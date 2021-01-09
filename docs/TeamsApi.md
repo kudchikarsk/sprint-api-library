@@ -1,4 +1,4 @@
-# NodeExpressBoilerplateApiDocumentation.TeamsApi
+# SprintApi.TeamsApi
 
 All URIs are relative to *http://localhost:3000/v1*
 
@@ -20,11 +20,11 @@ Only admins can retrieve all teams.
 
 ### Example
 ```javascript
-import NodeExpressBoilerplateApiDocumentation from 'node_express_boilerplate_api_documentation';
-let defaultClient = NodeExpressBoilerplateApiDocumentation.ApiClient.instance;
+import SprintApi from 'sprint_api';
+let defaultClient = SprintApi.ApiClient.instance;
 
 
-let apiInstance = new NodeExpressBoilerplateApiDocumentation.TeamsApi();
+let apiInstance = new SprintApi.TeamsApi();
 let opts = { 
   'name': "name_example", // String | Team name *
   'sortBy': "sortBy_example", // String | sort by query in the form of field:desc/asc (ex. name:asc)
@@ -72,11 +72,11 @@ Logged in teams can delete only themselves. Only admins can delete other teams.
 
 ### Example
 ```javascript
-import NodeExpressBoilerplateApiDocumentation from 'node_express_boilerplate_api_documentation';
-let defaultClient = NodeExpressBoilerplateApiDocumentation.ApiClient.instance;
+import SprintApi from 'sprint_api';
+let defaultClient = SprintApi.ApiClient.instance;
 
 
-let apiInstance = new NodeExpressBoilerplateApiDocumentation.TeamsApi();
+let apiInstance = new SprintApi.TeamsApi();
 let id = "id_example"; // String | Team id
 
 apiInstance.teamsIdDelete(id, (error, data, response) => {
@@ -117,11 +117,11 @@ Logged in teams can fetch only their own team information.
 
 ### Example
 ```javascript
-import NodeExpressBoilerplateApiDocumentation from 'node_express_boilerplate_api_documentation';
-let defaultClient = NodeExpressBoilerplateApiDocumentation.ApiClient.instance;
+import SprintApi from 'sprint_api';
+let defaultClient = SprintApi.ApiClient.instance;
 
 
-let apiInstance = new NodeExpressBoilerplateApiDocumentation.TeamsApi();
+let apiInstance = new SprintApi.TeamsApi();
 let id = "id_example"; // String | Team id
 
 apiInstance.teamsIdGet(id, (error, data, response) => {
@@ -162,12 +162,12 @@ Logged in teams can only update their own information. Only admins can update ot
 
 ### Example
 ```javascript
-import NodeExpressBoilerplateApiDocumentation from 'node_express_boilerplate_api_documentation';
-let defaultClient = NodeExpressBoilerplateApiDocumentation.ApiClient.instance;
+import SprintApi from 'sprint_api';
+let defaultClient = SprintApi.ApiClient.instance;
 
 
-let apiInstance = new NodeExpressBoilerplateApiDocumentation.TeamsApi();
-let body = new NodeExpressBoilerplateApiDocumentation.Body9(); // Body9 | 
+let apiInstance = new SprintApi.TeamsApi();
+let body = new SprintApi.Body9(); // Body9 | 
 let id = "id_example"; // String | Team id
 
 apiInstance.teamsIdPatch(bodyid, (error, data, response) => {
@@ -209,12 +209,12 @@ User can create teams.
 
 ### Example
 ```javascript
-import NodeExpressBoilerplateApiDocumentation from 'node_express_boilerplate_api_documentation';
-let defaultClient = NodeExpressBoilerplateApiDocumentation.ApiClient.instance;
+import SprintApi from 'sprint_api';
+let defaultClient = SprintApi.ApiClient.instance;
 
 
-let apiInstance = new NodeExpressBoilerplateApiDocumentation.TeamsApi();
-let body = new NodeExpressBoilerplateApiDocumentation.Body8(); // Body8 | 
+let apiInstance = new SprintApi.TeamsApi();
+let body = new SprintApi.Body8(); // Body8 | 
 
 apiInstance.teamsPost(body, (error, data, response) => {
   if (error) {

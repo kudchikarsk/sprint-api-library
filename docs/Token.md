@@ -1,4 +1,4 @@
-# NodeExpressBoilerplateApiDocumentation.Token
+# SprintApi.Token
 
 ## Properties
 Name | Type | Description | Notes

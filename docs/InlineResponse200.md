@@ -1,4 +1,4 @@
-# NodeExpressBoilerplateApiDocumentation.InlineResponse200
+# SprintApi.InlineResponse200
 
 ## Properties
 Name | Type | Description | Notes

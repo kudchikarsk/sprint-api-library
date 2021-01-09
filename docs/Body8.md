@@ -1,4 +1,4 @@
-# NodeExpressBoilerplateApiDocumentation.Body8
+# SprintApi.Body8
 
 ## Properties
 Name | Type | Description | Notes

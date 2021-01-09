@@ -1,4 +1,4 @@
-# NodeExpressBoilerplateApiDocumentation.Team
+# SprintApi.Team
 
 ## Properties
 Name | Type | Description | Notes

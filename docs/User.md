@@ -1,4 +1,4 @@
-# NodeExpressBoilerplateApiDocumentation.User
+# SprintApi.User
 
 ## Properties
 Name | Type | Description | Notes

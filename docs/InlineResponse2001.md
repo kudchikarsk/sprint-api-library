@@ -1,4 +1,4 @@
-# SprintApi.InlineResponse2001
+# SprintService.InlineResponse2001
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SprintApi.AuthTokens
+# SprintService.AuthTokens
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# SprintApi.AuthApi
+# SprintService.AuthApi
 
 All URIs are relative to *http://localhost:3000/v1*
 
@@ -21,10 +21,10 @@ An email will be sent to reset password.
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
+import SprintService from 'sprint_service';
 
-let apiInstance = new SprintApi.AuthApi();
-let body = new SprintApi.Body4(); // Body4 | 
+let apiInstance = new SprintService.AuthApi();
+let body = new SprintService.Body4(); // Body4 | 
 
 apiInstance.authForgotPasswordPost(body, (error, data, response) => {
   if (error) {
@@ -62,10 +62,10 @@ Login
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
+import SprintService from 'sprint_service';
 
-let apiInstance = new SprintApi.AuthApi();
-let body = new SprintApi.Body1(); // Body1 | 
+let apiInstance = new SprintService.AuthApi();
+let body = new SprintService.Body1(); // Body1 | 
 
 apiInstance.authLoginPost(body, (error, data, response) => {
   if (error) {
@@ -103,10 +103,10 @@ Logout
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
+import SprintService from 'sprint_service';
 
-let apiInstance = new SprintApi.AuthApi();
-let body = new SprintApi.Body2(); // Body2 | 
+let apiInstance = new SprintService.AuthApi();
+let body = new SprintService.Body2(); // Body2 | 
 
 apiInstance.authLogoutPost(body, (error, data, response) => {
   if (error) {
@@ -144,10 +144,10 @@ Refresh auth tokens
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
+import SprintService from 'sprint_service';
 
-let apiInstance = new SprintApi.AuthApi();
-let body = new SprintApi.Body3(); // Body3 | 
+let apiInstance = new SprintService.AuthApi();
+let body = new SprintService.Body3(); // Body3 | 
 
 apiInstance.authRefreshTokensPost(body, (error, data, response) => {
   if (error) {
@@ -185,10 +185,10 @@ Register as user
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
+import SprintService from 'sprint_service';
 
-let apiInstance = new SprintApi.AuthApi();
-let body = new SprintApi.Body(); // Body | 
+let apiInstance = new SprintService.AuthApi();
+let body = new SprintService.Body(); // Body | 
 
 apiInstance.authRegisterPost(body, (error, data, response) => {
   if (error) {
@@ -226,10 +226,10 @@ Reset password
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
+import SprintService from 'sprint_service';
 
-let apiInstance = new SprintApi.AuthApi();
-let body = new SprintApi.Body5(); // Body5 | 
+let apiInstance = new SprintService.AuthApi();
+let body = new SprintService.Body5(); // Body5 | 
 let token = "token_example"; // String | The reset password token
 
 apiInstance.authResetPasswordPost(bodytoken, (error, data, response) => {

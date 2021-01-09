@@ -1,4 +1,4 @@
-# SprintApi.BacklogsApi
+# SprintService.BacklogsApi
 
 All URIs are relative to *http://localhost:3000/v1*
 
@@ -20,11 +20,11 @@ Only admins can retrieve all backlogs.
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
-let defaultClient = SprintApi.ApiClient.instance;
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
 
 
-let apiInstance = new SprintApi.BacklogsApi();
+let apiInstance = new SprintService.BacklogsApi();
 let opts = { 
   'name': "name_example", // String | Backlog name *
   'sortBy': "sortBy_example", // String | sort by query in the form of field:desc/asc (ex. name:asc)
@@ -72,11 +72,11 @@ Logged in backlogs can delete only themselves. Only admins can delete other back
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
-let defaultClient = SprintApi.ApiClient.instance;
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
 
 
-let apiInstance = new SprintApi.BacklogsApi();
+let apiInstance = new SprintService.BacklogsApi();
 let id = "id_example"; // String | Backlog id
 
 apiInstance.backlogsIdDelete(id, (error, data, response) => {
@@ -117,11 +117,11 @@ Logged in backlogs can fetch only their own backlog information.
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
-let defaultClient = SprintApi.ApiClient.instance;
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
 
 
-let apiInstance = new SprintApi.BacklogsApi();
+let apiInstance = new SprintService.BacklogsApi();
 let id = "id_example"; // String | Backlog id
 
 apiInstance.backlogsIdGet(id, (error, data, response) => {
@@ -162,12 +162,12 @@ Logged in backlogs can only update their own information. Only admins can update
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
-let defaultClient = SprintApi.ApiClient.instance;
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
 
 
-let apiInstance = new SprintApi.BacklogsApi();
-let body = new SprintApi.Body7(); // Body7 | 
+let apiInstance = new SprintService.BacklogsApi();
+let body = new SprintService.Body7(); // Body7 | 
 let id = "id_example"; // String | Backlog id
 
 apiInstance.backlogsIdPatch(bodyid, (error, data, response) => {
@@ -209,12 +209,12 @@ User can create backlogs.
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
-let defaultClient = SprintApi.ApiClient.instance;
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
 
 
-let apiInstance = new SprintApi.BacklogsApi();
-let body = new SprintApi.Body6(); // Body6 | 
+let apiInstance = new SprintService.BacklogsApi();
+let body = new SprintService.Body6(); // Body6 | 
 
 apiInstance.backlogsPost(body, (error, data, response) => {
   if (error) {

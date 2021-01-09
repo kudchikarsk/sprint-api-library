@@ -1,4 +1,4 @@
-# SprintApi.Team
+# SprintService.Team
 
 ## Properties
 Name | Type | Description | Notes

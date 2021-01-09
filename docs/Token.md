@@ -1,4 +1,4 @@
-# SprintApi.Token
+# SprintService.Token
 
 ## Properties
 Name | Type | Description | Notes

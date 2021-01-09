@@ -1,4 +1,4 @@
-# SprintApi.Body1
+# SprintService.Body1
 
 ## Properties
 Name | Type | Description | Notes

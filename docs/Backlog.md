@@ -1,4 +1,4 @@
-# SprintApi.Backlog
+# SprintService.Backlog
 
 ## Properties
 Name | Type | Description | Notes

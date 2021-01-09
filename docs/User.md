@@ -1,4 +1,4 @@
-# SprintApi.User
+# SprintService.User
 
 ## Properties
 Name | Type | Description | Notes

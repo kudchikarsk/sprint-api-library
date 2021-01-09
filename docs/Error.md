@@ -1,4 +1,4 @@
-# SprintApi.Error
+# SprintService.Error
 
 ## Properties
 Name | Type | Description | Notes

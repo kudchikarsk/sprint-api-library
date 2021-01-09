@@ -1,4 +1,4 @@
-# SprintApi.UsersApi
+# SprintService.UsersApi
 
 All URIs are relative to *http://localhost:3000/v1*
 
@@ -20,11 +20,11 @@ Only admins can retrieve all users.
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
-let defaultClient = SprintApi.ApiClient.instance;
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
 
 
-let apiInstance = new SprintApi.UsersApi();
+let apiInstance = new SprintService.UsersApi();
 let opts = { 
   'name': "name_example", // String | User name
   'role': "role_example", // String | User role
@@ -74,11 +74,11 @@ Logged in users can delete only themselves. Only admins can delete other users.
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
-let defaultClient = SprintApi.ApiClient.instance;
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
 
 
-let apiInstance = new SprintApi.UsersApi();
+let apiInstance = new SprintService.UsersApi();
 let id = "id_example"; // String | User id
 
 apiInstance.usersIdDelete(id, (error, data, response) => {
@@ -119,11 +119,11 @@ Logged in users can fetch only their own user information. Only admins can fetch
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
-let defaultClient = SprintApi.ApiClient.instance;
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
 
 
-let apiInstance = new SprintApi.UsersApi();
+let apiInstance = new SprintService.UsersApi();
 let id = "id_example"; // String | User id
 
 apiInstance.usersIdGet(id, (error, data, response) => {
@@ -164,12 +164,12 @@ Logged in users can only update their own information. Only admins can update ot
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
-let defaultClient = SprintApi.ApiClient.instance;
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
 
 
-let apiInstance = new SprintApi.UsersApi();
-let body = new SprintApi.Body11(); // Body11 | 
+let apiInstance = new SprintService.UsersApi();
+let body = new SprintService.Body11(); // Body11 | 
 let id = "id_example"; // String | User id
 
 apiInstance.usersIdPatch(bodyid, (error, data, response) => {
@@ -211,12 +211,12 @@ Only admins can create other users.
 
 ### Example
 ```javascript
-import SprintApi from 'sprint_api';
-let defaultClient = SprintApi.ApiClient.instance;
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
 
 
-let apiInstance = new SprintApi.UsersApi();
-let body = new SprintApi.Body10(); // Body10 | 
+let apiInstance = new SprintService.UsersApi();
+let body = new SprintService.Body10(); // Body10 | 
 
 apiInstance.usersPost(body, (error, data, response) => {
   if (error) {

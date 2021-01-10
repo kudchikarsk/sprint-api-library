@@ -38,13 +38,6 @@ export default class BacklogsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the backlogsGet operation.
-     * @callback module:api/BacklogsApi~backlogsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Get all backlogs
@@ -54,10 +47,9 @@ export default class BacklogsApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of backlogs
      * @param {Number} opts.page Page number (default to 1)
-     * @param {module:api/BacklogsApi~backlogsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse200}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
-    backlogsGet(opts, callback) {
+    backlogsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -81,25 +73,35 @@ export default class BacklogsApi {
       return this.apiClient.callApi(
         '/backlogs', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the backlogsIdDelete operation.
-     * @callback module:api/BacklogsApi~backlogsIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get all backlogs
+     * Only admins can retrieve all backlogs.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.name Backlog name *
+     * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
+     * @param {Number} opts.limit Maximum number of backlogs
+     * @param {Number} opts.page Page number (default to 1)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
+    backlogsGet(opts) {
+      return this.backlogsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete a backlog
      * Logged in backlogs can delete only themselves. Only admins can delete other backlogs.
      * @param {String} id Backlog id
-     * @param {module:api/BacklogsApi~backlogsIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    backlogsIdDelete(id, callback) {
+    backlogsIdDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -123,26 +125,31 @@ export default class BacklogsApi {
       return this.apiClient.callApi(
         '/backlogs/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the backlogsIdGet operation.
-     * @callback module:api/BacklogsApi~backlogsIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Backlog} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete a backlog
+     * Logged in backlogs can delete only themselves. Only admins can delete other backlogs.
+     * @param {String} id Backlog id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    backlogsIdDelete(id) {
+      return this.backlogsIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get a backlog
      * Logged in backlogs can fetch only their own backlog information.
      * @param {String} id Backlog id
-     * @param {module:api/BacklogsApi~backlogsIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Backlog}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Backlog} and HTTP response
      */
-    backlogsIdGet(id, callback) {
+    backlogsIdGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -166,35 +173,40 @@ export default class BacklogsApi {
       return this.apiClient.callApi(
         '/backlogs/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the backlogsIdPatch operation.
-     * @callback module:api/BacklogsApi~backlogsIdPatchCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Backlog} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get a backlog
+     * Logged in backlogs can fetch only their own backlog information.
+     * @param {String} id Backlog id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Backlog}
      */
+    backlogsIdGet(id) {
+      return this.backlogsIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a backlog
      * Logged in backlogs can only update their own information. Only admins can update other backlogs.
      * @param {String} id Backlog id
-     * @param {module:model/Body7} body7 
-     * @param {module:api/BacklogsApi~backlogsIdPatchCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Backlog}
+     * @param {module:model/Body7} Body7 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Backlog} and HTTP response
      */
-    backlogsIdPatch(id, body7, callback) {
-      let postBody = body7;
+    backlogsIdPatchWithHttpInfo(id, Body7) {
+      let postBody = Body7;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling backlogsIdPatch");
       }
-      // verify the required parameter 'body7' is set
-      if (body7 === undefined || body7 === null) {
-        throw new Error("Missing the required parameter 'body7' when calling backlogsIdPatch");
+      // verify the required parameter 'Body7' is set
+      if (Body7 === undefined || Body7 === null) {
+        throw new Error("Missing the required parameter 'Body7' when calling backlogsIdPatch");
       }
 
       let pathParams = {
@@ -214,30 +226,36 @@ export default class BacklogsApi {
       return this.apiClient.callApi(
         '/backlogs/{id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the backlogsPost operation.
-     * @callback module:api/BacklogsApi~backlogsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Backlog} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update a backlog
+     * Logged in backlogs can only update their own information. Only admins can update other backlogs.
+     * @param {String} id Backlog id
+     * @param {module:model/Body7} Body7 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Backlog}
      */
+    backlogsIdPatch(id, Body7) {
+      return this.backlogsIdPatchWithHttpInfo(id, Body7)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create a backlog
      * User can create backlogs.
-     * @param {module:model/Body6} body6 
-     * @param {module:api/BacklogsApi~backlogsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Backlog}
+     * @param {module:model/Body6} Body6 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Backlog} and HTTP response
      */
-    backlogsPost(body6, callback) {
-      let postBody = body6;
-      // verify the required parameter 'body6' is set
-      if (body6 === undefined || body6 === null) {
-        throw new Error("Missing the required parameter 'body6' when calling backlogsPost");
+    backlogsPostWithHttpInfo(Body6) {
+      let postBody = Body6;
+      // verify the required parameter 'Body6' is set
+      if (Body6 === undefined || Body6 === null) {
+        throw new Error("Missing the required parameter 'Body6' when calling backlogsPost");
       }
 
       let pathParams = {
@@ -256,8 +274,21 @@ export default class BacklogsApi {
       return this.apiClient.callApi(
         '/backlogs', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Create a backlog
+     * User can create backlogs.
+     * @param {module:model/Body6} Body6 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Backlog}
+     */
+    backlogsPost(Body6) {
+      return this.backlogsPostWithHttpInfo(Body6)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

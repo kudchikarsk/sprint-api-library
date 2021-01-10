@@ -42,25 +42,18 @@ export default class AuthApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the authForgotPasswordPost operation.
-     * @callback module:api/AuthApi~authForgotPasswordPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Forgot password
      * An email will be sent to reset password.
-     * @param {module:model/Body4} body4 
-     * @param {module:api/AuthApi~authForgotPasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/Body4} Body4 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    authForgotPasswordPost(body4, callback) {
-      let postBody = body4;
-      // verify the required parameter 'body4' is set
-      if (body4 === undefined || body4 === null) {
-        throw new Error("Missing the required parameter 'body4' when calling authForgotPasswordPost");
+    authForgotPasswordPostWithHttpInfo(Body4) {
+      let postBody = Body4;
+      // verify the required parameter 'Body4' is set
+      if (Body4 === undefined || Body4 === null) {
+        throw new Error("Missing the required parameter 'Body4' when calling authForgotPasswordPost");
       }
 
       let pathParams = {
@@ -79,29 +72,34 @@ export default class AuthApi {
       return this.apiClient.callApi(
         '/auth/forgot-password', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the authLoginPost operation.
-     * @callback module:api/AuthApi~authLoginPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Forgot password
+     * An email will be sent to reset password.
+     * @param {module:model/Body4} Body4 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    authForgotPasswordPost(Body4) {
+      return this.authForgotPasswordPostWithHttpInfo(Body4)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Login
-     * @param {module:model/Body1} body1 
-     * @param {module:api/AuthApi~authLoginPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @param {module:model/Body1} Body1 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
-    authLoginPost(body1, callback) {
-      let postBody = body1;
-      // verify the required parameter 'body1' is set
-      if (body1 === undefined || body1 === null) {
-        throw new Error("Missing the required parameter 'body1' when calling authLoginPost");
+    authLoginPostWithHttpInfo(Body1) {
+      let postBody = Body1;
+      // verify the required parameter 'Body1' is set
+      if (Body1 === undefined || Body1 === null) {
+        throw new Error("Missing the required parameter 'Body1' when calling authLoginPost");
       }
 
       let pathParams = {
@@ -120,28 +118,33 @@ export default class AuthApi {
       return this.apiClient.callApi(
         '/auth/login', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the authLogoutPost operation.
-     * @callback module:api/AuthApi~authLogoutPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Login
+     * @param {module:model/Body1} Body1 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
+    authLoginPost(Body1) {
+      return this.authLoginPostWithHttpInfo(Body1)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Logout
-     * @param {module:model/Body2} body2 
-     * @param {module:api/AuthApi~authLogoutPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/Body2} Body2 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    authLogoutPost(body2, callback) {
-      let postBody = body2;
-      // verify the required parameter 'body2' is set
-      if (body2 === undefined || body2 === null) {
-        throw new Error("Missing the required parameter 'body2' when calling authLogoutPost");
+    authLogoutPostWithHttpInfo(Body2) {
+      let postBody = Body2;
+      // verify the required parameter 'Body2' is set
+      if (Body2 === undefined || Body2 === null) {
+        throw new Error("Missing the required parameter 'Body2' when calling authLogoutPost");
       }
 
       let pathParams = {
@@ -160,29 +163,33 @@ export default class AuthApi {
       return this.apiClient.callApi(
         '/auth/logout', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the authRefreshTokensPost operation.
-     * @callback module:api/AuthApi~authRefreshTokensPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/AuthTokens} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Logout
+     * @param {module:model/Body2} Body2 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    authLogoutPost(Body2) {
+      return this.authLogoutPostWithHttpInfo(Body2)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Refresh auth tokens
-     * @param {module:model/Body3} body3 
-     * @param {module:api/AuthApi~authRefreshTokensPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/AuthTokens}
+     * @param {module:model/Body3} Body3 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AuthTokens} and HTTP response
      */
-    authRefreshTokensPost(body3, callback) {
-      let postBody = body3;
-      // verify the required parameter 'body3' is set
-      if (body3 === undefined || body3 === null) {
-        throw new Error("Missing the required parameter 'body3' when calling authRefreshTokensPost");
+    authRefreshTokensPostWithHttpInfo(Body3) {
+      let postBody = Body3;
+      // verify the required parameter 'Body3' is set
+      if (Body3 === undefined || Body3 === null) {
+        throw new Error("Missing the required parameter 'Body3' when calling authRefreshTokensPost");
       }
 
       let pathParams = {
@@ -201,29 +208,33 @@ export default class AuthApi {
       return this.apiClient.callApi(
         '/auth/refresh-tokens', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the authRegisterPost operation.
-     * @callback module:api/AuthApi~authRegisterPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Refresh auth tokens
+     * @param {module:model/Body3} Body3 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AuthTokens}
      */
+    authRefreshTokensPost(Body3) {
+      return this.authRefreshTokensPostWithHttpInfo(Body3)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Register as user
-     * @param {module:model/Body} body 
-     * @param {module:api/AuthApi~authRegisterPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @param {module:model/Body} Body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
-    authRegisterPost(body, callback) {
-      let postBody = body;
-      // verify the required parameter 'body' is set
-      if (body === undefined || body === null) {
-        throw new Error("Missing the required parameter 'body' when calling authRegisterPost");
+    authRegisterPostWithHttpInfo(Body) {
+      let postBody = Body;
+      // verify the required parameter 'Body' is set
+      if (Body === undefined || Body === null) {
+        throw new Error("Missing the required parameter 'Body' when calling authRegisterPost");
       }
 
       let pathParams = {
@@ -242,33 +253,38 @@ export default class AuthApi {
       return this.apiClient.callApi(
         '/auth/register', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the authResetPasswordPost operation.
-     * @callback module:api/AuthApi~authResetPasswordPostCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Register as user
+     * @param {module:model/Body} Body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
+    authRegisterPost(Body) {
+      return this.authRegisterPostWithHttpInfo(Body)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Reset password
      * @param {String} token The reset password token
-     * @param {module:model/Body5} body5 
-     * @param {module:api/AuthApi~authResetPasswordPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:model/Body5} Body5 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    authResetPasswordPost(token, body5, callback) {
-      let postBody = body5;
+    authResetPasswordPostWithHttpInfo(token, Body5) {
+      let postBody = Body5;
       // verify the required parameter 'token' is set
       if (token === undefined || token === null) {
         throw new Error("Missing the required parameter 'token' when calling authResetPasswordPost");
       }
-      // verify the required parameter 'body5' is set
-      if (body5 === undefined || body5 === null) {
-        throw new Error("Missing the required parameter 'body5' when calling authResetPasswordPost");
+      // verify the required parameter 'Body5' is set
+      if (Body5 === undefined || Body5 === null) {
+        throw new Error("Missing the required parameter 'Body5' when calling authResetPasswordPost");
       }
 
       let pathParams = {
@@ -288,8 +304,21 @@ export default class AuthApi {
       return this.apiClient.callApi(
         '/auth/reset-password', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Reset password
+     * @param {String} token The reset password token
+     * @param {module:model/Body5} Body5 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    authResetPasswordPost(token, Body5) {
+      return this.authResetPasswordPostWithHttpInfo(token, Body5)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

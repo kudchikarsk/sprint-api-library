@@ -38,13 +38,6 @@ export default class UsersApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the usersGet operation.
-     * @callback module:api/UsersApi~usersGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2002} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Get all users
@@ -55,10 +48,9 @@ export default class UsersApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of users
      * @param {Number} opts.page Page number (default to 1)
-     * @param {module:api/UsersApi~usersGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2002}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
      */
-    usersGet(opts, callback) {
+    usersGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -83,25 +75,36 @@ export default class UsersApi {
       return this.apiClient.callApi(
         '/users', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the usersIdDelete operation.
-     * @callback module:api/UsersApi~usersIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get all users
+     * Only admins can retrieve all users.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.name User name
+     * @param {String} opts.role User role
+     * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
+     * @param {Number} opts.limit Maximum number of users
+     * @param {Number} opts.page Page number (default to 1)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
      */
+    usersGet(opts) {
+      return this.usersGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete a user
      * Logged in users can delete only themselves. Only admins can delete other users.
      * @param {String} id User id
-     * @param {module:api/UsersApi~usersIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    usersIdDelete(id, callback) {
+    usersIdDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -125,26 +128,31 @@ export default class UsersApi {
       return this.apiClient.callApi(
         '/users/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the usersIdGet operation.
-     * @callback module:api/UsersApi~usersIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/User} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete a user
+     * Logged in users can delete only themselves. Only admins can delete other users.
+     * @param {String} id User id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    usersIdDelete(id) {
+      return this.usersIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get a user
      * Logged in users can fetch only their own user information. Only admins can fetch other users.
      * @param {String} id User id
-     * @param {module:api/UsersApi~usersIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/User}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
-    usersIdGet(id, callback) {
+    usersIdGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -168,35 +176,40 @@ export default class UsersApi {
       return this.apiClient.callApi(
         '/users/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the usersIdPatch operation.
-     * @callback module:api/UsersApi~usersIdPatchCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/User} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get a user
+     * Logged in users can fetch only their own user information. Only admins can fetch other users.
+     * @param {String} id User id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
+    usersIdGet(id) {
+      return this.usersIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a user
      * Logged in users can only update their own information. Only admins can update other users.
      * @param {String} id User id
-     * @param {module:model/Body11} body11 
-     * @param {module:api/UsersApi~usersIdPatchCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/User}
+     * @param {module:model/Body11} Body11 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
-    usersIdPatch(id, body11, callback) {
-      let postBody = body11;
+    usersIdPatchWithHttpInfo(id, Body11) {
+      let postBody = Body11;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling usersIdPatch");
       }
-      // verify the required parameter 'body11' is set
-      if (body11 === undefined || body11 === null) {
-        throw new Error("Missing the required parameter 'body11' when calling usersIdPatch");
+      // verify the required parameter 'Body11' is set
+      if (Body11 === undefined || Body11 === null) {
+        throw new Error("Missing the required parameter 'Body11' when calling usersIdPatch");
       }
 
       let pathParams = {
@@ -216,30 +229,36 @@ export default class UsersApi {
       return this.apiClient.callApi(
         '/users/{id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the usersPost operation.
-     * @callback module:api/UsersApi~usersPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/User} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update a user
+     * Logged in users can only update their own information. Only admins can update other users.
+     * @param {String} id User id
+     * @param {module:model/Body11} Body11 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
+    usersIdPatch(id, Body11) {
+      return this.usersIdPatchWithHttpInfo(id, Body11)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create a user
      * Only admins can create other users.
-     * @param {module:model/Body10} body10 
-     * @param {module:api/UsersApi~usersPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/User}
+     * @param {module:model/Body10} Body10 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
-    usersPost(body10, callback) {
-      let postBody = body10;
-      // verify the required parameter 'body10' is set
-      if (body10 === undefined || body10 === null) {
-        throw new Error("Missing the required parameter 'body10' when calling usersPost");
+    usersPostWithHttpInfo(Body10) {
+      let postBody = Body10;
+      // verify the required parameter 'Body10' is set
+      if (Body10 === undefined || Body10 === null) {
+        throw new Error("Missing the required parameter 'Body10' when calling usersPost");
       }
 
       let pathParams = {
@@ -258,8 +277,21 @@ export default class UsersApi {
       return this.apiClient.callApi(
         '/users', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Create a user
+     * Only admins can create other users.
+     * @param {module:model/Body10} Body10 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
+     */
+    usersPost(Body10) {
+      return this.usersPostWithHttpInfo(Body10)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

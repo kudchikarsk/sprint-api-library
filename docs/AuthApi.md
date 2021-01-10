@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## authForgotPasswordPost
 
-> authForgotPasswordPost(body4)
+> authForgotPasswordPost(Body4)
 
 Forgot password
 
@@ -27,14 +27,13 @@ An email will be sent to reset password.
 import SprintService from 'sprint_service';
 
 let apiInstance = new SprintService.AuthApi();
-let body4 = new SprintService.Body4(); // Body4 | 
-apiInstance.authForgotPasswordPost(body4, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+let Body4 = new SprintService.Body4(); // Body4 | 
+apiInstance.authForgotPasswordPost(Body4).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -42,7 +41,7 @@ apiInstance.authForgotPasswordPost(body4, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body4** | [**Body4**](Body4.md)|  | 
+ **Body4** | [**Body4**](Body4.md)|  | 
 
 ### Return type
 
@@ -60,7 +59,7 @@ No authorization required
 
 ## authLoginPost
 
-> InlineResponse201 authLoginPost(body1)
+> InlineResponse201 authLoginPost(Body1)
 
 Login
 
@@ -70,14 +69,13 @@ Login
 import SprintService from 'sprint_service';
 
 let apiInstance = new SprintService.AuthApi();
-let body1 = new SprintService.Body1(); // Body1 | 
-apiInstance.authLoginPost(body1, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let Body1 = new SprintService.Body1(); // Body1 | 
+apiInstance.authLoginPost(Body1).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -85,7 +83,7 @@ apiInstance.authLoginPost(body1, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body1** | [**Body1**](Body1.md)|  | 
+ **Body1** | [**Body1**](Body1.md)|  | 
 
 ### Return type
 
@@ -103,7 +101,7 @@ No authorization required
 
 ## authLogoutPost
 
-> authLogoutPost(body2)
+> authLogoutPost(Body2)
 
 Logout
 
@@ -113,14 +111,13 @@ Logout
 import SprintService from 'sprint_service';
 
 let apiInstance = new SprintService.AuthApi();
-let body2 = new SprintService.Body2(); // Body2 | 
-apiInstance.authLogoutPost(body2, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+let Body2 = new SprintService.Body2(); // Body2 | 
+apiInstance.authLogoutPost(Body2).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -128,7 +125,7 @@ apiInstance.authLogoutPost(body2, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body2** | [**Body2**](Body2.md)|  | 
+ **Body2** | [**Body2**](Body2.md)|  | 
 
 ### Return type
 
@@ -146,7 +143,7 @@ No authorization required
 
 ## authRefreshTokensPost
 
-> AuthTokens authRefreshTokensPost(body3)
+> AuthTokens authRefreshTokensPost(Body3)
 
 Refresh auth tokens
 
@@ -156,14 +153,13 @@ Refresh auth tokens
 import SprintService from 'sprint_service';
 
 let apiInstance = new SprintService.AuthApi();
-let body3 = new SprintService.Body3(); // Body3 | 
-apiInstance.authRefreshTokensPost(body3, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let Body3 = new SprintService.Body3(); // Body3 | 
+apiInstance.authRefreshTokensPost(Body3).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -171,7 +167,7 @@ apiInstance.authRefreshTokensPost(body3, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body3** | [**Body3**](Body3.md)|  | 
+ **Body3** | [**Body3**](Body3.md)|  | 
 
 ### Return type
 
@@ -189,7 +185,7 @@ No authorization required
 
 ## authRegisterPost
 
-> InlineResponse201 authRegisterPost(body)
+> InlineResponse201 authRegisterPost(Body)
 
 Register as user
 
@@ -199,14 +195,13 @@ Register as user
 import SprintService from 'sprint_service';
 
 let apiInstance = new SprintService.AuthApi();
-let body = new SprintService.Body(); // Body | 
-apiInstance.authRegisterPost(body, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+let Body = new SprintService.Body(); // Body | 
+apiInstance.authRegisterPost(Body).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -214,7 +209,7 @@ apiInstance.authRegisterPost(body, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body**](Body.md)|  | 
+ **Body** | [**Body**](Body.md)|  | 
 
 ### Return type
 
@@ -232,7 +227,7 @@ No authorization required
 
 ## authResetPasswordPost
 
-> authResetPasswordPost(token, body5)
+> authResetPasswordPost(token, Body5)
 
 Reset password
 
@@ -243,14 +238,13 @@ import SprintService from 'sprint_service';
 
 let apiInstance = new SprintService.AuthApi();
 let token = "token_example"; // String | The reset password token
-let body5 = new SprintService.Body5(); // Body5 | 
-apiInstance.authResetPasswordPost(token, body5, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+let Body5 = new SprintService.Body5(); // Body5 | 
+apiInstance.authResetPasswordPost(token, Body5).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -259,7 +253,7 @@ apiInstance.authResetPasswordPost(token, body5, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token** | **String**| The reset password token | 
- **body5** | [**Body5**](Body5.md)|  | 
+ **Body5** | [**Body5**](Body5.md)|  | 
 
 ### Return type
 

@@ -38,13 +38,6 @@ export default class TeamsApi {
     }
 
 
-    /**
-     * Callback function to receive the result of the teamsGet operation.
-     * @callback module:api/TeamsApi~teamsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Get all teams
@@ -54,10 +47,9 @@ export default class TeamsApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of teams
      * @param {Number} opts.page Page number (default to 1)
-     * @param {module:api/TeamsApi~teamsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
      */
-    teamsGet(opts, callback) {
+    teamsGetWithHttpInfo(opts) {
       opts = opts || {};
       let postBody = null;
 
@@ -81,25 +73,35 @@ export default class TeamsApi {
       return this.apiClient.callApi(
         '/teams', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the teamsIdDelete operation.
-     * @callback module:api/TeamsApi~teamsIdDeleteCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get all teams
+     * Only admins can retrieve all teams.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.name Team name *
+     * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
+     * @param {Number} opts.limit Maximum number of teams
+     * @param {Number} opts.page Page number (default to 1)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
      */
+    teamsGet(opts) {
+      return this.teamsGetWithHttpInfo(opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Delete a team
      * Logged in teams can delete only themselves. Only admins can delete other teams.
      * @param {String} id Team id
-     * @param {module:api/TeamsApi~teamsIdDeleteCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    teamsIdDelete(id, callback) {
+    teamsIdDeleteWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -123,26 +125,31 @@ export default class TeamsApi {
       return this.apiClient.callApi(
         '/teams/{id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the teamsIdGet operation.
-     * @callback module:api/TeamsApi~teamsIdGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Team} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete a team
+     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * @param {String} id Team id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
+    teamsIdDelete(id) {
+      return this.teamsIdDeleteWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Get a team
      * Logged in teams can fetch only their own team information.
      * @param {String} id Team id
-     * @param {module:api/TeamsApi~teamsIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Team}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Team} and HTTP response
      */
-    teamsIdGet(id, callback) {
+    teamsIdGetWithHttpInfo(id) {
       let postBody = null;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
@@ -166,35 +173,40 @@ export default class TeamsApi {
       return this.apiClient.callApi(
         '/teams/{id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the teamsIdPatch operation.
-     * @callback module:api/TeamsApi~teamsIdPatchCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Team} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get a team
+     * Logged in teams can fetch only their own team information.
+     * @param {String} id Team id
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Team}
      */
+    teamsIdGet(id) {
+      return this.teamsIdGetWithHttpInfo(id)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Update a team
      * Logged in teams can only update their own information. Only admins can update other teams.
      * @param {String} id Team id
-     * @param {module:model/Body9} body9 
-     * @param {module:api/TeamsApi~teamsIdPatchCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Team}
+     * @param {module:model/Body9} Body9 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Team} and HTTP response
      */
-    teamsIdPatch(id, body9, callback) {
-      let postBody = body9;
+    teamsIdPatchWithHttpInfo(id, Body9) {
+      let postBody = Body9;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling teamsIdPatch");
       }
-      // verify the required parameter 'body9' is set
-      if (body9 === undefined || body9 === null) {
-        throw new Error("Missing the required parameter 'body9' when calling teamsIdPatch");
+      // verify the required parameter 'Body9' is set
+      if (Body9 === undefined || Body9 === null) {
+        throw new Error("Missing the required parameter 'Body9' when calling teamsIdPatch");
       }
 
       let pathParams = {
@@ -214,30 +226,36 @@ export default class TeamsApi {
       return this.apiClient.callApi(
         '/teams/{id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Callback function to receive the result of the teamsPost operation.
-     * @callback module:api/TeamsApi~teamsPostCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Team} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update a team
+     * Logged in teams can only update their own information. Only admins can update other teams.
+     * @param {String} id Team id
+     * @param {module:model/Body9} Body9 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Team}
      */
+    teamsIdPatch(id, Body9) {
+      return this.teamsIdPatchWithHttpInfo(id, Body9)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
 
     /**
      * Create a team
      * User can create teams.
-     * @param {module:model/Body8} body8 
-     * @param {module:api/TeamsApi~teamsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Team}
+     * @param {module:model/Body8} Body8 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Team} and HTTP response
      */
-    teamsPost(body8, callback) {
-      let postBody = body8;
-      // verify the required parameter 'body8' is set
-      if (body8 === undefined || body8 === null) {
-        throw new Error("Missing the required parameter 'body8' when calling teamsPost");
+    teamsPostWithHttpInfo(Body8) {
+      let postBody = Body8;
+      // verify the required parameter 'Body8' is set
+      if (Body8 === undefined || Body8 === null) {
+        throw new Error("Missing the required parameter 'Body8' when calling teamsPost");
       }
 
       let pathParams = {
@@ -256,8 +274,21 @@ export default class TeamsApi {
       return this.apiClient.callApi(
         '/teams', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
+        authNames, contentTypes, accepts, returnType, null
       );
+    }
+
+    /**
+     * Create a team
+     * User can create teams.
+     * @param {module:model/Body8} Body8 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Team}
+     */
+    teamsPost(Body8) {
+      return this.teamsPostWithHttpInfo(Body8)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
     }
 
 

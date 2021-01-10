@@ -10,8 +10,10 @@ Method | HTTP request | Description
 [**backlogsIdPatch**](BacklogsApi.md#backlogsIdPatch) | **PATCH** /backlogs/{id} | Update a backlog
 [**backlogsPost**](BacklogsApi.md#backlogsPost) | **POST** /backlogs | Create a backlog
 
-<a name="backlogsGet"></a>
-# **backlogsGet**
+
+
+## backlogsGet
+
 > InlineResponse200 backlogsGet(opts)
 
 Get all backlogs
@@ -19,13 +21,16 @@ Get all backlogs
 Only admins can retrieve all backlogs.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.BacklogsApi();
-let opts = { 
+let opts = {
   'name': "name_example", // String | Backlog name *
   'sortBy': "sortBy_example", // String | sort by query in the form of field:desc/asc (ex. name:asc)
   'limit': 56, // Number | Maximum number of backlogs
@@ -41,6 +46,7 @@ apiInstance.backlogsGet(opts, (error, data, response) => {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -59,11 +65,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="backlogsIdDelete"></a>
-# **backlogsIdDelete**
+
+## backlogsIdDelete
+
 > backlogsIdDelete(id)
 
 Delete a backlog
@@ -71,14 +78,16 @@ Delete a backlog
 Logged in backlogs can delete only themselves. Only admins can delete other backlogs.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.BacklogsApi();
 let id = "id_example"; // String | Backlog id
-
 apiInstance.backlogsIdDelete(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -89,6 +98,7 @@ apiInstance.backlogsIdDelete(id, (error, data, response) => {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -104,11 +114,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="backlogsIdGet"></a>
-# **backlogsIdGet**
+
+## backlogsIdGet
+
 > Backlog backlogsIdGet(id)
 
 Get a backlog
@@ -116,14 +127,16 @@ Get a backlog
 Logged in backlogs can fetch only their own backlog information.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.BacklogsApi();
 let id = "id_example"; // String | Backlog id
-
 apiInstance.backlogsIdGet(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -135,6 +148,7 @@ apiInstance.backlogsIdGet(id, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Backlog id | 
@@ -149,28 +163,31 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="backlogsIdPatch"></a>
-# **backlogsIdPatch**
-> Backlog backlogsIdPatch(bodyid)
+
+## backlogsIdPatch
+
+> Backlog backlogsIdPatch(id, body7)
 
 Update a backlog
 
 Logged in backlogs can only update their own information. Only admins can update other backlogs.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.BacklogsApi();
-let body = new SprintService.Body7(); // Body7 | 
 let id = "id_example"; // String | Backlog id
-
-apiInstance.backlogsIdPatch(bodyid, (error, data, response) => {
+let body7 = new SprintService.Body7(); // Body7 | 
+apiInstance.backlogsIdPatch(id, body7, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -181,10 +198,11 @@ apiInstance.backlogsIdPatch(bodyid, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body7**](Body7.md)|  | 
  **id** | **String**| Backlog id | 
+ **body7** | [**Body7**](Body7.md)|  | 
 
 ### Return type
 
@@ -196,27 +214,30 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="backlogsPost"></a>
-# **backlogsPost**
-> Backlog backlogsPost(body)
+
+## backlogsPost
+
+> Backlog backlogsPost(body6)
 
 Create a backlog
 
 User can create backlogs.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.BacklogsApi();
-let body = new SprintService.Body6(); // Body6 | 
-
-apiInstance.backlogsPost(body, (error, data, response) => {
+let body6 = new SprintService.Body6(); // Body6 | 
+apiInstance.backlogsPost(body6, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -227,9 +248,10 @@ apiInstance.backlogsPost(body, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body6**](Body6.md)|  | 
+ **body6** | [**Body6**](Body6.md)|  | 
 
 ### Return type
 
@@ -241,6 +263,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

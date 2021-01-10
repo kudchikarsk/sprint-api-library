@@ -1,6 +1,7 @@
 # SprintService.InlineResponse200
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **results** | [**[Backlog]**](Backlog.md) |  | [optional] 
@@ -8,3 +9,5 @@ Name | Type | Description | Notes
 **limit** | **Number** |  | [optional] 
 **totalPages** | **Number** |  | [optional] 
 **totalResults** | **Number** |  | [optional] 
+
+

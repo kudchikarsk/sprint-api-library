@@ -1,6 +1,7 @@
 # SprintService.User
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** |  | [optional] 
@@ -8,9 +9,15 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **role** | **String** |  | [optional] 
 
-<a name="RoleEnum"></a>
+
+
 ## Enum: RoleEnum
 
+
 * `user` (value: `"user"`)
+
 * `admin` (value: `"admin"`)
+
+
+
 

@@ -10,8 +10,10 @@ Method | HTTP request | Description
 [**usersIdPatch**](UsersApi.md#usersIdPatch) | **PATCH** /users/{id} | Update a user
 [**usersPost**](UsersApi.md#usersPost) | **POST** /users | Create a user
 
-<a name="usersGet"></a>
-# **usersGet**
+
+
+## usersGet
+
 > InlineResponse2002 usersGet(opts)
 
 Get all users
@@ -19,13 +21,16 @@ Get all users
 Only admins can retrieve all users.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.UsersApi();
-let opts = { 
+let opts = {
   'name': "name_example", // String | User name
   'role': "role_example", // String | User role
   'sortBy': "sortBy_example", // String | sort by query in the form of field:desc/asc (ex. name:asc)
@@ -42,6 +47,7 @@ apiInstance.usersGet(opts, (error, data, response) => {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -61,11 +67,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="usersIdDelete"></a>
-# **usersIdDelete**
+
+## usersIdDelete
+
 > usersIdDelete(id)
 
 Delete a user
@@ -73,14 +80,16 @@ Delete a user
 Logged in users can delete only themselves. Only admins can delete other users.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.UsersApi();
 let id = "id_example"; // String | User id
-
 apiInstance.usersIdDelete(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -91,6 +100,7 @@ apiInstance.usersIdDelete(id, (error, data, response) => {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -106,11 +116,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="usersIdGet"></a>
-# **usersIdGet**
+
+## usersIdGet
+
 > User usersIdGet(id)
 
 Get a user
@@ -118,14 +129,16 @@ Get a user
 Logged in users can fetch only their own user information. Only admins can fetch other users.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.UsersApi();
 let id = "id_example"; // String | User id
-
 apiInstance.usersIdGet(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -137,6 +150,7 @@ apiInstance.usersIdGet(id, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User id | 
@@ -151,28 +165,31 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="usersIdPatch"></a>
-# **usersIdPatch**
-> User usersIdPatch(bodyid)
+
+## usersIdPatch
+
+> User usersIdPatch(id, body11)
 
 Update a user
 
 Logged in users can only update their own information. Only admins can update other users.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.UsersApi();
-let body = new SprintService.Body11(); // Body11 | 
 let id = "id_example"; // String | User id
-
-apiInstance.usersIdPatch(bodyid, (error, data, response) => {
+let body11 = new SprintService.Body11(); // Body11 | 
+apiInstance.usersIdPatch(id, body11, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -183,10 +200,11 @@ apiInstance.usersIdPatch(bodyid, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body11**](Body11.md)|  | 
  **id** | **String**| User id | 
+ **body11** | [**Body11**](Body11.md)|  | 
 
 ### Return type
 
@@ -198,27 +216,30 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="usersPost"></a>
-# **usersPost**
-> User usersPost(body)
+
+## usersPost
+
+> User usersPost(body10)
 
 Create a user
 
 Only admins can create other users.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.UsersApi();
-let body = new SprintService.Body10(); // Body10 | 
-
-apiInstance.usersPost(body, (error, data, response) => {
+let body10 = new SprintService.Body10(); // Body10 | 
+apiInstance.usersPost(body10, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -229,9 +250,10 @@ apiInstance.usersPost(body, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body10**](Body10.md)|  | 
+ **body10** | [**Body10**](Body10.md)|  | 
 
 ### Return type
 
@@ -243,6 +265,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

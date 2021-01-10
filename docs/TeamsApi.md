@@ -10,8 +10,10 @@ Method | HTTP request | Description
 [**teamsIdPatch**](TeamsApi.md#teamsIdPatch) | **PATCH** /teams/{id} | Update a team
 [**teamsPost**](TeamsApi.md#teamsPost) | **POST** /teams | Create a team
 
-<a name="teamsGet"></a>
-# **teamsGet**
+
+
+## teamsGet
+
 > InlineResponse2001 teamsGet(opts)
 
 Get all teams
@@ -19,13 +21,16 @@ Get all teams
 Only admins can retrieve all teams.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TeamsApi();
-let opts = { 
+let opts = {
   'name': "name_example", // String | Team name *
   'sortBy': "sortBy_example", // String | sort by query in the form of field:desc/asc (ex. name:asc)
   'limit': 56, // Number | Maximum number of teams
@@ -41,6 +46,7 @@ apiInstance.teamsGet(opts, (error, data, response) => {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -59,11 +65,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="teamsIdDelete"></a>
-# **teamsIdDelete**
+
+## teamsIdDelete
+
 > teamsIdDelete(id)
 
 Delete a team
@@ -71,14 +78,16 @@ Delete a team
 Logged in teams can delete only themselves. Only admins can delete other teams.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TeamsApi();
 let id = "id_example"; // String | Team id
-
 apiInstance.teamsIdDelete(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -89,6 +98,7 @@ apiInstance.teamsIdDelete(id, (error, data, response) => {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -104,11 +114,12 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="teamsIdGet"></a>
-# **teamsIdGet**
+
+## teamsIdGet
+
 > Team teamsIdGet(id)
 
 Get a team
@@ -116,14 +127,16 @@ Get a team
 Logged in teams can fetch only their own team information.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TeamsApi();
 let id = "id_example"; // String | Team id
-
 apiInstance.teamsIdGet(id, (error, data, response) => {
   if (error) {
     console.error(error);
@@ -135,6 +148,7 @@ apiInstance.teamsIdGet(id, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Team id | 
@@ -149,28 +163,31 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-<a name="teamsIdPatch"></a>
-# **teamsIdPatch**
-> Team teamsIdPatch(bodyid)
+
+## teamsIdPatch
+
+> Team teamsIdPatch(id, body9)
 
 Update a team
 
 Logged in teams can only update their own information. Only admins can update other teams.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TeamsApi();
-let body = new SprintService.Body9(); // Body9 | 
 let id = "id_example"; // String | Team id
-
-apiInstance.teamsIdPatch(bodyid, (error, data, response) => {
+let body9 = new SprintService.Body9(); // Body9 | 
+apiInstance.teamsIdPatch(id, body9, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -181,10 +198,11 @@ apiInstance.teamsIdPatch(bodyid, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body9**](Body9.md)|  | 
  **id** | **String**| Team id | 
+ **body9** | [**Body9**](Body9.md)|  | 
 
 ### Return type
 
@@ -196,27 +214,30 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-<a name="teamsPost"></a>
-# **teamsPost**
-> Team teamsPost(body)
+
+## teamsPost
+
+> Team teamsPost(body8)
 
 Create a team
 
 User can create teams.
 
 ### Example
+
 ```javascript
 import SprintService from 'sprint_service';
 let defaultClient = SprintService.ApiClient.instance;
-
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TeamsApi();
-let body = new SprintService.Body8(); // Body8 | 
-
-apiInstance.teamsPost(body, (error, data, response) => {
+let body8 = new SprintService.Body8(); // Body8 | 
+apiInstance.teamsPost(body8, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -227,9 +248,10 @@ apiInstance.teamsPost(body, (error, data, response) => {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**Body8**](Body8.md)|  | 
+ **body8** | [**Body8**](Body8.md)|  | 
 
 ### Return type
 
@@ -241,6 +263,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 

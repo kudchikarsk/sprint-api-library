@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **email** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **role** | **String** |  | [optional] 
+**image** | **String** |  | [optional] 
 
 
 

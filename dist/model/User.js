@@ -69,6 +69,10 @@ var User = /*#__PURE__*/function () {
         if (data.hasOwnProperty('role')) {
           obj['role'] = _ApiClient["default"].convertToType(data['role'], 'String');
         }
+
+        if (data.hasOwnProperty('image')) {
+          obj['image'] = _ApiClient["default"].convertToType(data['image'], 'String');
+        }
       }
 
       return obj;
@@ -98,6 +102,11 @@ User.prototype['name'] = undefined;
  */
 
 User.prototype['role'] = undefined;
+/**
+ * @member {String} image
+ */
+
+User.prototype['image'] = undefined;
 /**
  * Allowed values for the <code>role</code> property.
  * @enum {String}

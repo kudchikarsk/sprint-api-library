@@ -62,6 +62,27 @@ class User {
             if (data.hasOwnProperty('image')) {
                 obj['image'] = ApiClient.convertToType(data['image'], 'String');
             }
+            if (data.hasOwnProperty('company')) {
+                obj['company'] = ApiClient.convertToType(data['company'], 'String');
+            }
+            if (data.hasOwnProperty('education')) {
+                obj['education'] = ApiClient.convertToType(data['education'], 'String');
+            }
+            if (data.hasOwnProperty('address')) {
+                obj['address'] = ApiClient.convertToType(data['address'], 'String');
+            }
+            if (data.hasOwnProperty('city')) {
+                obj['city'] = ApiClient.convertToType(data['city'], 'String');
+            }
+            if (data.hasOwnProperty('country')) {
+                obj['country'] = ApiClient.convertToType(data['country'], 'String');
+            }
+            if (data.hasOwnProperty('postalCode')) {
+                obj['postalCode'] = ApiClient.convertToType(data['postalCode'], 'String');
+            }
+            if (data.hasOwnProperty('aboutMe')) {
+                obj['aboutMe'] = ApiClient.convertToType(data['aboutMe'], 'String');
+            }
         }
         return obj;
     }
@@ -93,6 +114,41 @@ User.prototype['role'] = undefined;
  * @member {String} image
  */
 User.prototype['image'] = undefined;
+
+/**
+ * @member {String} company
+ */
+User.prototype['company'] = undefined;
+
+/**
+ * @member {String} education
+ */
+User.prototype['education'] = undefined;
+
+/**
+ * @member {String} address
+ */
+User.prototype['address'] = undefined;
+
+/**
+ * @member {String} city
+ */
+User.prototype['city'] = undefined;
+
+/**
+ * @member {String} country
+ */
+User.prototype['country'] = undefined;
+
+/**
+ * @member {String} postalCode
+ */
+User.prototype['postalCode'] = undefined;
+
+/**
+ * @member {String} aboutMe
+ */
+User.prototype['aboutMe'] = undefined;
 
 
 

@@ -6,6 +6,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** |  | [optional] 
 **email** | **String** | must be unique | [optional] 
-**password** | **String** | At least one number and one letter | [optional] 
+**company** | **String** |  | [optional] 
+**education** | **String** |  | [optional] 
+**address** | **String** |  | [optional] 
+**city** | **String** |  | [optional] 
+**country** | **String** |  | [optional] 
+**postalCode** | **String** |  | [optional] 
+**aboutMe** | **String** |  | [optional] 
 
 

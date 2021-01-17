@@ -62,8 +62,32 @@ var Body11 = /*#__PURE__*/function () {
           obj['email'] = _ApiClient["default"].convertToType(data['email'], 'String');
         }
 
-        if (data.hasOwnProperty('password')) {
-          obj['password'] = _ApiClient["default"].convertToType(data['password'], 'String');
+        if (data.hasOwnProperty('company')) {
+          obj['company'] = _ApiClient["default"].convertToType(data['company'], 'String');
+        }
+
+        if (data.hasOwnProperty('education')) {
+          obj['education'] = _ApiClient["default"].convertToType(data['education'], 'String');
+        }
+
+        if (data.hasOwnProperty('address')) {
+          obj['address'] = _ApiClient["default"].convertToType(data['address'], 'String');
+        }
+
+        if (data.hasOwnProperty('city')) {
+          obj['city'] = _ApiClient["default"].convertToType(data['city'], 'String');
+        }
+
+        if (data.hasOwnProperty('country')) {
+          obj['country'] = _ApiClient["default"].convertToType(data['country'], 'String');
+        }
+
+        if (data.hasOwnProperty('postalCode')) {
+          obj['postalCode'] = _ApiClient["default"].convertToType(data['postalCode'], 'String');
+        }
+
+        if (data.hasOwnProperty('aboutMe')) {
+          obj['aboutMe'] = _ApiClient["default"].convertToType(data['aboutMe'], 'String');
         }
       }
 
@@ -86,10 +110,39 @@ Body11.prototype['name'] = undefined;
 
 Body11.prototype['email'] = undefined;
 /**
- * At least one number and one letter
- * @member {String} password
+ * @member {String} company
  */
 
-Body11.prototype['password'] = undefined;
+Body11.prototype['company'] = undefined;
+/**
+ * @member {String} education
+ */
+
+Body11.prototype['education'] = undefined;
+/**
+ * @member {String} address
+ */
+
+Body11.prototype['address'] = undefined;
+/**
+ * @member {String} city
+ */
+
+Body11.prototype['city'] = undefined;
+/**
+ * @member {String} country
+ */
+
+Body11.prototype['country'] = undefined;
+/**
+ * @member {String} postalCode
+ */
+
+Body11.prototype['postalCode'] = undefined;
+/**
+ * @member {String} aboutMe
+ */
+
+Body11.prototype['aboutMe'] = undefined;
 var _default = Body11;
 exports["default"] = _default;

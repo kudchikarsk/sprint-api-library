@@ -73,6 +73,34 @@ var User = /*#__PURE__*/function () {
         if (data.hasOwnProperty('image')) {
           obj['image'] = _ApiClient["default"].convertToType(data['image'], 'String');
         }
+
+        if (data.hasOwnProperty('company')) {
+          obj['company'] = _ApiClient["default"].convertToType(data['company'], 'String');
+        }
+
+        if (data.hasOwnProperty('education')) {
+          obj['education'] = _ApiClient["default"].convertToType(data['education'], 'String');
+        }
+
+        if (data.hasOwnProperty('address')) {
+          obj['address'] = _ApiClient["default"].convertToType(data['address'], 'String');
+        }
+
+        if (data.hasOwnProperty('city')) {
+          obj['city'] = _ApiClient["default"].convertToType(data['city'], 'String');
+        }
+
+        if (data.hasOwnProperty('country')) {
+          obj['country'] = _ApiClient["default"].convertToType(data['country'], 'String');
+        }
+
+        if (data.hasOwnProperty('postalCode')) {
+          obj['postalCode'] = _ApiClient["default"].convertToType(data['postalCode'], 'String');
+        }
+
+        if (data.hasOwnProperty('aboutMe')) {
+          obj['aboutMe'] = _ApiClient["default"].convertToType(data['aboutMe'], 'String');
+        }
       }
 
       return obj;
@@ -107,6 +135,41 @@ User.prototype['role'] = undefined;
  */
 
 User.prototype['image'] = undefined;
+/**
+ * @member {String} company
+ */
+
+User.prototype['company'] = undefined;
+/**
+ * @member {String} education
+ */
+
+User.prototype['education'] = undefined;
+/**
+ * @member {String} address
+ */
+
+User.prototype['address'] = undefined;
+/**
+ * @member {String} city
+ */
+
+User.prototype['city'] = undefined;
+/**
+ * @member {String} country
+ */
+
+User.prototype['country'] = undefined;
+/**
+ * @member {String} postalCode
+ */
+
+User.prototype['postalCode'] = undefined;
+/**
+ * @member {String} aboutMe
+ */
+
+User.prototype['aboutMe'] = undefined;
 /**
  * Allowed values for the <code>role</code> property.
  * @enum {String}

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## backlogsGet
 
-> InlineResponse200 backlogsGet(opts)
+> InlineResponse200 backlogsGet(teamId, opts)
 
 Get all backlogs
 
@@ -30,13 +30,14 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.BacklogsApi();
+let teamId = "teamId_example"; // String | Team id
 let opts = {
-  'name': "name_example", // String | Backlog name *
+  'name': "name_example", // String | Backlog name
   'sortBy': "sortBy_example", // String | sort by query in the form of field:desc/asc (ex. name:asc)
   'limit': 56, // Number | Maximum number of backlogs
   'page': 1 // Number | Page number
 };
-apiInstance.backlogsGet(opts).then((data) => {
+apiInstance.backlogsGet(teamId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -49,7 +50,8 @@ apiInstance.backlogsGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **String**| Backlog name * | [optional] 
+ **teamId** | **String**| Team id | 
+ **name** | **String**| Backlog name | [optional] 
  **sortBy** | **String**| sort by query in the form of field:desc/asc (ex. name:asc) | [optional] 
  **limit** | **Number**| Maximum number of backlogs | [optional] 
  **page** | **Number**| Page number | [optional] [default to 1]

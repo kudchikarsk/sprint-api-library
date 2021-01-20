@@ -46,8 +46,9 @@ var BacklogsApi = /*#__PURE__*/function () {
   /**
    * Get all backlogs
    * Only admins can retrieve all backlogs.
+   * @param {String} teamId Team id
    * @param {Object} opts Optional parameters
-   * @param {String} opts.name Backlog name *
+   * @param {String} opts.name Backlog name
    * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
    * @param {Number} opts.limit Maximum number of backlogs
    * @param {Number} opts.page Page number (default to 1)
@@ -57,11 +58,17 @@ var BacklogsApi = /*#__PURE__*/function () {
 
   _createClass(BacklogsApi, [{
     key: "backlogsGetWithHttpInfo",
-    value: function backlogsGetWithHttpInfo(opts) {
+    value: function backlogsGetWithHttpInfo(teamId, opts) {
       opts = opts || {};
-      var postBody = null;
+      var postBody = null; // verify the required parameter 'teamId' is set
+
+      if (teamId === undefined || teamId === null) {
+        throw new _Error["default"]("Missing the required parameter 'teamId' when calling backlogsGet");
+      }
+
       var pathParams = {};
       var queryParams = {
+        'teamId': teamId,
         'name': opts['name'],
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
@@ -78,8 +85,9 @@ var BacklogsApi = /*#__PURE__*/function () {
     /**
      * Get all backlogs
      * Only admins can retrieve all backlogs.
+     * @param {String} teamId Team id
      * @param {Object} opts Optional parameters
-     * @param {String} opts.name Backlog name *
+     * @param {String} opts.name Backlog name
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of backlogs
      * @param {Number} opts.page Page number (default to 1)
@@ -88,8 +96,8 @@ var BacklogsApi = /*#__PURE__*/function () {
 
   }, {
     key: "backlogsGet",
-    value: function backlogsGet(opts) {
-      return this.backlogsGetWithHttpInfo(opts).then(function (response_and_data) {
+    value: function backlogsGet(teamId, opts) {
+      return this.backlogsGetWithHttpInfo(teamId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

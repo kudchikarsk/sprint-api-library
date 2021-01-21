@@ -22,14 +22,10 @@ class Body10 {
     /**
      * Constructs a new <code>Body10</code>.
      * @alias module:model/Body10
-     * @param name {String} 
-     * @param email {String} must be unique
-     * @param password {String} At least one number and one letter
-     * @param role {module:model/Body10.RoleEnum} 
      */
-    constructor(name, email, password, role) { 
+    constructor() { 
         
-        Body10.initialize(this, name, email, password, role);
+        Body10.initialize(this);
     }
 
     /**
@@ -37,11 +33,7 @@ class Body10 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, email, password, role) { 
-        obj['name'] = name;
-        obj['email'] = email;
-        obj['password'] = password;
-        obj['role'] = role;
+    static initialize(obj) { 
     }
 
     /**
@@ -58,14 +50,8 @@ class Body10 {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'String');
-            }
-            if (data.hasOwnProperty('password')) {
-                obj['password'] = ApiClient.convertToType(data['password'], 'String');
-            }
-            if (data.hasOwnProperty('role')) {
-                obj['role'] = ApiClient.convertToType(data['role'], 'String');
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
         }
         return obj;
@@ -80,45 +66,12 @@ class Body10 {
 Body10.prototype['name'] = undefined;
 
 /**
- * must be unique
- * @member {String} email
+ * @member {String} description
  */
-Body10.prototype['email'] = undefined;
-
-/**
- * At least one number and one letter
- * @member {String} password
- */
-Body10.prototype['password'] = undefined;
-
-/**
- * @member {module:model/Body10.RoleEnum} role
- */
-Body10.prototype['role'] = undefined;
+Body10.prototype['description'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>role</code> property.
- * @enum {String}
- * @readonly
- */
-Body10['RoleEnum'] = {
-
-    /**
-     * value: "user"
-     * @const
-     */
-    "user": "user",
-
-    /**
-     * value: "admin"
-     * @const
-     */
-    "admin": "admin"
-};
 
 
 

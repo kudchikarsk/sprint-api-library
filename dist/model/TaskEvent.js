@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _Task = _interopRequireDefault(require("./Task"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -16,20 +18,19 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 /**
- * The Body9 model module.
- * @module model/Body9
+ * The TaskEvent model module.
+ * @module model/TaskEvent
  * @version 1.6.0
  */
-var Body9 = /*#__PURE__*/function () {
+var TaskEvent = /*#__PURE__*/function () {
   /**
-   * Constructs a new <code>Body9</code>.
-   * @alias module:model/Body9
-   * @param name {String} 
+   * Constructs a new <code>TaskEvent</code>.
+   * @alias module:model/TaskEvent
    */
-  function Body9(name) {
-    _classCallCheck(this, Body9);
+  function TaskEvent() {
+    _classCallCheck(this, TaskEvent);
 
-    Body9.initialize(this, name);
+    TaskEvent.initialize(this);
   }
   /**
    * Initializes the fields of this object.
@@ -38,31 +39,33 @@ var Body9 = /*#__PURE__*/function () {
    */
 
 
-  _createClass(Body9, null, [{
+  _createClass(TaskEvent, null, [{
     key: "initialize",
-    value: function initialize(obj, name) {
-      obj['name'] = name;
-    }
+    value: function initialize(obj) {}
     /**
-     * Constructs a <code>Body9</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>TaskEvent</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Body9} obj Optional instance to populate.
-     * @return {module:model/Body9} The populated <code>Body9</code> instance.
+     * @param {module:model/TaskEvent} obj Optional instance to populate.
+     * @return {module:model/TaskEvent} The populated <code>TaskEvent</code> instance.
      */
 
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
-        obj = obj || new Body9();
+        obj = obj || new TaskEvent();
 
-        if (data.hasOwnProperty('name')) {
-          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
+        if (data.hasOwnProperty('type')) {
+          obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
         }
 
-        if (data.hasOwnProperty('description')) {
-          obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
+        if (data.hasOwnProperty('tid')) {
+          obj['tid'] = _ApiClient["default"].convertToType(data['tid'], 'String');
+        }
+
+        if (data.hasOwnProperty('data')) {
+          obj['data'] = _Task["default"].constructFromObject(data['data']);
         }
       }
 
@@ -70,18 +73,23 @@ var Body9 = /*#__PURE__*/function () {
     }
   }]);
 
-  return Body9;
+  return TaskEvent;
 }();
 /**
- * @member {String} name
+ * @member {String} type
  */
 
 
-Body9.prototype['name'] = undefined;
+TaskEvent.prototype['type'] = undefined;
 /**
- * @member {String} description
+ * @member {String} tid
  */
 
-Body9.prototype['description'] = undefined;
-var _default = Body9;
+TaskEvent.prototype['tid'] = undefined;
+/**
+ * @member {module:model/Task} data
+ */
+
+TaskEvent.prototype['data'] = undefined;
+var _default = TaskEvent;
 exports["default"] = _default;

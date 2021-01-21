@@ -7,9 +7,9 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Body = _interopRequireDefault(require("../model/Body10"));
+var _Body = _interopRequireDefault(require("../model/Body11"));
 
-var _Body2 = _interopRequireDefault(require("../model/Body11"));
+var _Body2 = _interopRequireDefault(require("../model/Body12"));
 
 var _Error = _interopRequireDefault(require("../model/Error"));
 
@@ -184,22 +184,22 @@ var UsersApi = /*#__PURE__*/function () {
      * Update a user
      * Logged in users can only update their own information. Only admins can update other users.
      * @param {String} id User id
-     * @param {module:model/Body11} Body11 
+     * @param {module:model/Body12} Body12 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
 
   }, {
     key: "usersIdPatchWithHttpInfo",
-    value: function usersIdPatchWithHttpInfo(id, Body11) {
-      var postBody = Body11; // verify the required parameter 'id' is set
+    value: function usersIdPatchWithHttpInfo(id, Body12) {
+      var postBody = Body12; // verify the required parameter 'id' is set
 
       if (id === undefined || id === null) {
         throw new _Error["default"]("Missing the required parameter 'id' when calling usersIdPatch");
-      } // verify the required parameter 'Body11' is set
+      } // verify the required parameter 'Body12' is set
 
 
-      if (Body11 === undefined || Body11 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body11' when calling usersIdPatch");
+      if (Body12 === undefined || Body12 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body12' when calling usersIdPatch");
       }
 
       var pathParams = {
@@ -218,31 +218,31 @@ var UsersApi = /*#__PURE__*/function () {
      * Update a user
      * Logged in users can only update their own information. Only admins can update other users.
      * @param {String} id User id
-     * @param {module:model/Body11} Body11 
+     * @param {module:model/Body12} Body12 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
 
   }, {
     key: "usersIdPatch",
-    value: function usersIdPatch(id, Body11) {
-      return this.usersIdPatchWithHttpInfo(id, Body11).then(function (response_and_data) {
+    value: function usersIdPatch(id, Body12) {
+      return this.usersIdPatchWithHttpInfo(id, Body12).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Create a user
      * Only admins can create other users.
-     * @param {module:model/Body10} Body10 
+     * @param {module:model/Body11} Body11 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
 
   }, {
     key: "usersPostWithHttpInfo",
-    value: function usersPostWithHttpInfo(Body10) {
-      var postBody = Body10; // verify the required parameter 'Body10' is set
+    value: function usersPostWithHttpInfo(Body11) {
+      var postBody = Body11; // verify the required parameter 'Body11' is set
 
-      if (Body10 === undefined || Body10 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body10' when calling usersPost");
+      if (Body11 === undefined || Body11 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body11' when calling usersPost");
       }
 
       var pathParams = {};
@@ -258,14 +258,14 @@ var UsersApi = /*#__PURE__*/function () {
     /**
      * Create a user
      * Only admins can create other users.
-     * @param {module:model/Body10} Body10 
+     * @param {module:model/Body11} Body11 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
 
   }, {
     key: "usersPost",
-    value: function usersPost(Body10) {
-      return this.usersPostWithHttpInfo(Body10).then(function (response_and_data) {
+    value: function usersPost(Body11) {
+      return this.usersPostWithHttpInfo(Body11).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

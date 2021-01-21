@@ -10,6 +10,7 @@ docs/Body.md
 docs/Body1.md
 docs/Body10.md
 docs/Body11.md
+docs/Body12.md
 docs/Body2.md
 docs/Body3.md
 docs/Body4.md
@@ -23,6 +24,9 @@ docs/InlineResponse200.md
 docs/InlineResponse2001.md
 docs/InlineResponse2002.md
 docs/InlineResponse201.md
+docs/Task.md
+docs/TaskEvent.md
+docs/TasksApi.md
 docs/Team.md
 docs/TeamsApi.md
 docs/Token.md
@@ -34,6 +38,7 @@ package.json
 src/ApiClient.js
 src/api/AuthApi.js
 src/api/BacklogsApi.js
+src/api/TasksApi.js
 src/api/TeamsApi.js
 src/api/UsersApi.js
 src/index.js
@@ -43,6 +48,7 @@ src/model/Body.js
 src/model/Body1.js
 src/model/Body10.js
 src/model/Body11.js
+src/model/Body12.js
 src/model/Body2.js
 src/model/Body3.js
 src/model/Body4.js
@@ -56,6 +62,12 @@ src/model/InlineResponse200.js
 src/model/InlineResponse2001.js
 src/model/InlineResponse2002.js
 src/model/InlineResponse201.js
+src/model/Task.js
+src/model/TaskEvent.js
 src/model/Team.js
 src/model/Token.js
 src/model/User.js
+test/api/TasksApi.spec.js
+test/model/Body12.spec.js
+test/model/Task.spec.js
+test/model/TaskEvent.spec.js

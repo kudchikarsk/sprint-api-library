@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _Task = _interopRequireDefault(require("./Task"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24,12 +26,14 @@ var Body8 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body8</code>.
    * @alias module:model/Body8
-   * @param name {String} 
+   * @param type {String} 
+   * @param tid {String} 
+   * @param data {module:model/Task} 
    */
-  function Body8(name) {
+  function Body8(type, tid, data) {
     _classCallCheck(this, Body8);
 
-    Body8.initialize(this, name);
+    Body8.initialize(this, type, tid, data);
   }
   /**
    * Initializes the fields of this object.
@@ -40,8 +44,10 @@ var Body8 = /*#__PURE__*/function () {
 
   _createClass(Body8, null, [{
     key: "initialize",
-    value: function initialize(obj, name) {
-      obj['name'] = name;
+    value: function initialize(obj, type, tid, data) {
+      obj['type'] = type;
+      obj['tid'] = tid;
+      obj['data'] = data;
     }
     /**
      * Constructs a <code>Body8</code> from a plain JavaScript object, optionally creating a new instance.
@@ -57,12 +63,16 @@ var Body8 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Body8();
 
-        if (data.hasOwnProperty('name')) {
-          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
+        if (data.hasOwnProperty('type')) {
+          obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
         }
 
-        if (data.hasOwnProperty('description')) {
-          obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
+        if (data.hasOwnProperty('tid')) {
+          obj['tid'] = _ApiClient["default"].convertToType(data['tid'], 'String');
+        }
+
+        if (data.hasOwnProperty('data')) {
+          obj['data'] = _Task["default"].constructFromObject(data['data']);
         }
       }
 
@@ -73,15 +83,20 @@ var Body8 = /*#__PURE__*/function () {
   return Body8;
 }();
 /**
- * @member {String} name
+ * @member {String} type
  */
 
 
-Body8.prototype['name'] = undefined;
+Body8.prototype['type'] = undefined;
 /**
- * @member {String} description
+ * @member {String} tid
  */
 
-Body8.prototype['description'] = undefined;
+Body8.prototype['tid'] = undefined;
+/**
+ * @member {module:model/Task} data
+ */
+
+Body8.prototype['data'] = undefined;
 var _default = Body8;
 exports["default"] = _default;

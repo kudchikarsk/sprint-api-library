@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | 
-**description** | **String** |  | [optional] 
+**type** | **String** |  | 
+**tid** | **String** |  | 
+**data** | [**Task**](Task.md) |  | 
 
 

@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *SprintService.BacklogsApi* | [**backlogsIdGet**](docs/BacklogsApi.md#backlogsIdGet) | **GET** /backlogs/{id} | Get a backlog
 *SprintService.BacklogsApi* | [**backlogsIdPatch**](docs/BacklogsApi.md#backlogsIdPatch) | **PATCH** /backlogs/{id} | Update a backlog
 *SprintService.BacklogsApi* | [**backlogsPost**](docs/BacklogsApi.md#backlogsPost) | **POST** /backlogs | Create a backlog
+*SprintService.TasksApi* | [**tasksPost**](docs/TasksApi.md#tasksPost) | **POST** /tasks | Create a task event
 *SprintService.TeamsApi* | [**teamsGet**](docs/TeamsApi.md#teamsGet) | **GET** /teams | Get all teams
 *SprintService.TeamsApi* | [**teamsIdDelete**](docs/TeamsApi.md#teamsIdDelete) | **DELETE** /teams/{id} | Delete a team
 *SprintService.TeamsApi* | [**teamsIdGet**](docs/TeamsApi.md#teamsIdGet) | **GET** /teams/{id} | Get a team
@@ -149,6 +150,7 @@ Class | Method | HTTP request | Description
  - [SprintService.Body1](docs/Body1.md)
  - [SprintService.Body10](docs/Body10.md)
  - [SprintService.Body11](docs/Body11.md)
+ - [SprintService.Body12](docs/Body12.md)
  - [SprintService.Body2](docs/Body2.md)
  - [SprintService.Body3](docs/Body3.md)
  - [SprintService.Body4](docs/Body4.md)
@@ -162,6 +164,8 @@ Class | Method | HTTP request | Description
  - [SprintService.InlineResponse2001](docs/InlineResponse2001.md)
  - [SprintService.InlineResponse2002](docs/InlineResponse2002.md)
  - [SprintService.InlineResponse201](docs/InlineResponse201.md)
+ - [SprintService.Task](docs/Task.md)
+ - [SprintService.TaskEvent](docs/TaskEvent.md)
  - [SprintService.Team](docs/Team.md)
  - [SprintService.Token](docs/Token.md)
  - [SprintService.User](docs/User.md)

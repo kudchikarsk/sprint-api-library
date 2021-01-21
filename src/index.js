@@ -19,6 +19,7 @@ import Body from './model/Body';
 import Body1 from './model/Body1';
 import Body10 from './model/Body10';
 import Body11 from './model/Body11';
+import Body12 from './model/Body12';
 import Body2 from './model/Body2';
 import Body3 from './model/Body3';
 import Body4 from './model/Body4';
@@ -32,11 +33,14 @@ import InlineResponse200 from './model/InlineResponse200';
 import InlineResponse2001 from './model/InlineResponse2001';
 import InlineResponse2002 from './model/InlineResponse2002';
 import InlineResponse201 from './model/InlineResponse201';
+import Task from './model/Task';
+import TaskEvent from './model/TaskEvent';
 import Team from './model/Team';
 import Token from './model/Token';
 import User from './model/User';
 import AuthApi from './api/AuthApi';
 import BacklogsApi from './api/BacklogsApi';
+import TasksApi from './api/TasksApi';
 import TeamsApi from './api/TeamsApi';
 import UsersApi from './api/UsersApi';
 
@@ -114,6 +118,12 @@ export {
      * @property {module:model/Body11}
      */
     Body11,
+
+    /**
+     * The Body12 model constructor.
+     * @property {module:model/Body12}
+     */
+    Body12,
 
     /**
      * The Body2 model constructor.
@@ -194,6 +204,18 @@ export {
     InlineResponse201,
 
     /**
+     * The Task model constructor.
+     * @property {module:model/Task}
+     */
+    Task,
+
+    /**
+     * The TaskEvent model constructor.
+     * @property {module:model/TaskEvent}
+     */
+    TaskEvent,
+
+    /**
      * The Team model constructor.
      * @property {module:model/Team}
      */
@@ -222,6 +244,12 @@ export {
     * @property {module:api/BacklogsApi}
     */
     BacklogsApi,
+
+    /**
+    * The TasksApi service constructor.
+    * @property {module:api/TasksApi}
+    */
+    TasksApi,
 
     /**
     * The TeamsApi service constructor.

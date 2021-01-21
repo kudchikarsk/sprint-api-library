@@ -16,20 +16,19 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 /**
- * The Body9 model module.
- * @module model/Body9
+ * The Task model module.
+ * @module model/Task
  * @version 1.6.0
  */
-var Body9 = /*#__PURE__*/function () {
+var Task = /*#__PURE__*/function () {
   /**
-   * Constructs a new <code>Body9</code>.
-   * @alias module:model/Body9
-   * @param name {String} 
+   * Constructs a new <code>Task</code>.
+   * @alias module:model/Task
    */
-  function Body9(name) {
-    _classCallCheck(this, Body9);
+  function Task() {
+    _classCallCheck(this, Task);
 
-    Body9.initialize(this, name);
+    Task.initialize(this);
   }
   /**
    * Initializes the fields of this object.
@@ -38,31 +37,41 @@ var Body9 = /*#__PURE__*/function () {
    */
 
 
-  _createClass(Body9, null, [{
+  _createClass(Task, null, [{
     key: "initialize",
-    value: function initialize(obj, name) {
-      obj['name'] = name;
-    }
+    value: function initialize(obj) {}
     /**
-     * Constructs a <code>Body9</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>Task</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Body9} obj Optional instance to populate.
-     * @return {module:model/Body9} The populated <code>Body9</code> instance.
+     * @param {module:model/Task} obj Optional instance to populate.
+     * @return {module:model/Task} The populated <code>Task</code> instance.
      */
 
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
-        obj = obj || new Body9();
+        obj = obj || new Task();
 
-        if (data.hasOwnProperty('name')) {
-          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
+        if (data.hasOwnProperty('backlogId')) {
+          obj['backlogId'] = _ApiClient["default"].convertToType(data['backlogId'], 'String');
+        }
+
+        if (data.hasOwnProperty('title')) {
+          obj['title'] = _ApiClient["default"].convertToType(data['title'], 'String');
         }
 
         if (data.hasOwnProperty('description')) {
           obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
+        }
+
+        if (data.hasOwnProperty('status')) {
+          obj['status'] = _ApiClient["default"].convertToType(data['status'], 'String');
+        }
+
+        if (data.hasOwnProperty('owners')) {
+          obj['owners'] = _ApiClient["default"].convertToType(data['owners'], ['String']);
         }
       }
 
@@ -70,18 +79,33 @@ var Body9 = /*#__PURE__*/function () {
     }
   }]);
 
-  return Body9;
+  return Task;
 }();
 /**
- * @member {String} name
+ * @member {String} backlogId
  */
 
 
-Body9.prototype['name'] = undefined;
+Task.prototype['backlogId'] = undefined;
+/**
+ * @member {String} title
+ */
+
+Task.prototype['title'] = undefined;
 /**
  * @member {String} description
  */
 
-Body9.prototype['description'] = undefined;
-var _default = Body9;
+Task.prototype['description'] = undefined;
+/**
+ * @member {String} status
+ */
+
+Task.prototype['status'] = undefined;
+/**
+ * @member {Array.<String>} owners
+ */
+
+Task.prototype['owners'] = undefined;
+var _default = Task;
 exports["default"] = _default;

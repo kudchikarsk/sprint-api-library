@@ -15,21 +15,18 @@ import ApiClient from '../ApiClient';
 import Task from './Task';
 
 /**
- * The Body8 model module.
- * @module model/Body8
+ * The TaskEvent model module.
+ * @module model/TaskEvent
  * @version 1.6.0
  */
-class Body8 {
+class TaskEvent {
     /**
-     * Constructs a new <code>Body8</code>.
-     * @alias module:model/Body8
-     * @param type {String} 
-     * @param tid {String} 
-     * @param data {module:model/Task} 
+     * Constructs a new <code>TaskEvent</code>.
+     * @alias module:model/TaskEvent
      */
-    constructor(type, tid, data) { 
+    constructor() { 
         
-        Body8.initialize(this, type, tid, data);
+        TaskEvent.initialize(this);
     }
 
     /**
@@ -37,22 +34,19 @@ class Body8 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type, tid, data) { 
-        obj['type'] = type;
-        obj['tid'] = tid;
-        obj['data'] = data;
+    static initialize(obj) { 
     }
 
     /**
-     * Constructs a <code>Body8</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>TaskEvent</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Body8} obj Optional instance to populate.
-     * @return {module:model/Body8} The populated <code>Body8</code> instance.
+     * @param {module:model/TaskEvent} obj Optional instance to populate.
+     * @return {module:model/TaskEvent} The populated <code>TaskEvent</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Body8();
+            obj = obj || new TaskEvent();
 
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -73,22 +67,22 @@ class Body8 {
 /**
  * @member {String} type
  */
-Body8.prototype['type'] = undefined;
+TaskEvent.prototype['type'] = undefined;
 
 /**
  * @member {String} tid
  */
-Body8.prototype['tid'] = undefined;
+TaskEvent.prototype['tid'] = undefined;
 
 /**
  * @member {module:model/Task} data
  */
-Body8.prototype['data'] = undefined;
+TaskEvent.prototype['data'] = undefined;
 
 
 
 
 
 
-export default Body8;
+export default TaskEvent;
 

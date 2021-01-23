@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import User from './User';
 
 /**
  * The Team model module.
@@ -56,6 +57,9 @@ class Team {
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
+            if (data.hasOwnProperty('members')) {
+                obj['members'] = ApiClient.convertToType(data['members'], [User]);
+            }
         }
         return obj;
     }
@@ -77,6 +81,11 @@ Team.prototype['name'] = undefined;
  * @member {String} description
  */
 Team.prototype['description'] = undefined;
+
+/**
+ * @member {Array.<module:model/User>} members
+ */
+Team.prototype['members'] = undefined;
 
 
 

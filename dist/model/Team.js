@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _User = _interopRequireDefault(require("./User"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -65,6 +67,10 @@ var Team = /*#__PURE__*/function () {
         if (data.hasOwnProperty('description')) {
           obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
+
+        if (data.hasOwnProperty('members')) {
+          obj['members'] = _ApiClient["default"].convertToType(data['members'], [_User["default"]]);
+        }
       }
 
       return obj;
@@ -89,5 +95,10 @@ Team.prototype['name'] = undefined;
  */
 
 Team.prototype['description'] = undefined;
+/**
+ * @member {Array.<module:model/User>} members
+ */
+
+Team.prototype['members'] = undefined;
 var _default = Team;
 exports["default"] = _default;

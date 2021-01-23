@@ -60,8 +60,8 @@ var TaskEvent = /*#__PURE__*/function () {
           obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
         }
 
-        if (data.hasOwnProperty('tid')) {
-          obj['tid'] = _ApiClient["default"].convertToType(data['tid'], 'String');
+        if (data.hasOwnProperty('taskId')) {
+          obj['taskId'] = _ApiClient["default"].convertToType(data['taskId'], 'String');
         }
 
         if (data.hasOwnProperty('data')) {
@@ -82,10 +82,10 @@ var TaskEvent = /*#__PURE__*/function () {
 
 TaskEvent.prototype['type'] = undefined;
 /**
- * @member {String} tid
+ * @member {String} taskId
  */
 
-TaskEvent.prototype['tid'] = undefined;
+TaskEvent.prototype['taskId'] = undefined;
 /**
  * @member {module:model/Task} data
  */

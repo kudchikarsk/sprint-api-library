@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** |  | 
-**tid** | **String** |  | 
+**taskId** | **String** |  | 
 **data** | [**Task**](Task.md) |  | 
 
 

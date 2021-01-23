@@ -24,12 +24,12 @@ class Body8 {
      * Constructs a new <code>Body8</code>.
      * @alias module:model/Body8
      * @param type {String} 
-     * @param tid {String} 
+     * @param taskId {String} 
      * @param data {module:model/Task} 
      */
-    constructor(type, tid, data) { 
+    constructor(type, taskId, data) { 
         
-        Body8.initialize(this, type, tid, data);
+        Body8.initialize(this, type, taskId, data);
     }
 
     /**
@@ -37,9 +37,9 @@ class Body8 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type, tid, data) { 
+    static initialize(obj, type, taskId, data) { 
         obj['type'] = type;
-        obj['tid'] = tid;
+        obj['taskId'] = taskId;
         obj['data'] = data;
     }
 
@@ -57,8 +57,8 @@ class Body8 {
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
-            if (data.hasOwnProperty('tid')) {
-                obj['tid'] = ApiClient.convertToType(data['tid'], 'String');
+            if (data.hasOwnProperty('taskId')) {
+                obj['taskId'] = ApiClient.convertToType(data['taskId'], 'String');
             }
             if (data.hasOwnProperty('data')) {
                 obj['data'] = Task.constructFromObject(data['data']);
@@ -76,9 +76,9 @@ class Body8 {
 Body8.prototype['type'] = undefined;
 
 /**
- * @member {String} tid
+ * @member {String} taskId
  */
-Body8.prototype['tid'] = undefined;
+Body8.prototype['taskId'] = undefined;
 
 /**
  * @member {module:model/Task} data

@@ -27,13 +27,13 @@ var Body8 = /*#__PURE__*/function () {
    * Constructs a new <code>Body8</code>.
    * @alias module:model/Body8
    * @param type {String} 
-   * @param tid {String} 
+   * @param taskId {String} 
    * @param data {module:model/Task} 
    */
-  function Body8(type, tid, data) {
+  function Body8(type, taskId, data) {
     _classCallCheck(this, Body8);
 
-    Body8.initialize(this, type, tid, data);
+    Body8.initialize(this, type, taskId, data);
   }
   /**
    * Initializes the fields of this object.
@@ -44,9 +44,9 @@ var Body8 = /*#__PURE__*/function () {
 
   _createClass(Body8, null, [{
     key: "initialize",
-    value: function initialize(obj, type, tid, data) {
+    value: function initialize(obj, type, taskId, data) {
       obj['type'] = type;
-      obj['tid'] = tid;
+      obj['taskId'] = taskId;
       obj['data'] = data;
     }
     /**
@@ -67,8 +67,8 @@ var Body8 = /*#__PURE__*/function () {
           obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
         }
 
-        if (data.hasOwnProperty('tid')) {
-          obj['tid'] = _ApiClient["default"].convertToType(data['tid'], 'String');
+        if (data.hasOwnProperty('taskId')) {
+          obj['taskId'] = _ApiClient["default"].convertToType(data['taskId'], 'String');
         }
 
         if (data.hasOwnProperty('data')) {
@@ -89,10 +89,10 @@ var Body8 = /*#__PURE__*/function () {
 
 Body8.prototype['type'] = undefined;
 /**
- * @member {String} tid
+ * @member {String} taskId
  */
 
-Body8.prototype['tid'] = undefined;
+Body8.prototype['taskId'] = undefined;
 /**
  * @member {module:model/Task} data
  */

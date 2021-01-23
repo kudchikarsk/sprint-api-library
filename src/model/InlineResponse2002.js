@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import User from './User';
+import Team from './Team';
 
 /**
  * The InlineResponse2002 model module.
@@ -49,7 +49,7 @@ class InlineResponse2002 {
             obj = obj || new InlineResponse2002();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [User]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Team]);
             }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -71,7 +71,7 @@ class InlineResponse2002 {
 }
 
 /**
- * @member {Array.<module:model/User>} results
+ * @member {Array.<module:model/Team>} results
  */
 InlineResponse2002.prototype['results'] = undefined;
 

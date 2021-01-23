@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Task = _interopRequireDefault(require("./Task"));
+var _User = _interopRequireDefault(require("./User"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -18,19 +18,19 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 /**
- * The InlineResponse2001 model module.
- * @module model/InlineResponse2001
+ * The InlineResponse2003 model module.
+ * @module model/InlineResponse2003
  * @version 1.6.0
  */
-var InlineResponse2001 = /*#__PURE__*/function () {
+var InlineResponse2003 = /*#__PURE__*/function () {
   /**
-   * Constructs a new <code>InlineResponse2001</code>.
-   * @alias module:model/InlineResponse2001
+   * Constructs a new <code>InlineResponse2003</code>.
+   * @alias module:model/InlineResponse2003
    */
-  function InlineResponse2001() {
-    _classCallCheck(this, InlineResponse2001);
+  function InlineResponse2003() {
+    _classCallCheck(this, InlineResponse2003);
 
-    InlineResponse2001.initialize(this);
+    InlineResponse2003.initialize(this);
   }
   /**
    * Initializes the fields of this object.
@@ -39,25 +39,25 @@ var InlineResponse2001 = /*#__PURE__*/function () {
    */
 
 
-  _createClass(InlineResponse2001, null, [{
+  _createClass(InlineResponse2003, null, [{
     key: "initialize",
     value: function initialize(obj) {}
     /**
-     * Constructs a <code>InlineResponse2001</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>InlineResponse2003</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/InlineResponse2001} obj Optional instance to populate.
-     * @return {module:model/InlineResponse2001} The populated <code>InlineResponse2001</code> instance.
+     * @param {module:model/InlineResponse2003} obj Optional instance to populate.
+     * @return {module:model/InlineResponse2003} The populated <code>InlineResponse2003</code> instance.
      */
 
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
-        obj = obj || new InlineResponse2001();
+        obj = obj || new InlineResponse2003();
 
         if (data.hasOwnProperty('results')) {
-          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_Task["default"]]);
+          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_User["default"]]);
         }
 
         if (data.hasOwnProperty('page')) {
@@ -81,33 +81,33 @@ var InlineResponse2001 = /*#__PURE__*/function () {
     }
   }]);
 
-  return InlineResponse2001;
+  return InlineResponse2003;
 }();
 /**
- * @member {Array.<module:model/Task>} results
+ * @member {Array.<module:model/User>} results
  */
 
 
-InlineResponse2001.prototype['results'] = undefined;
+InlineResponse2003.prototype['results'] = undefined;
 /**
  * @member {Number} page
  */
 
-InlineResponse2001.prototype['page'] = undefined;
+InlineResponse2003.prototype['page'] = undefined;
 /**
  * @member {Number} limit
  */
 
-InlineResponse2001.prototype['limit'] = undefined;
+InlineResponse2003.prototype['limit'] = undefined;
 /**
  * @member {Number} totalPages
  */
 
-InlineResponse2001.prototype['totalPages'] = undefined;
+InlineResponse2003.prototype['totalPages'] = undefined;
 /**
  * @member {Number} totalResults
  */
 
-InlineResponse2001.prototype['totalResults'] = undefined;
-var _default = InlineResponse2001;
+InlineResponse2003.prototype['totalResults'] = undefined;
+var _default = InlineResponse2003;
 exports["default"] = _default;

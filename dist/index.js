@@ -123,10 +123,16 @@ Object.defineProperty(exports, "InlineResponse2002", {
     return _InlineResponse3["default"];
   }
 });
-Object.defineProperty(exports, "InlineResponse201", {
+Object.defineProperty(exports, "InlineResponse2003", {
   enumerable: true,
   get: function get() {
     return _InlineResponse4["default"];
+  }
+});
+Object.defineProperty(exports, "InlineResponse201", {
+  enumerable: true,
+  get: function get() {
+    return _InlineResponse5["default"];
   }
 });
 Object.defineProperty(exports, "Task", {
@@ -230,7 +236,9 @@ var _InlineResponse2 = _interopRequireDefault(require("./model/InlineResponse200
 
 var _InlineResponse3 = _interopRequireDefault(require("./model/InlineResponse2002"));
 
-var _InlineResponse4 = _interopRequireDefault(require("./model/InlineResponse201"));
+var _InlineResponse4 = _interopRequireDefault(require("./model/InlineResponse2003"));
+
+var _InlineResponse5 = _interopRequireDefault(require("./model/InlineResponse201"));
 
 var _Task = _interopRequireDefault(require("./model/Task"));
 

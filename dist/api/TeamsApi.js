@@ -13,7 +13,7 @@ var _Body2 = _interopRequireDefault(require("../model/Body9"));
 
 var _Error = _interopRequireDefault(require("../model/Error"));
 
-var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2001"));
+var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2002"));
 
 var _Team = _interopRequireDefault(require("../model/Team"));
 
@@ -51,7 +51,7 @@ var TeamsApi = /*#__PURE__*/function () {
    * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
    * @param {Number} opts.limit Maximum number of teams
    * @param {Number} opts.page Page number (default to 1)
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
    */
 
 
@@ -83,7 +83,7 @@ var TeamsApi = /*#__PURE__*/function () {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of teams
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
      */
 
   }, {

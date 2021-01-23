@@ -1,10 +1,10 @@
-# SprintService.InlineResponse2002
+# SprintService.InlineResponse2003
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[Team]**](Team.md) |  | [optional] 
+**results** | [**[User]**](User.md) |  | [optional] 
 **page** | **Number** |  | [optional] 
 **limit** | **Number** |  | [optional] 
 **totalPages** | **Number** |  | [optional] 

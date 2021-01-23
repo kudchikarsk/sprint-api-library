@@ -23,6 +23,7 @@ docs/Error.md
 docs/InlineResponse200.md
 docs/InlineResponse2001.md
 docs/InlineResponse2002.md
+docs/InlineResponse2003.md
 docs/InlineResponse201.md
 docs/Task.md
 docs/TaskEvent.md
@@ -61,13 +62,11 @@ src/model/Error.js
 src/model/InlineResponse200.js
 src/model/InlineResponse2001.js
 src/model/InlineResponse2002.js
+src/model/InlineResponse2003.js
 src/model/InlineResponse201.js
 src/model/Task.js
 src/model/TaskEvent.js
 src/model/Team.js
 src/model/Token.js
 src/model/User.js
-test/api/TasksApi.spec.js
-test/model/Body12.spec.js
-test/model/Task.spec.js
-test/model/TaskEvent.spec.js
+test/model/InlineResponse2003.spec.js

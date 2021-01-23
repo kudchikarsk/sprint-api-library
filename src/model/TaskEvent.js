@@ -51,8 +51,8 @@ class TaskEvent {
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
-            if (data.hasOwnProperty('tid')) {
-                obj['tid'] = ApiClient.convertToType(data['tid'], 'String');
+            if (data.hasOwnProperty('taskId')) {
+                obj['taskId'] = ApiClient.convertToType(data['taskId'], 'String');
             }
             if (data.hasOwnProperty('data')) {
                 obj['data'] = Task.constructFromObject(data['data']);
@@ -70,9 +70,9 @@ class TaskEvent {
 TaskEvent.prototype['type'] = undefined;
 
 /**
- * @member {String} tid
+ * @member {String} taskId
  */
-TaskEvent.prototype['tid'] = undefined;
+TaskEvent.prototype['taskId'] = undefined;
 
 /**
  * @member {module:model/Task} data

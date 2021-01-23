@@ -32,6 +32,7 @@ import Error from './model/Error';
 import InlineResponse200 from './model/InlineResponse200';
 import InlineResponse2001 from './model/InlineResponse2001';
 import InlineResponse2002 from './model/InlineResponse2002';
+import InlineResponse2003 from './model/InlineResponse2003';
 import InlineResponse201 from './model/InlineResponse201';
 import Task from './model/Task';
 import TaskEvent from './model/TaskEvent';
@@ -196,6 +197,12 @@ export {
      * @property {module:model/InlineResponse2002}
      */
     InlineResponse2002,
+
+    /**
+     * The InlineResponse2003 model constructor.
+     * @property {module:model/InlineResponse2003}
+     */
+    InlineResponse2003,
 
     /**
      * The InlineResponse201 model constructor.

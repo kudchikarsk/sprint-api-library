@@ -129,6 +129,7 @@ Class | Method | HTTP request | Description
 *SprintService.BacklogsApi* | [**backlogsIdGet**](docs/BacklogsApi.md#backlogsIdGet) | **GET** /backlogs/{id} | Get a backlog
 *SprintService.BacklogsApi* | [**backlogsIdPatch**](docs/BacklogsApi.md#backlogsIdPatch) | **PATCH** /backlogs/{id} | Update a backlog
 *SprintService.BacklogsApi* | [**backlogsPost**](docs/BacklogsApi.md#backlogsPost) | **POST** /backlogs | Create a backlog
+*SprintService.TasksApi* | [**tasksGet**](docs/TasksApi.md#tasksGet) | **GET** /tasks | Get all tasks
 *SprintService.TasksApi* | [**tasksPost**](docs/TasksApi.md#tasksPost) | **POST** /tasks | Create a task event
 *SprintService.TeamsApi* | [**teamsGet**](docs/TeamsApi.md#teamsGet) | **GET** /teams | Get all teams
 *SprintService.TeamsApi* | [**teamsIdDelete**](docs/TeamsApi.md#teamsIdDelete) | **DELETE** /teams/{id} | Delete a team
@@ -163,6 +164,7 @@ Class | Method | HTTP request | Description
  - [SprintService.InlineResponse200](docs/InlineResponse200.md)
  - [SprintService.InlineResponse2001](docs/InlineResponse2001.md)
  - [SprintService.InlineResponse2002](docs/InlineResponse2002.md)
+ - [SprintService.InlineResponse2003](docs/InlineResponse2003.md)
  - [SprintService.InlineResponse201](docs/InlineResponse201.md)
  - [SprintService.Task](docs/Task.md)
  - [SprintService.TaskEvent](docs/TaskEvent.md)

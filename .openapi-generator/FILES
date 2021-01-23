@@ -69,4 +69,3 @@ src/model/TaskEvent.js
 src/model/Team.js
 src/model/Token.js
 src/model/User.js
-test/model/InlineResponse2003.spec.js

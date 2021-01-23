@@ -47,6 +47,9 @@ class Task {
         if (data) {
             obj = obj || new Task();
 
+            if (data.hasOwnProperty('taskId')) {
+                obj['taskId'] = ApiClient.convertToType(data['taskId'], 'String');
+            }
             if (data.hasOwnProperty('backlogId')) {
                 obj['backlogId'] = ApiClient.convertToType(data['backlogId'], 'String');
             }
@@ -62,12 +65,32 @@ class Task {
             if (data.hasOwnProperty('owners')) {
                 obj['owners'] = ApiClient.convertToType(data['owners'], ['String']);
             }
+            if (data.hasOwnProperty('history')) {
+                obj['history'] = ApiClient.convertToType(data['history'], Object);
+            }
+            if (data.hasOwnProperty('createdAt')) {
+                obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'String');
+            }
+            if (data.hasOwnProperty('createdBy')) {
+                obj['createdBy'] = ApiClient.convertToType(data['createdBy'], 'String');
+            }
+            if (data.hasOwnProperty('updatedAt')) {
+                obj['updatedAt'] = ApiClient.convertToType(data['updatedAt'], 'String');
+            }
+            if (data.hasOwnProperty('updatedBy')) {
+                obj['updatedBy'] = ApiClient.convertToType(data['updatedBy'], 'String');
+            }
         }
         return obj;
     }
 
 
 }
+
+/**
+ * @member {String} taskId
+ */
+Task.prototype['taskId'] = undefined;
 
 /**
  * @member {String} backlogId
@@ -93,6 +116,31 @@ Task.prototype['status'] = undefined;
  * @member {Array.<String>} owners
  */
 Task.prototype['owners'] = undefined;
+
+/**
+ * @member {Object} history
+ */
+Task.prototype['history'] = undefined;
+
+/**
+ * @member {String} createdAt
+ */
+Task.prototype['createdAt'] = undefined;
+
+/**
+ * @member {String} createdBy
+ */
+Task.prototype['createdBy'] = undefined;
+
+/**
+ * @member {String} updatedAt
+ */
+Task.prototype['updatedAt'] = undefined;
+
+/**
+ * @member {String} updatedBy
+ */
+Task.prototype['updatedBy'] = undefined;
 
 
 

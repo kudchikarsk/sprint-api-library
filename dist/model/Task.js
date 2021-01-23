@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _User = _interopRequireDefault(require("./User"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -75,7 +77,7 @@ var Task = /*#__PURE__*/function () {
         }
 
         if (data.hasOwnProperty('owners')) {
-          obj['owners'] = _ApiClient["default"].convertToType(data['owners'], ['String']);
+          obj['owners'] = _ApiClient["default"].convertToType(data['owners'], [_User["default"]]);
         }
 
         if (data.hasOwnProperty('history')) {
@@ -132,7 +134,7 @@ Task.prototype['description'] = undefined;
 
 Task.prototype['status'] = undefined;
 /**
- * @member {Array.<String>} owners
+ * @member {Array.<module:model/User>} owners
  */
 
 Task.prototype['owners'] = undefined;

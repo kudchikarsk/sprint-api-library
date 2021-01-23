@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
-**owners** | **[String]** |  | [optional] 
+**owners** | [**[User]**](User.md) |  | [optional] 
 **history** | **Object** |  | [optional] 
 **createdAt** | **String** |  | [optional] 
 **createdBy** | **String** |  | [optional] 

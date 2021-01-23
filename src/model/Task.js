@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import User from './User';
 
 /**
  * The Task model module.
@@ -63,7 +64,7 @@ class Task {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
             if (data.hasOwnProperty('owners')) {
-                obj['owners'] = ApiClient.convertToType(data['owners'], ['String']);
+                obj['owners'] = ApiClient.convertToType(data['owners'], [User]);
             }
             if (data.hasOwnProperty('history')) {
                 obj['history'] = ApiClient.convertToType(data['history'], Object);
@@ -113,7 +114,7 @@ Task.prototype['description'] = undefined;
 Task.prototype['status'] = undefined;
 
 /**
- * @member {Array.<String>} owners
+ * @member {Array.<module:model/User>} owners
  */
 Task.prototype['owners'] = undefined;
 

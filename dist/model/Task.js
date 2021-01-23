@@ -54,6 +54,10 @@ var Task = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Task();
 
+        if (data.hasOwnProperty('taskId')) {
+          obj['taskId'] = _ApiClient["default"].convertToType(data['taskId'], 'String');
+        }
+
         if (data.hasOwnProperty('backlogId')) {
           obj['backlogId'] = _ApiClient["default"].convertToType(data['backlogId'], 'String');
         }
@@ -73,6 +77,26 @@ var Task = /*#__PURE__*/function () {
         if (data.hasOwnProperty('owners')) {
           obj['owners'] = _ApiClient["default"].convertToType(data['owners'], ['String']);
         }
+
+        if (data.hasOwnProperty('history')) {
+          obj['history'] = _ApiClient["default"].convertToType(data['history'], Object);
+        }
+
+        if (data.hasOwnProperty('createdAt')) {
+          obj['createdAt'] = _ApiClient["default"].convertToType(data['createdAt'], 'String');
+        }
+
+        if (data.hasOwnProperty('createdBy')) {
+          obj['createdBy'] = _ApiClient["default"].convertToType(data['createdBy'], 'String');
+        }
+
+        if (data.hasOwnProperty('updatedAt')) {
+          obj['updatedAt'] = _ApiClient["default"].convertToType(data['updatedAt'], 'String');
+        }
+
+        if (data.hasOwnProperty('updatedBy')) {
+          obj['updatedBy'] = _ApiClient["default"].convertToType(data['updatedBy'], 'String');
+        }
       }
 
       return obj;
@@ -82,9 +106,14 @@ var Task = /*#__PURE__*/function () {
   return Task;
 }();
 /**
- * @member {String} backlogId
+ * @member {String} taskId
  */
 
+
+Task.prototype['taskId'] = undefined;
+/**
+ * @member {String} backlogId
+ */
 
 Task.prototype['backlogId'] = undefined;
 /**
@@ -107,5 +136,30 @@ Task.prototype['status'] = undefined;
  */
 
 Task.prototype['owners'] = undefined;
+/**
+ * @member {Object} history
+ */
+
+Task.prototype['history'] = undefined;
+/**
+ * @member {String} createdAt
+ */
+
+Task.prototype['createdAt'] = undefined;
+/**
+ * @member {String} createdBy
+ */
+
+Task.prototype['createdBy'] = undefined;
+/**
+ * @member {String} updatedAt
+ */
+
+Task.prototype['updatedAt'] = undefined;
+/**
+ * @member {String} updatedBy
+ */
+
+Task.prototype['updatedBy'] = undefined;
 var _default = Task;
 exports["default"] = _default;

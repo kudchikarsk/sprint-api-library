@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Get all users
 
-Only admins can retrieve all users.
+Logged in user can retrieve all users.
 
 ### Example
 
@@ -32,7 +32,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new SprintService.UsersApi();
 let opts = {
   'name': "name_example", // String | User name
-  'role': "role_example", // String | User role
+  'email': "email_example", // String | User email
   'sortBy': "sortBy_example", // String | sort by query in the form of field:desc/asc (ex. name:asc)
   'limit': 56, // Number | Maximum number of users
   'page': 1 // Number | Page number
@@ -51,7 +51,7 @@ apiInstance.usersGet(opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **String**| User name | [optional] 
- **role** | **String**| User role | [optional] 
+ **email** | **String**| User email | [optional] 
  **sortBy** | **String**| sort by query in the form of field:desc/asc (ex. name:asc) | [optional] 
  **limit** | **Number**| Maximum number of users | [optional] 
  **page** | **Number**| Page number | [optional] [default to 1]
@@ -124,7 +124,7 @@ null (empty response body)
 
 Get a user
 
-Logged in users can fetch only their own user information. Only admins can fetch other users.
+Logged in user can fetch any user information.
 
 ### Example
 

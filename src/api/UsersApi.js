@@ -41,10 +41,10 @@ export default class UsersApi {
 
     /**
      * Get all users
-     * Only admins can retrieve all users.
+     * Logged in user can retrieve all users.
      * @param {Object} opts Optional parameters
      * @param {String} opts.name User name
-     * @param {String} opts.role User role
+     * @param {String} opts.email User email
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of users
      * @param {Number} opts.page Page number (default to 1)
@@ -58,7 +58,7 @@ export default class UsersApi {
       };
       let queryParams = {
         'name': opts['name'],
-        'role': opts['role'],
+        'email': opts['email'],
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -81,10 +81,10 @@ export default class UsersApi {
 
     /**
      * Get all users
-     * Only admins can retrieve all users.
+     * Logged in user can retrieve all users.
      * @param {Object} opts Optional parameters
      * @param {String} opts.name User name
-     * @param {String} opts.role User role
+     * @param {String} opts.email User email
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of users
      * @param {Number} opts.page Page number (default to 1)
@@ -148,7 +148,7 @@ export default class UsersApi {
 
     /**
      * Get a user
-     * Logged in users can fetch only their own user information. Only admins can fetch other users.
+     * Logged in user can fetch any user information.
      * @param {String} id User id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
@@ -182,7 +182,7 @@ export default class UsersApi {
 
     /**
      * Get a user
-     * Logged in users can fetch only their own user information. Only admins can fetch other users.
+     * Logged in user can fetch any user information.
      * @param {String} id User id
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */

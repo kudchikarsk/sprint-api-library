@@ -178,6 +178,106 @@ var TeamsApi = /*#__PURE__*/function () {
       });
     }
     /**
+     * Remove a team member
+     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * @param {String} id Team id
+     * @param {String} memberId User id to invite
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: "teamsIdInviteMemberIdDeleteWithHttpInfo",
+    value: function teamsIdInviteMemberIdDeleteWithHttpInfo(id, memberId) {
+      var postBody = null; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new _Error["default"]("Missing the required parameter 'id' when calling teamsIdInviteMemberIdDelete");
+      } // verify the required parameter 'memberId' is set
+
+
+      if (memberId === undefined || memberId === null) {
+        throw new _Error["default"]("Missing the required parameter 'memberId' when calling teamsIdInviteMemberIdDelete");
+      }
+
+      var pathParams = {
+        'id': id,
+        'memberId': memberId
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['bearerAuth'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/teams/{id}/invite/{memberId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Remove a team member
+     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * @param {String} id Team id
+     * @param {String} memberId User id to invite
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: "teamsIdInviteMemberIdDelete",
+    value: function teamsIdInviteMemberIdDelete(id, memberId) {
+      return this.teamsIdInviteMemberIdDeleteWithHttpInfo(id, memberId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Invite a team member
+     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * @param {String} id Team id
+     * @param {String} memberId User id to invite
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: "teamsIdInviteMemberIdPostWithHttpInfo",
+    value: function teamsIdInviteMemberIdPostWithHttpInfo(id, memberId) {
+      var postBody = null; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new _Error["default"]("Missing the required parameter 'id' when calling teamsIdInviteMemberIdPost");
+      } // verify the required parameter 'memberId' is set
+
+
+      if (memberId === undefined || memberId === null) {
+        throw new _Error["default"]("Missing the required parameter 'memberId' when calling teamsIdInviteMemberIdPost");
+      }
+
+      var pathParams = {
+        'id': id,
+        'memberId': memberId
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['bearerAuth'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/teams/{id}/invite/{memberId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Invite a team member
+     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * @param {String} id Team id
+     * @param {String} memberId User id to invite
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: "teamsIdInviteMemberIdPost",
+    value: function teamsIdInviteMemberIdPost(id, memberId) {
+      return this.teamsIdInviteMemberIdPostWithHttpInfo(id, memberId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
      * Update a team
      * Logged in teams can only update their own information. Only admins can update other teams.
      * @param {String} id Team id

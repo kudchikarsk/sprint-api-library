@@ -192,6 +192,116 @@ export default class TeamsApi {
 
 
     /**
+     * Remove a team member
+     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * @param {String} id Team id
+     * @param {String} memberId User id to invite
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    teamsIdInviteMemberIdDeleteWithHttpInfo(id, memberId) {
+      let postBody = null;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling teamsIdInviteMemberIdDelete");
+      }
+      // verify the required parameter 'memberId' is set
+      if (memberId === undefined || memberId === null) {
+        throw new Error("Missing the required parameter 'memberId' when calling teamsIdInviteMemberIdDelete");
+      }
+
+      let pathParams = {
+        'id': id,
+        'memberId': memberId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/teams/{id}/invite/{memberId}', 'DELETE',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Remove a team member
+     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * @param {String} id Team id
+     * @param {String} memberId User id to invite
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    teamsIdInviteMemberIdDelete(id, memberId) {
+      return this.teamsIdInviteMemberIdDeleteWithHttpInfo(id, memberId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Invite a team member
+     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * @param {String} id Team id
+     * @param {String} memberId User id to invite
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    teamsIdInviteMemberIdPostWithHttpInfo(id, memberId) {
+      let postBody = null;
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling teamsIdInviteMemberIdPost");
+      }
+      // verify the required parameter 'memberId' is set
+      if (memberId === undefined || memberId === null) {
+        throw new Error("Missing the required parameter 'memberId' when calling teamsIdInviteMemberIdPost");
+      }
+
+      let pathParams = {
+        'id': id,
+        'memberId': memberId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['bearerAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/teams/{id}/invite/{memberId}', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Invite a team member
+     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * @param {String} id Team id
+     * @param {String} memberId User id to invite
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    teamsIdInviteMemberIdPost(id, memberId) {
+      return this.teamsIdInviteMemberIdPostWithHttpInfo(id, memberId)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Update a team
      * Logged in teams can only update their own information. Only admins can update other teams.
      * @param {String} id Team id

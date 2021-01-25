@@ -7,6 +7,8 @@ Method | HTTP request | Description
 [**teamsGet**](TeamsApi.md#teamsGet) | **GET** /teams | Get all teams
 [**teamsIdDelete**](TeamsApi.md#teamsIdDelete) | **DELETE** /teams/{id} | Delete a team
 [**teamsIdGet**](TeamsApi.md#teamsIdGet) | **GET** /teams/{id} | Get a team
+[**teamsIdInviteMemberIdDelete**](TeamsApi.md#teamsIdInviteMemberIdDelete) | **DELETE** /teams/{id}/invite/{memberId} | Remove a team member
+[**teamsIdInviteMemberIdPost**](TeamsApi.md#teamsIdInviteMemberIdPost) | **POST** /teams/{id}/invite/{memberId} | Invite a team member
 [**teamsIdPatch**](TeamsApi.md#teamsIdPatch) | **PATCH** /teams/{id} | Update a team
 [**teamsPost**](TeamsApi.md#teamsPost) | **POST** /teams | Create a team
 
@@ -153,6 +155,106 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Team**](Team.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## teamsIdInviteMemberIdDelete
+
+> teamsIdInviteMemberIdDelete(id, memberId)
+
+Remove a team member
+
+Logged in teams can delete only themselves. Only admins can delete other teams.
+
+### Example
+
+```javascript
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new SprintService.TeamsApi();
+let id = "id_example"; // String | Team id
+let memberId = "memberId_example"; // String | User id to invite
+apiInstance.teamsIdInviteMemberIdDelete(id, memberId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Team id | 
+ **memberId** | **String**| User id to invite | 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## teamsIdInviteMemberIdPost
+
+> teamsIdInviteMemberIdPost(id, memberId)
+
+Invite a team member
+
+Logged in teams can delete only themselves. Only admins can delete other teams.
+
+### Example
+
+```javascript
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new SprintService.TeamsApi();
+let id = "id_example"; // String | Team id
+let memberId = "memberId_example"; // String | User id to invite
+apiInstance.teamsIdInviteMemberIdPost(id, memberId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Team id | 
+ **memberId** | **String**| User id to invite | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

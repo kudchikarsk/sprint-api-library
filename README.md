@@ -134,6 +134,8 @@ Class | Method | HTTP request | Description
 *SprintService.TeamsApi* | [**teamsGet**](docs/TeamsApi.md#teamsGet) | **GET** /teams | Get all teams
 *SprintService.TeamsApi* | [**teamsIdDelete**](docs/TeamsApi.md#teamsIdDelete) | **DELETE** /teams/{id} | Delete a team
 *SprintService.TeamsApi* | [**teamsIdGet**](docs/TeamsApi.md#teamsIdGet) | **GET** /teams/{id} | Get a team
+*SprintService.TeamsApi* | [**teamsIdInviteMemberIdDelete**](docs/TeamsApi.md#teamsIdInviteMemberIdDelete) | **DELETE** /teams/{id}/invite/{memberId} | Remove a team member
+*SprintService.TeamsApi* | [**teamsIdInviteMemberIdPost**](docs/TeamsApi.md#teamsIdInviteMemberIdPost) | **POST** /teams/{id}/invite/{memberId} | Invite a team member
 *SprintService.TeamsApi* | [**teamsIdPatch**](docs/TeamsApi.md#teamsIdPatch) | **PATCH** /teams/{id} | Update a team
 *SprintService.TeamsApi* | [**teamsPost**](docs/TeamsApi.md#teamsPost) | **POST** /teams | Create a team
 *SprintService.UsersApi* | [**usersGet**](docs/UsersApi.md#usersGet) | **GET** /users | Get all users

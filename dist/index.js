@@ -177,6 +177,12 @@ Object.defineProperty(exports, "BacklogsApi", {
     return _BacklogsApi["default"];
   }
 });
+Object.defineProperty(exports, "InviteesApi", {
+  enumerable: true,
+  get: function get() {
+    return _InviteesApi["default"];
+  }
+});
 Object.defineProperty(exports, "TasksApi", {
   enumerable: true,
   get: function get() {
@@ -253,6 +259,8 @@ var _User = _interopRequireDefault(require("./model/User"));
 var _AuthApi = _interopRequireDefault(require("./api/AuthApi"));
 
 var _BacklogsApi = _interopRequireDefault(require("./api/BacklogsApi"));
+
+var _InviteesApi = _interopRequireDefault(require("./api/InviteesApi"));
 
 var _TasksApi = _interopRequireDefault(require("./api/TasksApi"));
 

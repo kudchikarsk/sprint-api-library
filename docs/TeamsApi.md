@@ -5,11 +5,10 @@ All URIs are relative to *http://localhost:3000/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**teamsGet**](TeamsApi.md#teamsGet) | **GET** /teams | Get all teams
-[**teamsIdAcceptInviteePost**](TeamsApi.md#teamsIdAcceptInviteePost) | **POST** /teams/{id}/accept/invitee | Accept a team invitee
 [**teamsIdDelete**](TeamsApi.md#teamsIdDelete) | **DELETE** /teams/{id} | Delete a team
 [**teamsIdGet**](TeamsApi.md#teamsIdGet) | **GET** /teams/{id} | Get a team
-[**teamsIdInviteMemberIdDelete**](TeamsApi.md#teamsIdInviteMemberIdDelete) | **DELETE** /teams/{id}/invite/{memberId} | Remove a team member
-[**teamsIdInviteMemberIdPost**](TeamsApi.md#teamsIdInviteMemberIdPost) | **POST** /teams/{id}/invite/{memberId} | Invite a team member
+[**teamsIdInviteUserIdDelete**](TeamsApi.md#teamsIdInviteUserIdDelete) | **DELETE** /teams/{id}/invite/{userId} | Remove a team member
+[**teamsIdInviteUserIdPost**](TeamsApi.md#teamsIdInviteUserIdPost) | **POST** /teams/{id}/invite/{userId} | Invite a team member
 [**teamsIdPatch**](TeamsApi.md#teamsIdPatch) | **PATCH** /teams/{id} | Update a team
 [**teamsPost**](TeamsApi.md#teamsPost) | **POST** /teams | Create a team
 
@@ -60,56 +59,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InlineResponse2002**](InlineResponse2002.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## teamsIdAcceptInviteePost
-
-> teamsIdAcceptInviteePost(id, memberId)
-
-Accept a team invitee
-
-User can accept team invitee
-
-### Example
-
-```javascript
-import SprintService from 'sprint_service';
-let defaultClient = SprintService.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new SprintService.TeamsApi();
-let id = "id_example"; // String | Team id
-let memberId = "memberId_example"; // String | User id to invite
-apiInstance.teamsIdAcceptInviteePost(id, memberId).then(() => {
-  console.log('API called successfully.');
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**| Team id | 
- **memberId** | **String**| User id to invite | 
-
-### Return type
-
-null (empty response body)
 
 ### Authorization
 
@@ -217,9 +166,9 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## teamsIdInviteMemberIdDelete
+## teamsIdInviteUserIdDelete
 
-> teamsIdInviteMemberIdDelete(id, memberId)
+> teamsIdInviteUserIdDelete(id, userId)
 
 Remove a team member
 
@@ -236,8 +185,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TeamsApi();
 let id = "id_example"; // String | Team id
-let memberId = "memberId_example"; // String | User id to invite
-apiInstance.teamsIdInviteMemberIdDelete(id, memberId).then(() => {
+let userId = "userId_example"; // String | User id to invite
+apiInstance.teamsIdInviteUserIdDelete(id, userId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -251,7 +200,7 @@ apiInstance.teamsIdInviteMemberIdDelete(id, memberId).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Team id | 
- **memberId** | **String**| User id to invite | 
+ **userId** | **String**| User id to invite | 
 
 ### Return type
 
@@ -267,9 +216,9 @@ null (empty response body)
 - **Accept**: application/json
 
 
-## teamsIdInviteMemberIdPost
+## teamsIdInviteUserIdPost
 
-> teamsIdInviteMemberIdPost(id, memberId)
+> teamsIdInviteUserIdPost(id, userId)
 
 Invite a team member
 
@@ -286,8 +235,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TeamsApi();
 let id = "id_example"; // String | Team id
-let memberId = "memberId_example"; // String | User id to invite
-apiInstance.teamsIdInviteMemberIdPost(id, memberId).then(() => {
+let userId = "userId_example"; // String | User id to invite
+apiInstance.teamsIdInviteUserIdPost(id, userId).then(() => {
   console.log('API called successfully.');
 }, (error) => {
   console.error(error);
@@ -301,7 +250,7 @@ apiInstance.teamsIdInviteMemberIdPost(id, memberId).then(() => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Team id | 
- **memberId** | **String**| User id to invite | 
+ **userId** | **String**| User id to invite | 
 
 ### Return type
 

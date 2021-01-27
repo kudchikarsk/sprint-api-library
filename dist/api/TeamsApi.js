@@ -94,56 +94,6 @@ var TeamsApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Accept a team invitee
-     * User can accept team invitee
-     * @param {String} id Team id
-     * @param {String} memberId User id to invite
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
-     */
-
-  }, {
-    key: "teamsIdAcceptInviteePostWithHttpInfo",
-    value: function teamsIdAcceptInviteePostWithHttpInfo(id, memberId) {
-      var postBody = null; // verify the required parameter 'id' is set
-
-      if (id === undefined || id === null) {
-        throw new _Error["default"]("Missing the required parameter 'id' when calling teamsIdAcceptInviteePost");
-      } // verify the required parameter 'memberId' is set
-
-
-      if (memberId === undefined || memberId === null) {
-        throw new _Error["default"]("Missing the required parameter 'memberId' when calling teamsIdAcceptInviteePost");
-      }
-
-      var pathParams = {
-        'id': id,
-        'memberId': memberId
-      };
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-      var authNames = ['bearerAuth'];
-      var contentTypes = [];
-      var accepts = ['application/json'];
-      var returnType = null;
-      return this.apiClient.callApi('/teams/{id}/accept/invitee', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
-    }
-    /**
-     * Accept a team invitee
-     * User can accept team invitee
-     * @param {String} id Team id
-     * @param {String} memberId User id to invite
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
-     */
-
-  }, {
-    key: "teamsIdAcceptInviteePost",
-    value: function teamsIdAcceptInviteePost(id, memberId) {
-      return this.teamsIdAcceptInviteePostWithHttpInfo(id, memberId).then(function (response_and_data) {
-        return response_and_data.data;
-      });
-    }
-    /**
      * Delete a team
      * Logged in teams can delete only themselves. Only admins can delete other teams.
      * @param {String} id Team id
@@ -231,27 +181,27 @@ var TeamsApi = /*#__PURE__*/function () {
      * Remove a team member
      * User can remove a team member
      * @param {String} id Team id
-     * @param {String} memberId User id to invite
+     * @param {String} userId User id to invite
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "teamsIdInviteMemberIdDeleteWithHttpInfo",
-    value: function teamsIdInviteMemberIdDeleteWithHttpInfo(id, memberId) {
+    key: "teamsIdInviteUserIdDeleteWithHttpInfo",
+    value: function teamsIdInviteUserIdDeleteWithHttpInfo(id, userId) {
       var postBody = null; // verify the required parameter 'id' is set
 
       if (id === undefined || id === null) {
-        throw new _Error["default"]("Missing the required parameter 'id' when calling teamsIdInviteMemberIdDelete");
-      } // verify the required parameter 'memberId' is set
+        throw new _Error["default"]("Missing the required parameter 'id' when calling teamsIdInviteUserIdDelete");
+      } // verify the required parameter 'userId' is set
 
 
-      if (memberId === undefined || memberId === null) {
-        throw new _Error["default"]("Missing the required parameter 'memberId' when calling teamsIdInviteMemberIdDelete");
+      if (userId === undefined || userId === null) {
+        throw new _Error["default"]("Missing the required parameter 'userId' when calling teamsIdInviteUserIdDelete");
       }
 
       var pathParams = {
         'id': id,
-        'memberId': memberId
+        'userId': userId
       };
       var queryParams = {};
       var headerParams = {};
@@ -260,20 +210,20 @@ var TeamsApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/teams/{id}/invite/{memberId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/teams/{id}/invite/{userId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Remove a team member
      * User can remove a team member
      * @param {String} id Team id
-     * @param {String} memberId User id to invite
+     * @param {String} userId User id to invite
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
-    key: "teamsIdInviteMemberIdDelete",
-    value: function teamsIdInviteMemberIdDelete(id, memberId) {
-      return this.teamsIdInviteMemberIdDeleteWithHttpInfo(id, memberId).then(function (response_and_data) {
+    key: "teamsIdInviteUserIdDelete",
+    value: function teamsIdInviteUserIdDelete(id, userId) {
+      return this.teamsIdInviteUserIdDeleteWithHttpInfo(id, userId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -281,27 +231,27 @@ var TeamsApi = /*#__PURE__*/function () {
      * Invite a team member
      * User can invite team members
      * @param {String} id Team id
-     * @param {String} memberId User id to invite
+     * @param {String} userId User id to invite
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "teamsIdInviteMemberIdPostWithHttpInfo",
-    value: function teamsIdInviteMemberIdPostWithHttpInfo(id, memberId) {
+    key: "teamsIdInviteUserIdPostWithHttpInfo",
+    value: function teamsIdInviteUserIdPostWithHttpInfo(id, userId) {
       var postBody = null; // verify the required parameter 'id' is set
 
       if (id === undefined || id === null) {
-        throw new _Error["default"]("Missing the required parameter 'id' when calling teamsIdInviteMemberIdPost");
-      } // verify the required parameter 'memberId' is set
+        throw new _Error["default"]("Missing the required parameter 'id' when calling teamsIdInviteUserIdPost");
+      } // verify the required parameter 'userId' is set
 
 
-      if (memberId === undefined || memberId === null) {
-        throw new _Error["default"]("Missing the required parameter 'memberId' when calling teamsIdInviteMemberIdPost");
+      if (userId === undefined || userId === null) {
+        throw new _Error["default"]("Missing the required parameter 'userId' when calling teamsIdInviteUserIdPost");
       }
 
       var pathParams = {
         'id': id,
-        'memberId': memberId
+        'userId': userId
       };
       var queryParams = {};
       var headerParams = {};
@@ -310,20 +260,20 @@ var TeamsApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/teams/{id}/invite/{memberId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/teams/{id}/invite/{userId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Invite a team member
      * User can invite team members
      * @param {String} id Team id
-     * @param {String} memberId User id to invite
+     * @param {String} userId User id to invite
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
-    key: "teamsIdInviteMemberIdPost",
-    value: function teamsIdInviteMemberIdPost(id, memberId) {
-      return this.teamsIdInviteMemberIdPostWithHttpInfo(id, memberId).then(function (response_and_data) {
+    key: "teamsIdInviteUserIdPost",
+    value: function teamsIdInviteUserIdPost(id, userId) {
+      return this.teamsIdInviteUserIdPostWithHttpInfo(id, userId).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

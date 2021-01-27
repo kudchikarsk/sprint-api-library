@@ -41,6 +41,7 @@ import Token from './model/Token';
 import User from './model/User';
 import AuthApi from './api/AuthApi';
 import BacklogsApi from './api/BacklogsApi';
+import InviteesApi from './api/InviteesApi';
 import TasksApi from './api/TasksApi';
 import TeamsApi from './api/TeamsApi';
 import UsersApi from './api/UsersApi';
@@ -251,6 +252,12 @@ export {
     * @property {module:api/BacklogsApi}
     */
     BacklogsApi,
+
+    /**
+    * The InviteesApi service constructor.
+    * @property {module:api/InviteesApi}
+    */
+    InviteesApi,
 
     /**
     * The TasksApi service constructor.

@@ -132,6 +132,7 @@ Class | Method | HTTP request | Description
 *SprintService.TasksApi* | [**tasksGet**](docs/TasksApi.md#tasksGet) | **GET** /tasks | Get all tasks
 *SprintService.TasksApi* | [**tasksPost**](docs/TasksApi.md#tasksPost) | **POST** /tasks | Create a task event
 *SprintService.TeamsApi* | [**teamsGet**](docs/TeamsApi.md#teamsGet) | **GET** /teams | Get all teams
+*SprintService.TeamsApi* | [**teamsIdAcceptInviteePost**](docs/TeamsApi.md#teamsIdAcceptInviteePost) | **POST** /teams/{id}/accept/invitee | Accept a team invitee
 *SprintService.TeamsApi* | [**teamsIdDelete**](docs/TeamsApi.md#teamsIdDelete) | **DELETE** /teams/{id} | Delete a team
 *SprintService.TeamsApi* | [**teamsIdGet**](docs/TeamsApi.md#teamsIdGet) | **GET** /teams/{id} | Get a team
 *SprintService.TeamsApi* | [**teamsIdInviteMemberIdDelete**](docs/TeamsApi.md#teamsIdInviteMemberIdDelete) | **DELETE** /teams/{id}/invite/{memberId} | Remove a team member

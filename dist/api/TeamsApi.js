@@ -94,6 +94,56 @@ var TeamsApi = /*#__PURE__*/function () {
       });
     }
     /**
+     * Accept a team invitee
+     * User can accept team invitee
+     * @param {String} id Team id
+     * @param {String} memberId User id to invite
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: "teamsIdAcceptInviteePostWithHttpInfo",
+    value: function teamsIdAcceptInviteePostWithHttpInfo(id, memberId) {
+      var postBody = null; // verify the required parameter 'id' is set
+
+      if (id === undefined || id === null) {
+        throw new _Error["default"]("Missing the required parameter 'id' when calling teamsIdAcceptInviteePost");
+      } // verify the required parameter 'memberId' is set
+
+
+      if (memberId === undefined || memberId === null) {
+        throw new _Error["default"]("Missing the required parameter 'memberId' when calling teamsIdAcceptInviteePost");
+      }
+
+      var pathParams = {
+        'id': id,
+        'memberId': memberId
+      };
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['bearerAuth'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/teams/{id}/accept/invitee', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Accept a team invitee
+     * User can accept team invitee
+     * @param {String} id Team id
+     * @param {String} memberId User id to invite
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: "teamsIdAcceptInviteePost",
+    value: function teamsIdAcceptInviteePost(id, memberId) {
+      return this.teamsIdAcceptInviteePostWithHttpInfo(id, memberId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
      * Delete a team
      * Logged in teams can delete only themselves. Only admins can delete other teams.
      * @param {String} id Team id
@@ -179,7 +229,7 @@ var TeamsApi = /*#__PURE__*/function () {
     }
     /**
      * Remove a team member
-     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * User can remove a team member
      * @param {String} id Team id
      * @param {String} memberId User id to invite
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -214,7 +264,7 @@ var TeamsApi = /*#__PURE__*/function () {
     }
     /**
      * Remove a team member
-     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * User can remove a team member
      * @param {String} id Team id
      * @param {String} memberId User id to invite
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
@@ -229,7 +279,7 @@ var TeamsApi = /*#__PURE__*/function () {
     }
     /**
      * Invite a team member
-     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * User can invite team members
      * @param {String} id Team id
      * @param {String} memberId User id to invite
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
@@ -264,7 +314,7 @@ var TeamsApi = /*#__PURE__*/function () {
     }
     /**
      * Invite a team member
-     * Logged in teams can delete only themselves. Only admins can delete other teams.
+     * User can invite team members
      * @param {String} id Team id
      * @param {String} memberId User id to invite
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}

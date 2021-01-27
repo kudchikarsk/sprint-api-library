@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost:3000/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**teamsGet**](TeamsApi.md#teamsGet) | **GET** /teams | Get all teams
+[**teamsIdAcceptInviteePost**](TeamsApi.md#teamsIdAcceptInviteePost) | **POST** /teams/{id}/accept/invitee | Accept a team invitee
 [**teamsIdDelete**](TeamsApi.md#teamsIdDelete) | **DELETE** /teams/{id} | Delete a team
 [**teamsIdGet**](TeamsApi.md#teamsIdGet) | **GET** /teams/{id} | Get a team
 [**teamsIdInviteMemberIdDelete**](TeamsApi.md#teamsIdInviteMemberIdDelete) | **DELETE** /teams/{id}/invite/{memberId} | Remove a team member
@@ -59,6 +60,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InlineResponse2002**](InlineResponse2002.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## teamsIdAcceptInviteePost
+
+> teamsIdAcceptInviteePost(id, memberId)
+
+Accept a team invitee
+
+User can accept team invitee
+
+### Example
+
+```javascript
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new SprintService.TeamsApi();
+let id = "id_example"; // String | Team id
+let memberId = "memberId_example"; // String | User id to invite
+apiInstance.teamsIdAcceptInviteePost(id, memberId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**| Team id | 
+ **memberId** | **String**| User id to invite | 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 
@@ -172,7 +223,7 @@ Name | Type | Description  | Notes
 
 Remove a team member
 
-Logged in teams can delete only themselves. Only admins can delete other teams.
+User can remove a team member
 
 ### Example
 
@@ -222,7 +273,7 @@ null (empty response body)
 
 Invite a team member
 
-Logged in teams can delete only themselves. Only admins can delete other teams.
+User can invite team members
 
 ### Example
 

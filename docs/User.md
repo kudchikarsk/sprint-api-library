@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **country** | **String** |  | [optional] 
 **postalCode** | **String** |  | [optional] 
 **aboutMe** | **String** |  | [optional] 
+**isInvitationAccepted** | **Boolean** |  | [optional] 
 
 
 

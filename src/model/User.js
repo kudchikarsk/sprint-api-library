@@ -83,6 +83,9 @@ class User {
             if (data.hasOwnProperty('aboutMe')) {
                 obj['aboutMe'] = ApiClient.convertToType(data['aboutMe'], 'String');
             }
+            if (data.hasOwnProperty('isInvitationAccepted')) {
+                obj['isInvitationAccepted'] = ApiClient.convertToType(data['isInvitationAccepted'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -149,6 +152,11 @@ User.prototype['postalCode'] = undefined;
  * @member {String} aboutMe
  */
 User.prototype['aboutMe'] = undefined;
+
+/**
+ * @member {Boolean} isInvitationAccepted
+ */
+User.prototype['isInvitationAccepted'] = undefined;
 
 
 

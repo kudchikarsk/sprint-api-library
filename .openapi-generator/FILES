@@ -71,4 +71,3 @@ src/model/TaskEvent.js
 src/model/Team.js
 src/model/Token.js
 src/model/User.js
-test/api/InviteesApi.spec.js

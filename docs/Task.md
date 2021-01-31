@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
+**state** | **String** |  | [optional] 
 **owners** | [**[User]**](User.md) |  | [optional] 
 **history** | **Object** |  | [optional] 
 **createdAt** | **String** |  | [optional] 

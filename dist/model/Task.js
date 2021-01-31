@@ -76,6 +76,10 @@ var Task = /*#__PURE__*/function () {
           obj['status'] = _ApiClient["default"].convertToType(data['status'], 'String');
         }
 
+        if (data.hasOwnProperty('state')) {
+          obj['state'] = _ApiClient["default"].convertToType(data['state'], 'String');
+        }
+
         if (data.hasOwnProperty('owners')) {
           obj['owners'] = _ApiClient["default"].convertToType(data['owners'], [_User["default"]]);
         }
@@ -133,6 +137,11 @@ Task.prototype['description'] = undefined;
  */
 
 Task.prototype['status'] = undefined;
+/**
+ * @member {String} state
+ */
+
+Task.prototype['state'] = undefined;
 /**
  * @member {Array.<module:model/User>} owners
  */

@@ -131,6 +131,7 @@ Class | Method | HTTP request | Description
 *SprintService.BacklogsApi* | [**backlogsPost**](docs/BacklogsApi.md#backlogsPost) | **POST** /backlogs | Create a backlog
 *SprintService.InviteesApi* | [**inviteesGet**](docs/InviteesApi.md#inviteesGet) | **GET** /invitees | Get all team invitees
 *SprintService.InviteesApi* | [**inviteesIdAcceptPost**](docs/InviteesApi.md#inviteesIdAcceptPost) | **POST** /invitees/{id}/accept | Accept a team invitee
+*SprintService.TasksApi* | [**tasksBacklogIdGet**](docs/TasksApi.md#tasksBacklogIdGet) | **GET** /tasks/{backlogId} | Get all tasks
 *SprintService.TasksApi* | [**tasksGet**](docs/TasksApi.md#tasksGet) | **GET** /tasks | Get all tasks
 *SprintService.TasksApi* | [**tasksPost**](docs/TasksApi.md#tasksPost) | **POST** /tasks | Create a task event
 *SprintService.TeamsApi* | [**teamsGet**](docs/TeamsApi.md#teamsGet) | **GET** /teams | Get all teams

@@ -43,10 +43,13 @@ var TasksApi = /*#__PURE__*/function () {
   }
   /**
    * Get all tasks
-   * User can retrieve all tasks for a backlog.
-   * @param {String} backlogId Backlog id
+   * User can retrieve assigned tasks.
+   * @param {String} backlogId task backlogId
    * @param {Object} opts Optional parameters
-   * @param {String} opts.name Backlog name
+   * @param {String} opts.title task title
+   * @param {String} opts.description task description
+   * @param {String} opts.state task state
+   * @param {String} opts.status task status
    * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
    * @param {Number} opts.limit Maximum number of tasks
    * @param {Number} opts.page Page number (default to 1)
@@ -55,19 +58,82 @@ var TasksApi = /*#__PURE__*/function () {
 
 
   _createClass(TasksApi, [{
-    key: "tasksGetWithHttpInfo",
-    value: function tasksGetWithHttpInfo(backlogId, opts) {
+    key: "tasksBacklogIdGetWithHttpInfo",
+    value: function tasksBacklogIdGetWithHttpInfo(backlogId, opts) {
       opts = opts || {};
       var postBody = null; // verify the required parameter 'backlogId' is set
 
       if (backlogId === undefined || backlogId === null) {
-        throw new _Error["default"]("Missing the required parameter 'backlogId' when calling tasksGet");
+        throw new _Error["default"]("Missing the required parameter 'backlogId' when calling tasksBacklogIdGet");
       }
 
+      var pathParams = {
+        'backlogId': backlogId
+      };
+      var queryParams = {
+        'title': opts['title'],
+        'description': opts['description'],
+        'state': opts['state'],
+        'status': opts['status'],
+        'sortBy': opts['sortBy'],
+        'limit': opts['limit'],
+        'page': opts['page']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['bearerAuth'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _InlineResponse["default"];
+      return this.apiClient.callApi('/tasks/{backlogId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Get all tasks
+     * User can retrieve assigned tasks.
+     * @param {String} backlogId task backlogId
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.title task title
+     * @param {String} opts.description task description
+     * @param {String} opts.state task state
+     * @param {String} opts.status task status
+     * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
+     * @param {Number} opts.limit Maximum number of tasks
+     * @param {Number} opts.page Page number (default to 1)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     */
+
+  }, {
+    key: "tasksBacklogIdGet",
+    value: function tasksBacklogIdGet(backlogId, opts) {
+      return this.tasksBacklogIdGetWithHttpInfo(backlogId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Get all tasks
+     * User can retrieve assigned tasks.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.title task title
+     * @param {String} opts.description task description
+     * @param {String} opts.state task state
+     * @param {String} opts.status task status
+     * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
+     * @param {Number} opts.limit Maximum number of tasks
+     * @param {Number} opts.page Page number (default to 1)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     */
+
+  }, {
+    key: "tasksGetWithHttpInfo",
+    value: function tasksGetWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = null;
       var pathParams = {};
       var queryParams = {
-        'backlogId': backlogId,
-        'name': opts['name'],
+        'title': opts['title'],
+        'description': opts['description'],
+        'state': opts['state'],
+        'status': opts['status'],
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -82,10 +148,12 @@ var TasksApi = /*#__PURE__*/function () {
     }
     /**
      * Get all tasks
-     * User can retrieve all tasks for a backlog.
-     * @param {String} backlogId Backlog id
+     * User can retrieve assigned tasks.
      * @param {Object} opts Optional parameters
-     * @param {String} opts.name Backlog name
+     * @param {String} opts.title task title
+     * @param {String} opts.description task description
+     * @param {String} opts.state task state
+     * @param {String} opts.status task status
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
@@ -94,8 +162,8 @@ var TasksApi = /*#__PURE__*/function () {
 
   }, {
     key: "tasksGet",
-    value: function tasksGet(backlogId, opts) {
-      return this.tasksGetWithHttpInfo(backlogId, opts).then(function (response_and_data) {
+    value: function tasksGet(opts) {
+      return this.tasksGetWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

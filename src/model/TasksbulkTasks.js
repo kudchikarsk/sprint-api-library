@@ -15,21 +15,18 @@ import ApiClient from '../ApiClient';
 import Task from './Task';
 
 /**
- * The Body9 model module.
- * @module model/Body9
+ * The TasksbulkTasks model module.
+ * @module model/TasksbulkTasks
  * @version 1.6.0
  */
-class Body9 {
+class TasksbulkTasks {
     /**
-     * Constructs a new <code>Body9</code>.
-     * @alias module:model/Body9
-     * @param type {String} 
-     * @param taskId {String} 
-     * @param data {module:model/Task} 
+     * Constructs a new <code>TasksbulkTasks</code>.
+     * @alias module:model/TasksbulkTasks
      */
-    constructor(type, taskId, data) { 
+    constructor() { 
         
-        Body9.initialize(this, type, taskId, data);
+        TasksbulkTasks.initialize(this);
     }
 
     /**
@@ -37,22 +34,19 @@ class Body9 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type, taskId, data) { 
-        obj['type'] = type;
-        obj['taskId'] = taskId;
-        obj['data'] = data;
+    static initialize(obj) { 
     }
 
     /**
-     * Constructs a <code>Body9</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>TasksbulkTasks</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Body9} obj Optional instance to populate.
-     * @return {module:model/Body9} The populated <code>Body9</code> instance.
+     * @param {module:model/TasksbulkTasks} obj Optional instance to populate.
+     * @return {module:model/TasksbulkTasks} The populated <code>TasksbulkTasks</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Body9();
+            obj = obj || new TasksbulkTasks();
 
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -73,22 +67,22 @@ class Body9 {
 /**
  * @member {String} type
  */
-Body9.prototype['type'] = undefined;
+TasksbulkTasks.prototype['type'] = undefined;
 
 /**
  * @member {String} taskId
  */
-Body9.prototype['taskId'] = undefined;
+TasksbulkTasks.prototype['taskId'] = undefined;
 
 /**
  * @member {module:model/Task} data
  */
-Body9.prototype['data'] = undefined;
+TasksbulkTasks.prototype['data'] = undefined;
 
 
 
 
 
 
-export default Body9;
+export default TasksbulkTasks;
 

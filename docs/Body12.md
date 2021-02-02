@@ -4,14 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] 
-**email** | **String** | must be unique | [optional] 
-**company** | **String** |  | [optional] 
-**education** | **String** |  | [optional] 
-**address** | **String** |  | [optional] 
-**city** | **String** |  | [optional] 
-**country** | **String** |  | [optional] 
-**postalCode** | **String** |  | [optional] 
-**aboutMe** | **String** |  | [optional] 
+**name** | **String** |  | 
+**email** | **String** | must be unique | 
+**password** | **String** | At least one number and one letter | 
+**role** | **String** |  | 
+
+
+
+## Enum: RoleEnum
+
+
+* `user` (value: `"user"`)
+
+* `admin` (value: `"admin"`)
+
+
 
 

@@ -22,10 +22,11 @@ class Body10 {
     /**
      * Constructs a new <code>Body10</code>.
      * @alias module:model/Body10
+     * @param name {String} 
      */
-    constructor() { 
+    constructor(name) { 
         
-        Body10.initialize(this);
+        Body10.initialize(this, name);
     }
 
     /**
@@ -33,7 +34,8 @@ class Body10 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, name) { 
+        obj['name'] = name;
     }
 
     /**

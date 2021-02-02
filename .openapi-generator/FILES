@@ -11,6 +11,7 @@ docs/Body1.md
 docs/Body10.md
 docs/Body11.md
 docs/Body12.md
+docs/Body13.md
 docs/Body2.md
 docs/Body3.md
 docs/Body4.md
@@ -29,6 +30,7 @@ docs/InviteesApi.md
 docs/Task.md
 docs/TaskEvent.md
 docs/TasksApi.md
+docs/TasksbulkTasks.md
 docs/Team.md
 docs/TeamsApi.md
 docs/Token.md
@@ -52,6 +54,7 @@ src/model/Body1.js
 src/model/Body10.js
 src/model/Body11.js
 src/model/Body12.js
+src/model/Body13.js
 src/model/Body2.js
 src/model/Body3.js
 src/model/Body4.js
@@ -68,6 +71,9 @@ src/model/InlineResponse2003.js
 src/model/InlineResponse201.js
 src/model/Task.js
 src/model/TaskEvent.js
+src/model/TasksbulkTasks.js
 src/model/Team.js
 src/model/Token.js
 src/model/User.js
+test/model/Body13.spec.js
+test/model/TasksbulkTasks.spec.js

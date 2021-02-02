@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ## usersIdPatch
 
-> User usersIdPatch(id, Body12)
+> User usersIdPatch(id, Body13)
 
 Update a user
 
@@ -185,8 +185,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.UsersApi();
 let id = "id_example"; // String | User id
-let Body12 = new SprintService.Body12(); // Body12 | 
-apiInstance.usersIdPatch(id, Body12).then((data) => {
+let Body13 = new SprintService.Body13(); // Body13 | 
+apiInstance.usersIdPatch(id, Body13).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -200,7 +200,7 @@ apiInstance.usersIdPatch(id, Body12).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User id | 
- **Body12** | [**Body12**](Body12.md)|  | 
+ **Body13** | [**Body13**](Body13.md)|  | 
 
 ### Return type
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ## usersPost
 
-> User usersPost(Body11)
+> User usersPost(Body12)
 
 Create a user
 
@@ -234,8 +234,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.UsersApi();
-let Body11 = new SprintService.Body11(); // Body11 | 
-apiInstance.usersPost(Body11).then((data) => {
+let Body12 = new SprintService.Body12(); // Body12 | 
+apiInstance.usersPost(Body12).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -248,7 +248,7 @@ apiInstance.usersPost(Body11).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body11** | [**Body11**](Body11.md)|  | 
+ **Body12** | [**Body12**](Body12.md)|  | 
 
 ### Return type
 

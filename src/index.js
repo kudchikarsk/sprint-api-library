@@ -20,6 +20,7 @@ import Body1 from './model/Body1';
 import Body10 from './model/Body10';
 import Body11 from './model/Body11';
 import Body12 from './model/Body12';
+import Body13 from './model/Body13';
 import Body2 from './model/Body2';
 import Body3 from './model/Body3';
 import Body4 from './model/Body4';
@@ -36,6 +37,7 @@ import InlineResponse2003 from './model/InlineResponse2003';
 import InlineResponse201 from './model/InlineResponse201';
 import Task from './model/Task';
 import TaskEvent from './model/TaskEvent';
+import TasksbulkTasks from './model/TasksbulkTasks';
 import Team from './model/Team';
 import Token from './model/Token';
 import User from './model/User';
@@ -126,6 +128,12 @@ export {
      * @property {module:model/Body12}
      */
     Body12,
+
+    /**
+     * The Body13 model constructor.
+     * @property {module:model/Body13}
+     */
+    Body13,
 
     /**
      * The Body2 model constructor.
@@ -222,6 +230,12 @@ export {
      * @property {module:model/TaskEvent}
      */
     TaskEvent,
+
+    /**
+     * The TasksbulkTasks model constructor.
+     * @property {module:model/TasksbulkTasks}
+     */
+    TasksbulkTasks,
 
     /**
      * The Team model constructor.

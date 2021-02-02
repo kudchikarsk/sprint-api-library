@@ -132,6 +132,7 @@ Class | Method | HTTP request | Description
 *SprintService.InviteesApi* | [**inviteesGet**](docs/InviteesApi.md#inviteesGet) | **GET** /invitees | Get all team invitees
 *SprintService.InviteesApi* | [**inviteesIdAcceptPost**](docs/InviteesApi.md#inviteesIdAcceptPost) | **POST** /invitees/{id}/accept | Accept a team invitee
 *SprintService.TasksApi* | [**tasksBacklogIdGet**](docs/TasksApi.md#tasksBacklogIdGet) | **GET** /tasks/{backlogId} | Get all tasks
+*SprintService.TasksApi* | [**tasksBulkPost**](docs/TasksApi.md#tasksBulkPost) | **POST** /tasks/bulk | Create a task events
 *SprintService.TasksApi* | [**tasksGet**](docs/TasksApi.md#tasksGet) | **GET** /tasks | Get all tasks
 *SprintService.TasksApi* | [**tasksPost**](docs/TasksApi.md#tasksPost) | **POST** /tasks | Create a task event
 *SprintService.TeamsApi* | [**teamsGet**](docs/TeamsApi.md#teamsGet) | **GET** /teams | Get all teams
@@ -157,6 +158,7 @@ Class | Method | HTTP request | Description
  - [SprintService.Body10](docs/Body10.md)
  - [SprintService.Body11](docs/Body11.md)
  - [SprintService.Body12](docs/Body12.md)
+ - [SprintService.Body13](docs/Body13.md)
  - [SprintService.Body2](docs/Body2.md)
  - [SprintService.Body3](docs/Body3.md)
  - [SprintService.Body4](docs/Body4.md)
@@ -173,6 +175,7 @@ Class | Method | HTTP request | Description
  - [SprintService.InlineResponse201](docs/InlineResponse201.md)
  - [SprintService.Task](docs/Task.md)
  - [SprintService.TaskEvent](docs/TaskEvent.md)
+ - [SprintService.TasksbulkTasks](docs/TasksbulkTasks.md)
  - [SprintService.Team](docs/Team.md)
  - [SprintService.Token](docs/Token.md)
  - [SprintService.User](docs/User.md)

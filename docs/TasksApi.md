@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost:3000/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**tasksBacklogIdGet**](TasksApi.md#tasksBacklogIdGet) | **GET** /tasks/{backlogId} | Get all tasks
+[**tasksBulkPost**](TasksApi.md#tasksBulkPost) | **POST** /tasks/bulk | Create a task events
 [**tasksGet**](TasksApi.md#tasksGet) | **GET** /tasks | Get all tasks
 [**tasksPost**](TasksApi.md#tasksPost) | **POST** /tasks | Create a task event
 
@@ -74,6 +75,54 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
+## tasksBulkPost
+
+> TaskEvent tasksBulkPost(Body8)
+
+Create a task events
+
+User can create task events.
+
+### Example
+
+```javascript
+import SprintService from 'sprint_service';
+let defaultClient = SprintService.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new SprintService.TasksApi();
+let Body8 = new SprintService.Body8(); // Body8 | 
+apiInstance.tasksBulkPost(Body8).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **Body8** | [**Body8**](Body8.md)|  | 
+
+### Return type
+
+[**TaskEvent**](TaskEvent.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## tasksGet
 
 > InlineResponse2001 tasksGet(opts)
@@ -138,7 +187,7 @@ Name | Type | Description  | Notes
 
 ## tasksPost
 
-> TaskEvent tasksPost(Body8)
+> TaskEvent tasksPost(Body9)
 
 Create a task event
 
@@ -154,8 +203,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TasksApi();
-let Body8 = new SprintService.Body8(); // Body8 | 
-apiInstance.tasksPost(Body8).then((data) => {
+let Body9 = new SprintService.Body9(); // Body9 | 
+apiInstance.tasksPost(Body9).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -168,7 +217,7 @@ apiInstance.tasksPost(Body8).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body8** | [**Body8**](Body8.md)|  | 
+ **Body9** | [**Body9**](Body9.md)|  | 
 
 ### Return type
 

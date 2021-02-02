@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import Task from './Task';
+import TasksbulkTasks from './TasksbulkTasks';
 
 /**
  * The Body8 model module.
@@ -23,13 +23,12 @@ class Body8 {
     /**
      * Constructs a new <code>Body8</code>.
      * @alias module:model/Body8
-     * @param type {String} 
-     * @param taskId {String} 
-     * @param data {module:model/Task} 
+     * @param backlogId {String} 
+     * @param tasks {Array.<module:model/TasksbulkTasks>} 
      */
-    constructor(type, taskId, data) { 
+    constructor(backlogId, tasks) { 
         
-        Body8.initialize(this, type, taskId, data);
+        Body8.initialize(this, backlogId, tasks);
     }
 
     /**
@@ -37,10 +36,9 @@ class Body8 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type, taskId, data) { 
-        obj['type'] = type;
-        obj['taskId'] = taskId;
-        obj['data'] = data;
+    static initialize(obj, backlogId, tasks) { 
+        obj['backlogId'] = backlogId;
+        obj['tasks'] = tasks;
     }
 
     /**
@@ -54,14 +52,11 @@ class Body8 {
         if (data) {
             obj = obj || new Body8();
 
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            if (data.hasOwnProperty('backlogId')) {
+                obj['backlogId'] = ApiClient.convertToType(data['backlogId'], 'String');
             }
-            if (data.hasOwnProperty('taskId')) {
-                obj['taskId'] = ApiClient.convertToType(data['taskId'], 'String');
-            }
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Task.constructFromObject(data['data']);
+            if (data.hasOwnProperty('tasks')) {
+                obj['tasks'] = ApiClient.convertToType(data['tasks'], [TasksbulkTasks]);
             }
         }
         return obj;
@@ -71,19 +66,14 @@ class Body8 {
 }
 
 /**
- * @member {String} type
+ * @member {String} backlogId
  */
-Body8.prototype['type'] = undefined;
+Body8.prototype['backlogId'] = undefined;
 
 /**
- * @member {String} taskId
+ * @member {Array.<module:model/TasksbulkTasks>} tasks
  */
-Body8.prototype['taskId'] = undefined;
-
-/**
- * @member {module:model/Task} data
- */
-Body8.prototype['data'] = undefined;
+Body8.prototype['tasks'] = undefined;
 
 
 

@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _TasksbulkTasks = _interopRequireDefault(require("./TasksbulkTasks"));
+var _Task = _interopRequireDefault(require("./Task"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -18,21 +18,19 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 /**
- * The Body8 model module.
- * @module model/Body8
+ * The TasksbulkTasks model module.
+ * @module model/TasksbulkTasks
  * @version 1.6.0
  */
-var Body8 = /*#__PURE__*/function () {
+var TasksbulkTasks = /*#__PURE__*/function () {
   /**
-   * Constructs a new <code>Body8</code>.
-   * @alias module:model/Body8
-   * @param backlogId {String} 
-   * @param tasks {Array.<module:model/TasksbulkTasks>} 
+   * Constructs a new <code>TasksbulkTasks</code>.
+   * @alias module:model/TasksbulkTasks
    */
-  function Body8(backlogId, tasks) {
-    _classCallCheck(this, Body8);
+  function TasksbulkTasks() {
+    _classCallCheck(this, TasksbulkTasks);
 
-    Body8.initialize(this, backlogId, tasks);
+    TasksbulkTasks.initialize(this);
   }
   /**
    * Initializes the fields of this object.
@@ -41,32 +39,33 @@ var Body8 = /*#__PURE__*/function () {
    */
 
 
-  _createClass(Body8, null, [{
+  _createClass(TasksbulkTasks, null, [{
     key: "initialize",
-    value: function initialize(obj, backlogId, tasks) {
-      obj['backlogId'] = backlogId;
-      obj['tasks'] = tasks;
-    }
+    value: function initialize(obj) {}
     /**
-     * Constructs a <code>Body8</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>TasksbulkTasks</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Body8} obj Optional instance to populate.
-     * @return {module:model/Body8} The populated <code>Body8</code> instance.
+     * @param {module:model/TasksbulkTasks} obj Optional instance to populate.
+     * @return {module:model/TasksbulkTasks} The populated <code>TasksbulkTasks</code> instance.
      */
 
   }, {
     key: "constructFromObject",
     value: function constructFromObject(data, obj) {
       if (data) {
-        obj = obj || new Body8();
+        obj = obj || new TasksbulkTasks();
 
-        if (data.hasOwnProperty('backlogId')) {
-          obj['backlogId'] = _ApiClient["default"].convertToType(data['backlogId'], 'String');
+        if (data.hasOwnProperty('type')) {
+          obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
         }
 
-        if (data.hasOwnProperty('tasks')) {
-          obj['tasks'] = _ApiClient["default"].convertToType(data['tasks'], [_TasksbulkTasks["default"]]);
+        if (data.hasOwnProperty('taskId')) {
+          obj['taskId'] = _ApiClient["default"].convertToType(data['taskId'], 'String');
+        }
+
+        if (data.hasOwnProperty('data')) {
+          obj['data'] = _Task["default"].constructFromObject(data['data']);
         }
       }
 
@@ -74,18 +73,23 @@ var Body8 = /*#__PURE__*/function () {
     }
   }]);
 
-  return Body8;
+  return TasksbulkTasks;
 }();
 /**
- * @member {String} backlogId
+ * @member {String} type
  */
 
 
-Body8.prototype['backlogId'] = undefined;
+TasksbulkTasks.prototype['type'] = undefined;
 /**
- * @member {Array.<module:model/TasksbulkTasks>} tasks
+ * @member {String} taskId
  */
 
-Body8.prototype['tasks'] = undefined;
-var _default = Body8;
+TasksbulkTasks.prototype['taskId'] = undefined;
+/**
+ * @member {module:model/Task} data
+ */
+
+TasksbulkTasks.prototype['data'] = undefined;
+var _default = TasksbulkTasks;
 exports["default"] = _default;

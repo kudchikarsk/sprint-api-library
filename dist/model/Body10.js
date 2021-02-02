@@ -24,11 +24,12 @@ var Body10 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body10</code>.
    * @alias module:model/Body10
+   * @param name {String} 
    */
-  function Body10() {
+  function Body10(name) {
     _classCallCheck(this, Body10);
 
-    Body10.initialize(this);
+    Body10.initialize(this, name);
   }
   /**
    * Initializes the fields of this object.
@@ -39,7 +40,9 @@ var Body10 = /*#__PURE__*/function () {
 
   _createClass(Body10, null, [{
     key: "initialize",
-    value: function initialize(obj) {}
+    value: function initialize(obj, name) {
+      obj['name'] = name;
+    }
     /**
      * Constructs a <code>Body10</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.

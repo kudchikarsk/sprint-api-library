@@ -24,15 +24,11 @@ var Body11 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body11</code>.
    * @alias module:model/Body11
-   * @param name {String} 
-   * @param email {String} must be unique
-   * @param password {String} At least one number and one letter
-   * @param role {module:model/Body11.RoleEnum} 
    */
-  function Body11(name, email, password, role) {
+  function Body11() {
     _classCallCheck(this, Body11);
 
-    Body11.initialize(this, name, email, password, role);
+    Body11.initialize(this);
   }
   /**
    * Initializes the fields of this object.
@@ -43,12 +39,7 @@ var Body11 = /*#__PURE__*/function () {
 
   _createClass(Body11, null, [{
     key: "initialize",
-    value: function initialize(obj, name, email, password, role) {
-      obj['name'] = name;
-      obj['email'] = email;
-      obj['password'] = password;
-      obj['role'] = role;
-    }
+    value: function initialize(obj) {}
     /**
      * Constructs a <code>Body11</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -67,16 +58,8 @@ var Body11 = /*#__PURE__*/function () {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
 
-        if (data.hasOwnProperty('email')) {
-          obj['email'] = _ApiClient["default"].convertToType(data['email'], 'String');
-        }
-
-        if (data.hasOwnProperty('password')) {
-          obj['password'] = _ApiClient["default"].convertToType(data['password'], 'String');
-        }
-
-        if (data.hasOwnProperty('role')) {
-          obj['role'] = _ApiClient["default"].convertToType(data['role'], 'String');
+        if (data.hasOwnProperty('description')) {
+          obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
       }
 
@@ -93,40 +76,9 @@ var Body11 = /*#__PURE__*/function () {
 
 Body11.prototype['name'] = undefined;
 /**
- * must be unique
- * @member {String} email
+ * @member {String} description
  */
 
-Body11.prototype['email'] = undefined;
-/**
- * At least one number and one letter
- * @member {String} password
- */
-
-Body11.prototype['password'] = undefined;
-/**
- * @member {module:model/Body11.RoleEnum} role
- */
-
-Body11.prototype['role'] = undefined;
-/**
- * Allowed values for the <code>role</code> property.
- * @enum {String}
- * @readonly
- */
-
-Body11['RoleEnum'] = {
-  /**
-   * value: "user"
-   * @const
-   */
-  "user": "user",
-
-  /**
-   * value: "admin"
-   * @const
-   */
-  "admin": "admin"
-};
+Body11.prototype['description'] = undefined;
 var _default = Body11;
 exports["default"] = _default;

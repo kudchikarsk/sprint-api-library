@@ -51,52 +51,58 @@ Object.defineProperty(exports, "Body12", {
     return _Body5["default"];
   }
 });
-Object.defineProperty(exports, "Body2", {
+Object.defineProperty(exports, "Body13", {
   enumerable: true,
   get: function get() {
     return _Body6["default"];
   }
 });
-Object.defineProperty(exports, "Body3", {
+Object.defineProperty(exports, "Body2", {
   enumerable: true,
   get: function get() {
     return _Body7["default"];
   }
 });
-Object.defineProperty(exports, "Body4", {
+Object.defineProperty(exports, "Body3", {
   enumerable: true,
   get: function get() {
     return _Body8["default"];
   }
 });
-Object.defineProperty(exports, "Body5", {
+Object.defineProperty(exports, "Body4", {
   enumerable: true,
   get: function get() {
     return _Body9["default"];
   }
 });
-Object.defineProperty(exports, "Body6", {
+Object.defineProperty(exports, "Body5", {
   enumerable: true,
   get: function get() {
     return _Body10["default"];
   }
 });
-Object.defineProperty(exports, "Body7", {
+Object.defineProperty(exports, "Body6", {
   enumerable: true,
   get: function get() {
     return _Body11["default"];
   }
 });
-Object.defineProperty(exports, "Body8", {
+Object.defineProperty(exports, "Body7", {
   enumerable: true,
   get: function get() {
     return _Body12["default"];
   }
 });
-Object.defineProperty(exports, "Body9", {
+Object.defineProperty(exports, "Body8", {
   enumerable: true,
   get: function get() {
     return _Body13["default"];
+  }
+});
+Object.defineProperty(exports, "Body9", {
+  enumerable: true,
+  get: function get() {
+    return _Body14["default"];
   }
 });
 Object.defineProperty(exports, "Error", {
@@ -145,6 +151,12 @@ Object.defineProperty(exports, "TaskEvent", {
   enumerable: true,
   get: function get() {
     return _TaskEvent["default"];
+  }
+});
+Object.defineProperty(exports, "TasksbulkTasks", {
+  enumerable: true,
+  get: function get() {
+    return _TasksbulkTasks["default"];
   }
 });
 Object.defineProperty(exports, "Team", {
@@ -218,21 +230,23 @@ var _Body4 = _interopRequireDefault(require("./model/Body11"));
 
 var _Body5 = _interopRequireDefault(require("./model/Body12"));
 
-var _Body6 = _interopRequireDefault(require("./model/Body2"));
+var _Body6 = _interopRequireDefault(require("./model/Body13"));
 
-var _Body7 = _interopRequireDefault(require("./model/Body3"));
+var _Body7 = _interopRequireDefault(require("./model/Body2"));
 
-var _Body8 = _interopRequireDefault(require("./model/Body4"));
+var _Body8 = _interopRequireDefault(require("./model/Body3"));
 
-var _Body9 = _interopRequireDefault(require("./model/Body5"));
+var _Body9 = _interopRequireDefault(require("./model/Body4"));
 
-var _Body10 = _interopRequireDefault(require("./model/Body6"));
+var _Body10 = _interopRequireDefault(require("./model/Body5"));
 
-var _Body11 = _interopRequireDefault(require("./model/Body7"));
+var _Body11 = _interopRequireDefault(require("./model/Body6"));
 
-var _Body12 = _interopRequireDefault(require("./model/Body8"));
+var _Body12 = _interopRequireDefault(require("./model/Body7"));
 
-var _Body13 = _interopRequireDefault(require("./model/Body9"));
+var _Body13 = _interopRequireDefault(require("./model/Body8"));
+
+var _Body14 = _interopRequireDefault(require("./model/Body9"));
 
 var _Error = _interopRequireDefault(require("./model/Error"));
 
@@ -249,6 +263,8 @@ var _InlineResponse5 = _interopRequireDefault(require("./model/InlineResponse201
 var _Task = _interopRequireDefault(require("./model/Task"));
 
 var _TaskEvent = _interopRequireDefault(require("./model/TaskEvent"));
+
+var _TasksbulkTasks = _interopRequireDefault(require("./model/TasksbulkTasks"));
 
 var _Team = _interopRequireDefault(require("./model/Team"));
 

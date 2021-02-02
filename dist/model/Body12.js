@@ -24,11 +24,15 @@ var Body12 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body12</code>.
    * @alias module:model/Body12
+   * @param name {String} 
+   * @param email {String} must be unique
+   * @param password {String} At least one number and one letter
+   * @param role {module:model/Body12.RoleEnum} 
    */
-  function Body12() {
+  function Body12(name, email, password, role) {
     _classCallCheck(this, Body12);
 
-    Body12.initialize(this);
+    Body12.initialize(this, name, email, password, role);
   }
   /**
    * Initializes the fields of this object.
@@ -39,7 +43,12 @@ var Body12 = /*#__PURE__*/function () {
 
   _createClass(Body12, null, [{
     key: "initialize",
-    value: function initialize(obj) {}
+    value: function initialize(obj, name, email, password, role) {
+      obj['name'] = name;
+      obj['email'] = email;
+      obj['password'] = password;
+      obj['role'] = role;
+    }
     /**
      * Constructs a <code>Body12</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -62,32 +71,12 @@ var Body12 = /*#__PURE__*/function () {
           obj['email'] = _ApiClient["default"].convertToType(data['email'], 'String');
         }
 
-        if (data.hasOwnProperty('company')) {
-          obj['company'] = _ApiClient["default"].convertToType(data['company'], 'String');
+        if (data.hasOwnProperty('password')) {
+          obj['password'] = _ApiClient["default"].convertToType(data['password'], 'String');
         }
 
-        if (data.hasOwnProperty('education')) {
-          obj['education'] = _ApiClient["default"].convertToType(data['education'], 'String');
-        }
-
-        if (data.hasOwnProperty('address')) {
-          obj['address'] = _ApiClient["default"].convertToType(data['address'], 'String');
-        }
-
-        if (data.hasOwnProperty('city')) {
-          obj['city'] = _ApiClient["default"].convertToType(data['city'], 'String');
-        }
-
-        if (data.hasOwnProperty('country')) {
-          obj['country'] = _ApiClient["default"].convertToType(data['country'], 'String');
-        }
-
-        if (data.hasOwnProperty('postalCode')) {
-          obj['postalCode'] = _ApiClient["default"].convertToType(data['postalCode'], 'String');
-        }
-
-        if (data.hasOwnProperty('aboutMe')) {
-          obj['aboutMe'] = _ApiClient["default"].convertToType(data['aboutMe'], 'String');
+        if (data.hasOwnProperty('role')) {
+          obj['role'] = _ApiClient["default"].convertToType(data['role'], 'String');
         }
       }
 
@@ -110,39 +99,34 @@ Body12.prototype['name'] = undefined;
 
 Body12.prototype['email'] = undefined;
 /**
- * @member {String} company
+ * At least one number and one letter
+ * @member {String} password
  */
 
-Body12.prototype['company'] = undefined;
+Body12.prototype['password'] = undefined;
 /**
- * @member {String} education
+ * @member {module:model/Body12.RoleEnum} role
  */
 
-Body12.prototype['education'] = undefined;
+Body12.prototype['role'] = undefined;
 /**
- * @member {String} address
+ * Allowed values for the <code>role</code> property.
+ * @enum {String}
+ * @readonly
  */
 
-Body12.prototype['address'] = undefined;
-/**
- * @member {String} city
- */
+Body12['RoleEnum'] = {
+  /**
+   * value: "user"
+   * @const
+   */
+  "user": "user",
 
-Body12.prototype['city'] = undefined;
-/**
- * @member {String} country
- */
-
-Body12.prototype['country'] = undefined;
-/**
- * @member {String} postalCode
- */
-
-Body12.prototype['postalCode'] = undefined;
-/**
- * @member {String} aboutMe
- */
-
-Body12.prototype['aboutMe'] = undefined;
+  /**
+   * value: "admin"
+   * @const
+   */
+  "admin": "admin"
+};
 var _default = Body12;
 exports["default"] = _default;

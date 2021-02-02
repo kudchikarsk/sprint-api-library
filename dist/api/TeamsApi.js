@@ -9,7 +9,7 @@ var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
 var _Body = _interopRequireDefault(require("../model/Body10"));
 
-var _Body2 = _interopRequireDefault(require("../model/Body9"));
+var _Body2 = _interopRequireDefault(require("../model/Body11"));
 
 var _Error = _interopRequireDefault(require("../model/Error"));
 
@@ -281,22 +281,22 @@ var TeamsApi = /*#__PURE__*/function () {
      * Update a team
      * Logged in teams can only update their own information. Only admins can update other teams.
      * @param {String} id Team id
-     * @param {module:model/Body10} Body10 
+     * @param {module:model/Body11} Body11 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Team} and HTTP response
      */
 
   }, {
     key: "teamsIdPatchWithHttpInfo",
-    value: function teamsIdPatchWithHttpInfo(id, Body10) {
-      var postBody = Body10; // verify the required parameter 'id' is set
+    value: function teamsIdPatchWithHttpInfo(id, Body11) {
+      var postBody = Body11; // verify the required parameter 'id' is set
 
       if (id === undefined || id === null) {
         throw new _Error["default"]("Missing the required parameter 'id' when calling teamsIdPatch");
-      } // verify the required parameter 'Body10' is set
+      } // verify the required parameter 'Body11' is set
 
 
-      if (Body10 === undefined || Body10 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body10' when calling teamsIdPatch");
+      if (Body11 === undefined || Body11 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body11' when calling teamsIdPatch");
       }
 
       var pathParams = {
@@ -315,31 +315,31 @@ var TeamsApi = /*#__PURE__*/function () {
      * Update a team
      * Logged in teams can only update their own information. Only admins can update other teams.
      * @param {String} id Team id
-     * @param {module:model/Body10} Body10 
+     * @param {module:model/Body11} Body11 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Team}
      */
 
   }, {
     key: "teamsIdPatch",
-    value: function teamsIdPatch(id, Body10) {
-      return this.teamsIdPatchWithHttpInfo(id, Body10).then(function (response_and_data) {
+    value: function teamsIdPatch(id, Body11) {
+      return this.teamsIdPatchWithHttpInfo(id, Body11).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Create a team
      * User can create teams.
-     * @param {module:model/Body9} Body9 
+     * @param {module:model/Body10} Body10 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Team} and HTTP response
      */
 
   }, {
     key: "teamsPostWithHttpInfo",
-    value: function teamsPostWithHttpInfo(Body9) {
-      var postBody = Body9; // verify the required parameter 'Body9' is set
+    value: function teamsPostWithHttpInfo(Body10) {
+      var postBody = Body10; // verify the required parameter 'Body10' is set
 
-      if (Body9 === undefined || Body9 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body9' when calling teamsPost");
+      if (Body10 === undefined || Body10 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body10' when calling teamsPost");
       }
 
       var pathParams = {};
@@ -355,14 +355,14 @@ var TeamsApi = /*#__PURE__*/function () {
     /**
      * Create a team
      * User can create teams.
-     * @param {module:model/Body9} Body9 
+     * @param {module:model/Body10} Body10 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Team}
      */
 
   }, {
     key: "teamsPost",
-    value: function teamsPost(Body9) {
-      return this.teamsPostWithHttpInfo(Body9).then(function (response_and_data) {
+    value: function teamsPost(Body10) {
+      return this.teamsPostWithHttpInfo(Body10).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **taskId** | **String** |  | [optional] 
 **backlogId** | **String** |  | [optional] 
+**teamId** | **String** |  | [optional] 
 **title** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 

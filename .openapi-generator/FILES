@@ -75,5 +75,3 @@ src/model/TasksbulkTasks.js
 src/model/Team.js
 src/model/Token.js
 src/model/User.js
-test/model/Body13.spec.js
-test/model/TasksbulkTasks.spec.js

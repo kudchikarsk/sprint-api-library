@@ -23,12 +23,11 @@ class Body8 {
     /**
      * Constructs a new <code>Body8</code>.
      * @alias module:model/Body8
-     * @param backlogId {String} 
      * @param tasks {Array.<module:model/TasksbulkTasks>} 
      */
-    constructor(backlogId, tasks) { 
+    constructor(tasks) { 
         
-        Body8.initialize(this, backlogId, tasks);
+        Body8.initialize(this, tasks);
     }
 
     /**
@@ -36,8 +35,7 @@ class Body8 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, backlogId, tasks) { 
-        obj['backlogId'] = backlogId;
+    static initialize(obj, tasks) { 
         obj['tasks'] = tasks;
     }
 
@@ -52,9 +50,6 @@ class Body8 {
         if (data) {
             obj = obj || new Body8();
 
-            if (data.hasOwnProperty('backlogId')) {
-                obj['backlogId'] = ApiClient.convertToType(data['backlogId'], 'String');
-            }
             if (data.hasOwnProperty('tasks')) {
                 obj['tasks'] = ApiClient.convertToType(data['tasks'], [TasksbulkTasks]);
             }
@@ -64,11 +59,6 @@ class Body8 {
 
 
 }
-
-/**
- * @member {String} backlogId
- */
-Body8.prototype['backlogId'] = undefined;
 
 /**
  * @member {Array.<module:model/TasksbulkTasks>} tasks

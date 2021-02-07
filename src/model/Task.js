@@ -54,6 +54,9 @@ class Task {
             if (data.hasOwnProperty('backlogId')) {
                 obj['backlogId'] = ApiClient.convertToType(data['backlogId'], 'String');
             }
+            if (data.hasOwnProperty('teamId')) {
+                obj['teamId'] = ApiClient.convertToType(data['teamId'], 'String');
+            }
             if (data.hasOwnProperty('title')) {
                 obj['title'] = ApiClient.convertToType(data['title'], 'String');
             }
@@ -100,6 +103,11 @@ Task.prototype['taskId'] = undefined;
  * @member {String} backlogId
  */
 Task.prototype['backlogId'] = undefined;
+
+/**
+ * @member {String} teamId
+ */
+Task.prototype['teamId'] = undefined;
 
 /**
  * @member {String} title

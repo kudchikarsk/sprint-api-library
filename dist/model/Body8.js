@@ -26,13 +26,12 @@ var Body8 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body8</code>.
    * @alias module:model/Body8
-   * @param backlogId {String} 
    * @param tasks {Array.<module:model/TasksbulkTasks>} 
    */
-  function Body8(backlogId, tasks) {
+  function Body8(tasks) {
     _classCallCheck(this, Body8);
 
-    Body8.initialize(this, backlogId, tasks);
+    Body8.initialize(this, tasks);
   }
   /**
    * Initializes the fields of this object.
@@ -43,8 +42,7 @@ var Body8 = /*#__PURE__*/function () {
 
   _createClass(Body8, null, [{
     key: "initialize",
-    value: function initialize(obj, backlogId, tasks) {
-      obj['backlogId'] = backlogId;
+    value: function initialize(obj, tasks) {
       obj['tasks'] = tasks;
     }
     /**
@@ -61,10 +59,6 @@ var Body8 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Body8();
 
-        if (data.hasOwnProperty('backlogId')) {
-          obj['backlogId'] = _ApiClient["default"].convertToType(data['backlogId'], 'String');
-        }
-
         if (data.hasOwnProperty('tasks')) {
           obj['tasks'] = _ApiClient["default"].convertToType(data['tasks'], [_TasksbulkTasks["default"]]);
         }
@@ -77,14 +71,9 @@ var Body8 = /*#__PURE__*/function () {
   return Body8;
 }();
 /**
- * @member {String} backlogId
- */
-
-
-Body8.prototype['backlogId'] = undefined;
-/**
  * @member {Array.<module:model/TasksbulkTasks>} tasks
  */
+
 
 Body8.prototype['tasks'] = undefined;
 var _default = Body8;

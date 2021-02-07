@@ -64,6 +64,10 @@ var Task = /*#__PURE__*/function () {
           obj['backlogId'] = _ApiClient["default"].convertToType(data['backlogId'], 'String');
         }
 
+        if (data.hasOwnProperty('teamId')) {
+          obj['teamId'] = _ApiClient["default"].convertToType(data['teamId'], 'String');
+        }
+
         if (data.hasOwnProperty('title')) {
           obj['title'] = _ApiClient["default"].convertToType(data['title'], 'String');
         }
@@ -122,6 +126,11 @@ Task.prototype['taskId'] = undefined;
  */
 
 Task.prototype['backlogId'] = undefined;
+/**
+ * @member {String} teamId
+ */
+
+Task.prototype['teamId'] = undefined;
 /**
  * @member {String} title
  */

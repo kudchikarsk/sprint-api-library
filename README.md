@@ -133,6 +133,8 @@ Class | Method | HTTP request | Description
 *SprintService.InviteesApi* | [**inviteesIdAcceptPost**](docs/InviteesApi.md#inviteesIdAcceptPost) | **POST** /invitees/{id}/accept | Accept a team invitee
 *SprintService.TasksApi* | [**tasksBacklogBacklogIdGet**](docs/TasksApi.md#tasksBacklogBacklogIdGet) | **GET** /tasks/backlog/{backlogId} | Get all tasks
 *SprintService.TasksApi* | [**tasksBulkPost**](docs/TasksApi.md#tasksBulkPost) | **POST** /tasks/bulk | Create a task events
+*SprintService.TasksApi* | [**tasksDoingGet**](docs/TasksApi.md#tasksDoingGet) | **GET** /tasks/doing | Get all tasks
+*SprintService.TasksApi* | [**tasksDoneGet**](docs/TasksApi.md#tasksDoneGet) | **GET** /tasks/done | Get all tasks
 *SprintService.TasksApi* | [**tasksPost**](docs/TasksApi.md#tasksPost) | **POST** /tasks | Create a task event
 *SprintService.TasksApi* | [**tasksTodoGet**](docs/TasksApi.md#tasksTodoGet) | **GET** /tasks/todo | Get all tasks
 *SprintService.TeamsApi* | [**teamsGet**](docs/TeamsApi.md#teamsGet) | **GET** /teams | Get all teams

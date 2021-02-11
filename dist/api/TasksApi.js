@@ -152,6 +152,116 @@ var TasksApi = /*#__PURE__*/function () {
       });
     }
     /**
+     * Get all tasks
+     * User can retrieve assigned tasks.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.title task title
+     * @param {String} opts.description task description
+     * @param {String} opts.state task state
+     * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
+     * @param {Number} opts.limit Maximum number of tasks
+     * @param {Number} opts.page Page number (default to 1)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     */
+
+  }, {
+    key: "tasksDoingGetWithHttpInfo",
+    value: function tasksDoingGetWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {
+        'title': opts['title'],
+        'description': opts['description'],
+        'state': opts['state'],
+        'sortBy': opts['sortBy'],
+        'limit': opts['limit'],
+        'page': opts['page']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['bearerAuth'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _InlineResponse["default"];
+      return this.apiClient.callApi('/tasks/doing', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Get all tasks
+     * User can retrieve assigned tasks.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.title task title
+     * @param {String} opts.description task description
+     * @param {String} opts.state task state
+     * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
+     * @param {Number} opts.limit Maximum number of tasks
+     * @param {Number} opts.page Page number (default to 1)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     */
+
+  }, {
+    key: "tasksDoingGet",
+    value: function tasksDoingGet(opts) {
+      return this.tasksDoingGetWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Get all tasks
+     * User can retrieve assigned tasks.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.title task title
+     * @param {String} opts.description task description
+     * @param {String} opts.state task state
+     * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
+     * @param {Number} opts.limit Maximum number of tasks
+     * @param {Number} opts.page Page number (default to 1)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     */
+
+  }, {
+    key: "tasksDoneGetWithHttpInfo",
+    value: function tasksDoneGetWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {
+        'title': opts['title'],
+        'description': opts['description'],
+        'state': opts['state'],
+        'sortBy': opts['sortBy'],
+        'limit': opts['limit'],
+        'page': opts['page']
+      };
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['bearerAuth'];
+      var contentTypes = [];
+      var accepts = ['application/json'];
+      var returnType = _InlineResponse["default"];
+      return this.apiClient.callApi('/tasks/done', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Get all tasks
+     * User can retrieve assigned tasks.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.title task title
+     * @param {String} opts.description task description
+     * @param {String} opts.state task state
+     * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
+     * @param {Number} opts.limit Maximum number of tasks
+     * @param {Number} opts.page Page number (default to 1)
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     */
+
+  }, {
+    key: "tasksDoneGet",
+    value: function tasksDoneGet(opts) {
+      return this.tasksDoneGetWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
      * Create a task event
      * User can create task event.
      * @param {module:model/Body9} Body9 

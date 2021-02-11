@@ -131,10 +131,10 @@ Class | Method | HTTP request | Description
 *SprintService.BacklogsApi* | [**backlogsPost**](docs/BacklogsApi.md#backlogsPost) | **POST** /backlogs | Create a backlog
 *SprintService.InviteesApi* | [**inviteesGet**](docs/InviteesApi.md#inviteesGet) | **GET** /invitees | Get all team invitees
 *SprintService.InviteesApi* | [**inviteesIdAcceptPost**](docs/InviteesApi.md#inviteesIdAcceptPost) | **POST** /invitees/{id}/accept | Accept a team invitee
-*SprintService.TasksApi* | [**tasksBacklogIdGet**](docs/TasksApi.md#tasksBacklogIdGet) | **GET** /tasks/{backlogId} | Get all tasks
+*SprintService.TasksApi* | [**tasksBacklogBacklogIdGet**](docs/TasksApi.md#tasksBacklogBacklogIdGet) | **GET** /tasks/backlog/{backlogId} | Get all tasks
 *SprintService.TasksApi* | [**tasksBulkPost**](docs/TasksApi.md#tasksBulkPost) | **POST** /tasks/bulk | Create a task events
-*SprintService.TasksApi* | [**tasksGet**](docs/TasksApi.md#tasksGet) | **GET** /tasks | Get all tasks
 *SprintService.TasksApi* | [**tasksPost**](docs/TasksApi.md#tasksPost) | **POST** /tasks | Create a task event
+*SprintService.TasksApi* | [**tasksTodoGet**](docs/TasksApi.md#tasksTodoGet) | **GET** /tasks/todo | Get all tasks
 *SprintService.TeamsApi* | [**teamsGet**](docs/TeamsApi.md#teamsGet) | **GET** /teams | Get all teams
 *SprintService.TeamsApi* | [**teamsIdDelete**](docs/TeamsApi.md#teamsIdDelete) | **DELETE** /teams/{id} | Delete a team
 *SprintService.TeamsApi* | [**teamsIdGet**](docs/TeamsApi.md#teamsIdGet) | **GET** /teams/{id} | Get a team

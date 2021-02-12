@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## teamsGet
 
-> InlineResponse2002 teamsGet(opts)
+> InlineResponse2003 teamsGet(opts)
 
 Get all teams
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 

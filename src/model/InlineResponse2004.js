@@ -12,21 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import Team from './Team';
+import User from './User';
 
 /**
- * The InlineResponse2003 model module.
- * @module model/InlineResponse2003
+ * The InlineResponse2004 model module.
+ * @module model/InlineResponse2004
  * @version 1.6.0
  */
-class InlineResponse2003 {
+class InlineResponse2004 {
     /**
-     * Constructs a new <code>InlineResponse2003</code>.
-     * @alias module:model/InlineResponse2003
+     * Constructs a new <code>InlineResponse2004</code>.
+     * @alias module:model/InlineResponse2004
      */
     constructor() { 
         
-        InlineResponse2003.initialize(this);
+        InlineResponse2004.initialize(this);
     }
 
     /**
@@ -38,18 +38,18 @@ class InlineResponse2003 {
     }
 
     /**
-     * Constructs a <code>InlineResponse2003</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>InlineResponse2004</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/InlineResponse2003} obj Optional instance to populate.
-     * @return {module:model/InlineResponse2003} The populated <code>InlineResponse2003</code> instance.
+     * @param {module:model/InlineResponse2004} obj Optional instance to populate.
+     * @return {module:model/InlineResponse2004} The populated <code>InlineResponse2004</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new InlineResponse2003();
+            obj = obj || new InlineResponse2004();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Team]);
+                obj['results'] = ApiClient.convertToType(data['results'], [User]);
             }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -71,34 +71,34 @@ class InlineResponse2003 {
 }
 
 /**
- * @member {Array.<module:model/Team>} results
+ * @member {Array.<module:model/User>} results
  */
-InlineResponse2003.prototype['results'] = undefined;
+InlineResponse2004.prototype['results'] = undefined;
 
 /**
  * @member {Number} page
  */
-InlineResponse2003.prototype['page'] = undefined;
+InlineResponse2004.prototype['page'] = undefined;
 
 /**
  * @member {Number} limit
  */
-InlineResponse2003.prototype['limit'] = undefined;
+InlineResponse2004.prototype['limit'] = undefined;
 
 /**
  * @member {Number} totalPages
  */
-InlineResponse2003.prototype['totalPages'] = undefined;
+InlineResponse2004.prototype['totalPages'] = undefined;
 
 /**
  * @member {Number} totalResults
  */
-InlineResponse2003.prototype['totalResults'] = undefined;
+InlineResponse2004.prototype['totalResults'] = undefined;
 
 
 
 
 
 
-export default InlineResponse2003;
+export default InlineResponse2004;
 

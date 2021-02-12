@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## usersGet
 
-> InlineResponse2003 usersGet(opts)
+> InlineResponse2004 usersGet(opts)
 
 Get all users
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 

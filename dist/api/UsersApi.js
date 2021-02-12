@@ -13,7 +13,7 @@ var _Body2 = _interopRequireDefault(require("../model/Body13"));
 
 var _Error = _interopRequireDefault(require("../model/Error"));
 
-var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2003"));
+var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2004"));
 
 var _User = _interopRequireDefault(require("../model/User"));
 
@@ -52,7 +52,7 @@ var UsersApi = /*#__PURE__*/function () {
    * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
    * @param {Number} opts.limit Maximum number of users
    * @param {Number} opts.page Page number (default to 1)
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2003} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
    */
 
 
@@ -86,7 +86,7 @@ var UsersApi = /*#__PURE__*/function () {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of users
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2003}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
      */
 
   }, {

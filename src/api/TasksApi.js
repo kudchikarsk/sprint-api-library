@@ -17,6 +17,7 @@ import Body8 from '../model/Body8';
 import Body9 from '../model/Body9';
 import Error from '../model/Error';
 import InlineResponse2001 from '../model/InlineResponse2001';
+import InlineResponse2002 from '../model/InlineResponse2002';
 import TaskEvent from '../model/TaskEvent';
 
 /**
@@ -51,7 +52,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
      */
     tasksBacklogBacklogIdGetWithHttpInfo(backlogId, opts) {
       opts = opts || {};
@@ -81,7 +82,7 @@ export default class TasksApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = InlineResponse2002;
       return this.apiClient.callApi(
         '/tasks/backlog/{backlogId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -101,7 +102,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
      */
     tasksBacklogBacklogIdGet(backlogId, opts) {
       return this.tasksBacklogBacklogIdGetWithHttpInfo(backlogId, opts)
@@ -168,7 +169,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
      */
     tasksDoingGetWithHttpInfo(opts) {
       opts = opts || {};
@@ -192,7 +193,7 @@ export default class TasksApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = InlineResponse2002;
       return this.apiClient.callApi(
         '/tasks/doing', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -210,7 +211,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
      */
     tasksDoingGet(opts) {
       return this.tasksDoingGetWithHttpInfo(opts)
@@ -230,7 +231,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
      */
     tasksDoneGetWithHttpInfo(opts) {
       opts = opts || {};
@@ -254,7 +255,7 @@ export default class TasksApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = InlineResponse2002;
       return this.apiClient.callApi(
         '/tasks/done', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -272,7 +273,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
      */
     tasksDoneGet(opts) {
       return this.tasksDoneGetWithHttpInfo(opts)

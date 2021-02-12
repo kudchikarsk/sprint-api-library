@@ -25,6 +25,7 @@ docs/InlineResponse200.md
 docs/InlineResponse2001.md
 docs/InlineResponse2002.md
 docs/InlineResponse2003.md
+docs/InlineResponse2004.md
 docs/InlineResponse201.md
 docs/InviteesApi.md
 docs/Task.md
@@ -68,6 +69,7 @@ src/model/InlineResponse200.js
 src/model/InlineResponse2001.js
 src/model/InlineResponse2002.js
 src/model/InlineResponse2003.js
+src/model/InlineResponse2004.js
 src/model/InlineResponse201.js
 src/model/Task.js
 src/model/TaskEvent.js
@@ -75,3 +77,4 @@ src/model/TasksbulkTasks.js
 src/model/Team.js
 src/model/Token.js
 src/model/User.js
+test/model/InlineResponse2004.spec.js

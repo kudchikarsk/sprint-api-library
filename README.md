@@ -174,6 +174,7 @@ Class | Method | HTTP request | Description
  - [SprintService.InlineResponse2001](docs/InlineResponse2001.md)
  - [SprintService.InlineResponse2002](docs/InlineResponse2002.md)
  - [SprintService.InlineResponse2003](docs/InlineResponse2003.md)
+ - [SprintService.InlineResponse2004](docs/InlineResponse2004.md)
  - [SprintService.InlineResponse201](docs/InlineResponse201.md)
  - [SprintService.Task](docs/Task.md)
  - [SprintService.TaskEvent](docs/TaskEvent.md)

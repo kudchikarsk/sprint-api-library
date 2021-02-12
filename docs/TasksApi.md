@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## tasksBacklogBacklogIdGet
 
-> InlineResponse2001 tasksBacklogBacklogIdGet(backlogId, opts)
+> InlineResponse2002 tasksBacklogBacklogIdGet(backlogId, opts)
 
 Get all tasks
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ## tasksDoingGet
 
-> InlineResponse2001 tasksDoingGet(opts)
+> InlineResponse2002 tasksDoingGet(opts)
 
 Get all tasks
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ## tasksDoneGet
 
-> InlineResponse2001 tasksDoneGet(opts)
+> InlineResponse2002 tasksDoneGet(opts)
 
 Get all tasks
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

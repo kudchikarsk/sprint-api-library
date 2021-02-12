@@ -77,4 +77,3 @@ src/model/TasksbulkTasks.js
 src/model/Team.js
 src/model/Token.js
 src/model/User.js
-test/model/InlineResponse2004.spec.js

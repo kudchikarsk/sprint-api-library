@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ## tasksDoingGet
 
-> InlineResponse2002 tasksDoingGet(opts)
+> InlineResponse2001 tasksDoingGet(opts)
 
 Get all tasks
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ## tasksDoneGet
 
-> InlineResponse2002 tasksDoneGet(opts)
+> InlineResponse2001 tasksDoneGet(opts)
 
 Get all tasks
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 

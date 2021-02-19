@@ -75,6 +75,10 @@ var InlineResponse2002 = /*#__PURE__*/function () {
         if (data.hasOwnProperty('totalResults')) {
           obj['totalResults'] = _ApiClient["default"].convertToType(data['totalResults'], 'Number');
         }
+
+        if (data.hasOwnProperty('totalPoints')) {
+          obj['totalPoints'] = _ApiClient["default"].convertToType(data['totalPoints'], 'Number');
+        }
       }
 
       return obj;
@@ -109,5 +113,10 @@ InlineResponse2002.prototype['totalPages'] = undefined;
  */
 
 InlineResponse2002.prototype['totalResults'] = undefined;
+/**
+ * @member {Number} totalPoints
+ */
+
+InlineResponse2002.prototype['totalPoints'] = undefined;
 var _default = InlineResponse2002;
 exports["default"] = _default;

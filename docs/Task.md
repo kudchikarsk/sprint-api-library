@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 
 **state** | **String** |  | [optional] 
+**points** | **Number** |  | [optional] 
 **owners** | [**[User]**](User.md) |  | [optional] 
 **history** | **Object** |  | [optional] 
 **createdAt** | **String** |  | [optional] 

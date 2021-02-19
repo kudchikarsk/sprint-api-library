@@ -84,6 +84,10 @@ var Task = /*#__PURE__*/function () {
           obj['state'] = _ApiClient["default"].convertToType(data['state'], 'String');
         }
 
+        if (data.hasOwnProperty('points')) {
+          obj['points'] = _ApiClient["default"].convertToType(data['points'], 'Number');
+        }
+
         if (data.hasOwnProperty('owners')) {
           obj['owners'] = _ApiClient["default"].convertToType(data['owners'], [_User["default"]]);
         }
@@ -151,6 +155,11 @@ Task.prototype['status'] = undefined;
  */
 
 Task.prototype['state'] = undefined;
+/**
+ * @member {Number} points
+ */
+
+Task.prototype['points'] = undefined;
 /**
  * @member {Array.<module:model/User>} owners
  */

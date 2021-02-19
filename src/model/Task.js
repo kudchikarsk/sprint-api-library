@@ -69,6 +69,9 @@ class Task {
             if (data.hasOwnProperty('state')) {
                 obj['state'] = ApiClient.convertToType(data['state'], 'String');
             }
+            if (data.hasOwnProperty('points')) {
+                obj['points'] = ApiClient.convertToType(data['points'], 'Number');
+            }
             if (data.hasOwnProperty('owners')) {
                 obj['owners'] = ApiClient.convertToType(data['owners'], [User]);
             }
@@ -128,6 +131,11 @@ Task.prototype['status'] = undefined;
  * @member {String} state
  */
 Task.prototype['state'] = undefined;
+
+/**
+ * @member {Number} points
+ */
+Task.prototype['points'] = undefined;
 
 /**
  * @member {Array.<module:model/User>} owners

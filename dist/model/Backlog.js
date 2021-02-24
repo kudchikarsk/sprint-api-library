@@ -69,6 +69,10 @@ var Backlog = /*#__PURE__*/function () {
         if (data.hasOwnProperty('teamId')) {
           obj['teamId'] = _ApiClient["default"].convertToType(data['teamId'], 'String');
         }
+
+        if (data.hasOwnProperty('period')) {
+          obj['period'] = _ApiClient["default"].convertToType(data['period'], Object);
+        }
       }
 
       return obj;
@@ -98,5 +102,10 @@ Backlog.prototype['description'] = undefined;
  */
 
 Backlog.prototype['teamId'] = undefined;
+/**
+ * @member {Object} period
+ */
+
+Backlog.prototype['period'] = undefined;
 var _default = Backlog;
 exports["default"] = _default;

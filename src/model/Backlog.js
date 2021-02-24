@@ -59,6 +59,9 @@ class Backlog {
             if (data.hasOwnProperty('teamId')) {
                 obj['teamId'] = ApiClient.convertToType(data['teamId'], 'String');
             }
+            if (data.hasOwnProperty('period')) {
+                obj['period'] = ApiClient.convertToType(data['period'], Object);
+            }
         }
         return obj;
     }
@@ -85,6 +88,11 @@ Backlog.prototype['description'] = undefined;
  * @member {String} teamId
  */
 Backlog.prototype['teamId'] = undefined;
+
+/**
+ * @member {Object} period
+ */
+Backlog.prototype['period'] = undefined;
 
 
 

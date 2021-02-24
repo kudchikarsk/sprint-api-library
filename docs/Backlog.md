@@ -8,5 +8,6 @@ Name | Type | Description | Notes
 **name** | **String** |  | [optional] 
 **description** | **String** |  | [optional] 
 **teamId** | **String** |  | [optional] 
+**period** | **Object** |  | [optional] 
 
 

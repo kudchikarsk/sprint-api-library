@@ -58,6 +58,10 @@ var Widget = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Widget();
 
+        if (data.hasOwnProperty('id')) {
+          obj['id'] = _ApiClient["default"].convertToType(data['id'], 'String');
+        }
+
         if (data.hasOwnProperty('userId')) {
           obj['userId'] = _ApiClient["default"].convertToType(data['userId'], 'String');
         }
@@ -90,9 +94,14 @@ var Widget = /*#__PURE__*/function () {
   return Widget;
 }();
 /**
- * @member {String} userId
+ * @member {String} id
  */
 
+
+Widget.prototype['id'] = undefined;
+/**
+ * @member {String} userId
+ */
 
 Widget.prototype['userId'] = undefined;
 /**

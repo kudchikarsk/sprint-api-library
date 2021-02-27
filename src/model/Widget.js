@@ -49,6 +49,9 @@ class Widget {
         if (data) {
             obj = obj || new Widget();
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
             if (data.hasOwnProperty('userId')) {
                 obj['userId'] = ApiClient.convertToType(data['userId'], 'String');
             }
@@ -73,6 +76,11 @@ class Widget {
 
 
 }
+
+/**
+ * @member {String} id
+ */
+Widget.prototype['id'] = undefined;
 
 /**
  * @member {String} userId

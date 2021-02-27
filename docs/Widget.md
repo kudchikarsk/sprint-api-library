@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **String** |  | [optional] 
 **userId** | **String** |  | [optional] 
 **teamId** | **String** |  | [optional] 
 **team** | [**Team**](Team.md) |  | [optional] 

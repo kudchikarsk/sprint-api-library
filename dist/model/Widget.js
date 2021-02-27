@@ -7,6 +7,10 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _Backlog = _interopRequireDefault(require("./Backlog"));
+
+var _Team = _interopRequireDefault(require("./Team"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -62,8 +66,16 @@ var Widget = /*#__PURE__*/function () {
           obj['teamId'] = _ApiClient["default"].convertToType(data['teamId'], 'String');
         }
 
+        if (data.hasOwnProperty('team')) {
+          obj['team'] = _Team["default"].constructFromObject(data['team']);
+        }
+
         if (data.hasOwnProperty('backlogId')) {
           obj['backlogId'] = _ApiClient["default"].convertToType(data['backlogId'], 'String');
+        }
+
+        if (data.hasOwnProperty('backlog')) {
+          obj['backlog'] = _Backlog["default"].constructFromObject(data['backlog']);
         }
 
         if (data.hasOwnProperty('type')) {
@@ -89,10 +101,20 @@ Widget.prototype['userId'] = undefined;
 
 Widget.prototype['teamId'] = undefined;
 /**
+ * @member {module:model/Team} team
+ */
+
+Widget.prototype['team'] = undefined;
+/**
  * @member {String} backlogId
  */
 
 Widget.prototype['backlogId'] = undefined;
+/**
+ * @member {module:model/Backlog} backlog
+ */
+
+Widget.prototype['backlog'] = undefined;
 /**
  * @member {String} type
  */

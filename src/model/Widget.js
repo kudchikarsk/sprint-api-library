@@ -12,6 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
+import Backlog from './Backlog';
+import Team from './Team';
 
 /**
  * The Widget model module.
@@ -53,8 +55,14 @@ class Widget {
             if (data.hasOwnProperty('teamId')) {
                 obj['teamId'] = ApiClient.convertToType(data['teamId'], 'String');
             }
+            if (data.hasOwnProperty('team')) {
+                obj['team'] = Team.constructFromObject(data['team']);
+            }
             if (data.hasOwnProperty('backlogId')) {
                 obj['backlogId'] = ApiClient.convertToType(data['backlogId'], 'String');
+            }
+            if (data.hasOwnProperty('backlog')) {
+                obj['backlog'] = Backlog.constructFromObject(data['backlog']);
             }
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
@@ -77,9 +85,19 @@ Widget.prototype['userId'] = undefined;
 Widget.prototype['teamId'] = undefined;
 
 /**
+ * @member {module:model/Team} team
+ */
+Widget.prototype['team'] = undefined;
+
+/**
  * @member {String} backlogId
  */
 Widget.prototype['backlogId'] = undefined;
+
+/**
+ * @member {module:model/Backlog} backlog
+ */
+Widget.prototype['backlog'] = undefined;
 
 /**
  * @member {String} type

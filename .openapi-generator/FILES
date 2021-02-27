@@ -87,8 +87,3 @@ src/model/Team.js
 src/model/Token.js
 src/model/User.js
 src/model/Widget.js
-test/api/WidgetsApi.spec.js
-test/model/Body14.spec.js
-test/model/Body15.spec.js
-test/model/InlineResponse2005.spec.js
-test/model/Widget.spec.js

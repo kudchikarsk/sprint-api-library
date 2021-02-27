@@ -85,6 +85,10 @@ var Widget = /*#__PURE__*/function () {
         if (data.hasOwnProperty('type')) {
           obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
         }
+
+        if (data.hasOwnProperty('burndownChart')) {
+          obj['burndownChart'] = _ApiClient["default"].convertToType(data['burndownChart'], Object);
+        }
       }
 
       return obj;
@@ -129,5 +133,10 @@ Widget.prototype['backlog'] = undefined;
  */
 
 Widget.prototype['type'] = undefined;
+/**
+ * @member {Object} burndownChart
+ */
+
+Widget.prototype['burndownChart'] = undefined;
 var _default = Widget;
 exports["default"] = _default;

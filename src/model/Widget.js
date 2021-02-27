@@ -70,6 +70,9 @@ class Widget {
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
+            if (data.hasOwnProperty('burndownChart')) {
+                obj['burndownChart'] = ApiClient.convertToType(data['burndownChart'], Object);
+            }
         }
         return obj;
     }
@@ -111,6 +114,11 @@ Widget.prototype['backlog'] = undefined;
  * @member {String} type
  */
 Widget.prototype['type'] = undefined;
+
+/**
+ * @member {Object} burndownChart
+ */
+Widget.prototype['burndownChart'] = undefined;
 
 
 

@@ -11,5 +11,6 @@ Name | Type | Description | Notes
 **backlogId** | **String** |  | [optional] 
 **backlog** | [**Backlog**](Backlog.md) |  | [optional] 
 **type** | **String** |  | [optional] 
+**burndownChart** | **Object** |  | [optional] 
 
 

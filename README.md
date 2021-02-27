@@ -149,6 +149,11 @@ Class | Method | HTTP request | Description
 *SprintService.UsersApi* | [**usersIdGet**](docs/UsersApi.md#usersIdGet) | **GET** /users/{id} | Get a user
 *SprintService.UsersApi* | [**usersIdPatch**](docs/UsersApi.md#usersIdPatch) | **PATCH** /users/{id} | Update a user
 *SprintService.UsersApi* | [**usersPost**](docs/UsersApi.md#usersPost) | **POST** /users | Create a user
+*SprintService.WidgetsApi* | [**widgetsGet**](docs/WidgetsApi.md#widgetsGet) | **GET** /widgets | Get all widgets
+*SprintService.WidgetsApi* | [**widgetsIdDelete**](docs/WidgetsApi.md#widgetsIdDelete) | **DELETE** /widgets/{id} | Delete a widget
+*SprintService.WidgetsApi* | [**widgetsIdGet**](docs/WidgetsApi.md#widgetsIdGet) | **GET** /widgets/{id} | Get a widget
+*SprintService.WidgetsApi* | [**widgetsIdPatch**](docs/WidgetsApi.md#widgetsIdPatch) | **PATCH** /widgets/{id} | Update a widget
+*SprintService.WidgetsApi* | [**widgetsPost**](docs/WidgetsApi.md#widgetsPost) | **POST** /widgets | Create a widget
 
 
 ## Documentation for Models
@@ -161,6 +166,8 @@ Class | Method | HTTP request | Description
  - [SprintService.Body11](docs/Body11.md)
  - [SprintService.Body12](docs/Body12.md)
  - [SprintService.Body13](docs/Body13.md)
+ - [SprintService.Body14](docs/Body14.md)
+ - [SprintService.Body15](docs/Body15.md)
  - [SprintService.Body2](docs/Body2.md)
  - [SprintService.Body3](docs/Body3.md)
  - [SprintService.Body4](docs/Body4.md)
@@ -175,6 +182,7 @@ Class | Method | HTTP request | Description
  - [SprintService.InlineResponse2002](docs/InlineResponse2002.md)
  - [SprintService.InlineResponse2003](docs/InlineResponse2003.md)
  - [SprintService.InlineResponse2004](docs/InlineResponse2004.md)
+ - [SprintService.InlineResponse2005](docs/InlineResponse2005.md)
  - [SprintService.InlineResponse201](docs/InlineResponse201.md)
  - [SprintService.Task](docs/Task.md)
  - [SprintService.TaskEvent](docs/TaskEvent.md)
@@ -182,6 +190,7 @@ Class | Method | HTTP request | Description
  - [SprintService.Team](docs/Team.md)
  - [SprintService.Token](docs/Token.md)
  - [SprintService.User](docs/User.md)
+ - [SprintService.Widget](docs/Widget.md)
 
 
 ## Documentation for Authorization

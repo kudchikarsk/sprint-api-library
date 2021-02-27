@@ -12,6 +12,8 @@ docs/Body10.md
 docs/Body11.md
 docs/Body12.md
 docs/Body13.md
+docs/Body14.md
+docs/Body15.md
 docs/Body2.md
 docs/Body3.md
 docs/Body4.md
@@ -26,6 +28,7 @@ docs/InlineResponse2001.md
 docs/InlineResponse2002.md
 docs/InlineResponse2003.md
 docs/InlineResponse2004.md
+docs/InlineResponse2005.md
 docs/InlineResponse201.md
 docs/InviteesApi.md
 docs/Task.md
@@ -37,6 +40,8 @@ docs/TeamsApi.md
 docs/Token.md
 docs/User.md
 docs/UsersApi.md
+docs/Widget.md
+docs/WidgetsApi.md
 git_push.sh
 mocha.opts
 package.json
@@ -47,6 +52,7 @@ src/api/InviteesApi.js
 src/api/TasksApi.js
 src/api/TeamsApi.js
 src/api/UsersApi.js
+src/api/WidgetsApi.js
 src/index.js
 src/model/AuthTokens.js
 src/model/Backlog.js
@@ -56,6 +62,8 @@ src/model/Body10.js
 src/model/Body11.js
 src/model/Body12.js
 src/model/Body13.js
+src/model/Body14.js
+src/model/Body15.js
 src/model/Body2.js
 src/model/Body3.js
 src/model/Body4.js
@@ -70,6 +78,7 @@ src/model/InlineResponse2001.js
 src/model/InlineResponse2002.js
 src/model/InlineResponse2003.js
 src/model/InlineResponse2004.js
+src/model/InlineResponse2005.js
 src/model/InlineResponse201.js
 src/model/Task.js
 src/model/TaskEvent.js
@@ -77,3 +86,9 @@ src/model/TasksbulkTasks.js
 src/model/Team.js
 src/model/Token.js
 src/model/User.js
+src/model/Widget.js
+test/api/WidgetsApi.spec.js
+test/model/Body14.spec.js
+test/model/Body15.spec.js
+test/model/InlineResponse2005.spec.js
+test/model/Widget.spec.js

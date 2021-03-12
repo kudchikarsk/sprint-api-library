@@ -156,6 +156,7 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Get all tasks
      * User can retrieve assigned tasks.
+     * @param {String} teamId task teamId
      * @param {Object} opts Optional parameters
      * @param {String} opts.title task title
      * @param {String} opts.description task description
@@ -168,14 +169,20 @@ var TasksApi = /*#__PURE__*/function () {
 
   }, {
     key: "tasksDoingGetWithHttpInfo",
-    value: function tasksDoingGetWithHttpInfo(opts) {
+    value: function tasksDoingGetWithHttpInfo(teamId, opts) {
       opts = opts || {};
-      var postBody = null;
+      var postBody = null; // verify the required parameter 'teamId' is set
+
+      if (teamId === undefined || teamId === null) {
+        throw new _Error["default"]("Missing the required parameter 'teamId' when calling tasksDoingGet");
+      }
+
       var pathParams = {};
       var queryParams = {
         'title': opts['title'],
         'description': opts['description'],
         'state': opts['state'],
+        'teamId': teamId,
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -191,6 +198,7 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Get all tasks
      * User can retrieve assigned tasks.
+     * @param {String} teamId task teamId
      * @param {Object} opts Optional parameters
      * @param {String} opts.title task title
      * @param {String} opts.description task description
@@ -203,14 +211,15 @@ var TasksApi = /*#__PURE__*/function () {
 
   }, {
     key: "tasksDoingGet",
-    value: function tasksDoingGet(opts) {
-      return this.tasksDoingGetWithHttpInfo(opts).then(function (response_and_data) {
+    value: function tasksDoingGet(teamId, opts) {
+      return this.tasksDoingGetWithHttpInfo(teamId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Get all tasks
      * User can retrieve assigned tasks.
+     * @param {String} teamId task teamId
      * @param {Object} opts Optional parameters
      * @param {String} opts.title task title
      * @param {String} opts.description task description
@@ -223,14 +232,20 @@ var TasksApi = /*#__PURE__*/function () {
 
   }, {
     key: "tasksDoneGetWithHttpInfo",
-    value: function tasksDoneGetWithHttpInfo(opts) {
+    value: function tasksDoneGetWithHttpInfo(teamId, opts) {
       opts = opts || {};
-      var postBody = null;
+      var postBody = null; // verify the required parameter 'teamId' is set
+
+      if (teamId === undefined || teamId === null) {
+        throw new _Error["default"]("Missing the required parameter 'teamId' when calling tasksDoneGet");
+      }
+
       var pathParams = {};
       var queryParams = {
         'title': opts['title'],
         'description': opts['description'],
         'state': opts['state'],
+        'teamId': teamId,
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -246,6 +261,7 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Get all tasks
      * User can retrieve assigned tasks.
+     * @param {String} teamId task teamId
      * @param {Object} opts Optional parameters
      * @param {String} opts.title task title
      * @param {String} opts.description task description
@@ -258,8 +274,8 @@ var TasksApi = /*#__PURE__*/function () {
 
   }, {
     key: "tasksDoneGet",
-    value: function tasksDoneGet(opts) {
-      return this.tasksDoneGetWithHttpInfo(opts).then(function (response_and_data) {
+    value: function tasksDoneGet(teamId, opts) {
+      return this.tasksDoneGetWithHttpInfo(teamId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -306,6 +322,7 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Get all tasks
      * User can retrieve assigned tasks.
+     * @param {String} teamId task teamId
      * @param {Object} opts Optional parameters
      * @param {String} opts.title task title
      * @param {String} opts.description task description
@@ -318,14 +335,20 @@ var TasksApi = /*#__PURE__*/function () {
 
   }, {
     key: "tasksTodoGetWithHttpInfo",
-    value: function tasksTodoGetWithHttpInfo(opts) {
+    value: function tasksTodoGetWithHttpInfo(teamId, opts) {
       opts = opts || {};
-      var postBody = null;
+      var postBody = null; // verify the required parameter 'teamId' is set
+
+      if (teamId === undefined || teamId === null) {
+        throw new _Error["default"]("Missing the required parameter 'teamId' when calling tasksTodoGet");
+      }
+
       var pathParams = {};
       var queryParams = {
         'title': opts['title'],
         'description': opts['description'],
         'state': opts['state'],
+        'teamId': teamId,
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -341,6 +364,7 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Get all tasks
      * User can retrieve assigned tasks.
+     * @param {String} teamId task teamId
      * @param {Object} opts Optional parameters
      * @param {String} opts.title task title
      * @param {String} opts.description task description
@@ -353,8 +377,8 @@ var TasksApi = /*#__PURE__*/function () {
 
   }, {
     key: "tasksTodoGet",
-    value: function tasksTodoGet(opts) {
-      return this.tasksTodoGetWithHttpInfo(opts).then(function (response_and_data) {
+    value: function tasksTodoGet(teamId, opts) {
+      return this.tasksTodoGetWithHttpInfo(teamId, opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

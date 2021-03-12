@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ## tasksDoingGet
 
-> InlineResponse2001 tasksDoingGet(opts)
+> InlineResponse2001 tasksDoingGet(teamId, opts)
 
 Get all tasks
 
@@ -143,6 +143,7 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TasksApi();
+let teamId = "teamId_example"; // String | task teamId
 let opts = {
   'title': "title_example", // String | task title
   'description': "description_example", // String | task description
@@ -151,7 +152,7 @@ let opts = {
   'limit': 56, // Number | Maximum number of tasks
   'page': 1 // Number | Page number
 };
-apiInstance.tasksDoingGet(opts).then((data) => {
+apiInstance.tasksDoingGet(teamId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -164,6 +165,7 @@ apiInstance.tasksDoingGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **teamId** | **String**| task teamId | 
  **title** | **String**| task title | [optional] 
  **description** | **String**| task description | [optional] 
  **state** | **String**| task state | [optional] 
@@ -187,7 +189,7 @@ Name | Type | Description  | Notes
 
 ## tasksDoneGet
 
-> InlineResponse2001 tasksDoneGet(opts)
+> InlineResponse2001 tasksDoneGet(teamId, opts)
 
 Get all tasks
 
@@ -203,6 +205,7 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TasksApi();
+let teamId = "teamId_example"; // String | task teamId
 let opts = {
   'title': "title_example", // String | task title
   'description': "description_example", // String | task description
@@ -211,7 +214,7 @@ let opts = {
   'limit': 56, // Number | Maximum number of tasks
   'page': 1 // Number | Page number
 };
-apiInstance.tasksDoneGet(opts).then((data) => {
+apiInstance.tasksDoneGet(teamId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -224,6 +227,7 @@ apiInstance.tasksDoneGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **teamId** | **String**| task teamId | 
  **title** | **String**| task title | [optional] 
  **description** | **String**| task description | [optional] 
  **state** | **String**| task state | [optional] 
@@ -295,7 +299,7 @@ Name | Type | Description  | Notes
 
 ## tasksTodoGet
 
-> InlineResponse2001 tasksTodoGet(opts)
+> InlineResponse2001 tasksTodoGet(teamId, opts)
 
 Get all tasks
 
@@ -311,6 +315,7 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TasksApi();
+let teamId = "teamId_example"; // String | task teamId
 let opts = {
   'title': "title_example", // String | task title
   'description': "description_example", // String | task description
@@ -319,7 +324,7 @@ let opts = {
   'limit': 56, // Number | Maximum number of tasks
   'page': 1 // Number | Page number
 };
-apiInstance.tasksTodoGet(opts).then((data) => {
+apiInstance.tasksTodoGet(teamId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -332,6 +337,7 @@ apiInstance.tasksTodoGet(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **teamId** | **String**| task teamId | 
  **title** | **String**| task title | [optional] 
  **description** | **String**| task description | [optional] 
  **state** | **String**| task state | [optional] 

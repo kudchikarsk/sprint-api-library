@@ -162,6 +162,7 @@ export default class TasksApi {
     /**
      * Get all tasks
      * User can retrieve assigned tasks.
+     * @param {String} teamId task teamId
      * @param {Object} opts Optional parameters
      * @param {String} opts.title task title
      * @param {String} opts.description task description
@@ -171,9 +172,13 @@ export default class TasksApi {
      * @param {Number} opts.page Page number (default to 1)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
      */
-    tasksDoingGetWithHttpInfo(opts) {
+    tasksDoingGetWithHttpInfo(teamId, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'teamId' is set
+      if (teamId === undefined || teamId === null) {
+        throw new Error("Missing the required parameter 'teamId' when calling tasksDoingGet");
+      }
 
       let pathParams = {
       };
@@ -181,6 +186,7 @@ export default class TasksApi {
         'title': opts['title'],
         'description': opts['description'],
         'state': opts['state'],
+        'teamId': teamId,
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -204,6 +210,7 @@ export default class TasksApi {
     /**
      * Get all tasks
      * User can retrieve assigned tasks.
+     * @param {String} teamId task teamId
      * @param {Object} opts Optional parameters
      * @param {String} opts.title task title
      * @param {String} opts.description task description
@@ -213,8 +220,8 @@ export default class TasksApi {
      * @param {Number} opts.page Page number (default to 1)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
      */
-    tasksDoingGet(opts) {
-      return this.tasksDoingGetWithHttpInfo(opts)
+    tasksDoingGet(teamId, opts) {
+      return this.tasksDoingGetWithHttpInfo(teamId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -224,6 +231,7 @@ export default class TasksApi {
     /**
      * Get all tasks
      * User can retrieve assigned tasks.
+     * @param {String} teamId task teamId
      * @param {Object} opts Optional parameters
      * @param {String} opts.title task title
      * @param {String} opts.description task description
@@ -233,9 +241,13 @@ export default class TasksApi {
      * @param {Number} opts.page Page number (default to 1)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
      */
-    tasksDoneGetWithHttpInfo(opts) {
+    tasksDoneGetWithHttpInfo(teamId, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'teamId' is set
+      if (teamId === undefined || teamId === null) {
+        throw new Error("Missing the required parameter 'teamId' when calling tasksDoneGet");
+      }
 
       let pathParams = {
       };
@@ -243,6 +255,7 @@ export default class TasksApi {
         'title': opts['title'],
         'description': opts['description'],
         'state': opts['state'],
+        'teamId': teamId,
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -266,6 +279,7 @@ export default class TasksApi {
     /**
      * Get all tasks
      * User can retrieve assigned tasks.
+     * @param {String} teamId task teamId
      * @param {Object} opts Optional parameters
      * @param {String} opts.title task title
      * @param {String} opts.description task description
@@ -275,8 +289,8 @@ export default class TasksApi {
      * @param {Number} opts.page Page number (default to 1)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
      */
-    tasksDoneGet(opts) {
-      return this.tasksDoneGetWithHttpInfo(opts)
+    tasksDoneGet(teamId, opts) {
+      return this.tasksDoneGetWithHttpInfo(teamId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -333,6 +347,7 @@ export default class TasksApi {
     /**
      * Get all tasks
      * User can retrieve assigned tasks.
+     * @param {String} teamId task teamId
      * @param {Object} opts Optional parameters
      * @param {String} opts.title task title
      * @param {String} opts.description task description
@@ -342,9 +357,13 @@ export default class TasksApi {
      * @param {Number} opts.page Page number (default to 1)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
      */
-    tasksTodoGetWithHttpInfo(opts) {
+    tasksTodoGetWithHttpInfo(teamId, opts) {
       opts = opts || {};
       let postBody = null;
+      // verify the required parameter 'teamId' is set
+      if (teamId === undefined || teamId === null) {
+        throw new Error("Missing the required parameter 'teamId' when calling tasksTodoGet");
+      }
 
       let pathParams = {
       };
@@ -352,6 +371,7 @@ export default class TasksApi {
         'title': opts['title'],
         'description': opts['description'],
         'state': opts['state'],
+        'teamId': teamId,
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -375,6 +395,7 @@ export default class TasksApi {
     /**
      * Get all tasks
      * User can retrieve assigned tasks.
+     * @param {String} teamId task teamId
      * @param {Object} opts Optional parameters
      * @param {String} opts.title task title
      * @param {String} opts.description task description
@@ -384,8 +405,8 @@ export default class TasksApi {
      * @param {Number} opts.page Page number (default to 1)
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
      */
-    tasksTodoGet(opts) {
-      return this.tasksTodoGetWithHttpInfo(opts)
+    tasksTodoGet(teamId, opts) {
+      return this.tasksTodoGetWithHttpInfo(teamId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

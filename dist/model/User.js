@@ -105,6 +105,10 @@ var User = /*#__PURE__*/function () {
         if (data.hasOwnProperty('isInvitationAccepted')) {
           obj['isInvitationAccepted'] = _ApiClient["default"].convertToType(data['isInvitationAccepted'], 'Boolean');
         }
+
+        if (data.hasOwnProperty('isAdmin')) {
+          obj['isAdmin'] = _ApiClient["default"].convertToType(data['isAdmin'], 'Boolean');
+        }
       }
 
       return obj;
@@ -179,6 +183,11 @@ User.prototype['aboutMe'] = undefined;
  */
 
 User.prototype['isInvitationAccepted'] = undefined;
+/**
+ * @member {Boolean} isAdmin
+ */
+
+User.prototype['isAdmin'] = undefined;
 /**
  * Allowed values for the <code>role</code> property.
  * @enum {String}

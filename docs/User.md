@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **postalCode** | **String** |  | [optional] 
 **aboutMe** | **String** |  | [optional] 
 **isInvitationAccepted** | **Boolean** |  | [optional] 
+**isAdmin** | **Boolean** |  | [optional] 
 
 
 

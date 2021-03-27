@@ -86,6 +86,9 @@ class User {
             if (data.hasOwnProperty('isInvitationAccepted')) {
                 obj['isInvitationAccepted'] = ApiClient.convertToType(data['isInvitationAccepted'], 'Boolean');
             }
+            if (data.hasOwnProperty('isAdmin')) {
+                obj['isAdmin'] = ApiClient.convertToType(data['isAdmin'], 'Boolean');
+            }
         }
         return obj;
     }
@@ -157,6 +160,11 @@ User.prototype['aboutMe'] = undefined;
  * @member {Boolean} isInvitationAccepted
  */
 User.prototype['isInvitationAccepted'] = undefined;
+
+/**
+ * @member {Boolean} isAdmin
+ */
+User.prototype['isAdmin'] = undefined;
 
 
 

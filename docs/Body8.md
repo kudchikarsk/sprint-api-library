@@ -4,6 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tasks** | [**[TasksbulkTasks]**](TasksbulkTasks.md) |  | 
+**invoices** | [**[InvoicesbulkInvoices]**](InvoicesbulkInvoices.md) |  | 
 
 

@@ -50,29 +50,8 @@ class Body13 {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'String');
-            }
-            if (data.hasOwnProperty('company')) {
-                obj['company'] = ApiClient.convertToType(data['company'], 'String');
-            }
-            if (data.hasOwnProperty('education')) {
-                obj['education'] = ApiClient.convertToType(data['education'], 'String');
-            }
-            if (data.hasOwnProperty('address')) {
-                obj['address'] = ApiClient.convertToType(data['address'], 'String');
-            }
-            if (data.hasOwnProperty('city')) {
-                obj['city'] = ApiClient.convertToType(data['city'], 'String');
-            }
-            if (data.hasOwnProperty('country')) {
-                obj['country'] = ApiClient.convertToType(data['country'], 'String');
-            }
-            if (data.hasOwnProperty('postalCode')) {
-                obj['postalCode'] = ApiClient.convertToType(data['postalCode'], 'String');
-            }
-            if (data.hasOwnProperty('aboutMe')) {
-                obj['aboutMe'] = ApiClient.convertToType(data['aboutMe'], 'String');
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
         }
         return obj;
@@ -87,45 +66,9 @@ class Body13 {
 Body13.prototype['name'] = undefined;
 
 /**
- * must be unique
- * @member {String} email
+ * @member {String} description
  */
-Body13.prototype['email'] = undefined;
-
-/**
- * @member {String} company
- */
-Body13.prototype['company'] = undefined;
-
-/**
- * @member {String} education
- */
-Body13.prototype['education'] = undefined;
-
-/**
- * @member {String} address
- */
-Body13.prototype['address'] = undefined;
-
-/**
- * @member {String} city
- */
-Body13.prototype['city'] = undefined;
-
-/**
- * @member {String} country
- */
-Body13.prototype['country'] = undefined;
-
-/**
- * @member {String} postalCode
- */
-Body13.prototype['postalCode'] = undefined;
-
-/**
- * @member {String} aboutMe
- */
-Body13.prototype['aboutMe'] = undefined;
+Body13.prototype['description'] = undefined;
 
 
 

@@ -63,8 +63,8 @@ class InlineResponse2002 {
             if (data.hasOwnProperty('totalResults')) {
                 obj['totalResults'] = ApiClient.convertToType(data['totalResults'], 'Number');
             }
-            if (data.hasOwnProperty('totalPoints')) {
-                obj['totalPoints'] = ApiClient.convertToType(data['totalPoints'], 'Number');
+            if (data.hasOwnProperty('cache')) {
+                obj['cache'] = ApiClient.convertToType(data['cache'], Object);
             }
         }
         return obj;
@@ -99,9 +99,9 @@ InlineResponse2002.prototype['totalPages'] = undefined;
 InlineResponse2002.prototype['totalResults'] = undefined;
 
 /**
- * @member {Number} totalPoints
+ * @member {Object} cache
  */
-InlineResponse2002.prototype['totalPoints'] = undefined;
+InlineResponse2002.prototype['cache'] = undefined;
 
 
 

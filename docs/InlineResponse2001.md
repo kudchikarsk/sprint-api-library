@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[Task]**](Task.md) |  | [optional] 
+**results** | [**[Invoice]**](Invoice.md) |  | [optional] 
 **page** | **Number** |  | [optional] 
 **limit** | **Number** |  | [optional] 
 **totalPages** | **Number** |  | [optional] 
 **totalResults** | **Number** |  | [optional] 
-**cache** | **Object** |  | [optional] 
 
 

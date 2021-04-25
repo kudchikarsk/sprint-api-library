@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## widgetsGet
 
-> InlineResponse2005 widgetsGet(opts)
+> InlineResponse2006 widgetsGet(opts)
 
 Get all widgets
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ## widgetsIdPatch
 
-> Widget widgetsIdPatch(id, Body15)
+> Widget widgetsIdPatch(id, Body17)
 
 Update a widget
 
@@ -181,8 +181,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.WidgetsApi();
 let id = "id_example"; // String | Widget id
-let Body15 = new SprintService.Body15(); // Body15 | 
-apiInstance.widgetsIdPatch(id, Body15).then((data) => {
+let Body17 = new SprintService.Body17(); // Body17 | 
+apiInstance.widgetsIdPatch(id, Body17).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -196,7 +196,7 @@ apiInstance.widgetsIdPatch(id, Body15).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Widget id | 
- **Body15** | [**Body15**](Body15.md)|  | 
+ **Body17** | [**Body17**](Body17.md)|  | 
 
 ### Return type
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ## widgetsPost
 
-> Widget widgetsPost(Body14)
+> Widget widgetsPost(Body16)
 
 Create a widget
 
@@ -230,8 +230,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.WidgetsApi();
-let Body14 = new SprintService.Body14(); // Body14 | 
-apiInstance.widgetsPost(Body14).then((data) => {
+let Body16 = new SprintService.Body16(); // Body16 | 
+apiInstance.widgetsPost(Body16).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -244,7 +244,7 @@ apiInstance.widgetsPost(Body14).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body14** | [**Body14**](Body14.md)|  | 
+ **Body16** | [**Body16**](Body16.md)|  | 
 
 ### Return type
 

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import TasksbulkTasks from './TasksbulkTasks';
+import InvoicesbulkInvoices from './InvoicesbulkInvoices';
 
 /**
  * The Body8 model module.
@@ -23,11 +23,11 @@ class Body8 {
     /**
      * Constructs a new <code>Body8</code>.
      * @alias module:model/Body8
-     * @param tasks {Array.<module:model/TasksbulkTasks>} 
+     * @param invoices {Array.<module:model/InvoicesbulkInvoices>} 
      */
-    constructor(tasks) { 
+    constructor(invoices) { 
         
-        Body8.initialize(this, tasks);
+        Body8.initialize(this, invoices);
     }
 
     /**
@@ -35,8 +35,8 @@ class Body8 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, tasks) { 
-        obj['tasks'] = tasks;
+    static initialize(obj, invoices) { 
+        obj['invoices'] = invoices;
     }
 
     /**
@@ -50,8 +50,8 @@ class Body8 {
         if (data) {
             obj = obj || new Body8();
 
-            if (data.hasOwnProperty('tasks')) {
-                obj['tasks'] = ApiClient.convertToType(data['tasks'], [TasksbulkTasks]);
+            if (data.hasOwnProperty('invoices')) {
+                obj['invoices'] = ApiClient.convertToType(data['invoices'], [InvoicesbulkInvoices]);
             }
         }
         return obj;
@@ -61,9 +61,9 @@ class Body8 {
 }
 
 /**
- * @member {Array.<module:model/TasksbulkTasks>} tasks
+ * @member {Array.<module:model/InvoicesbulkInvoices>} invoices
  */
-Body8.prototype['tasks'] = undefined;
+Body8.prototype['invoices'] = undefined;
 
 
 

@@ -131,6 +131,10 @@ Class | Method | HTTP request | Description
 *SprintService.BacklogsApi* | [**backlogsPost**](docs/BacklogsApi.md#backlogsPost) | **POST** /backlogs | Create a backlog
 *SprintService.InviteesApi* | [**inviteesGet**](docs/InviteesApi.md#inviteesGet) | **GET** /invitees | Get all team invitees
 *SprintService.InviteesApi* | [**inviteesIdAcceptPost**](docs/InviteesApi.md#inviteesIdAcceptPost) | **POST** /invitees/{id}/accept | Accept a team invitee
+*SprintService.InvoicesApi* | [**invoicesBulkPost**](docs/InvoicesApi.md#invoicesBulkPost) | **POST** /invoices/bulk | Create a invoice events
+*SprintService.InvoicesApi* | [**invoicesGet**](docs/InvoicesApi.md#invoicesGet) | **GET** /invoices | Get all invoices
+*SprintService.InvoicesApi* | [**invoicesInvoiceIdGet**](docs/InvoicesApi.md#invoicesInvoiceIdGet) | **GET** /invoices/{invoiceId} | Get all invoices
+*SprintService.InvoicesApi* | [**invoicesPost**](docs/InvoicesApi.md#invoicesPost) | **POST** /invoices | Create a invoice event
 *SprintService.TasksApi* | [**tasksBacklogBacklogIdGet**](docs/TasksApi.md#tasksBacklogBacklogIdGet) | **GET** /tasks/backlog/{backlogId} | Get all tasks
 *SprintService.TasksApi* | [**tasksBulkPost**](docs/TasksApi.md#tasksBulkPost) | **POST** /tasks/bulk | Create a task events
 *SprintService.TasksApi* | [**tasksDoingGet**](docs/TasksApi.md#tasksDoingGet) | **GET** /tasks/doing | Get all tasks
@@ -168,6 +172,8 @@ Class | Method | HTTP request | Description
  - [SprintService.Body13](docs/Body13.md)
  - [SprintService.Body14](docs/Body14.md)
  - [SprintService.Body15](docs/Body15.md)
+ - [SprintService.Body16](docs/Body16.md)
+ - [SprintService.Body17](docs/Body17.md)
  - [SprintService.Body2](docs/Body2.md)
  - [SprintService.Body3](docs/Body3.md)
  - [SprintService.Body4](docs/Body4.md)
@@ -183,7 +189,13 @@ Class | Method | HTTP request | Description
  - [SprintService.InlineResponse2003](docs/InlineResponse2003.md)
  - [SprintService.InlineResponse2004](docs/InlineResponse2004.md)
  - [SprintService.InlineResponse2005](docs/InlineResponse2005.md)
+ - [SprintService.InlineResponse2006](docs/InlineResponse2006.md)
  - [SprintService.InlineResponse201](docs/InlineResponse201.md)
+ - [SprintService.Invoice](docs/Invoice.md)
+ - [SprintService.InvoiceEvent](docs/InvoiceEvent.md)
+ - [SprintService.InvoiceItems](docs/InvoiceItems.md)
+ - [SprintService.InvoiceRecipient](docs/InvoiceRecipient.md)
+ - [SprintService.InvoicesbulkInvoices](docs/InvoicesbulkInvoices.md)
  - [SprintService.Task](docs/Task.md)
  - [SprintService.TaskEvent](docs/TaskEvent.md)
  - [SprintService.TasksbulkTasks](docs/TasksbulkTasks.md)

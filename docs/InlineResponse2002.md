@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **limit** | **Number** |  | [optional] 
 **totalPages** | **Number** |  | [optional] 
 **totalResults** | **Number** |  | [optional] 
-**totalPoints** | **Number** |  | [optional] 
+**cache** | **Object** |  | [optional] 
 
 

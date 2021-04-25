@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import Task from './Task';
+import Invoice from './Invoice';
 
 /**
  * The Body9 model module.
@@ -24,12 +24,12 @@ class Body9 {
      * Constructs a new <code>Body9</code>.
      * @alias module:model/Body9
      * @param type {String} 
-     * @param taskId {String} 
-     * @param data {module:model/Task} 
+     * @param invoiceId {String} 
+     * @param data {module:model/Invoice} 
      */
-    constructor(type, taskId, data) { 
+    constructor(type, invoiceId, data) { 
         
-        Body9.initialize(this, type, taskId, data);
+        Body9.initialize(this, type, invoiceId, data);
     }
 
     /**
@@ -37,9 +37,9 @@ class Body9 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type, taskId, data) { 
+    static initialize(obj, type, invoiceId, data) { 
         obj['type'] = type;
-        obj['taskId'] = taskId;
+        obj['invoiceId'] = invoiceId;
         obj['data'] = data;
     }
 
@@ -57,11 +57,11 @@ class Body9 {
             if (data.hasOwnProperty('type')) {
                 obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
-            if (data.hasOwnProperty('taskId')) {
-                obj['taskId'] = ApiClient.convertToType(data['taskId'], 'String');
+            if (data.hasOwnProperty('invoiceId')) {
+                obj['invoiceId'] = ApiClient.convertToType(data['invoiceId'], 'String');
             }
             if (data.hasOwnProperty('data')) {
-                obj['data'] = Task.constructFromObject(data['data']);
+                obj['data'] = Invoice.constructFromObject(data['data']);
             }
         }
         return obj;
@@ -76,12 +76,12 @@ class Body9 {
 Body9.prototype['type'] = undefined;
 
 /**
- * @member {String} taskId
+ * @member {String} invoiceId
  */
-Body9.prototype['taskId'] = undefined;
+Body9.prototype['invoiceId'] = undefined;
 
 /**
- * @member {module:model/Task} data
+ * @member {module:model/Invoice} data
  */
 Body9.prototype['data'] = undefined;
 

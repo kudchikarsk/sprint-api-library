@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import TasksbulkTasks from './TasksbulkTasks';
 
 /**
  * The Body10 model module.
@@ -22,11 +23,11 @@ class Body10 {
     /**
      * Constructs a new <code>Body10</code>.
      * @alias module:model/Body10
-     * @param name {String} 
+     * @param tasks {Array.<module:model/TasksbulkTasks>} 
      */
-    constructor(name) { 
+    constructor(tasks) { 
         
-        Body10.initialize(this, name);
+        Body10.initialize(this, tasks);
     }
 
     /**
@@ -34,8 +35,8 @@ class Body10 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name) { 
-        obj['name'] = name;
+    static initialize(obj, tasks) { 
+        obj['tasks'] = tasks;
     }
 
     /**
@@ -49,11 +50,8 @@ class Body10 {
         if (data) {
             obj = obj || new Body10();
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('description')) {
-                obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            if (data.hasOwnProperty('tasks')) {
+                obj['tasks'] = ApiClient.convertToType(data['tasks'], [TasksbulkTasks]);
             }
         }
         return obj;
@@ -63,14 +61,9 @@ class Body10 {
 }
 
 /**
- * @member {String} name
+ * @member {Array.<module:model/TasksbulkTasks>} tasks
  */
-Body10.prototype['name'] = undefined;
-
-/**
- * @member {String} description
- */
-Body10.prototype['description'] = undefined;
+Body10.prototype['tasks'] = undefined;
 
 
 

@@ -22,13 +22,14 @@ class Body14 {
     /**
      * Constructs a new <code>Body14</code>.
      * @alias module:model/Body14
-     * @param teamId {String} 
-     * @param backlogId {String} 
-     * @param type {String} 
+     * @param name {String} 
+     * @param email {String} must be unique
+     * @param password {String} At least one number and one letter
+     * @param role {module:model/Body14.RoleEnum} 
      */
-    constructor(teamId, backlogId, type) { 
+    constructor(name, email, password, role) { 
         
-        Body14.initialize(this, teamId, backlogId, type);
+        Body14.initialize(this, name, email, password, role);
     }
 
     /**
@@ -36,10 +37,11 @@ class Body14 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, teamId, backlogId, type) { 
-        obj['teamId'] = teamId;
-        obj['backlogId'] = backlogId;
-        obj['type'] = type;
+    static initialize(obj, name, email, password, role) { 
+        obj['name'] = name;
+        obj['email'] = email;
+        obj['password'] = password;
+        obj['role'] = role;
     }
 
     /**
@@ -53,14 +55,17 @@ class Body14 {
         if (data) {
             obj = obj || new Body14();
 
-            if (data.hasOwnProperty('teamId')) {
-                obj['teamId'] = ApiClient.convertToType(data['teamId'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('backlogId')) {
-                obj['backlogId'] = ApiClient.convertToType(data['backlogId'], 'String');
+            if (data.hasOwnProperty('email')) {
+                obj['email'] = ApiClient.convertToType(data['email'], 'String');
             }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            if (data.hasOwnProperty('password')) {
+                obj['password'] = ApiClient.convertToType(data['password'], 'String');
+            }
+            if (data.hasOwnProperty('role')) {
+                obj['role'] = ApiClient.convertToType(data['role'], 'String');
             }
         }
         return obj;
@@ -70,22 +75,50 @@ class Body14 {
 }
 
 /**
- * @member {String} teamId
+ * @member {String} name
  */
-Body14.prototype['teamId'] = undefined;
+Body14.prototype['name'] = undefined;
 
 /**
- * @member {String} backlogId
+ * must be unique
+ * @member {String} email
  */
-Body14.prototype['backlogId'] = undefined;
+Body14.prototype['email'] = undefined;
 
 /**
- * @member {String} type
+ * At least one number and one letter
+ * @member {String} password
  */
-Body14.prototype['type'] = undefined;
+Body14.prototype['password'] = undefined;
+
+/**
+ * @member {module:model/Body14.RoleEnum} role
+ */
+Body14.prototype['role'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>role</code> property.
+ * @enum {String}
+ * @readonly
+ */
+Body14['RoleEnum'] = {
+
+    /**
+     * value: "user"
+     * @const
+     */
+    "user": "user",
+
+    /**
+     * value: "admin"
+     * @const
+     */
+    "admin": "admin"
+};
 
 
 

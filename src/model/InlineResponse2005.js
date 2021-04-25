@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import Widget from './Widget';
+import User from './User';
 
 /**
  * The InlineResponse2005 model module.
@@ -49,7 +49,7 @@ class InlineResponse2005 {
             obj = obj || new InlineResponse2005();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Widget]);
+                obj['results'] = ApiClient.convertToType(data['results'], [User]);
             }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -71,7 +71,7 @@ class InlineResponse2005 {
 }
 
 /**
- * @member {Array.<module:model/Widget>} results
+ * @member {Array.<module:model/User>} results
  */
 InlineResponse2005.prototype['results'] = undefined;
 

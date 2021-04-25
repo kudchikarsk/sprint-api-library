@@ -23,6 +23,8 @@ import Body12 from './model/Body12';
 import Body13 from './model/Body13';
 import Body14 from './model/Body14';
 import Body15 from './model/Body15';
+import Body16 from './model/Body16';
+import Body17 from './model/Body17';
 import Body2 from './model/Body2';
 import Body3 from './model/Body3';
 import Body4 from './model/Body4';
@@ -38,7 +40,13 @@ import InlineResponse2002 from './model/InlineResponse2002';
 import InlineResponse2003 from './model/InlineResponse2003';
 import InlineResponse2004 from './model/InlineResponse2004';
 import InlineResponse2005 from './model/InlineResponse2005';
+import InlineResponse2006 from './model/InlineResponse2006';
 import InlineResponse201 from './model/InlineResponse201';
+import Invoice from './model/Invoice';
+import InvoiceEvent from './model/InvoiceEvent';
+import InvoiceItems from './model/InvoiceItems';
+import InvoiceRecipient from './model/InvoiceRecipient';
+import InvoicesbulkInvoices from './model/InvoicesbulkInvoices';
 import Task from './model/Task';
 import TaskEvent from './model/TaskEvent';
 import TasksbulkTasks from './model/TasksbulkTasks';
@@ -49,6 +57,7 @@ import Widget from './model/Widget';
 import AuthApi from './api/AuthApi';
 import BacklogsApi from './api/BacklogsApi';
 import InviteesApi from './api/InviteesApi';
+import InvoicesApi from './api/InvoicesApi';
 import TasksApi from './api/TasksApi';
 import TeamsApi from './api/TeamsApi';
 import UsersApi from './api/UsersApi';
@@ -154,6 +163,18 @@ export {
     Body15,
 
     /**
+     * The Body16 model constructor.
+     * @property {module:model/Body16}
+     */
+    Body16,
+
+    /**
+     * The Body17 model constructor.
+     * @property {module:model/Body17}
+     */
+    Body17,
+
+    /**
      * The Body2 model constructor.
      * @property {module:model/Body2}
      */
@@ -244,10 +265,46 @@ export {
     InlineResponse2005,
 
     /**
+     * The InlineResponse2006 model constructor.
+     * @property {module:model/InlineResponse2006}
+     */
+    InlineResponse2006,
+
+    /**
      * The InlineResponse201 model constructor.
      * @property {module:model/InlineResponse201}
      */
     InlineResponse201,
+
+    /**
+     * The Invoice model constructor.
+     * @property {module:model/Invoice}
+     */
+    Invoice,
+
+    /**
+     * The InvoiceEvent model constructor.
+     * @property {module:model/InvoiceEvent}
+     */
+    InvoiceEvent,
+
+    /**
+     * The InvoiceItems model constructor.
+     * @property {module:model/InvoiceItems}
+     */
+    InvoiceItems,
+
+    /**
+     * The InvoiceRecipient model constructor.
+     * @property {module:model/InvoiceRecipient}
+     */
+    InvoiceRecipient,
+
+    /**
+     * The InvoicesbulkInvoices model constructor.
+     * @property {module:model/InvoicesbulkInvoices}
+     */
+    InvoicesbulkInvoices,
 
     /**
      * The Task model constructor.
@@ -308,6 +365,12 @@ export {
     * @property {module:api/InviteesApi}
     */
     InviteesApi,
+
+    /**
+    * The InvoicesApi service constructor.
+    * @property {module:api/InvoicesApi}
+    */
+    InvoicesApi,
 
     /**
     * The TasksApi service constructor.

@@ -47,14 +47,32 @@ class Body15 {
         if (data) {
             obj = obj || new Body15();
 
-            if (data.hasOwnProperty('teamId')) {
-                obj['teamId'] = ApiClient.convertToType(data['teamId'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('backlogId')) {
-                obj['backlogId'] = ApiClient.convertToType(data['backlogId'], 'String');
+            if (data.hasOwnProperty('email')) {
+                obj['email'] = ApiClient.convertToType(data['email'], 'String');
             }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            if (data.hasOwnProperty('company')) {
+                obj['company'] = ApiClient.convertToType(data['company'], 'String');
+            }
+            if (data.hasOwnProperty('education')) {
+                obj['education'] = ApiClient.convertToType(data['education'], 'String');
+            }
+            if (data.hasOwnProperty('address')) {
+                obj['address'] = ApiClient.convertToType(data['address'], 'String');
+            }
+            if (data.hasOwnProperty('city')) {
+                obj['city'] = ApiClient.convertToType(data['city'], 'String');
+            }
+            if (data.hasOwnProperty('country')) {
+                obj['country'] = ApiClient.convertToType(data['country'], 'String');
+            }
+            if (data.hasOwnProperty('postalCode')) {
+                obj['postalCode'] = ApiClient.convertToType(data['postalCode'], 'String');
+            }
+            if (data.hasOwnProperty('aboutMe')) {
+                obj['aboutMe'] = ApiClient.convertToType(data['aboutMe'], 'String');
             }
         }
         return obj;
@@ -64,19 +82,50 @@ class Body15 {
 }
 
 /**
- * @member {String} teamId
+ * @member {String} name
  */
-Body15.prototype['teamId'] = undefined;
+Body15.prototype['name'] = undefined;
 
 /**
- * @member {String} backlogId
+ * must be unique
+ * @member {String} email
  */
-Body15.prototype['backlogId'] = undefined;
+Body15.prototype['email'] = undefined;
 
 /**
- * @member {String} type
+ * @member {String} company
  */
-Body15.prototype['type'] = undefined;
+Body15.prototype['company'] = undefined;
+
+/**
+ * @member {String} education
+ */
+Body15.prototype['education'] = undefined;
+
+/**
+ * @member {String} address
+ */
+Body15.prototype['address'] = undefined;
+
+/**
+ * @member {String} city
+ */
+Body15.prototype['city'] = undefined;
+
+/**
+ * @member {String} country
+ */
+Body15.prototype['country'] = undefined;
+
+/**
+ * @member {String} postalCode
+ */
+Body15.prototype['postalCode'] = undefined;
+
+/**
+ * @member {String} aboutMe
+ */
+Body15.prototype['aboutMe'] = undefined;
 
 
 

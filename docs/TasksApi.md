@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## tasksBacklogBacklogIdGet
 
-> InlineResponse2002 tasksBacklogBacklogIdGet(backlogId, opts)
+> InlineResponse2003 tasksBacklogBacklogIdGet(backlogId, opts)
 
 Get all tasks
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ## tasksBulkPost
 
-> TaskEvent tasksBulkPost(Body8)
+> TaskEvent tasksBulkPost(Body10)
 
 Create a task events
 
@@ -95,8 +95,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TasksApi();
-let Body8 = new SprintService.Body8(); // Body8 | 
-apiInstance.tasksBulkPost(Body8).then((data) => {
+let Body10 = new SprintService.Body10(); // Body10 | 
+apiInstance.tasksBulkPost(Body10).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -109,7 +109,7 @@ apiInstance.tasksBulkPost(Body8).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body8** | [**Body8**](Body8.md)|  | 
+ **Body10** | [**Body10**](Body10.md)|  | 
 
 ### Return type
 
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ## tasksDoingGet
 
-> InlineResponse2001 tasksDoingGet(teamId, opts)
+> InlineResponse2002 tasksDoingGet(teamId, opts)
 
 Get all tasks
 
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -189,7 +189,7 @@ Name | Type | Description  | Notes
 
 ## tasksDoneGet
 
-> InlineResponse2001 tasksDoneGet(teamId, opts)
+> InlineResponse2002 tasksDoneGet(teamId, opts)
 
 Get all tasks
 
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ## tasksPost
 
-> TaskEvent tasksPost(Body9)
+> TaskEvent tasksPost(Body11)
 
 Create a task event
 
@@ -267,8 +267,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TasksApi();
-let Body9 = new SprintService.Body9(); // Body9 | 
-apiInstance.tasksPost(Body9).then((data) => {
+let Body11 = new SprintService.Body11(); // Body11 | 
+apiInstance.tasksPost(Body11).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -281,7 +281,7 @@ apiInstance.tasksPost(Body9).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body9** | [**Body9**](Body9.md)|  | 
+ **Body11** | [**Body11**](Body11.md)|  | 
 
 ### Return type
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 ## tasksTodoGet
 
-> InlineResponse2001 tasksTodoGet(teamId, opts)
+> InlineResponse2002 tasksTodoGet(teamId, opts)
 
 Get all tasks
 
@@ -347,7 +347,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

@@ -13,11 +13,11 @@
 
 
 import ApiClient from "../ApiClient";
-import Body10 from '../model/Body10';
-import Body11 from '../model/Body11';
+import Body14 from '../model/Body14';
+import Body15 from '../model/Body15';
 import Error from '../model/Error';
-import InlineResponse2002 from '../model/InlineResponse2002';
-import InlineResponse2003 from '../model/InlineResponse2003';
+import InlineResponse2004 from '../model/InlineResponse2004';
+import InlineResponse2005 from '../model/InlineResponse2005';
 import TaskEvent from '../model/TaskEvent';
 
 /**
@@ -52,7 +52,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2003} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
      */
     tasksBacklogBacklogIdGetWithHttpInfo(backlogId, opts) {
       opts = opts || {};
@@ -82,7 +82,7 @@ export default class TasksApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2003;
+      let returnType = InlineResponse2005;
       return this.apiClient.callApi(
         '/tasks/backlog/{backlogId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -102,7 +102,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2003}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
      */
     tasksBacklogBacklogIdGet(backlogId, opts) {
       return this.tasksBacklogBacklogIdGetWithHttpInfo(backlogId, opts)
@@ -115,14 +115,14 @@ export default class TasksApi {
     /**
      * Create a task events
      * User can create task events.
-     * @param {module:model/Body10} Body10 
+     * @param {module:model/Body14} Body14 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TaskEvent} and HTTP response
      */
-    tasksBulkPostWithHttpInfo(Body10) {
-      let postBody = Body10;
-      // verify the required parameter 'Body10' is set
-      if (Body10 === undefined || Body10 === null) {
-        throw new Error("Missing the required parameter 'Body10' when calling tasksBulkPost");
+    tasksBulkPostWithHttpInfo(Body14) {
+      let postBody = Body14;
+      // verify the required parameter 'Body14' is set
+      if (Body14 === undefined || Body14 === null) {
+        throw new Error("Missing the required parameter 'Body14' when calling tasksBulkPost");
       }
 
       let pathParams = {
@@ -148,11 +148,11 @@ export default class TasksApi {
     /**
      * Create a task events
      * User can create task events.
-     * @param {module:model/Body10} Body10 
+     * @param {module:model/Body14} Body14 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TaskEvent}
      */
-    tasksBulkPost(Body10) {
-      return this.tasksBulkPostWithHttpInfo(Body10)
+    tasksBulkPost(Body14) {
+      return this.tasksBulkPostWithHttpInfo(Body14)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -170,7 +170,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
      */
     tasksDoingGetWithHttpInfo(teamId, opts) {
       opts = opts || {};
@@ -199,7 +199,7 @@ export default class TasksApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2002;
+      let returnType = InlineResponse2004;
       return this.apiClient.callApi(
         '/tasks/doing', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -218,7 +218,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
      */
     tasksDoingGet(teamId, opts) {
       return this.tasksDoingGetWithHttpInfo(teamId, opts)
@@ -239,7 +239,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
      */
     tasksDoneGetWithHttpInfo(teamId, opts) {
       opts = opts || {};
@@ -268,7 +268,7 @@ export default class TasksApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2002;
+      let returnType = InlineResponse2004;
       return this.apiClient.callApi(
         '/tasks/done', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -287,7 +287,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
      */
     tasksDoneGet(teamId, opts) {
       return this.tasksDoneGetWithHttpInfo(teamId, opts)
@@ -300,14 +300,14 @@ export default class TasksApi {
     /**
      * Create a task event
      * User can create task event.
-     * @param {module:model/Body11} Body11 
+     * @param {module:model/Body15} Body15 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TaskEvent} and HTTP response
      */
-    tasksPostWithHttpInfo(Body11) {
-      let postBody = Body11;
-      // verify the required parameter 'Body11' is set
-      if (Body11 === undefined || Body11 === null) {
-        throw new Error("Missing the required parameter 'Body11' when calling tasksPost");
+    tasksPostWithHttpInfo(Body15) {
+      let postBody = Body15;
+      // verify the required parameter 'Body15' is set
+      if (Body15 === undefined || Body15 === null) {
+        throw new Error("Missing the required parameter 'Body15' when calling tasksPost");
       }
 
       let pathParams = {
@@ -333,11 +333,11 @@ export default class TasksApi {
     /**
      * Create a task event
      * User can create task event.
-     * @param {module:model/Body11} Body11 
+     * @param {module:model/Body15} Body15 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TaskEvent}
      */
-    tasksPost(Body11) {
-      return this.tasksPostWithHttpInfo(Body11)
+    tasksPost(Body15) {
+      return this.tasksPostWithHttpInfo(Body15)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -355,7 +355,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
      */
     tasksTodoGetWithHttpInfo(teamId, opts) {
       opts = opts || {};
@@ -384,7 +384,7 @@ export default class TasksApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2002;
+      let returnType = InlineResponse2004;
       return this.apiClient.callApi(
         '/tasks/todo', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -403,7 +403,7 @@ export default class TasksApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
      */
     tasksTodoGet(teamId, opts) {
       return this.tasksTodoGetWithHttpInfo(teamId, opts)

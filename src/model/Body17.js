@@ -47,14 +47,11 @@ class Body17 {
         if (data) {
             obj = obj || new Body17();
 
-            if (data.hasOwnProperty('teamId')) {
-                obj['teamId'] = ApiClient.convertToType(data['teamId'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('backlogId')) {
-                obj['backlogId'] = ApiClient.convertToType(data['backlogId'], 'String');
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
         }
         return obj;
@@ -64,19 +61,14 @@ class Body17 {
 }
 
 /**
- * @member {String} teamId
+ * @member {String} name
  */
-Body17.prototype['teamId'] = undefined;
+Body17.prototype['name'] = undefined;
 
 /**
- * @member {String} backlogId
+ * @member {String} description
  */
-Body17.prototype['backlogId'] = undefined;
-
-/**
- * @member {String} type
- */
-Body17.prototype['type'] = undefined;
+Body17.prototype['description'] = undefined;
 
 
 

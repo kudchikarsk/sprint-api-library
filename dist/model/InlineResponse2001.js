@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Task = _interopRequireDefault(require("./Task"));
+var _Contact = _interopRequireDefault(require("./Contact"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -57,7 +57,7 @@ var InlineResponse2001 = /*#__PURE__*/function () {
         obj = obj || new InlineResponse2001();
 
         if (data.hasOwnProperty('results')) {
-          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_Task["default"]]);
+          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_Contact["default"]]);
         }
 
         if (data.hasOwnProperty('page')) {
@@ -75,10 +75,6 @@ var InlineResponse2001 = /*#__PURE__*/function () {
         if (data.hasOwnProperty('totalResults')) {
           obj['totalResults'] = _ApiClient["default"].convertToType(data['totalResults'], 'Number');
         }
-
-        if (data.hasOwnProperty('cache')) {
-          obj['cache'] = _ApiClient["default"].convertToType(data['cache'], Object);
-        }
       }
 
       return obj;
@@ -88,7 +84,7 @@ var InlineResponse2001 = /*#__PURE__*/function () {
   return InlineResponse2001;
 }();
 /**
- * @member {Array.<module:model/Task>} results
+ * @member {Array.<module:model/Contact>} results
  */
 
 
@@ -113,10 +109,5 @@ InlineResponse2001.prototype['totalPages'] = undefined;
  */
 
 InlineResponse2001.prototype['totalResults'] = undefined;
-/**
- * @member {Object} cache
- */
-
-InlineResponse2001.prototype['cache'] = undefined;
 var _default = InlineResponse2001;
 exports["default"] = _default;

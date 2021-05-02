@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**teamId** | **String** |  | [optional] 
-**backlogId** | **String** |  | [optional] 
-**type** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
+**description** | **String** |  | [optional] 
 
 

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import Task from './Task';
+import Organization from './Organization';
 
 /**
  * The InlineResponse2003 model module.
@@ -49,7 +49,7 @@ class InlineResponse2003 {
             obj = obj || new InlineResponse2003();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Task]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Organization]);
             }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -63,9 +63,6 @@ class InlineResponse2003 {
             if (data.hasOwnProperty('totalResults')) {
                 obj['totalResults'] = ApiClient.convertToType(data['totalResults'], 'Number');
             }
-            if (data.hasOwnProperty('totalPoints')) {
-                obj['totalPoints'] = ApiClient.convertToType(data['totalPoints'], 'Number');
-            }
         }
         return obj;
     }
@@ -74,7 +71,7 @@ class InlineResponse2003 {
 }
 
 /**
- * @member {Array.<module:model/Task>} results
+ * @member {Array.<module:model/Organization>} results
  */
 InlineResponse2003.prototype['results'] = undefined;
 
@@ -97,11 +94,6 @@ InlineResponse2003.prototype['totalPages'] = undefined;
  * @member {Number} totalResults
  */
 InlineResponse2003.prototype['totalResults'] = undefined;
-
-/**
- * @member {Number} totalPoints
- */
-InlineResponse2003.prototype['totalPoints'] = undefined;
 
 
 

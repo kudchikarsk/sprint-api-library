@@ -7,13 +7,13 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Body = _interopRequireDefault(require("../model/Body10"));
+var _Body = _interopRequireDefault(require("../model/Body16"));
 
-var _Body2 = _interopRequireDefault(require("../model/Body11"));
+var _Body2 = _interopRequireDefault(require("../model/Body17"));
 
 var _Error = _interopRequireDefault(require("../model/Error"));
 
-var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2003"));
+var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2006"));
 
 var _Team = _interopRequireDefault(require("../model/Team"));
 
@@ -51,7 +51,7 @@ var TeamsApi = /*#__PURE__*/function () {
    * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
    * @param {Number} opts.limit Maximum number of teams
    * @param {Number} opts.page Page number (default to 1)
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2003} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2006} and HTTP response
    */
 
 
@@ -83,7 +83,7 @@ var TeamsApi = /*#__PURE__*/function () {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of teams
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2003}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2006}
      */
 
   }, {
@@ -281,22 +281,22 @@ var TeamsApi = /*#__PURE__*/function () {
      * Update a team
      * Logged in teams can only update their own information. Only admins can update other teams.
      * @param {String} id Team id
-     * @param {module:model/Body11} Body11 
+     * @param {module:model/Body17} Body17 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Team} and HTTP response
      */
 
   }, {
     key: "teamsIdPatchWithHttpInfo",
-    value: function teamsIdPatchWithHttpInfo(id, Body11) {
-      var postBody = Body11; // verify the required parameter 'id' is set
+    value: function teamsIdPatchWithHttpInfo(id, Body17) {
+      var postBody = Body17; // verify the required parameter 'id' is set
 
       if (id === undefined || id === null) {
         throw new _Error["default"]("Missing the required parameter 'id' when calling teamsIdPatch");
-      } // verify the required parameter 'Body11' is set
+      } // verify the required parameter 'Body17' is set
 
 
-      if (Body11 === undefined || Body11 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body11' when calling teamsIdPatch");
+      if (Body17 === undefined || Body17 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body17' when calling teamsIdPatch");
       }
 
       var pathParams = {
@@ -315,31 +315,31 @@ var TeamsApi = /*#__PURE__*/function () {
      * Update a team
      * Logged in teams can only update their own information. Only admins can update other teams.
      * @param {String} id Team id
-     * @param {module:model/Body11} Body11 
+     * @param {module:model/Body17} Body17 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Team}
      */
 
   }, {
     key: "teamsIdPatch",
-    value: function teamsIdPatch(id, Body11) {
-      return this.teamsIdPatchWithHttpInfo(id, Body11).then(function (response_and_data) {
+    value: function teamsIdPatch(id, Body17) {
+      return this.teamsIdPatchWithHttpInfo(id, Body17).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Create a team
      * User can create teams.
-     * @param {module:model/Body10} Body10 
+     * @param {module:model/Body16} Body16 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Team} and HTTP response
      */
 
   }, {
     key: "teamsPostWithHttpInfo",
-    value: function teamsPostWithHttpInfo(Body10) {
-      var postBody = Body10; // verify the required parameter 'Body10' is set
+    value: function teamsPostWithHttpInfo(Body16) {
+      var postBody = Body16; // verify the required parameter 'Body16' is set
 
-      if (Body10 === undefined || Body10 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body10' when calling teamsPost");
+      if (Body16 === undefined || Body16 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body16' when calling teamsPost");
       }
 
       var pathParams = {};
@@ -355,14 +355,14 @@ var TeamsApi = /*#__PURE__*/function () {
     /**
      * Create a team
      * User can create teams.
-     * @param {module:model/Body10} Body10 
+     * @param {module:model/Body16} Body16 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Team}
      */
 
   }, {
     key: "teamsPost",
-    value: function teamsPost(Body10) {
-      return this.teamsPostWithHttpInfo(Body10).then(function (response_and_data) {
+    value: function teamsPost(Body16) {
+      return this.teamsPostWithHttpInfo(Body16).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

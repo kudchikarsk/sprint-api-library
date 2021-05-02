@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import Task from './Task';
+import Invoice from './Invoice';
 
 /**
  * The InlineResponse2002 model module.
@@ -49,7 +49,7 @@ class InlineResponse2002 {
             obj = obj || new InlineResponse2002();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Task]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Invoice]);
             }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -63,9 +63,6 @@ class InlineResponse2002 {
             if (data.hasOwnProperty('totalResults')) {
                 obj['totalResults'] = ApiClient.convertToType(data['totalResults'], 'Number');
             }
-            if (data.hasOwnProperty('cache')) {
-                obj['cache'] = ApiClient.convertToType(data['cache'], Object);
-            }
         }
         return obj;
     }
@@ -74,7 +71,7 @@ class InlineResponse2002 {
 }
 
 /**
- * @member {Array.<module:model/Task>} results
+ * @member {Array.<module:model/Invoice>} results
  */
 InlineResponse2002.prototype['results'] = undefined;
 
@@ -97,11 +94,6 @@ InlineResponse2002.prototype['totalPages'] = undefined;
  * @member {Number} totalResults
  */
 InlineResponse2002.prototype['totalResults'] = undefined;
-
-/**
- * @member {Object} cache
- */
-InlineResponse2002.prototype['cache'] = undefined;
 
 
 

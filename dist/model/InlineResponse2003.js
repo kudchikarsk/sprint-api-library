@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Team = _interopRequireDefault(require("./Team"));
+var _Organization = _interopRequireDefault(require("./Organization"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -57,7 +57,7 @@ var InlineResponse2003 = /*#__PURE__*/function () {
         obj = obj || new InlineResponse2003();
 
         if (data.hasOwnProperty('results')) {
-          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_Team["default"]]);
+          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_Organization["default"]]);
         }
 
         if (data.hasOwnProperty('page')) {
@@ -84,7 +84,7 @@ var InlineResponse2003 = /*#__PURE__*/function () {
   return InlineResponse2003;
 }();
 /**
- * @member {Array.<module:model/Team>} results
+ * @member {Array.<module:model/Organization>} results
  */
 
 

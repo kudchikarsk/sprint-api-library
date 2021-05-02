@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _TasksbulkTasks = _interopRequireDefault(require("./TasksbulkTasks"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24,14 +26,12 @@ var Body14 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body14</code>.
    * @alias module:model/Body14
-   * @param teamId {String} 
-   * @param backlogId {String} 
-   * @param type {String} 
+   * @param tasks {Array.<module:model/TasksbulkTasks>} 
    */
-  function Body14(teamId, backlogId, type) {
+  function Body14(tasks) {
     _classCallCheck(this, Body14);
 
-    Body14.initialize(this, teamId, backlogId, type);
+    Body14.initialize(this, tasks);
   }
   /**
    * Initializes the fields of this object.
@@ -42,10 +42,8 @@ var Body14 = /*#__PURE__*/function () {
 
   _createClass(Body14, null, [{
     key: "initialize",
-    value: function initialize(obj, teamId, backlogId, type) {
-      obj['teamId'] = teamId;
-      obj['backlogId'] = backlogId;
-      obj['type'] = type;
+    value: function initialize(obj, tasks) {
+      obj['tasks'] = tasks;
     }
     /**
      * Constructs a <code>Body14</code> from a plain JavaScript object, optionally creating a new instance.
@@ -61,16 +59,8 @@ var Body14 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Body14();
 
-        if (data.hasOwnProperty('teamId')) {
-          obj['teamId'] = _ApiClient["default"].convertToType(data['teamId'], 'String');
-        }
-
-        if (data.hasOwnProperty('backlogId')) {
-          obj['backlogId'] = _ApiClient["default"].convertToType(data['backlogId'], 'String');
-        }
-
-        if (data.hasOwnProperty('type')) {
-          obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
+        if (data.hasOwnProperty('tasks')) {
+          obj['tasks'] = _ApiClient["default"].convertToType(data['tasks'], [_TasksbulkTasks["default"]]);
         }
       }
 
@@ -81,20 +71,10 @@ var Body14 = /*#__PURE__*/function () {
   return Body14;
 }();
 /**
- * @member {String} teamId
+ * @member {Array.<module:model/TasksbulkTasks>} tasks
  */
 
 
-Body14.prototype['teamId'] = undefined;
-/**
- * @member {String} backlogId
- */
-
-Body14.prototype['backlogId'] = undefined;
-/**
- * @member {String} type
- */
-
-Body14.prototype['type'] = undefined;
+Body14.prototype['tasks'] = undefined;
 var _default = Body14;
 exports["default"] = _default;

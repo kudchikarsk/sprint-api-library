@@ -7,15 +7,15 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Body = _interopRequireDefault(require("../model/Body8"));
+var _Body = _interopRequireDefault(require("../model/Body14"));
 
-var _Body2 = _interopRequireDefault(require("../model/Body9"));
+var _Body2 = _interopRequireDefault(require("../model/Body15"));
 
 var _Error = _interopRequireDefault(require("../model/Error"));
 
-var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2001"));
+var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2004"));
 
-var _InlineResponse2 = _interopRequireDefault(require("../model/InlineResponse2002"));
+var _InlineResponse2 = _interopRequireDefault(require("../model/InlineResponse2005"));
 
 var _TaskEvent = _interopRequireDefault(require("../model/TaskEvent"));
 
@@ -57,7 +57,7 @@ var TasksApi = /*#__PURE__*/function () {
    * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
    * @param {Number} opts.limit Maximum number of tasks
    * @param {Number} opts.page Page number (default to 1)
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
    */
 
 
@@ -103,7 +103,7 @@ var TasksApi = /*#__PURE__*/function () {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
      */
 
   }, {
@@ -116,17 +116,17 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Create a task events
      * User can create task events.
-     * @param {module:model/Body8} Body8 
+     * @param {module:model/Body14} Body14 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TaskEvent} and HTTP response
      */
 
   }, {
     key: "tasksBulkPostWithHttpInfo",
-    value: function tasksBulkPostWithHttpInfo(Body8) {
-      var postBody = Body8; // verify the required parameter 'Body8' is set
+    value: function tasksBulkPostWithHttpInfo(Body14) {
+      var postBody = Body14; // verify the required parameter 'Body14' is set
 
-      if (Body8 === undefined || Body8 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body8' when calling tasksBulkPost");
+      if (Body14 === undefined || Body14 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body14' when calling tasksBulkPost");
       }
 
       var pathParams = {};
@@ -142,14 +142,14 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Create a task events
      * User can create task events.
-     * @param {module:model/Body8} Body8 
+     * @param {module:model/Body14} Body14 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TaskEvent}
      */
 
   }, {
     key: "tasksBulkPost",
-    value: function tasksBulkPost(Body8) {
-      return this.tasksBulkPostWithHttpInfo(Body8).then(function (response_and_data) {
+    value: function tasksBulkPost(Body14) {
+      return this.tasksBulkPostWithHttpInfo(Body14).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -164,7 +164,7 @@ var TasksApi = /*#__PURE__*/function () {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
      */
 
   }, {
@@ -179,10 +179,10 @@ var TasksApi = /*#__PURE__*/function () {
 
       var pathParams = {};
       var queryParams = {
+        'teamId': teamId,
         'title': opts['title'],
         'description': opts['description'],
         'state': opts['state'],
-        'teamId': teamId,
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -206,7 +206,7 @@ var TasksApi = /*#__PURE__*/function () {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
      */
 
   }, {
@@ -227,7 +227,7 @@ var TasksApi = /*#__PURE__*/function () {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
      */
 
   }, {
@@ -242,10 +242,10 @@ var TasksApi = /*#__PURE__*/function () {
 
       var pathParams = {};
       var queryParams = {
+        'teamId': teamId,
         'title': opts['title'],
         'description': opts['description'],
         'state': opts['state'],
-        'teamId': teamId,
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -269,7 +269,7 @@ var TasksApi = /*#__PURE__*/function () {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
      */
 
   }, {
@@ -282,17 +282,17 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Create a task event
      * User can create task event.
-     * @param {module:model/Body9} Body9 
+     * @param {module:model/Body15} Body15 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TaskEvent} and HTTP response
      */
 
   }, {
     key: "tasksPostWithHttpInfo",
-    value: function tasksPostWithHttpInfo(Body9) {
-      var postBody = Body9; // verify the required parameter 'Body9' is set
+    value: function tasksPostWithHttpInfo(Body15) {
+      var postBody = Body15; // verify the required parameter 'Body15' is set
 
-      if (Body9 === undefined || Body9 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body9' when calling tasksPost");
+      if (Body15 === undefined || Body15 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body15' when calling tasksPost");
       }
 
       var pathParams = {};
@@ -308,14 +308,14 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Create a task event
      * User can create task event.
-     * @param {module:model/Body9} Body9 
+     * @param {module:model/Body15} Body15 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TaskEvent}
      */
 
   }, {
     key: "tasksPost",
-    value: function tasksPost(Body9) {
-      return this.tasksPostWithHttpInfo(Body9).then(function (response_and_data) {
+    value: function tasksPost(Body15) {
+      return this.tasksPostWithHttpInfo(Body15).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -330,7 +330,7 @@ var TasksApi = /*#__PURE__*/function () {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
      */
 
   }, {
@@ -345,10 +345,10 @@ var TasksApi = /*#__PURE__*/function () {
 
       var pathParams = {};
       var queryParams = {
+        'teamId': teamId,
         'title': opts['title'],
         'description': opts['description'],
         'state': opts['state'],
-        'teamId': teamId,
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -372,7 +372,7 @@ var TasksApi = /*#__PURE__*/function () {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of tasks
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
      */
 
   }, {

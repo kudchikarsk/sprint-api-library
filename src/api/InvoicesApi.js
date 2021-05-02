@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
-import Body8 from '../model/Body8';
-import Body9 from '../model/Body9';
+import Body10 from '../model/Body10';
+import Body11 from '../model/Body11';
 import Error from '../model/Error';
-import InlineResponse2001 from '../model/InlineResponse2001';
+import InlineResponse2002 from '../model/InlineResponse2002';
 import Invoice from '../model/Invoice';
 import InvoiceEvent from '../model/InvoiceEvent';
 
@@ -43,14 +43,14 @@ export default class InvoicesApi {
     /**
      * Create a invoice events
      * User can create invoice events.
-     * @param {module:model/Body8} Body8 
+     * @param {module:model/Body10} Body10 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceEvent} and HTTP response
      */
-    invoicesBulkPostWithHttpInfo(Body8) {
-      let postBody = Body8;
-      // verify the required parameter 'Body8' is set
-      if (Body8 === undefined || Body8 === null) {
-        throw new Error("Missing the required parameter 'Body8' when calling invoicesBulkPost");
+    invoicesBulkPostWithHttpInfo(Body10) {
+      let postBody = Body10;
+      // verify the required parameter 'Body10' is set
+      if (Body10 === undefined || Body10 === null) {
+        throw new Error("Missing the required parameter 'Body10' when calling invoicesBulkPost");
       }
 
       let pathParams = {
@@ -76,11 +76,11 @@ export default class InvoicesApi {
     /**
      * Create a invoice events
      * User can create invoice events.
-     * @param {module:model/Body8} Body8 
+     * @param {module:model/Body10} Body10 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceEvent}
      */
-    invoicesBulkPost(Body8) {
-      return this.invoicesBulkPostWithHttpInfo(Body8)
+    invoicesBulkPost(Body10) {
+      return this.invoicesBulkPostWithHttpInfo(Body10)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -90,7 +90,7 @@ export default class InvoicesApi {
     /**
      * Get all invoices
      * Logged in invoice can retrieve all invoices.
-     * @param {String} teamId invoice teamId
+     * @param {String} organizationId invoice organizationId
      * @param {Object} opts Optional parameters
      * @param {String} opts.name invoice client name
      * @param {String} opts.status invoice status
@@ -98,20 +98,20 @@ export default class InvoicesApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of invoices
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
      */
-    invoicesGetWithHttpInfo(teamId, opts) {
+    invoicesGetWithHttpInfo(organizationId, opts) {
       opts = opts || {};
       let postBody = null;
-      // verify the required parameter 'teamId' is set
-      if (teamId === undefined || teamId === null) {
-        throw new Error("Missing the required parameter 'teamId' when calling invoicesGet");
+      // verify the required parameter 'organizationId' is set
+      if (organizationId === undefined || organizationId === null) {
+        throw new Error("Missing the required parameter 'organizationId' when calling invoicesGet");
       }
 
       let pathParams = {
       };
       let queryParams = {
-        'teamId': teamId,
+        'organizationId': organizationId,
         'name': opts['name'],
         'status': opts['status'],
         'description': opts['description'],
@@ -127,7 +127,7 @@ export default class InvoicesApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2001;
+      let returnType = InlineResponse2002;
       return this.apiClient.callApi(
         '/invoices', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -138,7 +138,7 @@ export default class InvoicesApi {
     /**
      * Get all invoices
      * Logged in invoice can retrieve all invoices.
-     * @param {String} teamId invoice teamId
+     * @param {String} organizationId invoice organizationId
      * @param {Object} opts Optional parameters
      * @param {String} opts.name invoice client name
      * @param {String} opts.status invoice status
@@ -146,10 +146,10 @@ export default class InvoicesApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of invoices
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
      */
-    invoicesGet(teamId, opts) {
-      return this.invoicesGetWithHttpInfo(teamId, opts)
+    invoicesGet(organizationId, opts) {
+      return this.invoicesGetWithHttpInfo(organizationId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -207,14 +207,14 @@ export default class InvoicesApi {
     /**
      * Create a invoice event
      * User can create invoice event.
-     * @param {module:model/Body9} Body9 
+     * @param {module:model/Body11} Body11 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceEvent} and HTTP response
      */
-    invoicesPostWithHttpInfo(Body9) {
-      let postBody = Body9;
-      // verify the required parameter 'Body9' is set
-      if (Body9 === undefined || Body9 === null) {
-        throw new Error("Missing the required parameter 'Body9' when calling invoicesPost");
+    invoicesPostWithHttpInfo(Body11) {
+      let postBody = Body11;
+      // verify the required parameter 'Body11' is set
+      if (Body11 === undefined || Body11 === null) {
+        throw new Error("Missing the required parameter 'Body11' when calling invoicesPost");
       }
 
       let pathParams = {
@@ -240,11 +240,11 @@ export default class InvoicesApi {
     /**
      * Create a invoice event
      * User can create invoice event.
-     * @param {module:model/Body9} Body9 
+     * @param {module:model/Body11} Body11 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceEvent}
      */
-    invoicesPost(Body9) {
-      return this.invoicesPostWithHttpInfo(Body9)
+    invoicesPost(Body11) {
+      return this.invoicesPostWithHttpInfo(Body11)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

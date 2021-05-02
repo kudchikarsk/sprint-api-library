@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
-import Body12 from '../model/Body12';
-import Body13 from '../model/Body13';
+import Body16 from '../model/Body16';
+import Body17 from '../model/Body17';
 import Error from '../model/Error';
-import InlineResponse2004 from '../model/InlineResponse2004';
+import InlineResponse2006 from '../model/InlineResponse2006';
 import Team from '../model/Team';
 
 /**
@@ -47,7 +47,7 @@ export default class TeamsApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of teams
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2006} and HTTP response
      */
     teamsGetWithHttpInfo(opts) {
       opts = opts || {};
@@ -69,7 +69,7 @@ export default class TeamsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2004;
+      let returnType = InlineResponse2006;
       return this.apiClient.callApi(
         '/teams', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -85,7 +85,7 @@ export default class TeamsApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of teams
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2006}
      */
     teamsGet(opts) {
       return this.teamsGetWithHttpInfo(opts)
@@ -305,18 +305,18 @@ export default class TeamsApi {
      * Update a team
      * Logged in teams can only update their own information. Only admins can update other teams.
      * @param {String} id Team id
-     * @param {module:model/Body13} Body13 
+     * @param {module:model/Body17} Body17 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Team} and HTTP response
      */
-    teamsIdPatchWithHttpInfo(id, Body13) {
-      let postBody = Body13;
+    teamsIdPatchWithHttpInfo(id, Body17) {
+      let postBody = Body17;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling teamsIdPatch");
       }
-      // verify the required parameter 'Body13' is set
-      if (Body13 === undefined || Body13 === null) {
-        throw new Error("Missing the required parameter 'Body13' when calling teamsIdPatch");
+      // verify the required parameter 'Body17' is set
+      if (Body17 === undefined || Body17 === null) {
+        throw new Error("Missing the required parameter 'Body17' when calling teamsIdPatch");
       }
 
       let pathParams = {
@@ -344,11 +344,11 @@ export default class TeamsApi {
      * Update a team
      * Logged in teams can only update their own information. Only admins can update other teams.
      * @param {String} id Team id
-     * @param {module:model/Body13} Body13 
+     * @param {module:model/Body17} Body17 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Team}
      */
-    teamsIdPatch(id, Body13) {
-      return this.teamsIdPatchWithHttpInfo(id, Body13)
+    teamsIdPatch(id, Body17) {
+      return this.teamsIdPatchWithHttpInfo(id, Body17)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -358,14 +358,14 @@ export default class TeamsApi {
     /**
      * Create a team
      * User can create teams.
-     * @param {module:model/Body12} Body12 
+     * @param {module:model/Body16} Body16 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Team} and HTTP response
      */
-    teamsPostWithHttpInfo(Body12) {
-      let postBody = Body12;
-      // verify the required parameter 'Body12' is set
-      if (Body12 === undefined || Body12 === null) {
-        throw new Error("Missing the required parameter 'Body12' when calling teamsPost");
+    teamsPostWithHttpInfo(Body16) {
+      let postBody = Body16;
+      // verify the required parameter 'Body16' is set
+      if (Body16 === undefined || Body16 === null) {
+        throw new Error("Missing the required parameter 'Body16' when calling teamsPost");
       }
 
       let pathParams = {
@@ -391,11 +391,11 @@ export default class TeamsApi {
     /**
      * Create a team
      * User can create teams.
-     * @param {module:model/Body12} Body12 
+     * @param {module:model/Body16} Body16 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Team}
      */
-    teamsPost(Body12) {
-      return this.teamsPostWithHttpInfo(Body12)
+    teamsPost(Body16) {
+      return this.teamsPostWithHttpInfo(Body16)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

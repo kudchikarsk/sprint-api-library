@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## usersGet
 
-> InlineResponse2005 usersGet(opts)
+> InlineResponse2007 usersGet(opts)
 
 Get all users
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ## usersIdPatch
 
-> User usersIdPatch(id, Body15)
+> User usersIdPatch(id, Body19)
 
 Update a user
 
@@ -185,8 +185,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.UsersApi();
 let id = "id_example"; // String | User id
-let Body15 = new SprintService.Body15(); // Body15 | 
-apiInstance.usersIdPatch(id, Body15).then((data) => {
+let Body19 = new SprintService.Body19(); // Body19 | 
+apiInstance.usersIdPatch(id, Body19).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -200,7 +200,7 @@ apiInstance.usersIdPatch(id, Body15).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| User id | 
- **Body15** | [**Body15**](Body15.md)|  | 
+ **Body19** | [**Body19**](Body19.md)|  | 
 
 ### Return type
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ## usersPost
 
-> User usersPost(Body14)
+> User usersPost(Body18)
 
 Create a user
 
@@ -234,8 +234,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.UsersApi();
-let Body14 = new SprintService.Body14(); // Body14 | 
-apiInstance.usersPost(Body14).then((data) => {
+let Body18 = new SprintService.Body18(); // Body18 | 
+apiInstance.usersPost(Body18).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -248,7 +248,7 @@ apiInstance.usersPost(Body14).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body14** | [**Body14**](Body14.md)|  | 
+ **Body18** | [**Body18**](Body18.md)|  | 
 
 ### Return type
 

@@ -7,13 +7,13 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Body = _interopRequireDefault(require("../model/Body14"));
+var _Body = _interopRequireDefault(require("../model/Body20"));
 
-var _Body2 = _interopRequireDefault(require("../model/Body15"));
+var _Body2 = _interopRequireDefault(require("../model/Body21"));
 
 var _Error = _interopRequireDefault(require("../model/Error"));
 
-var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2005"));
+var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2008"));
 
 var _Widget = _interopRequireDefault(require("../model/Widget"));
 
@@ -50,7 +50,7 @@ var WidgetsApi = /*#__PURE__*/function () {
    * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
    * @param {Number} opts.limit Maximum number of widgets
    * @param {Number} opts.page Page number (default to 1)
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2008} and HTTP response
    */
 
 
@@ -80,7 +80,7 @@ var WidgetsApi = /*#__PURE__*/function () {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of widgets
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2008}
      */
 
   }, {
@@ -178,22 +178,22 @@ var WidgetsApi = /*#__PURE__*/function () {
      * Update a widget
      * Logged in widgets can only update their own information. Only admins can update other widgets.
      * @param {String} id Widget id
-     * @param {module:model/Body15} Body15 
+     * @param {module:model/Body21} Body21 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Widget} and HTTP response
      */
 
   }, {
     key: "widgetsIdPatchWithHttpInfo",
-    value: function widgetsIdPatchWithHttpInfo(id, Body15) {
-      var postBody = Body15; // verify the required parameter 'id' is set
+    value: function widgetsIdPatchWithHttpInfo(id, Body21) {
+      var postBody = Body21; // verify the required parameter 'id' is set
 
       if (id === undefined || id === null) {
         throw new _Error["default"]("Missing the required parameter 'id' when calling widgetsIdPatch");
-      } // verify the required parameter 'Body15' is set
+      } // verify the required parameter 'Body21' is set
 
 
-      if (Body15 === undefined || Body15 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body15' when calling widgetsIdPatch");
+      if (Body21 === undefined || Body21 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body21' when calling widgetsIdPatch");
       }
 
       var pathParams = {
@@ -212,31 +212,31 @@ var WidgetsApi = /*#__PURE__*/function () {
      * Update a widget
      * Logged in widgets can only update their own information. Only admins can update other widgets.
      * @param {String} id Widget id
-     * @param {module:model/Body15} Body15 
+     * @param {module:model/Body21} Body21 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Widget}
      */
 
   }, {
     key: "widgetsIdPatch",
-    value: function widgetsIdPatch(id, Body15) {
-      return this.widgetsIdPatchWithHttpInfo(id, Body15).then(function (response_and_data) {
+    value: function widgetsIdPatch(id, Body21) {
+      return this.widgetsIdPatchWithHttpInfo(id, Body21).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Create a widget
      * Only admins can create other widgets.
-     * @param {module:model/Body14} Body14 
+     * @param {module:model/Body20} Body20 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Widget} and HTTP response
      */
 
   }, {
     key: "widgetsPostWithHttpInfo",
-    value: function widgetsPostWithHttpInfo(Body14) {
-      var postBody = Body14; // verify the required parameter 'Body14' is set
+    value: function widgetsPostWithHttpInfo(Body20) {
+      var postBody = Body20; // verify the required parameter 'Body20' is set
 
-      if (Body14 === undefined || Body14 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body14' when calling widgetsPost");
+      if (Body20 === undefined || Body20 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body20' when calling widgetsPost");
       }
 
       var pathParams = {};
@@ -252,14 +252,14 @@ var WidgetsApi = /*#__PURE__*/function () {
     /**
      * Create a widget
      * Only admins can create other widgets.
-     * @param {module:model/Body14} Body14 
+     * @param {module:model/Body20} Body20 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Widget}
      */
 
   }, {
     key: "widgetsPost",
-    value: function widgetsPost(Body14) {
-      return this.widgetsPostWithHttpInfo(Body14).then(function (response_and_data) {
+    value: function widgetsPost(Body20) {
+      return this.widgetsPostWithHttpInfo(Body20).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

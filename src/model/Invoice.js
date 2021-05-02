@@ -49,8 +49,8 @@ class Invoice {
         if (data) {
             obj = obj || new Invoice();
 
-            if (data.hasOwnProperty('teamId')) {
-                obj['teamId'] = ApiClient.convertToType(data['teamId'], 'String');
+            if (data.hasOwnProperty('organizationId')) {
+                obj['organizationId'] = ApiClient.convertToType(data['organizationId'], 'String');
             }
             if (data.hasOwnProperty('invoiceId')) {
                 obj['invoiceId'] = ApiClient.convertToType(data['invoiceId'], 'String');
@@ -99,9 +99,9 @@ class Invoice {
 }
 
 /**
- * @member {String} teamId
+ * @member {String} organizationId
  */
-Invoice.prototype['teamId'] = undefined;
+Invoice.prototype['organizationId'] = undefined;
 
 /**
  * @member {String} invoiceId

@@ -58,36 +58,8 @@ var Body13 = /*#__PURE__*/function () {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
 
-        if (data.hasOwnProperty('email')) {
-          obj['email'] = _ApiClient["default"].convertToType(data['email'], 'String');
-        }
-
-        if (data.hasOwnProperty('company')) {
-          obj['company'] = _ApiClient["default"].convertToType(data['company'], 'String');
-        }
-
-        if (data.hasOwnProperty('education')) {
-          obj['education'] = _ApiClient["default"].convertToType(data['education'], 'String');
-        }
-
-        if (data.hasOwnProperty('address')) {
-          obj['address'] = _ApiClient["default"].convertToType(data['address'], 'String');
-        }
-
-        if (data.hasOwnProperty('city')) {
-          obj['city'] = _ApiClient["default"].convertToType(data['city'], 'String');
-        }
-
-        if (data.hasOwnProperty('country')) {
-          obj['country'] = _ApiClient["default"].convertToType(data['country'], 'String');
-        }
-
-        if (data.hasOwnProperty('postalCode')) {
-          obj['postalCode'] = _ApiClient["default"].convertToType(data['postalCode'], 'String');
-        }
-
-        if (data.hasOwnProperty('aboutMe')) {
-          obj['aboutMe'] = _ApiClient["default"].convertToType(data['aboutMe'], 'String');
+        if (data.hasOwnProperty('description')) {
+          obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
       }
 
@@ -104,45 +76,9 @@ var Body13 = /*#__PURE__*/function () {
 
 Body13.prototype['name'] = undefined;
 /**
- * must be unique
- * @member {String} email
+ * @member {String} description
  */
 
-Body13.prototype['email'] = undefined;
-/**
- * @member {String} company
- */
-
-Body13.prototype['company'] = undefined;
-/**
- * @member {String} education
- */
-
-Body13.prototype['education'] = undefined;
-/**
- * @member {String} address
- */
-
-Body13.prototype['address'] = undefined;
-/**
- * @member {String} city
- */
-
-Body13.prototype['city'] = undefined;
-/**
- * @member {String} country
- */
-
-Body13.prototype['country'] = undefined;
-/**
- * @member {String} postalCode
- */
-
-Body13.prototype['postalCode'] = undefined;
-/**
- * @member {String} aboutMe
- */
-
-Body13.prototype['aboutMe'] = undefined;
+Body13.prototype['description'] = undefined;
 var _default = Body13;
 exports["default"] = _default;

@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## teamsGet
 
-> InlineResponse2004 teamsGet(opts)
+> InlineResponse2006 teamsGet(opts)
 
 Get all teams
 
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**InlineResponse2006**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ null (empty response body)
 
 ## teamsIdPatch
 
-> Team teamsIdPatch(id, Body13)
+> Team teamsIdPatch(id, Body17)
 
 Update a team
 
@@ -285,8 +285,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TeamsApi();
 let id = "id_example"; // String | Team id
-let Body13 = new SprintService.Body13(); // Body13 | 
-apiInstance.teamsIdPatch(id, Body13).then((data) => {
+let Body17 = new SprintService.Body17(); // Body17 | 
+apiInstance.teamsIdPatch(id, Body17).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -300,7 +300,7 @@ apiInstance.teamsIdPatch(id, Body13).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Team id | 
- **Body13** | [**Body13**](Body13.md)|  | 
+ **Body17** | [**Body17**](Body17.md)|  | 
 
 ### Return type
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ## teamsPost
 
-> Team teamsPost(Body12)
+> Team teamsPost(Body16)
 
 Create a team
 
@@ -334,8 +334,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TeamsApi();
-let Body12 = new SprintService.Body12(); // Body12 | 
-apiInstance.teamsPost(Body12).then((data) => {
+let Body16 = new SprintService.Body16(); // Body16 | 
+apiInstance.teamsPost(Body16).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -348,7 +348,7 @@ apiInstance.teamsPost(Body12).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body12** | [**Body12**](Body12.md)|  | 
+ **Body16** | [**Body16**](Body16.md)|  | 
 
 ### Return type
 

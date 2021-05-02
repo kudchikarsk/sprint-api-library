@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Widget = _interopRequireDefault(require("./Widget"));
+var _Task = _interopRequireDefault(require("./Task"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -57,7 +57,7 @@ var InlineResponse2005 = /*#__PURE__*/function () {
         obj = obj || new InlineResponse2005();
 
         if (data.hasOwnProperty('results')) {
-          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_Widget["default"]]);
+          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_Task["default"]]);
         }
 
         if (data.hasOwnProperty('page')) {
@@ -75,6 +75,10 @@ var InlineResponse2005 = /*#__PURE__*/function () {
         if (data.hasOwnProperty('totalResults')) {
           obj['totalResults'] = _ApiClient["default"].convertToType(data['totalResults'], 'Number');
         }
+
+        if (data.hasOwnProperty('totalPoints')) {
+          obj['totalPoints'] = _ApiClient["default"].convertToType(data['totalPoints'], 'Number');
+        }
       }
 
       return obj;
@@ -84,7 +88,7 @@ var InlineResponse2005 = /*#__PURE__*/function () {
   return InlineResponse2005;
 }();
 /**
- * @member {Array.<module:model/Widget>} results
+ * @member {Array.<module:model/Task>} results
  */
 
 
@@ -109,5 +113,10 @@ InlineResponse2005.prototype['totalPages'] = undefined;
  */
 
 InlineResponse2005.prototype['totalResults'] = undefined;
+/**
+ * @member {Number} totalPoints
+ */
+
+InlineResponse2005.prototype['totalPoints'] = undefined;
 var _default = InlineResponse2005;
 exports["default"] = _default;

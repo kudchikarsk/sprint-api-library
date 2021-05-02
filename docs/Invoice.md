@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**teamId** | **String** |  | [optional] 
+**organizationId** | **String** |  | [optional] 
 **invoiceId** | **String** |  | [optional] 
 **recipient** | [**InvoiceRecipient**](InvoiceRecipient.md) |  | [optional] 
 **description** | **String** |  | [optional] 

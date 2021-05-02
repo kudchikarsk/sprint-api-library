@@ -7,13 +7,13 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Body = _interopRequireDefault(require("../model/Body12"));
+var _Body = _interopRequireDefault(require("../model/Body18"));
 
-var _Body2 = _interopRequireDefault(require("../model/Body13"));
+var _Body2 = _interopRequireDefault(require("../model/Body19"));
 
 var _Error = _interopRequireDefault(require("../model/Error"));
 
-var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2004"));
+var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse2007"));
 
 var _User = _interopRequireDefault(require("../model/User"));
 
@@ -52,7 +52,7 @@ var UsersApi = /*#__PURE__*/function () {
    * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
    * @param {Number} opts.limit Maximum number of users
    * @param {Number} opts.page Page number (default to 1)
-   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2007} and HTTP response
    */
 
 
@@ -86,7 +86,7 @@ var UsersApi = /*#__PURE__*/function () {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of users
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2007}
      */
 
   }, {
@@ -184,22 +184,22 @@ var UsersApi = /*#__PURE__*/function () {
      * Update a user
      * Logged in users can only update their own information. Only admins can update other users.
      * @param {String} id User id
-     * @param {module:model/Body13} Body13 
+     * @param {module:model/Body19} Body19 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
 
   }, {
     key: "usersIdPatchWithHttpInfo",
-    value: function usersIdPatchWithHttpInfo(id, Body13) {
-      var postBody = Body13; // verify the required parameter 'id' is set
+    value: function usersIdPatchWithHttpInfo(id, Body19) {
+      var postBody = Body19; // verify the required parameter 'id' is set
 
       if (id === undefined || id === null) {
         throw new _Error["default"]("Missing the required parameter 'id' when calling usersIdPatch");
-      } // verify the required parameter 'Body13' is set
+      } // verify the required parameter 'Body19' is set
 
 
-      if (Body13 === undefined || Body13 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body13' when calling usersIdPatch");
+      if (Body19 === undefined || Body19 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body19' when calling usersIdPatch");
       }
 
       var pathParams = {
@@ -218,31 +218,31 @@ var UsersApi = /*#__PURE__*/function () {
      * Update a user
      * Logged in users can only update their own information. Only admins can update other users.
      * @param {String} id User id
-     * @param {module:model/Body13} Body13 
+     * @param {module:model/Body19} Body19 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
 
   }, {
     key: "usersIdPatch",
-    value: function usersIdPatch(id, Body13) {
-      return this.usersIdPatchWithHttpInfo(id, Body13).then(function (response_and_data) {
+    value: function usersIdPatch(id, Body19) {
+      return this.usersIdPatchWithHttpInfo(id, Body19).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Create a user
      * Only admins can create other users.
-     * @param {module:model/Body12} Body12 
+     * @param {module:model/Body18} Body18 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
 
   }, {
     key: "usersPostWithHttpInfo",
-    value: function usersPostWithHttpInfo(Body12) {
-      var postBody = Body12; // verify the required parameter 'Body12' is set
+    value: function usersPostWithHttpInfo(Body18) {
+      var postBody = Body18; // verify the required parameter 'Body18' is set
 
-      if (Body12 === undefined || Body12 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body12' when calling usersPost");
+      if (Body18 === undefined || Body18 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body18' when calling usersPost");
       }
 
       var pathParams = {};
@@ -258,14 +258,14 @@ var UsersApi = /*#__PURE__*/function () {
     /**
      * Create a user
      * Only admins can create other users.
-     * @param {module:model/Body12} Body12 
+     * @param {module:model/Body18} Body18 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
 
   }, {
     key: "usersPost",
-    value: function usersPost(Body12) {
-      return this.usersPostWithHttpInfo(Body12).then(function (response_and_data) {
+    value: function usersPost(Body18) {
+      return this.usersPostWithHttpInfo(Body18).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

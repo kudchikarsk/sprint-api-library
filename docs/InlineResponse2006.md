@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[Widget]**](Widget.md) |  | [optional] 
+**results** | [**[Team]**](Team.md) |  | [optional] 
 **page** | **Number** |  | [optional] 
 **limit** | **Number** |  | [optional] 
 **totalPages** | **Number** |  | [optional] 

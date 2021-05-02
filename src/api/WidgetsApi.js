@@ -13,10 +13,10 @@
 
 
 import ApiClient from "../ApiClient";
-import Body16 from '../model/Body16';
-import Body17 from '../model/Body17';
+import Body20 from '../model/Body20';
+import Body21 from '../model/Body21';
 import Error from '../model/Error';
-import InlineResponse2006 from '../model/InlineResponse2006';
+import InlineResponse2008 from '../model/InlineResponse2008';
 import Widget from '../model/Widget';
 
 /**
@@ -46,7 +46,7 @@ export default class WidgetsApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of widgets
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2006} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2008} and HTTP response
      */
     widgetsGetWithHttpInfo(opts) {
       opts = opts || {};
@@ -67,7 +67,7 @@ export default class WidgetsApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = InlineResponse2006;
+      let returnType = InlineResponse2008;
       return this.apiClient.callApi(
         '/widgets', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -82,7 +82,7 @@ export default class WidgetsApi {
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of widgets
      * @param {Number} opts.page Page number (default to 1)
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2006}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2008}
      */
     widgetsGet(opts) {
       return this.widgetsGetWithHttpInfo(opts)
@@ -192,18 +192,18 @@ export default class WidgetsApi {
      * Update a widget
      * Logged in widgets can only update their own information. Only admins can update other widgets.
      * @param {String} id Widget id
-     * @param {module:model/Body17} Body17 
+     * @param {module:model/Body21} Body21 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Widget} and HTTP response
      */
-    widgetsIdPatchWithHttpInfo(id, Body17) {
-      let postBody = Body17;
+    widgetsIdPatchWithHttpInfo(id, Body21) {
+      let postBody = Body21;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling widgetsIdPatch");
       }
-      // verify the required parameter 'Body17' is set
-      if (Body17 === undefined || Body17 === null) {
-        throw new Error("Missing the required parameter 'Body17' when calling widgetsIdPatch");
+      // verify the required parameter 'Body21' is set
+      if (Body21 === undefined || Body21 === null) {
+        throw new Error("Missing the required parameter 'Body21' when calling widgetsIdPatch");
       }
 
       let pathParams = {
@@ -231,11 +231,11 @@ export default class WidgetsApi {
      * Update a widget
      * Logged in widgets can only update their own information. Only admins can update other widgets.
      * @param {String} id Widget id
-     * @param {module:model/Body17} Body17 
+     * @param {module:model/Body21} Body21 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Widget}
      */
-    widgetsIdPatch(id, Body17) {
-      return this.widgetsIdPatchWithHttpInfo(id, Body17)
+    widgetsIdPatch(id, Body21) {
+      return this.widgetsIdPatchWithHttpInfo(id, Body21)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -245,14 +245,14 @@ export default class WidgetsApi {
     /**
      * Create a widget
      * Only admins can create other widgets.
-     * @param {module:model/Body16} Body16 
+     * @param {module:model/Body20} Body20 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Widget} and HTTP response
      */
-    widgetsPostWithHttpInfo(Body16) {
-      let postBody = Body16;
-      // verify the required parameter 'Body16' is set
-      if (Body16 === undefined || Body16 === null) {
-        throw new Error("Missing the required parameter 'Body16' when calling widgetsPost");
+    widgetsPostWithHttpInfo(Body20) {
+      let postBody = Body20;
+      // verify the required parameter 'Body20' is set
+      if (Body20 === undefined || Body20 === null) {
+        throw new Error("Missing the required parameter 'Body20' when calling widgetsPost");
       }
 
       let pathParams = {
@@ -278,11 +278,11 @@ export default class WidgetsApi {
     /**
      * Create a widget
      * Only admins can create other widgets.
-     * @param {module:model/Body16} Body16 
+     * @param {module:model/Body20} Body20 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Widget}
      */
-    widgetsPost(Body16) {
-      return this.widgetsPostWithHttpInfo(Body16)
+    widgetsPost(Body20) {
+      return this.widgetsPostWithHttpInfo(Body20)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

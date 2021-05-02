@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _InvoicesbulkInvoices = _interopRequireDefault(require("./InvoicesbulkInvoices"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24,12 +26,12 @@ var Body10 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body10</code>.
    * @alias module:model/Body10
-   * @param name {String} 
+   * @param invoices {Array.<module:model/InvoicesbulkInvoices>} 
    */
-  function Body10(name) {
+  function Body10(invoices) {
     _classCallCheck(this, Body10);
 
-    Body10.initialize(this, name);
+    Body10.initialize(this, invoices);
   }
   /**
    * Initializes the fields of this object.
@@ -40,8 +42,8 @@ var Body10 = /*#__PURE__*/function () {
 
   _createClass(Body10, null, [{
     key: "initialize",
-    value: function initialize(obj, name) {
-      obj['name'] = name;
+    value: function initialize(obj, invoices) {
+      obj['invoices'] = invoices;
     }
     /**
      * Constructs a <code>Body10</code> from a plain JavaScript object, optionally creating a new instance.
@@ -57,12 +59,8 @@ var Body10 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Body10();
 
-        if (data.hasOwnProperty('name')) {
-          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
-        }
-
-        if (data.hasOwnProperty('description')) {
-          obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
+        if (data.hasOwnProperty('invoices')) {
+          obj['invoices'] = _ApiClient["default"].convertToType(data['invoices'], [_InvoicesbulkInvoices["default"]]);
         }
       }
 
@@ -73,15 +71,10 @@ var Body10 = /*#__PURE__*/function () {
   return Body10;
 }();
 /**
- * @member {String} name
+ * @member {Array.<module:model/InvoicesbulkInvoices>} invoices
  */
 
 
-Body10.prototype['name'] = undefined;
-/**
- * @member {String} description
- */
-
-Body10.prototype['description'] = undefined;
+Body10.prototype['invoices'] = undefined;
 var _default = Body10;
 exports["default"] = _default;

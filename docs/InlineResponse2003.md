@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[Task]**](Task.md) |  | [optional] 
+**results** | [**[Organization]**](Organization.md) |  | [optional] 
 **page** | **Number** |  | [optional] 
 **limit** | **Number** |  | [optional] 
 **totalPages** | **Number** |  | [optional] 
 **totalResults** | **Number** |  | [optional] 
-**totalPoints** | **Number** |  | [optional] 
 
 

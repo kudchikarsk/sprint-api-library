@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import Invoice from './Invoice';
+import Contact from './Contact';
 
 /**
  * The InlineResponse2001 model module.
@@ -49,7 +49,7 @@ class InlineResponse2001 {
             obj = obj || new InlineResponse2001();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Invoice]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Contact]);
             }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -71,7 +71,7 @@ class InlineResponse2001 {
 }
 
 /**
- * @member {Array.<module:model/Invoice>} results
+ * @member {Array.<module:model/Contact>} results
  */
 InlineResponse2001.prototype['results'] = undefined;
 

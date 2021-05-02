@@ -25,7 +25,11 @@ import Body14 from './model/Body14';
 import Body15 from './model/Body15';
 import Body16 from './model/Body16';
 import Body17 from './model/Body17';
+import Body18 from './model/Body18';
+import Body19 from './model/Body19';
 import Body2 from './model/Body2';
+import Body20 from './model/Body20';
+import Body21 from './model/Body21';
 import Body3 from './model/Body3';
 import Body4 from './model/Body4';
 import Body5 from './model/Body5';
@@ -33,6 +37,7 @@ import Body6 from './model/Body6';
 import Body7 from './model/Body7';
 import Body8 from './model/Body8';
 import Body9 from './model/Body9';
+import Contact from './model/Contact';
 import Error from './model/Error';
 import InlineResponse200 from './model/InlineResponse200';
 import InlineResponse2001 from './model/InlineResponse2001';
@@ -41,12 +46,15 @@ import InlineResponse2003 from './model/InlineResponse2003';
 import InlineResponse2004 from './model/InlineResponse2004';
 import InlineResponse2005 from './model/InlineResponse2005';
 import InlineResponse2006 from './model/InlineResponse2006';
+import InlineResponse2007 from './model/InlineResponse2007';
+import InlineResponse2008 from './model/InlineResponse2008';
 import InlineResponse201 from './model/InlineResponse201';
 import Invoice from './model/Invoice';
 import InvoiceEvent from './model/InvoiceEvent';
 import InvoiceItems from './model/InvoiceItems';
 import InvoiceRecipient from './model/InvoiceRecipient';
 import InvoicesbulkInvoices from './model/InvoicesbulkInvoices';
+import Organization from './model/Organization';
 import Task from './model/Task';
 import TaskEvent from './model/TaskEvent';
 import TasksbulkTasks from './model/TasksbulkTasks';
@@ -56,8 +64,10 @@ import User from './model/User';
 import Widget from './model/Widget';
 import AuthApi from './api/AuthApi';
 import BacklogsApi from './api/BacklogsApi';
+import ContactsApi from './api/ContactsApi';
 import InviteesApi from './api/InviteesApi';
 import InvoicesApi from './api/InvoicesApi';
+import OrganizationsApi from './api/OrganizationsApi';
 import TasksApi from './api/TasksApi';
 import TeamsApi from './api/TeamsApi';
 import UsersApi from './api/UsersApi';
@@ -175,10 +185,34 @@ export {
     Body17,
 
     /**
+     * The Body18 model constructor.
+     * @property {module:model/Body18}
+     */
+    Body18,
+
+    /**
+     * The Body19 model constructor.
+     * @property {module:model/Body19}
+     */
+    Body19,
+
+    /**
      * The Body2 model constructor.
      * @property {module:model/Body2}
      */
     Body2,
+
+    /**
+     * The Body20 model constructor.
+     * @property {module:model/Body20}
+     */
+    Body20,
+
+    /**
+     * The Body21 model constructor.
+     * @property {module:model/Body21}
+     */
+    Body21,
 
     /**
      * The Body3 model constructor.
@@ -221,6 +255,12 @@ export {
      * @property {module:model/Body9}
      */
     Body9,
+
+    /**
+     * The Contact model constructor.
+     * @property {module:model/Contact}
+     */
+    Contact,
 
     /**
      * The Error model constructor.
@@ -271,6 +311,18 @@ export {
     InlineResponse2006,
 
     /**
+     * The InlineResponse2007 model constructor.
+     * @property {module:model/InlineResponse2007}
+     */
+    InlineResponse2007,
+
+    /**
+     * The InlineResponse2008 model constructor.
+     * @property {module:model/InlineResponse2008}
+     */
+    InlineResponse2008,
+
+    /**
      * The InlineResponse201 model constructor.
      * @property {module:model/InlineResponse201}
      */
@@ -305,6 +357,12 @@ export {
      * @property {module:model/InvoicesbulkInvoices}
      */
     InvoicesbulkInvoices,
+
+    /**
+     * The Organization model constructor.
+     * @property {module:model/Organization}
+     */
+    Organization,
 
     /**
      * The Task model constructor.
@@ -361,6 +419,12 @@ export {
     BacklogsApi,
 
     /**
+    * The ContactsApi service constructor.
+    * @property {module:api/ContactsApi}
+    */
+    ContactsApi,
+
+    /**
     * The InviteesApi service constructor.
     * @property {module:api/InviteesApi}
     */
@@ -371,6 +435,12 @@ export {
     * @property {module:api/InvoicesApi}
     */
     InvoicesApi,
+
+    /**
+    * The OrganizationsApi service constructor.
+    * @property {module:api/OrganizationsApi}
+    */
+    OrganizationsApi,
 
     /**
     * The TasksApi service constructor.

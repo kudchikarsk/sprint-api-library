@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import TasksbulkTasks from './TasksbulkTasks';
 
 /**
  * The Body14 model module.
@@ -22,14 +23,11 @@ class Body14 {
     /**
      * Constructs a new <code>Body14</code>.
      * @alias module:model/Body14
-     * @param name {String} 
-     * @param email {String} must be unique
-     * @param password {String} At least one number and one letter
-     * @param role {module:model/Body14.RoleEnum} 
+     * @param tasks {Array.<module:model/TasksbulkTasks>} 
      */
-    constructor(name, email, password, role) { 
+    constructor(tasks) { 
         
-        Body14.initialize(this, name, email, password, role);
+        Body14.initialize(this, tasks);
     }
 
     /**
@@ -37,11 +35,8 @@ class Body14 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, email, password, role) { 
-        obj['name'] = name;
-        obj['email'] = email;
-        obj['password'] = password;
-        obj['role'] = role;
+    static initialize(obj, tasks) { 
+        obj['tasks'] = tasks;
     }
 
     /**
@@ -55,17 +50,8 @@ class Body14 {
         if (data) {
             obj = obj || new Body14();
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'String');
-            }
-            if (data.hasOwnProperty('password')) {
-                obj['password'] = ApiClient.convertToType(data['password'], 'String');
-            }
-            if (data.hasOwnProperty('role')) {
-                obj['role'] = ApiClient.convertToType(data['role'], 'String');
+            if (data.hasOwnProperty('tasks')) {
+                obj['tasks'] = ApiClient.convertToType(data['tasks'], [TasksbulkTasks]);
             }
         }
         return obj;
@@ -75,50 +61,12 @@ class Body14 {
 }
 
 /**
- * @member {String} name
+ * @member {Array.<module:model/TasksbulkTasks>} tasks
  */
-Body14.prototype['name'] = undefined;
-
-/**
- * must be unique
- * @member {String} email
- */
-Body14.prototype['email'] = undefined;
-
-/**
- * At least one number and one letter
- * @member {String} password
- */
-Body14.prototype['password'] = undefined;
-
-/**
- * @member {module:model/Body14.RoleEnum} role
- */
-Body14.prototype['role'] = undefined;
+Body14.prototype['tasks'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>role</code> property.
- * @enum {String}
- * @readonly
- */
-Body14['RoleEnum'] = {
-
-    /**
-     * value: "user"
-     * @const
-     */
-    "user": "user",
-
-    /**
-     * value: "admin"
-     * @const
-     */
-    "admin": "admin"
-};
 
 
 

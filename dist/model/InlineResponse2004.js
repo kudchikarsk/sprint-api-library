@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _User = _interopRequireDefault(require("./User"));
+var _Task = _interopRequireDefault(require("./Task"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -57,7 +57,7 @@ var InlineResponse2004 = /*#__PURE__*/function () {
         obj = obj || new InlineResponse2004();
 
         if (data.hasOwnProperty('results')) {
-          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_User["default"]]);
+          obj['results'] = _ApiClient["default"].convertToType(data['results'], [_Task["default"]]);
         }
 
         if (data.hasOwnProperty('page')) {
@@ -75,6 +75,10 @@ var InlineResponse2004 = /*#__PURE__*/function () {
         if (data.hasOwnProperty('totalResults')) {
           obj['totalResults'] = _ApiClient["default"].convertToType(data['totalResults'], 'Number');
         }
+
+        if (data.hasOwnProperty('cache')) {
+          obj['cache'] = _ApiClient["default"].convertToType(data['cache'], Object);
+        }
       }
 
       return obj;
@@ -84,7 +88,7 @@ var InlineResponse2004 = /*#__PURE__*/function () {
   return InlineResponse2004;
 }();
 /**
- * @member {Array.<module:model/User>} results
+ * @member {Array.<module:model/Task>} results
  */
 
 
@@ -109,5 +113,10 @@ InlineResponse2004.prototype['totalPages'] = undefined;
  */
 
 InlineResponse2004.prototype['totalResults'] = undefined;
+/**
+ * @member {Object} cache
+ */
+
+InlineResponse2004.prototype['cache'] = undefined;
 var _default = InlineResponse2004;
 exports["default"] = _default;

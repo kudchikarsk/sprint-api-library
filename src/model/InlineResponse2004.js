@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import Team from './Team';
+import Task from './Task';
 
 /**
  * The InlineResponse2004 model module.
@@ -49,7 +49,7 @@ class InlineResponse2004 {
             obj = obj || new InlineResponse2004();
 
             if (data.hasOwnProperty('results')) {
-                obj['results'] = ApiClient.convertToType(data['results'], [Team]);
+                obj['results'] = ApiClient.convertToType(data['results'], [Task]);
             }
             if (data.hasOwnProperty('page')) {
                 obj['page'] = ApiClient.convertToType(data['page'], 'Number');
@@ -63,6 +63,9 @@ class InlineResponse2004 {
             if (data.hasOwnProperty('totalResults')) {
                 obj['totalResults'] = ApiClient.convertToType(data['totalResults'], 'Number');
             }
+            if (data.hasOwnProperty('cache')) {
+                obj['cache'] = ApiClient.convertToType(data['cache'], Object);
+            }
         }
         return obj;
     }
@@ -71,7 +74,7 @@ class InlineResponse2004 {
 }
 
 /**
- * @member {Array.<module:model/Team>} results
+ * @member {Array.<module:model/Task>} results
  */
 InlineResponse2004.prototype['results'] = undefined;
 
@@ -94,6 +97,11 @@ InlineResponse2004.prototype['totalPages'] = undefined;
  * @member {Number} totalResults
  */
 InlineResponse2004.prototype['totalResults'] = undefined;
+
+/**
+ * @member {Object} cache
+ */
+InlineResponse2004.prototype['cache'] = undefined;
 
 
 

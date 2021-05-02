@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** |  | 
-**taskId** | **String** |  | 
-**data** | [**Task**](Task.md) |  | 
+**invoiceId** | **String** |  | 
+**data** | [**Invoice**](Invoice.md) |  | 
 
 

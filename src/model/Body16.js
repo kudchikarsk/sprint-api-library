@@ -22,13 +22,11 @@ class Body16 {
     /**
      * Constructs a new <code>Body16</code>.
      * @alias module:model/Body16
-     * @param teamId {String} 
-     * @param backlogId {String} 
-     * @param type {String} 
+     * @param name {String} 
      */
-    constructor(teamId, backlogId, type) { 
+    constructor(name) { 
         
-        Body16.initialize(this, teamId, backlogId, type);
+        Body16.initialize(this, name);
     }
 
     /**
@@ -36,10 +34,8 @@ class Body16 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, teamId, backlogId, type) { 
-        obj['teamId'] = teamId;
-        obj['backlogId'] = backlogId;
-        obj['type'] = type;
+    static initialize(obj, name) { 
+        obj['name'] = name;
     }
 
     /**
@@ -53,14 +49,11 @@ class Body16 {
         if (data) {
             obj = obj || new Body16();
 
-            if (data.hasOwnProperty('teamId')) {
-                obj['teamId'] = ApiClient.convertToType(data['teamId'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('backlogId')) {
-                obj['backlogId'] = ApiClient.convertToType(data['backlogId'], 'String');
-            }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
         }
         return obj;
@@ -70,19 +63,14 @@ class Body16 {
 }
 
 /**
- * @member {String} teamId
+ * @member {String} name
  */
-Body16.prototype['teamId'] = undefined;
+Body16.prototype['name'] = undefined;
 
 /**
- * @member {String} backlogId
+ * @member {String} description
  */
-Body16.prototype['backlogId'] = undefined;
-
-/**
- * @member {String} type
- */
-Body16.prototype['type'] = undefined;
+Body16.prototype['description'] = undefined;
 
 
 

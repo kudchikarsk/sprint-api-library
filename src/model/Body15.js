@@ -12,6 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
+import Task from './Task';
 
 /**
  * The Body15 model module.
@@ -22,10 +23,13 @@ class Body15 {
     /**
      * Constructs a new <code>Body15</code>.
      * @alias module:model/Body15
+     * @param type {String} 
+     * @param taskId {String} 
+     * @param data {module:model/Task} 
      */
-    constructor() { 
+    constructor(type, taskId, data) { 
         
-        Body15.initialize(this);
+        Body15.initialize(this, type, taskId, data);
     }
 
     /**
@@ -33,7 +37,10 @@ class Body15 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, type, taskId, data) { 
+        obj['type'] = type;
+        obj['taskId'] = taskId;
+        obj['data'] = data;
     }
 
     /**
@@ -47,32 +54,14 @@ class Body15 {
         if (data) {
             obj = obj || new Body15();
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'String');
+            if (data.hasOwnProperty('taskId')) {
+                obj['taskId'] = ApiClient.convertToType(data['taskId'], 'String');
             }
-            if (data.hasOwnProperty('company')) {
-                obj['company'] = ApiClient.convertToType(data['company'], 'String');
-            }
-            if (data.hasOwnProperty('education')) {
-                obj['education'] = ApiClient.convertToType(data['education'], 'String');
-            }
-            if (data.hasOwnProperty('address')) {
-                obj['address'] = ApiClient.convertToType(data['address'], 'String');
-            }
-            if (data.hasOwnProperty('city')) {
-                obj['city'] = ApiClient.convertToType(data['city'], 'String');
-            }
-            if (data.hasOwnProperty('country')) {
-                obj['country'] = ApiClient.convertToType(data['country'], 'String');
-            }
-            if (data.hasOwnProperty('postalCode')) {
-                obj['postalCode'] = ApiClient.convertToType(data['postalCode'], 'String');
-            }
-            if (data.hasOwnProperty('aboutMe')) {
-                obj['aboutMe'] = ApiClient.convertToType(data['aboutMe'], 'String');
+            if (data.hasOwnProperty('data')) {
+                obj['data'] = Task.constructFromObject(data['data']);
             }
         }
         return obj;
@@ -82,50 +71,19 @@ class Body15 {
 }
 
 /**
- * @member {String} name
+ * @member {String} type
  */
-Body15.prototype['name'] = undefined;
+Body15.prototype['type'] = undefined;
 
 /**
- * must be unique
- * @member {String} email
+ * @member {String} taskId
  */
-Body15.prototype['email'] = undefined;
+Body15.prototype['taskId'] = undefined;
 
 /**
- * @member {String} company
+ * @member {module:model/Task} data
  */
-Body15.prototype['company'] = undefined;
-
-/**
- * @member {String} education
- */
-Body15.prototype['education'] = undefined;
-
-/**
- * @member {String} address
- */
-Body15.prototype['address'] = undefined;
-
-/**
- * @member {String} city
- */
-Body15.prototype['city'] = undefined;
-
-/**
- * @member {String} country
- */
-Body15.prototype['country'] = undefined;
-
-/**
- * @member {String} postalCode
- */
-Body15.prototype['postalCode'] = undefined;
-
-/**
- * @member {String} aboutMe
- */
-Body15.prototype['aboutMe'] = undefined;
+Body15.prototype['data'] = undefined;
 
 
 

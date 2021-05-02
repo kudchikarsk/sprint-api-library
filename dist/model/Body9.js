@@ -7,8 +7,6 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Task = _interopRequireDefault(require("./Task"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26,14 +24,11 @@ var Body9 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body9</code>.
    * @alias module:model/Body9
-   * @param type {String} 
-   * @param taskId {String} 
-   * @param data {module:model/Task} 
    */
-  function Body9(type, taskId, data) {
+  function Body9() {
     _classCallCheck(this, Body9);
 
-    Body9.initialize(this, type, taskId, data);
+    Body9.initialize(this);
   }
   /**
    * Initializes the fields of this object.
@@ -44,11 +39,7 @@ var Body9 = /*#__PURE__*/function () {
 
   _createClass(Body9, null, [{
     key: "initialize",
-    value: function initialize(obj, type, taskId, data) {
-      obj['type'] = type;
-      obj['taskId'] = taskId;
-      obj['data'] = data;
-    }
+    value: function initialize(obj) {}
     /**
      * Constructs a <code>Body9</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -63,16 +54,16 @@ var Body9 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Body9();
 
-        if (data.hasOwnProperty('type')) {
-          obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
+        if (data.hasOwnProperty('name')) {
+          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
 
-        if (data.hasOwnProperty('taskId')) {
-          obj['taskId'] = _ApiClient["default"].convertToType(data['taskId'], 'String');
+        if (data.hasOwnProperty('phone')) {
+          obj['phone'] = _ApiClient["default"].convertToType(data['phone'], 'String');
         }
 
-        if (data.hasOwnProperty('data')) {
-          obj['data'] = _Task["default"].constructFromObject(data['data']);
+        if (data.hasOwnProperty('address')) {
+          obj['address'] = _ApiClient["default"].convertToType(data['address'], 'String');
         }
       }
 
@@ -83,20 +74,20 @@ var Body9 = /*#__PURE__*/function () {
   return Body9;
 }();
 /**
- * @member {String} type
+ * @member {String} name
  */
 
 
-Body9.prototype['type'] = undefined;
+Body9.prototype['name'] = undefined;
 /**
- * @member {String} taskId
+ * @member {String} phone
  */
 
-Body9.prototype['taskId'] = undefined;
+Body9.prototype['phone'] = undefined;
 /**
- * @member {module:model/Task} data
+ * @member {String} address
  */
 
-Body9.prototype['data'] = undefined;
+Body9.prototype['address'] = undefined;
 var _default = Body9;
 exports["default"] = _default;

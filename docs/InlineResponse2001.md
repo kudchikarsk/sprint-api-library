@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**results** | [**[Invoice]**](Invoice.md) |  | [optional] 
+**results** | [**[Contact]**](Contact.md) |  | [optional] 
 **page** | **Number** |  | [optional] 
 **limit** | **Number** |  | [optional] 
 **totalPages** | **Number** |  | [optional] 

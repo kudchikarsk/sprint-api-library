@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## invoicesBulkPost
 
-> InvoiceEvent invoicesBulkPost(Body8)
+> InvoiceEvent invoicesBulkPost(Body10)
 
 Create a invoice events
 
@@ -29,8 +29,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.InvoicesApi();
-let Body8 = new SprintService.Body8(); // Body8 | 
-apiInstance.invoicesBulkPost(Body8).then((data) => {
+let Body10 = new SprintService.Body10(); // Body10 | 
+apiInstance.invoicesBulkPost(Body10).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -43,7 +43,7 @@ apiInstance.invoicesBulkPost(Body8).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body8** | [**Body8**](Body8.md)|  | 
+ **Body10** | [**Body10**](Body10.md)|  | 
 
 ### Return type
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ## invoicesGet
 
-> InlineResponse2001 invoicesGet(teamId, opts)
+> InlineResponse2002 invoicesGet(organizationId, opts)
 
 Get all invoices
 
@@ -77,7 +77,7 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.InvoicesApi();
-let teamId = "teamId_example"; // String | invoice teamId
+let organizationId = "organizationId_example"; // String | invoice organizationId
 let opts = {
   'name': "name_example", // String | invoice client name
   'status': "status_example", // String | invoice status
@@ -86,7 +86,7 @@ let opts = {
   'limit': 56, // Number | Maximum number of invoices
   'page': 1 // Number | Page number
 };
-apiInstance.invoicesGet(teamId, opts).then((data) => {
+apiInstance.invoicesGet(organizationId, opts).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -99,7 +99,7 @@ apiInstance.invoicesGet(teamId, opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **teamId** | **String**| invoice teamId | 
+ **organizationId** | **String**| invoice organizationId | 
  **name** | **String**| invoice client name | [optional] 
  **status** | **String**| invoice status | [optional] 
  **description** | **String**| invoice project / description | [optional] 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ## invoicesPost
 
-> InvoiceEvent invoicesPost(Body9)
+> InvoiceEvent invoicesPost(Body11)
 
 Create a invoice event
 
@@ -187,8 +187,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.InvoicesApi();
-let Body9 = new SprintService.Body9(); // Body9 | 
-apiInstance.invoicesPost(Body9).then((data) => {
+let Body11 = new SprintService.Body11(); // Body11 | 
+apiInstance.invoicesPost(Body11).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -201,7 +201,7 @@ apiInstance.invoicesPost(Body9).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body9** | [**Body9**](Body9.md)|  | 
+ **Body11** | [**Body11**](Body11.md)|  | 
 
 ### Return type
 

@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import InvoicesbulkInvoices from './InvoicesbulkInvoices';
 
 /**
  * The Body8 model module.
@@ -23,11 +22,13 @@ class Body8 {
     /**
      * Constructs a new <code>Body8</code>.
      * @alias module:model/Body8
-     * @param invoices {Array.<module:model/InvoicesbulkInvoices>} 
+     * @param name {String} 
+     * @param phone {String} 
+     * @param organizationId {String} 
      */
-    constructor(invoices) { 
+    constructor(name, phone, organizationId) { 
         
-        Body8.initialize(this, invoices);
+        Body8.initialize(this, name, phone, organizationId);
     }
 
     /**
@@ -35,8 +36,10 @@ class Body8 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, invoices) { 
-        obj['invoices'] = invoices;
+    static initialize(obj, name, phone, organizationId) { 
+        obj['name'] = name;
+        obj['phone'] = phone;
+        obj['organizationId'] = organizationId;
     }
 
     /**
@@ -50,8 +53,17 @@ class Body8 {
         if (data) {
             obj = obj || new Body8();
 
-            if (data.hasOwnProperty('invoices')) {
-                obj['invoices'] = ApiClient.convertToType(data['invoices'], [InvoicesbulkInvoices]);
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('phone')) {
+                obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
+            }
+            if (data.hasOwnProperty('address')) {
+                obj['address'] = ApiClient.convertToType(data['address'], 'String');
+            }
+            if (data.hasOwnProperty('organizationId')) {
+                obj['organizationId'] = ApiClient.convertToType(data['organizationId'], 'String');
             }
         }
         return obj;
@@ -61,9 +73,24 @@ class Body8 {
 }
 
 /**
- * @member {Array.<module:model/InvoicesbulkInvoices>} invoices
+ * @member {String} name
  */
-Body8.prototype['invoices'] = undefined;
+Body8.prototype['name'] = undefined;
+
+/**
+ * @member {String} phone
+ */
+Body8.prototype['phone'] = undefined;
+
+/**
+ * @member {String} address
+ */
+Body8.prototype['address'] = undefined;
+
+/**
+ * @member {String} organizationId
+ */
+Body8.prototype['organizationId'] = undefined;
 
 
 

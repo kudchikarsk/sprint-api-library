@@ -24,11 +24,14 @@ var Body19 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body19</code>.
    * @alias module:model/Body19
+   * @param teamId {String} 
+   * @param backlogId {String} 
+   * @param type {String} 
    */
-  function Body19() {
+  function Body19(teamId, backlogId, type) {
     _classCallCheck(this, Body19);
 
-    Body19.initialize(this);
+    Body19.initialize(this, teamId, backlogId, type);
   }
   /**
    * Initializes the fields of this object.
@@ -39,7 +42,11 @@ var Body19 = /*#__PURE__*/function () {
 
   _createClass(Body19, null, [{
     key: "initialize",
-    value: function initialize(obj) {}
+    value: function initialize(obj, teamId, backlogId, type) {
+      obj['teamId'] = teamId;
+      obj['backlogId'] = backlogId;
+      obj['type'] = type;
+    }
     /**
      * Constructs a <code>Body19</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -54,40 +61,16 @@ var Body19 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Body19();
 
-        if (data.hasOwnProperty('name')) {
-          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
+        if (data.hasOwnProperty('teamId')) {
+          obj['teamId'] = _ApiClient["default"].convertToType(data['teamId'], 'String');
         }
 
-        if (data.hasOwnProperty('email')) {
-          obj['email'] = _ApiClient["default"].convertToType(data['email'], 'String');
+        if (data.hasOwnProperty('backlogId')) {
+          obj['backlogId'] = _ApiClient["default"].convertToType(data['backlogId'], 'String');
         }
 
-        if (data.hasOwnProperty('company')) {
-          obj['company'] = _ApiClient["default"].convertToType(data['company'], 'String');
-        }
-
-        if (data.hasOwnProperty('education')) {
-          obj['education'] = _ApiClient["default"].convertToType(data['education'], 'String');
-        }
-
-        if (data.hasOwnProperty('address')) {
-          obj['address'] = _ApiClient["default"].convertToType(data['address'], 'String');
-        }
-
-        if (data.hasOwnProperty('city')) {
-          obj['city'] = _ApiClient["default"].convertToType(data['city'], 'String');
-        }
-
-        if (data.hasOwnProperty('country')) {
-          obj['country'] = _ApiClient["default"].convertToType(data['country'], 'String');
-        }
-
-        if (data.hasOwnProperty('postalCode')) {
-          obj['postalCode'] = _ApiClient["default"].convertToType(data['postalCode'], 'String');
-        }
-
-        if (data.hasOwnProperty('aboutMe')) {
-          obj['aboutMe'] = _ApiClient["default"].convertToType(data['aboutMe'], 'String');
+        if (data.hasOwnProperty('type')) {
+          obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
         }
       }
 
@@ -98,51 +81,20 @@ var Body19 = /*#__PURE__*/function () {
   return Body19;
 }();
 /**
- * @member {String} name
+ * @member {String} teamId
  */
 
 
-Body19.prototype['name'] = undefined;
+Body19.prototype['teamId'] = undefined;
 /**
- * must be unique
- * @member {String} email
+ * @member {String} backlogId
  */
 
-Body19.prototype['email'] = undefined;
+Body19.prototype['backlogId'] = undefined;
 /**
- * @member {String} company
+ * @member {String} type
  */
 
-Body19.prototype['company'] = undefined;
-/**
- * @member {String} education
- */
-
-Body19.prototype['education'] = undefined;
-/**
- * @member {String} address
- */
-
-Body19.prototype['address'] = undefined;
-/**
- * @member {String} city
- */
-
-Body19.prototype['city'] = undefined;
-/**
- * @member {String} country
- */
-
-Body19.prototype['country'] = undefined;
-/**
- * @member {String} postalCode
- */
-
-Body19.prototype['postalCode'] = undefined;
-/**
- * @member {String} aboutMe
- */
-
-Body19.prototype['aboutMe'] = undefined;
+Body19.prototype['type'] = undefined;
 var _default = Body19;
 exports["default"] = _default;

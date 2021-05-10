@@ -22,13 +22,10 @@ class Body20 {
     /**
      * Constructs a new <code>Body20</code>.
      * @alias module:model/Body20
-     * @param teamId {String} 
-     * @param backlogId {String} 
-     * @param type {String} 
      */
-    constructor(teamId, backlogId, type) { 
+    constructor() { 
         
-        Body20.initialize(this, teamId, backlogId, type);
+        Body20.initialize(this);
     }
 
     /**
@@ -36,10 +33,7 @@ class Body20 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, teamId, backlogId, type) { 
-        obj['teamId'] = teamId;
-        obj['backlogId'] = backlogId;
-        obj['type'] = type;
+    static initialize(obj) { 
     }
 
     /**

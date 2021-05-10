@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _InvoicesbulkInvoices = _interopRequireDefault(require("./InvoicesbulkInvoices"));
+var _Invoice = _interopRequireDefault(require("./Invoice"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -26,12 +26,14 @@ var Body10 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body10</code>.
    * @alias module:model/Body10
-   * @param invoices {Array.<module:model/InvoicesbulkInvoices>} 
+   * @param type {String} 
+   * @param invoiceId {String} 
+   * @param data {module:model/Invoice} 
    */
-  function Body10(invoices) {
+  function Body10(type, invoiceId, data) {
     _classCallCheck(this, Body10);
 
-    Body10.initialize(this, invoices);
+    Body10.initialize(this, type, invoiceId, data);
   }
   /**
    * Initializes the fields of this object.
@@ -42,8 +44,10 @@ var Body10 = /*#__PURE__*/function () {
 
   _createClass(Body10, null, [{
     key: "initialize",
-    value: function initialize(obj, invoices) {
-      obj['invoices'] = invoices;
+    value: function initialize(obj, type, invoiceId, data) {
+      obj['type'] = type;
+      obj['invoiceId'] = invoiceId;
+      obj['data'] = data;
     }
     /**
      * Constructs a <code>Body10</code> from a plain JavaScript object, optionally creating a new instance.
@@ -59,8 +63,16 @@ var Body10 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Body10();
 
-        if (data.hasOwnProperty('invoices')) {
-          obj['invoices'] = _ApiClient["default"].convertToType(data['invoices'], [_InvoicesbulkInvoices["default"]]);
+        if (data.hasOwnProperty('type')) {
+          obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
+        }
+
+        if (data.hasOwnProperty('invoiceId')) {
+          obj['invoiceId'] = _ApiClient["default"].convertToType(data['invoiceId'], 'String');
+        }
+
+        if (data.hasOwnProperty('data')) {
+          obj['data'] = _Invoice["default"].constructFromObject(data['data']);
         }
       }
 
@@ -71,10 +83,20 @@ var Body10 = /*#__PURE__*/function () {
   return Body10;
 }();
 /**
- * @member {Array.<module:model/InvoicesbulkInvoices>} invoices
+ * @member {String} type
  */
 
 
-Body10.prototype['invoices'] = undefined;
+Body10.prototype['type'] = undefined;
+/**
+ * @member {String} invoiceId
+ */
+
+Body10.prototype['invoiceId'] = undefined;
+/**
+ * @member {module:model/Invoice} data
+ */
+
+Body10.prototype['data'] = undefined;
 var _default = Body10;
 exports["default"] = _default;

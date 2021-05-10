@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**tasks** | [**[TasksbulkTasks]**](TasksbulkTasks.md) |  | 
+**type** | **String** |  | 
+**taskId** | **String** |  | 
+**data** | [**Task**](Task.md) |  | 
 
 

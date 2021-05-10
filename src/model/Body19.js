@@ -22,10 +22,13 @@ class Body19 {
     /**
      * Constructs a new <code>Body19</code>.
      * @alias module:model/Body19
+     * @param teamId {String} 
+     * @param backlogId {String} 
+     * @param type {String} 
      */
-    constructor() { 
+    constructor(teamId, backlogId, type) { 
         
-        Body19.initialize(this);
+        Body19.initialize(this, teamId, backlogId, type);
     }
 
     /**
@@ -33,7 +36,10 @@ class Body19 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, teamId, backlogId, type) { 
+        obj['teamId'] = teamId;
+        obj['backlogId'] = backlogId;
+        obj['type'] = type;
     }
 
     /**
@@ -47,32 +53,14 @@ class Body19 {
         if (data) {
             obj = obj || new Body19();
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('teamId')) {
+                obj['teamId'] = ApiClient.convertToType(data['teamId'], 'String');
             }
-            if (data.hasOwnProperty('email')) {
-                obj['email'] = ApiClient.convertToType(data['email'], 'String');
+            if (data.hasOwnProperty('backlogId')) {
+                obj['backlogId'] = ApiClient.convertToType(data['backlogId'], 'String');
             }
-            if (data.hasOwnProperty('company')) {
-                obj['company'] = ApiClient.convertToType(data['company'], 'String');
-            }
-            if (data.hasOwnProperty('education')) {
-                obj['education'] = ApiClient.convertToType(data['education'], 'String');
-            }
-            if (data.hasOwnProperty('address')) {
-                obj['address'] = ApiClient.convertToType(data['address'], 'String');
-            }
-            if (data.hasOwnProperty('city')) {
-                obj['city'] = ApiClient.convertToType(data['city'], 'String');
-            }
-            if (data.hasOwnProperty('country')) {
-                obj['country'] = ApiClient.convertToType(data['country'], 'String');
-            }
-            if (data.hasOwnProperty('postalCode')) {
-                obj['postalCode'] = ApiClient.convertToType(data['postalCode'], 'String');
-            }
-            if (data.hasOwnProperty('aboutMe')) {
-                obj['aboutMe'] = ApiClient.convertToType(data['aboutMe'], 'String');
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
             }
         }
         return obj;
@@ -82,50 +70,19 @@ class Body19 {
 }
 
 /**
- * @member {String} name
+ * @member {String} teamId
  */
-Body19.prototype['name'] = undefined;
+Body19.prototype['teamId'] = undefined;
 
 /**
- * must be unique
- * @member {String} email
+ * @member {String} backlogId
  */
-Body19.prototype['email'] = undefined;
+Body19.prototype['backlogId'] = undefined;
 
 /**
- * @member {String} company
+ * @member {String} type
  */
-Body19.prototype['company'] = undefined;
-
-/**
- * @member {String} education
- */
-Body19.prototype['education'] = undefined;
-
-/**
- * @member {String} address
- */
-Body19.prototype['address'] = undefined;
-
-/**
- * @member {String} city
- */
-Body19.prototype['city'] = undefined;
-
-/**
- * @member {String} country
- */
-Body19.prototype['country'] = undefined;
-
-/**
- * @member {String} postalCode
- */
-Body19.prototype['postalCode'] = undefined;
-
-/**
- * @member {String} aboutMe
- */
-Body19.prototype['aboutMe'] = undefined;
+Body19.prototype['type'] = undefined;
 
 
 

@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **String** |  | 
-**invoiceId** | **String** |  | 
-**data** | [**Invoice**](Invoice.md) |  | 
+**name** | **String** |  | 
+**description** | **String** |  | [optional] 
 
 

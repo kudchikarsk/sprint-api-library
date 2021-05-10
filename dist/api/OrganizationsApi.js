@@ -7,9 +7,9 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Body = _interopRequireDefault(require("../model/Body12"));
+var _Body = _interopRequireDefault(require("../model/Body11"));
 
-var _Body2 = _interopRequireDefault(require("../model/Body13"));
+var _Body2 = _interopRequireDefault(require("../model/Body12"));
 
 var _Error = _interopRequireDefault(require("../model/Error"));
 
@@ -281,22 +281,22 @@ var OrganizationsApi = /*#__PURE__*/function () {
      * Update a organization
      * Logged in organizations can only update their own information. Only admins can update other organizations.
      * @param {String} id Organization id
-     * @param {module:model/Body13} Body13 
+     * @param {module:model/Body12} Body12 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Organization} and HTTP response
      */
 
   }, {
     key: "organizationsIdPatchWithHttpInfo",
-    value: function organizationsIdPatchWithHttpInfo(id, Body13) {
-      var postBody = Body13; // verify the required parameter 'id' is set
+    value: function organizationsIdPatchWithHttpInfo(id, Body12) {
+      var postBody = Body12; // verify the required parameter 'id' is set
 
       if (id === undefined || id === null) {
         throw new _Error["default"]("Missing the required parameter 'id' when calling organizationsIdPatch");
-      } // verify the required parameter 'Body13' is set
+      } // verify the required parameter 'Body12' is set
 
 
-      if (Body13 === undefined || Body13 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body13' when calling organizationsIdPatch");
+      if (Body12 === undefined || Body12 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body12' when calling organizationsIdPatch");
       }
 
       var pathParams = {
@@ -315,31 +315,31 @@ var OrganizationsApi = /*#__PURE__*/function () {
      * Update a organization
      * Logged in organizations can only update their own information. Only admins can update other organizations.
      * @param {String} id Organization id
-     * @param {module:model/Body13} Body13 
+     * @param {module:model/Body12} Body12 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Organization}
      */
 
   }, {
     key: "organizationsIdPatch",
-    value: function organizationsIdPatch(id, Body13) {
-      return this.organizationsIdPatchWithHttpInfo(id, Body13).then(function (response_and_data) {
+    value: function organizationsIdPatch(id, Body12) {
+      return this.organizationsIdPatchWithHttpInfo(id, Body12).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Create a organization
      * User can create organizations.
-     * @param {module:model/Body12} Body12 
+     * @param {module:model/Body11} Body11 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Organization} and HTTP response
      */
 
   }, {
     key: "organizationsPostWithHttpInfo",
-    value: function organizationsPostWithHttpInfo(Body12) {
-      var postBody = Body12; // verify the required parameter 'Body12' is set
+    value: function organizationsPostWithHttpInfo(Body11) {
+      var postBody = Body11; // verify the required parameter 'Body11' is set
 
-      if (Body12 === undefined || Body12 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body12' when calling organizationsPost");
+      if (Body11 === undefined || Body11 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body11' when calling organizationsPost");
       }
 
       var pathParams = {};
@@ -355,14 +355,14 @@ var OrganizationsApi = /*#__PURE__*/function () {
     /**
      * Create a organization
      * User can create organizations.
-     * @param {module:model/Body12} Body12 
+     * @param {module:model/Body11} Body11 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Organization}
      */
 
   }, {
     key: "organizationsPost",
-    value: function organizationsPost(Body12) {
-      return this.organizationsPostWithHttpInfo(Body12).then(function (response_and_data) {
+    value: function organizationsPost(Body11) {
+      return this.organizationsPostWithHttpInfo(Body11).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import TasksbulkTasks from './TasksbulkTasks';
+import Task from './Task';
 
 /**
  * The Body14 model module.
@@ -23,11 +23,13 @@ class Body14 {
     /**
      * Constructs a new <code>Body14</code>.
      * @alias module:model/Body14
-     * @param tasks {Array.<module:model/TasksbulkTasks>} 
+     * @param type {String} 
+     * @param taskId {String} 
+     * @param data {module:model/Task} 
      */
-    constructor(tasks) { 
+    constructor(type, taskId, data) { 
         
-        Body14.initialize(this, tasks);
+        Body14.initialize(this, type, taskId, data);
     }
 
     /**
@@ -35,8 +37,10 @@ class Body14 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, tasks) { 
-        obj['tasks'] = tasks;
+    static initialize(obj, type, taskId, data) { 
+        obj['type'] = type;
+        obj['taskId'] = taskId;
+        obj['data'] = data;
     }
 
     /**
@@ -50,8 +54,14 @@ class Body14 {
         if (data) {
             obj = obj || new Body14();
 
-            if (data.hasOwnProperty('tasks')) {
-                obj['tasks'] = ApiClient.convertToType(data['tasks'], [TasksbulkTasks]);
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            }
+            if (data.hasOwnProperty('taskId')) {
+                obj['taskId'] = ApiClient.convertToType(data['taskId'], 'String');
+            }
+            if (data.hasOwnProperty('data')) {
+                obj['data'] = Task.constructFromObject(data['data']);
             }
         }
         return obj;
@@ -61,9 +71,19 @@ class Body14 {
 }
 
 /**
- * @member {Array.<module:model/TasksbulkTasks>} tasks
+ * @member {String} type
  */
-Body14.prototype['tasks'] = undefined;
+Body14.prototype['type'] = undefined;
+
+/**
+ * @member {String} taskId
+ */
+Body14.prototype['taskId'] = undefined;
+
+/**
+ * @member {module:model/Task} data
+ */
+Body14.prototype['data'] = undefined;
 
 
 

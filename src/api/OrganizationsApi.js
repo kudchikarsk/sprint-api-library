@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import Body11 from '../model/Body11';
 import Body12 from '../model/Body12';
-import Body13 from '../model/Body13';
 import Error from '../model/Error';
 import InlineResponse2003 from '../model/InlineResponse2003';
 import Organization from '../model/Organization';
@@ -305,18 +305,18 @@ export default class OrganizationsApi {
      * Update a organization
      * Logged in organizations can only update their own information. Only admins can update other organizations.
      * @param {String} id Organization id
-     * @param {module:model/Body13} Body13 
+     * @param {module:model/Body12} Body12 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Organization} and HTTP response
      */
-    organizationsIdPatchWithHttpInfo(id, Body13) {
-      let postBody = Body13;
+    organizationsIdPatchWithHttpInfo(id, Body12) {
+      let postBody = Body12;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling organizationsIdPatch");
       }
-      // verify the required parameter 'Body13' is set
-      if (Body13 === undefined || Body13 === null) {
-        throw new Error("Missing the required parameter 'Body13' when calling organizationsIdPatch");
+      // verify the required parameter 'Body12' is set
+      if (Body12 === undefined || Body12 === null) {
+        throw new Error("Missing the required parameter 'Body12' when calling organizationsIdPatch");
       }
 
       let pathParams = {
@@ -344,11 +344,11 @@ export default class OrganizationsApi {
      * Update a organization
      * Logged in organizations can only update their own information. Only admins can update other organizations.
      * @param {String} id Organization id
-     * @param {module:model/Body13} Body13 
+     * @param {module:model/Body12} Body12 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Organization}
      */
-    organizationsIdPatch(id, Body13) {
-      return this.organizationsIdPatchWithHttpInfo(id, Body13)
+    organizationsIdPatch(id, Body12) {
+      return this.organizationsIdPatchWithHttpInfo(id, Body12)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -358,14 +358,14 @@ export default class OrganizationsApi {
     /**
      * Create a organization
      * User can create organizations.
-     * @param {module:model/Body12} Body12 
+     * @param {module:model/Body11} Body11 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Organization} and HTTP response
      */
-    organizationsPostWithHttpInfo(Body12) {
-      let postBody = Body12;
-      // verify the required parameter 'Body12' is set
-      if (Body12 === undefined || Body12 === null) {
-        throw new Error("Missing the required parameter 'Body12' when calling organizationsPost");
+    organizationsPostWithHttpInfo(Body11) {
+      let postBody = Body11;
+      // verify the required parameter 'Body11' is set
+      if (Body11 === undefined || Body11 === null) {
+        throw new Error("Missing the required parameter 'Body11' when calling organizationsPost");
       }
 
       let pathParams = {
@@ -391,11 +391,11 @@ export default class OrganizationsApi {
     /**
      * Create a organization
      * User can create organizations.
-     * @param {module:model/Body12} Body12 
+     * @param {module:model/Body11} Body11 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Organization}
      */
-    organizationsPost(Body12) {
-      return this.organizationsPostWithHttpInfo(Body12)
+    organizationsPost(Body11) {
+      return this.organizationsPostWithHttpInfo(Body11)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

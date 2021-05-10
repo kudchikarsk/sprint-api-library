@@ -12,7 +12,7 @@
  */
 
 import ApiClient from '../ApiClient';
-import InvoicesbulkInvoices from './InvoicesbulkInvoices';
+import Invoice from './Invoice';
 
 /**
  * The Body10 model module.
@@ -23,11 +23,13 @@ class Body10 {
     /**
      * Constructs a new <code>Body10</code>.
      * @alias module:model/Body10
-     * @param invoices {Array.<module:model/InvoicesbulkInvoices>} 
+     * @param type {String} 
+     * @param invoiceId {String} 
+     * @param data {module:model/Invoice} 
      */
-    constructor(invoices) { 
+    constructor(type, invoiceId, data) { 
         
-        Body10.initialize(this, invoices);
+        Body10.initialize(this, type, invoiceId, data);
     }
 
     /**
@@ -35,8 +37,10 @@ class Body10 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, invoices) { 
-        obj['invoices'] = invoices;
+    static initialize(obj, type, invoiceId, data) { 
+        obj['type'] = type;
+        obj['invoiceId'] = invoiceId;
+        obj['data'] = data;
     }
 
     /**
@@ -50,8 +54,14 @@ class Body10 {
         if (data) {
             obj = obj || new Body10();
 
-            if (data.hasOwnProperty('invoices')) {
-                obj['invoices'] = ApiClient.convertToType(data['invoices'], [InvoicesbulkInvoices]);
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            }
+            if (data.hasOwnProperty('invoiceId')) {
+                obj['invoiceId'] = ApiClient.convertToType(data['invoiceId'], 'String');
+            }
+            if (data.hasOwnProperty('data')) {
+                obj['data'] = Invoice.constructFromObject(data['data']);
             }
         }
         return obj;
@@ -61,9 +71,19 @@ class Body10 {
 }
 
 /**
- * @member {Array.<module:model/InvoicesbulkInvoices>} invoices
+ * @member {String} type
  */
-Body10.prototype['invoices'] = undefined;
+Body10.prototype['type'] = undefined;
+
+/**
+ * @member {String} invoiceId
+ */
+Body10.prototype['invoiceId'] = undefined;
+
+/**
+ * @member {module:model/Invoice} data
+ */
+Body10.prototype['data'] = undefined;
 
 
 

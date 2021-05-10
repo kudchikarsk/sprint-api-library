@@ -22,14 +22,10 @@ class Body18 {
     /**
      * Constructs a new <code>Body18</code>.
      * @alias module:model/Body18
-     * @param name {String} 
-     * @param email {String} must be unique
-     * @param password {String} At least one number and one letter
-     * @param role {module:model/Body18.RoleEnum} 
      */
-    constructor(name, email, password, role) { 
+    constructor() { 
         
-        Body18.initialize(this, name, email, password, role);
+        Body18.initialize(this);
     }
 
     /**
@@ -37,11 +33,7 @@ class Body18 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, name, email, password, role) { 
-        obj['name'] = name;
-        obj['email'] = email;
-        obj['password'] = password;
-        obj['role'] = role;
+    static initialize(obj) { 
     }
 
     /**
@@ -61,11 +53,26 @@ class Body18 {
             if (data.hasOwnProperty('email')) {
                 obj['email'] = ApiClient.convertToType(data['email'], 'String');
             }
-            if (data.hasOwnProperty('password')) {
-                obj['password'] = ApiClient.convertToType(data['password'], 'String');
+            if (data.hasOwnProperty('company')) {
+                obj['company'] = ApiClient.convertToType(data['company'], 'String');
             }
-            if (data.hasOwnProperty('role')) {
-                obj['role'] = ApiClient.convertToType(data['role'], 'String');
+            if (data.hasOwnProperty('education')) {
+                obj['education'] = ApiClient.convertToType(data['education'], 'String');
+            }
+            if (data.hasOwnProperty('address')) {
+                obj['address'] = ApiClient.convertToType(data['address'], 'String');
+            }
+            if (data.hasOwnProperty('city')) {
+                obj['city'] = ApiClient.convertToType(data['city'], 'String');
+            }
+            if (data.hasOwnProperty('country')) {
+                obj['country'] = ApiClient.convertToType(data['country'], 'String');
+            }
+            if (data.hasOwnProperty('postalCode')) {
+                obj['postalCode'] = ApiClient.convertToType(data['postalCode'], 'String');
+            }
+            if (data.hasOwnProperty('aboutMe')) {
+                obj['aboutMe'] = ApiClient.convertToType(data['aboutMe'], 'String');
             }
         }
         return obj;
@@ -86,39 +93,42 @@ Body18.prototype['name'] = undefined;
 Body18.prototype['email'] = undefined;
 
 /**
- * At least one number and one letter
- * @member {String} password
+ * @member {String} company
  */
-Body18.prototype['password'] = undefined;
+Body18.prototype['company'] = undefined;
 
 /**
- * @member {module:model/Body18.RoleEnum} role
+ * @member {String} education
  */
-Body18.prototype['role'] = undefined;
-
-
-
-
+Body18.prototype['education'] = undefined;
 
 /**
- * Allowed values for the <code>role</code> property.
- * @enum {String}
- * @readonly
+ * @member {String} address
  */
-Body18['RoleEnum'] = {
+Body18.prototype['address'] = undefined;
 
-    /**
-     * value: "user"
-     * @const
-     */
-    "user": "user",
+/**
+ * @member {String} city
+ */
+Body18.prototype['city'] = undefined;
 
-    /**
-     * value: "admin"
-     * @const
-     */
-    "admin": "admin"
-};
+/**
+ * @member {String} country
+ */
+Body18.prototype['country'] = undefined;
+
+/**
+ * @member {String} postalCode
+ */
+Body18.prototype['postalCode'] = undefined;
+
+/**
+ * @member {String} aboutMe
+ */
+Body18.prototype['aboutMe'] = undefined;
+
+
+
 
 
 

@@ -20,7 +20,6 @@ docs/Body18.md
 docs/Body19.md
 docs/Body2.md
 docs/Body20.md
-docs/Body21.md
 docs/Body3.md
 docs/Body4.md
 docs/Body5.md
@@ -47,7 +46,6 @@ docs/InvoiceEvent.md
 docs/InvoiceItems.md
 docs/InvoiceRecipient.md
 docs/InvoicesApi.md
-docs/InvoicesbulkInvoices.md
 docs/Organization.md
 docs/OrganizationsApi.md
 docs/Task.md
@@ -92,7 +90,6 @@ src/model/Body18.js
 src/model/Body19.js
 src/model/Body2.js
 src/model/Body20.js
-src/model/Body21.js
 src/model/Body3.js
 src/model/Body4.js
 src/model/Body5.js
@@ -116,7 +113,6 @@ src/model/Invoice.js
 src/model/InvoiceEvent.js
 src/model/InvoiceItems.js
 src/model/InvoiceRecipient.js
-src/model/InvoicesbulkInvoices.js
 src/model/Organization.js
 src/model/Task.js
 src/model/TaskEvent.js
@@ -125,13 +121,3 @@ src/model/Team.js
 src/model/Token.js
 src/model/User.js
 src/model/Widget.js
-test/api/ContactsApi.spec.js
-test/api/OrganizationsApi.spec.js
-test/model/Body18.spec.js
-test/model/Body19.spec.js
-test/model/Body20.spec.js
-test/model/Body21.spec.js
-test/model/Contact.spec.js
-test/model/InlineResponse2007.spec.js
-test/model/InlineResponse2008.spec.js
-test/model/Organization.spec.js

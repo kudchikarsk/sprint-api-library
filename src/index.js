@@ -29,7 +29,6 @@ import Body18 from './model/Body18';
 import Body19 from './model/Body19';
 import Body2 from './model/Body2';
 import Body20 from './model/Body20';
-import Body21 from './model/Body21';
 import Body3 from './model/Body3';
 import Body4 from './model/Body4';
 import Body5 from './model/Body5';
@@ -53,7 +52,6 @@ import Invoice from './model/Invoice';
 import InvoiceEvent from './model/InvoiceEvent';
 import InvoiceItems from './model/InvoiceItems';
 import InvoiceRecipient from './model/InvoiceRecipient';
-import InvoicesbulkInvoices from './model/InvoicesbulkInvoices';
 import Organization from './model/Organization';
 import Task from './model/Task';
 import TaskEvent from './model/TaskEvent';
@@ -209,12 +207,6 @@ export {
     Body20,
 
     /**
-     * The Body21 model constructor.
-     * @property {module:model/Body21}
-     */
-    Body21,
-
-    /**
      * The Body3 model constructor.
      * @property {module:model/Body3}
      */
@@ -351,12 +343,6 @@ export {
      * @property {module:model/InvoiceRecipient}
      */
     InvoiceRecipient,
-
-    /**
-     * The InvoicesbulkInvoices model constructor.
-     * @property {module:model/InvoicesbulkInvoices}
-     */
-    InvoicesbulkInvoices,
 
     /**
      * The Organization model constructor.

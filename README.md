@@ -136,7 +136,6 @@ Class | Method | HTTP request | Description
 *SprintService.ContactsApi* | [**contactsPost**](docs/ContactsApi.md#contactsPost) | **POST** /contacts | Create a contact
 *SprintService.InviteesApi* | [**inviteesGet**](docs/InviteesApi.md#inviteesGet) | **GET** /invitees | Get all team invitees
 *SprintService.InviteesApi* | [**inviteesIdAcceptPost**](docs/InviteesApi.md#inviteesIdAcceptPost) | **POST** /invitees/{id}/accept | Accept a team invitee
-*SprintService.InvoicesApi* | [**invoicesBulkPost**](docs/InvoicesApi.md#invoicesBulkPost) | **POST** /invoices/bulk | Create a invoice events
 *SprintService.InvoicesApi* | [**invoicesGet**](docs/InvoicesApi.md#invoicesGet) | **GET** /invoices | Get all invoices
 *SprintService.InvoicesApi* | [**invoicesInvoiceIdGet**](docs/InvoicesApi.md#invoicesInvoiceIdGet) | **GET** /invoices/{invoiceId} | Get all invoices
 *SprintService.InvoicesApi* | [**invoicesPost**](docs/InvoicesApi.md#invoicesPost) | **POST** /invoices | Create a invoice event
@@ -190,7 +189,6 @@ Class | Method | HTTP request | Description
  - [SprintService.Body19](docs/Body19.md)
  - [SprintService.Body2](docs/Body2.md)
  - [SprintService.Body20](docs/Body20.md)
- - [SprintService.Body21](docs/Body21.md)
  - [SprintService.Body3](docs/Body3.md)
  - [SprintService.Body4](docs/Body4.md)
  - [SprintService.Body5](docs/Body5.md)
@@ -214,7 +212,6 @@ Class | Method | HTTP request | Description
  - [SprintService.InvoiceEvent](docs/InvoiceEvent.md)
  - [SprintService.InvoiceItems](docs/InvoiceItems.md)
  - [SprintService.InvoiceRecipient](docs/InvoiceRecipient.md)
- - [SprintService.InvoicesbulkInvoices](docs/InvoicesbulkInvoices.md)
  - [SprintService.Organization](docs/Organization.md)
  - [SprintService.Task](docs/Task.md)
  - [SprintService.TaskEvent](docs/TaskEvent.md)

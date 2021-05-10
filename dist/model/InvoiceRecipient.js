@@ -61,6 +61,10 @@ var InvoiceRecipient = /*#__PURE__*/function () {
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
+
+        if (data.hasOwnProperty('phone')) {
+          obj['phone'] = _ApiClient["default"].convertToType(data['phone'], 'String');
+        }
       }
 
       return obj;
@@ -80,5 +84,10 @@ InvoiceRecipient.prototype['clientId'] = undefined;
  */
 
 InvoiceRecipient.prototype['name'] = undefined;
+/**
+ * @member {String} phone
+ */
+
+InvoiceRecipient.prototype['phone'] = undefined;
 var _default = InvoiceRecipient;
 exports["default"] = _default;

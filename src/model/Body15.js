@@ -12,7 +12,6 @@
  */
 
 import ApiClient from '../ApiClient';
-import Task from './Task';
 
 /**
  * The Body15 model module.
@@ -23,13 +22,11 @@ class Body15 {
     /**
      * Constructs a new <code>Body15</code>.
      * @alias module:model/Body15
-     * @param type {String} 
-     * @param taskId {String} 
-     * @param data {module:model/Task} 
+     * @param name {String} 
      */
-    constructor(type, taskId, data) { 
+    constructor(name) { 
         
-        Body15.initialize(this, type, taskId, data);
+        Body15.initialize(this, name);
     }
 
     /**
@@ -37,10 +34,8 @@ class Body15 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, type, taskId, data) { 
-        obj['type'] = type;
-        obj['taskId'] = taskId;
-        obj['data'] = data;
+    static initialize(obj, name) { 
+        obj['name'] = name;
     }
 
     /**
@@ -54,14 +49,11 @@ class Body15 {
         if (data) {
             obj = obj || new Body15();
 
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('taskId')) {
-                obj['taskId'] = ApiClient.convertToType(data['taskId'], 'String');
-            }
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = Task.constructFromObject(data['data']);
+            if (data.hasOwnProperty('description')) {
+                obj['description'] = ApiClient.convertToType(data['description'], 'String');
             }
         }
         return obj;
@@ -71,19 +63,14 @@ class Body15 {
 }
 
 /**
- * @member {String} type
+ * @member {String} name
  */
-Body15.prototype['type'] = undefined;
+Body15.prototype['name'] = undefined;
 
 /**
- * @member {String} taskId
+ * @member {String} description
  */
-Body15.prototype['taskId'] = undefined;
-
-/**
- * @member {module:model/Task} data
- */
-Body15.prototype['data'] = undefined;
+Body15.prototype['description'] = undefined;
 
 
 

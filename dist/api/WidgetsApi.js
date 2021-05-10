@@ -7,9 +7,9 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Body = _interopRequireDefault(require("../model/Body20"));
+var _Body = _interopRequireDefault(require("../model/Body19"));
 
-var _Body2 = _interopRequireDefault(require("../model/Body21"));
+var _Body2 = _interopRequireDefault(require("../model/Body20"));
 
 var _Error = _interopRequireDefault(require("../model/Error"));
 
@@ -178,22 +178,22 @@ var WidgetsApi = /*#__PURE__*/function () {
      * Update a widget
      * Logged in widgets can only update their own information. Only admins can update other widgets.
      * @param {String} id Widget id
-     * @param {module:model/Body21} Body21 
+     * @param {module:model/Body20} Body20 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Widget} and HTTP response
      */
 
   }, {
     key: "widgetsIdPatchWithHttpInfo",
-    value: function widgetsIdPatchWithHttpInfo(id, Body21) {
-      var postBody = Body21; // verify the required parameter 'id' is set
+    value: function widgetsIdPatchWithHttpInfo(id, Body20) {
+      var postBody = Body20; // verify the required parameter 'id' is set
 
       if (id === undefined || id === null) {
         throw new _Error["default"]("Missing the required parameter 'id' when calling widgetsIdPatch");
-      } // verify the required parameter 'Body21' is set
+      } // verify the required parameter 'Body20' is set
 
 
-      if (Body21 === undefined || Body21 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body21' when calling widgetsIdPatch");
+      if (Body20 === undefined || Body20 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body20' when calling widgetsIdPatch");
       }
 
       var pathParams = {
@@ -212,31 +212,31 @@ var WidgetsApi = /*#__PURE__*/function () {
      * Update a widget
      * Logged in widgets can only update their own information. Only admins can update other widgets.
      * @param {String} id Widget id
-     * @param {module:model/Body21} Body21 
+     * @param {module:model/Body20} Body20 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Widget}
      */
 
   }, {
     key: "widgetsIdPatch",
-    value: function widgetsIdPatch(id, Body21) {
-      return this.widgetsIdPatchWithHttpInfo(id, Body21).then(function (response_and_data) {
+    value: function widgetsIdPatch(id, Body20) {
+      return this.widgetsIdPatchWithHttpInfo(id, Body20).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Create a widget
      * Only admins can create other widgets.
-     * @param {module:model/Body20} Body20 
+     * @param {module:model/Body19} Body19 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Widget} and HTTP response
      */
 
   }, {
     key: "widgetsPostWithHttpInfo",
-    value: function widgetsPostWithHttpInfo(Body20) {
-      var postBody = Body20; // verify the required parameter 'Body20' is set
+    value: function widgetsPostWithHttpInfo(Body19) {
+      var postBody = Body19; // verify the required parameter 'Body19' is set
 
-      if (Body20 === undefined || Body20 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body20' when calling widgetsPost");
+      if (Body19 === undefined || Body19 === null) {
+        throw new _Error["default"]("Missing the required parameter 'Body19' when calling widgetsPost");
       }
 
       var pathParams = {};
@@ -252,14 +252,14 @@ var WidgetsApi = /*#__PURE__*/function () {
     /**
      * Create a widget
      * Only admins can create other widgets.
-     * @param {module:model/Body20} Body20 
+     * @param {module:model/Body19} Body19 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Widget}
      */
 
   }, {
     key: "widgetsPost",
-    value: function widgetsPost(Body20) {
-      return this.widgetsPostWithHttpInfo(Body20).then(function (response_and_data) {
+    value: function widgetsPost(Body19) {
+      return this.widgetsPostWithHttpInfo(Body19).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

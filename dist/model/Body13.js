@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _TasksbulkTasks = _interopRequireDefault(require("./TasksbulkTasks"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24,11 +26,12 @@ var Body13 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body13</code>.
    * @alias module:model/Body13
+   * @param tasks {Array.<module:model/TasksbulkTasks>} 
    */
-  function Body13() {
+  function Body13(tasks) {
     _classCallCheck(this, Body13);
 
-    Body13.initialize(this);
+    Body13.initialize(this, tasks);
   }
   /**
    * Initializes the fields of this object.
@@ -39,7 +42,9 @@ var Body13 = /*#__PURE__*/function () {
 
   _createClass(Body13, null, [{
     key: "initialize",
-    value: function initialize(obj) {}
+    value: function initialize(obj, tasks) {
+      obj['tasks'] = tasks;
+    }
     /**
      * Constructs a <code>Body13</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -54,12 +59,8 @@ var Body13 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Body13();
 
-        if (data.hasOwnProperty('name')) {
-          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
-        }
-
-        if (data.hasOwnProperty('description')) {
-          obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
+        if (data.hasOwnProperty('tasks')) {
+          obj['tasks'] = _ApiClient["default"].convertToType(data['tasks'], [_TasksbulkTasks["default"]]);
         }
       }
 
@@ -70,15 +71,10 @@ var Body13 = /*#__PURE__*/function () {
   return Body13;
 }();
 /**
- * @member {String} name
+ * @member {Array.<module:model/TasksbulkTasks>} tasks
  */
 
 
-Body13.prototype['name'] = undefined;
-/**
- * @member {String} description
- */
-
-Body13.prototype['description'] = undefined;
+Body13.prototype['tasks'] = undefined;
 var _default = Body13;
 exports["default"] = _default;

@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import Body17 from '../model/Body17';
 import Body18 from '../model/Body18';
-import Body19 from '../model/Body19';
 import Error from '../model/Error';
 import InlineResponse2007 from '../model/InlineResponse2007';
 import User from '../model/User';
@@ -198,18 +198,18 @@ export default class UsersApi {
      * Update a user
      * Logged in users can only update their own information. Only admins can update other users.
      * @param {String} id User id
-     * @param {module:model/Body19} Body19 
+     * @param {module:model/Body18} Body18 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
-    usersIdPatchWithHttpInfo(id, Body19) {
-      let postBody = Body19;
+    usersIdPatchWithHttpInfo(id, Body18) {
+      let postBody = Body18;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling usersIdPatch");
       }
-      // verify the required parameter 'Body19' is set
-      if (Body19 === undefined || Body19 === null) {
-        throw new Error("Missing the required parameter 'Body19' when calling usersIdPatch");
+      // verify the required parameter 'Body18' is set
+      if (Body18 === undefined || Body18 === null) {
+        throw new Error("Missing the required parameter 'Body18' when calling usersIdPatch");
       }
 
       let pathParams = {
@@ -237,11 +237,11 @@ export default class UsersApi {
      * Update a user
      * Logged in users can only update their own information. Only admins can update other users.
      * @param {String} id User id
-     * @param {module:model/Body19} Body19 
+     * @param {module:model/Body18} Body18 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
-    usersIdPatch(id, Body19) {
-      return this.usersIdPatchWithHttpInfo(id, Body19)
+    usersIdPatch(id, Body18) {
+      return this.usersIdPatchWithHttpInfo(id, Body18)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -251,14 +251,14 @@ export default class UsersApi {
     /**
      * Create a user
      * Only admins can create other users.
-     * @param {module:model/Body18} Body18 
+     * @param {module:model/Body17} Body17 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/User} and HTTP response
      */
-    usersPostWithHttpInfo(Body18) {
-      let postBody = Body18;
-      // verify the required parameter 'Body18' is set
-      if (Body18 === undefined || Body18 === null) {
-        throw new Error("Missing the required parameter 'Body18' when calling usersPost");
+    usersPostWithHttpInfo(Body17) {
+      let postBody = Body17;
+      // verify the required parameter 'Body17' is set
+      if (Body17 === undefined || Body17 === null) {
+        throw new Error("Missing the required parameter 'Body17' when calling usersPost");
       }
 
       let pathParams = {
@@ -284,11 +284,11 @@ export default class UsersApi {
     /**
      * Create a user
      * Only admins can create other users.
-     * @param {module:model/Body18} Body18 
+     * @param {module:model/Body17} Body17 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/User}
      */
-    usersPost(Body18) {
-      return this.usersPostWithHttpInfo(Body18)
+    usersPost(Body17) {
+      return this.usersPostWithHttpInfo(Body17)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

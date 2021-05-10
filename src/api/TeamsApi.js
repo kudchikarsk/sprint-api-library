@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
+import Body15 from '../model/Body15';
 import Body16 from '../model/Body16';
-import Body17 from '../model/Body17';
 import Error from '../model/Error';
 import InlineResponse2006 from '../model/InlineResponse2006';
 import Team from '../model/Team';
@@ -305,18 +305,18 @@ export default class TeamsApi {
      * Update a team
      * Logged in teams can only update their own information. Only admins can update other teams.
      * @param {String} id Team id
-     * @param {module:model/Body17} Body17 
+     * @param {module:model/Body16} Body16 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Team} and HTTP response
      */
-    teamsIdPatchWithHttpInfo(id, Body17) {
-      let postBody = Body17;
+    teamsIdPatchWithHttpInfo(id, Body16) {
+      let postBody = Body16;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling teamsIdPatch");
       }
-      // verify the required parameter 'Body17' is set
-      if (Body17 === undefined || Body17 === null) {
-        throw new Error("Missing the required parameter 'Body17' when calling teamsIdPatch");
+      // verify the required parameter 'Body16' is set
+      if (Body16 === undefined || Body16 === null) {
+        throw new Error("Missing the required parameter 'Body16' when calling teamsIdPatch");
       }
 
       let pathParams = {
@@ -344,11 +344,11 @@ export default class TeamsApi {
      * Update a team
      * Logged in teams can only update their own information. Only admins can update other teams.
      * @param {String} id Team id
-     * @param {module:model/Body17} Body17 
+     * @param {module:model/Body16} Body16 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Team}
      */
-    teamsIdPatch(id, Body17) {
-      return this.teamsIdPatchWithHttpInfo(id, Body17)
+    teamsIdPatch(id, Body16) {
+      return this.teamsIdPatchWithHttpInfo(id, Body16)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -358,14 +358,14 @@ export default class TeamsApi {
     /**
      * Create a team
      * User can create teams.
-     * @param {module:model/Body16} Body16 
+     * @param {module:model/Body15} Body15 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Team} and HTTP response
      */
-    teamsPostWithHttpInfo(Body16) {
-      let postBody = Body16;
-      // verify the required parameter 'Body16' is set
-      if (Body16 === undefined || Body16 === null) {
-        throw new Error("Missing the required parameter 'Body16' when calling teamsPost");
+    teamsPostWithHttpInfo(Body15) {
+      let postBody = Body15;
+      // verify the required parameter 'Body15' is set
+      if (Body15 === undefined || Body15 === null) {
+        throw new Error("Missing the required parameter 'Body15' when calling teamsPost");
       }
 
       let pathParams = {
@@ -391,11 +391,11 @@ export default class TeamsApi {
     /**
      * Create a team
      * User can create teams.
-     * @param {module:model/Body16} Body16 
+     * @param {module:model/Body15} Body15 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Team}
      */
-    teamsPost(Body16) {
-      return this.teamsPostWithHttpInfo(Body16)
+    teamsPost(Body15) {
+      return this.teamsPostWithHttpInfo(Body15)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

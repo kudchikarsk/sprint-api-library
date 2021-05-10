@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**invoices** | [**[InvoicesbulkInvoices]**](InvoicesbulkInvoices.md) |  | 
+**type** | **String** |  | 
+**invoiceId** | **String** |  | 
+**data** | [**Invoice**](Invoice.md) |  | 
 
 

@@ -105,52 +105,46 @@ Object.defineProperty(exports, "Body20", {
     return _Body14["default"];
   }
 });
-Object.defineProperty(exports, "Body21", {
+Object.defineProperty(exports, "Body3", {
   enumerable: true,
   get: function get() {
     return _Body15["default"];
   }
 });
-Object.defineProperty(exports, "Body3", {
+Object.defineProperty(exports, "Body4", {
   enumerable: true,
   get: function get() {
     return _Body16["default"];
   }
 });
-Object.defineProperty(exports, "Body4", {
+Object.defineProperty(exports, "Body5", {
   enumerable: true,
   get: function get() {
     return _Body17["default"];
   }
 });
-Object.defineProperty(exports, "Body5", {
+Object.defineProperty(exports, "Body6", {
   enumerable: true,
   get: function get() {
     return _Body18["default"];
   }
 });
-Object.defineProperty(exports, "Body6", {
+Object.defineProperty(exports, "Body7", {
   enumerable: true,
   get: function get() {
     return _Body19["default"];
   }
 });
-Object.defineProperty(exports, "Body7", {
+Object.defineProperty(exports, "Body8", {
   enumerable: true,
   get: function get() {
     return _Body20["default"];
   }
 });
-Object.defineProperty(exports, "Body8", {
-  enumerable: true,
-  get: function get() {
-    return _Body21["default"];
-  }
-});
 Object.defineProperty(exports, "Body9", {
   enumerable: true,
   get: function get() {
-    return _Body22["default"];
+    return _Body21["default"];
   }
 });
 Object.defineProperty(exports, "Contact", {
@@ -247,12 +241,6 @@ Object.defineProperty(exports, "InvoiceRecipient", {
   enumerable: true,
   get: function get() {
     return _InvoiceRecipient["default"];
-  }
-});
-Object.defineProperty(exports, "InvoicesbulkInvoices", {
-  enumerable: true,
-  get: function get() {
-    return _InvoicesbulkInvoices["default"];
   }
 });
 Object.defineProperty(exports, "Organization", {
@@ -398,21 +386,19 @@ var _Body13 = _interopRequireDefault(require("./model/Body2"));
 
 var _Body14 = _interopRequireDefault(require("./model/Body20"));
 
-var _Body15 = _interopRequireDefault(require("./model/Body21"));
+var _Body15 = _interopRequireDefault(require("./model/Body3"));
 
-var _Body16 = _interopRequireDefault(require("./model/Body3"));
+var _Body16 = _interopRequireDefault(require("./model/Body4"));
 
-var _Body17 = _interopRequireDefault(require("./model/Body4"));
+var _Body17 = _interopRequireDefault(require("./model/Body5"));
 
-var _Body18 = _interopRequireDefault(require("./model/Body5"));
+var _Body18 = _interopRequireDefault(require("./model/Body6"));
 
-var _Body19 = _interopRequireDefault(require("./model/Body6"));
+var _Body19 = _interopRequireDefault(require("./model/Body7"));
 
-var _Body20 = _interopRequireDefault(require("./model/Body7"));
+var _Body20 = _interopRequireDefault(require("./model/Body8"));
 
-var _Body21 = _interopRequireDefault(require("./model/Body8"));
-
-var _Body22 = _interopRequireDefault(require("./model/Body9"));
+var _Body21 = _interopRequireDefault(require("./model/Body9"));
 
 var _Contact = _interopRequireDefault(require("./model/Contact"));
 
@@ -445,8 +431,6 @@ var _InvoiceEvent = _interopRequireDefault(require("./model/InvoiceEvent"));
 var _InvoiceItems = _interopRequireDefault(require("./model/InvoiceItems"));
 
 var _InvoiceRecipient = _interopRequireDefault(require("./model/InvoiceRecipient"));
-
-var _InvoicesbulkInvoices = _interopRequireDefault(require("./model/InvoicesbulkInvoices"));
 
 var _Organization = _interopRequireDefault(require("./model/Organization"));
 

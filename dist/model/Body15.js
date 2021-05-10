@@ -7,8 +7,6 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Task = _interopRequireDefault(require("./Task"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26,14 +24,12 @@ var Body15 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body15</code>.
    * @alias module:model/Body15
-   * @param type {String} 
-   * @param taskId {String} 
-   * @param data {module:model/Task} 
+   * @param name {String} 
    */
-  function Body15(type, taskId, data) {
+  function Body15(name) {
     _classCallCheck(this, Body15);
 
-    Body15.initialize(this, type, taskId, data);
+    Body15.initialize(this, name);
   }
   /**
    * Initializes the fields of this object.
@@ -44,10 +40,8 @@ var Body15 = /*#__PURE__*/function () {
 
   _createClass(Body15, null, [{
     key: "initialize",
-    value: function initialize(obj, type, taskId, data) {
-      obj['type'] = type;
-      obj['taskId'] = taskId;
-      obj['data'] = data;
+    value: function initialize(obj, name) {
+      obj['name'] = name;
     }
     /**
      * Constructs a <code>Body15</code> from a plain JavaScript object, optionally creating a new instance.
@@ -63,16 +57,12 @@ var Body15 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Body15();
 
-        if (data.hasOwnProperty('type')) {
-          obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
+        if (data.hasOwnProperty('name')) {
+          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
 
-        if (data.hasOwnProperty('taskId')) {
-          obj['taskId'] = _ApiClient["default"].convertToType(data['taskId'], 'String');
-        }
-
-        if (data.hasOwnProperty('data')) {
-          obj['data'] = _Task["default"].constructFromObject(data['data']);
+        if (data.hasOwnProperty('description')) {
+          obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
       }
 
@@ -83,20 +73,15 @@ var Body15 = /*#__PURE__*/function () {
   return Body15;
 }();
 /**
- * @member {String} type
+ * @member {String} name
  */
 
 
-Body15.prototype['type'] = undefined;
+Body15.prototype['name'] = undefined;
 /**
- * @member {String} taskId
+ * @member {String} description
  */
 
-Body15.prototype['taskId'] = undefined;
-/**
- * @member {module:model/Task} data
- */
-
-Body15.prototype['data'] = undefined;
+Body15.prototype['description'] = undefined;
 var _default = Body15;
 exports["default"] = _default;

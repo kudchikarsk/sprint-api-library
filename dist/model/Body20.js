@@ -24,14 +24,11 @@ var Body20 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body20</code>.
    * @alias module:model/Body20
-   * @param teamId {String} 
-   * @param backlogId {String} 
-   * @param type {String} 
    */
-  function Body20(teamId, backlogId, type) {
+  function Body20() {
     _classCallCheck(this, Body20);
 
-    Body20.initialize(this, teamId, backlogId, type);
+    Body20.initialize(this);
   }
   /**
    * Initializes the fields of this object.
@@ -42,11 +39,7 @@ var Body20 = /*#__PURE__*/function () {
 
   _createClass(Body20, null, [{
     key: "initialize",
-    value: function initialize(obj, teamId, backlogId, type) {
-      obj['teamId'] = teamId;
-      obj['backlogId'] = backlogId;
-      obj['type'] = type;
-    }
+    value: function initialize(obj) {}
     /**
      * Constructs a <code>Body20</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.

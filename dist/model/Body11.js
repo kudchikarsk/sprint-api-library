@@ -7,8 +7,6 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _Invoice = _interopRequireDefault(require("./Invoice"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26,14 +24,12 @@ var Body11 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body11</code>.
    * @alias module:model/Body11
-   * @param type {String} 
-   * @param invoiceId {String} 
-   * @param data {module:model/Invoice} 
+   * @param name {String} 
    */
-  function Body11(type, invoiceId, data) {
+  function Body11(name) {
     _classCallCheck(this, Body11);
 
-    Body11.initialize(this, type, invoiceId, data);
+    Body11.initialize(this, name);
   }
   /**
    * Initializes the fields of this object.
@@ -44,10 +40,8 @@ var Body11 = /*#__PURE__*/function () {
 
   _createClass(Body11, null, [{
     key: "initialize",
-    value: function initialize(obj, type, invoiceId, data) {
-      obj['type'] = type;
-      obj['invoiceId'] = invoiceId;
-      obj['data'] = data;
+    value: function initialize(obj, name) {
+      obj['name'] = name;
     }
     /**
      * Constructs a <code>Body11</code> from a plain JavaScript object, optionally creating a new instance.
@@ -63,16 +57,12 @@ var Body11 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Body11();
 
-        if (data.hasOwnProperty('type')) {
-          obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
+        if (data.hasOwnProperty('name')) {
+          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
 
-        if (data.hasOwnProperty('invoiceId')) {
-          obj['invoiceId'] = _ApiClient["default"].convertToType(data['invoiceId'], 'String');
-        }
-
-        if (data.hasOwnProperty('data')) {
-          obj['data'] = _Invoice["default"].constructFromObject(data['data']);
+        if (data.hasOwnProperty('description')) {
+          obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
         }
       }
 
@@ -83,20 +73,15 @@ var Body11 = /*#__PURE__*/function () {
   return Body11;
 }();
 /**
- * @member {String} type
+ * @member {String} name
  */
 
 
-Body11.prototype['type'] = undefined;
+Body11.prototype['name'] = undefined;
 /**
- * @member {String} invoiceId
+ * @member {String} description
  */
 
-Body11.prototype['invoiceId'] = undefined;
-/**
- * @member {module:model/Invoice} data
- */
-
-Body11.prototype['data'] = undefined;
+Body11.prototype['description'] = undefined;
 var _default = Body11;
 exports["default"] = _default;

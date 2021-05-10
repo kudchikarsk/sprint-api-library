@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _TasksbulkTasks = _interopRequireDefault(require("./TasksbulkTasks"));
+var _Task = _interopRequireDefault(require("./Task"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -26,12 +26,14 @@ var Body14 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body14</code>.
    * @alias module:model/Body14
-   * @param tasks {Array.<module:model/TasksbulkTasks>} 
+   * @param type {String} 
+   * @param taskId {String} 
+   * @param data {module:model/Task} 
    */
-  function Body14(tasks) {
+  function Body14(type, taskId, data) {
     _classCallCheck(this, Body14);
 
-    Body14.initialize(this, tasks);
+    Body14.initialize(this, type, taskId, data);
   }
   /**
    * Initializes the fields of this object.
@@ -42,8 +44,10 @@ var Body14 = /*#__PURE__*/function () {
 
   _createClass(Body14, null, [{
     key: "initialize",
-    value: function initialize(obj, tasks) {
-      obj['tasks'] = tasks;
+    value: function initialize(obj, type, taskId, data) {
+      obj['type'] = type;
+      obj['taskId'] = taskId;
+      obj['data'] = data;
     }
     /**
      * Constructs a <code>Body14</code> from a plain JavaScript object, optionally creating a new instance.
@@ -59,8 +63,16 @@ var Body14 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Body14();
 
-        if (data.hasOwnProperty('tasks')) {
-          obj['tasks'] = _ApiClient["default"].convertToType(data['tasks'], [_TasksbulkTasks["default"]]);
+        if (data.hasOwnProperty('type')) {
+          obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
+        }
+
+        if (data.hasOwnProperty('taskId')) {
+          obj['taskId'] = _ApiClient["default"].convertToType(data['taskId'], 'String');
+        }
+
+        if (data.hasOwnProperty('data')) {
+          obj['data'] = _Task["default"].constructFromObject(data['data']);
         }
       }
 
@@ -71,10 +83,20 @@ var Body14 = /*#__PURE__*/function () {
   return Body14;
 }();
 /**
- * @member {Array.<module:model/TasksbulkTasks>} tasks
+ * @member {String} type
  */
 
 
-Body14.prototype['tasks'] = undefined;
+Body14.prototype['type'] = undefined;
+/**
+ * @member {String} taskId
+ */
+
+Body14.prototype['taskId'] = undefined;
+/**
+ * @member {module:model/Task} data
+ */
+
+Body14.prototype['data'] = undefined;
 var _default = Body14;
 exports["default"] = _default;

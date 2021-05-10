@@ -24,11 +24,15 @@ var Body17 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>Body17</code>.
    * @alias module:model/Body17
+   * @param name {String} 
+   * @param email {String} must be unique
+   * @param password {String} At least one number and one letter
+   * @param role {module:model/Body17.RoleEnum} 
    */
-  function Body17() {
+  function Body17(name, email, password, role) {
     _classCallCheck(this, Body17);
 
-    Body17.initialize(this);
+    Body17.initialize(this, name, email, password, role);
   }
   /**
    * Initializes the fields of this object.
@@ -39,7 +43,12 @@ var Body17 = /*#__PURE__*/function () {
 
   _createClass(Body17, null, [{
     key: "initialize",
-    value: function initialize(obj) {}
+    value: function initialize(obj, name, email, password, role) {
+      obj['name'] = name;
+      obj['email'] = email;
+      obj['password'] = password;
+      obj['role'] = role;
+    }
     /**
      * Constructs a <code>Body17</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -58,8 +67,16 @@ var Body17 = /*#__PURE__*/function () {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
 
-        if (data.hasOwnProperty('description')) {
-          obj['description'] = _ApiClient["default"].convertToType(data['description'], 'String');
+        if (data.hasOwnProperty('email')) {
+          obj['email'] = _ApiClient["default"].convertToType(data['email'], 'String');
+        }
+
+        if (data.hasOwnProperty('password')) {
+          obj['password'] = _ApiClient["default"].convertToType(data['password'], 'String');
+        }
+
+        if (data.hasOwnProperty('role')) {
+          obj['role'] = _ApiClient["default"].convertToType(data['role'], 'String');
         }
       }
 
@@ -76,9 +93,40 @@ var Body17 = /*#__PURE__*/function () {
 
 Body17.prototype['name'] = undefined;
 /**
- * @member {String} description
+ * must be unique
+ * @member {String} email
  */
 
-Body17.prototype['description'] = undefined;
+Body17.prototype['email'] = undefined;
+/**
+ * At least one number and one letter
+ * @member {String} password
+ */
+
+Body17.prototype['password'] = undefined;
+/**
+ * @member {module:model/Body17.RoleEnum} role
+ */
+
+Body17.prototype['role'] = undefined;
+/**
+ * Allowed values for the <code>role</code> property.
+ * @enum {String}
+ * @readonly
+ */
+
+Body17['RoleEnum'] = {
+  /**
+   * value: "user"
+   * @const
+   */
+  "user": "user",
+
+  /**
+   * value: "admin"
+   * @const
+   */
+  "admin": "admin"
+};
 var _default = Body17;
 exports["default"] = _default;

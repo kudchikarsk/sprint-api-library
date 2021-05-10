@@ -4,59 +4,10 @@ All URIs are relative to *http://localhost:3000/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**invoicesBulkPost**](InvoicesApi.md#invoicesBulkPost) | **POST** /invoices/bulk | Create a invoice events
 [**invoicesGet**](InvoicesApi.md#invoicesGet) | **GET** /invoices | Get all invoices
 [**invoicesInvoiceIdGet**](InvoicesApi.md#invoicesInvoiceIdGet) | **GET** /invoices/{invoiceId} | Get all invoices
 [**invoicesPost**](InvoicesApi.md#invoicesPost) | **POST** /invoices | Create a invoice event
 
-
-
-## invoicesBulkPost
-
-> InvoiceEvent invoicesBulkPost(Body10)
-
-Create a invoice events
-
-User can create invoice events.
-
-### Example
-
-```javascript
-import SprintService from 'sprint_service';
-let defaultClient = SprintService.ApiClient.instance;
-// Configure Bearer (JWT) access token for authorization: bearerAuth
-let bearerAuth = defaultClient.authentications['bearerAuth'];
-bearerAuth.accessToken = "YOUR ACCESS TOKEN"
-
-let apiInstance = new SprintService.InvoicesApi();
-let Body10 = new SprintService.Body10(); // Body10 | 
-apiInstance.invoicesBulkPost(Body10).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **Body10** | [**Body10**](Body10.md)|  | 
-
-### Return type
-
-[**InvoiceEvent**](InvoiceEvent.md)
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
 
 
 ## invoicesGet
@@ -171,7 +122,7 @@ Name | Type | Description  | Notes
 
 ## invoicesPost
 
-> InvoiceEvent invoicesPost(Body11)
+> InvoiceEvent invoicesPost(Body10)
 
 Create a invoice event
 
@@ -187,8 +138,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.InvoicesApi();
-let Body11 = new SprintService.Body11(); // Body11 | 
-apiInstance.invoicesPost(Body11).then((data) => {
+let Body10 = new SprintService.Body10(); // Body10 | 
+apiInstance.invoicesPost(Body10).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -201,7 +152,7 @@ apiInstance.invoicesPost(Body11).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body11** | [**Body11**](Body11.md)|  | 
+ **Body10** | [**Body10**](Body10.md)|  | 
 
 ### Return type
 

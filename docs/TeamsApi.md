@@ -268,7 +268,7 @@ null (empty response body)
 
 ## teamsIdPatch
 
-> Team teamsIdPatch(id, Body17)
+> Team teamsIdPatch(id, Body16)
 
 Update a team
 
@@ -285,8 +285,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TeamsApi();
 let id = "id_example"; // String | Team id
-let Body17 = new SprintService.Body17(); // Body17 | 
-apiInstance.teamsIdPatch(id, Body17).then((data) => {
+let Body16 = new SprintService.Body16(); // Body16 | 
+apiInstance.teamsIdPatch(id, Body16).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -300,7 +300,7 @@ apiInstance.teamsIdPatch(id, Body17).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Team id | 
- **Body17** | [**Body17**](Body17.md)|  | 
+ **Body16** | [**Body16**](Body16.md)|  | 
 
 ### Return type
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ## teamsPost
 
-> Team teamsPost(Body16)
+> Team teamsPost(Body15)
 
 Create a team
 
@@ -334,8 +334,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TeamsApi();
-let Body16 = new SprintService.Body16(); // Body16 | 
-apiInstance.teamsPost(Body16).then((data) => {
+let Body15 = new SprintService.Body15(); // Body15 | 
+apiInstance.teamsPost(Body15).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -348,7 +348,7 @@ apiInstance.teamsPost(Body16).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body16** | [**Body16**](Body16.md)|  | 
+ **Body15** | [**Body15**](Body15.md)|  | 
 
 ### Return type
 

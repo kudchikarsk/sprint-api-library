@@ -54,6 +54,10 @@ var Contact = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new Contact();
 
+        if (data.hasOwnProperty('id')) {
+          obj['id'] = _ApiClient["default"].convertToType(data['id'], 'String');
+        }
+
         if (data.hasOwnProperty('name')) {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
@@ -74,9 +78,14 @@ var Contact = /*#__PURE__*/function () {
   return Contact;
 }();
 /**
- * @member {String} name
+ * @member {String} id
  */
 
+
+Contact.prototype['id'] = undefined;
+/**
+ * @member {String} name
+ */
 
 Contact.prototype['name'] = undefined;
 /**

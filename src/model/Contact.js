@@ -47,6 +47,9 @@ class Contact {
         if (data) {
             obj = obj || new Contact();
 
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -62,6 +65,11 @@ class Contact {
 
 
 }
+
+/**
+ * @member {String} id
+ */
+Contact.prototype['id'] = undefined;
 
 /**
  * @member {String} name

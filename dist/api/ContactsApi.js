@@ -65,10 +65,9 @@ var ContactsApi = /*#__PURE__*/function () {
         throw new _Error["default"]("Missing the required parameter 'organizationId' when calling contactsGet");
       }
 
-      var pathParams = {
-        'organizationId': organizationId
-      };
+      var pathParams = {};
       var queryParams = {
+        'organizationId': organizationId,
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']

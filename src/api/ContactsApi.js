@@ -58,9 +58,9 @@ export default class ContactsApi {
       }
 
       let pathParams = {
-        'organizationId': organizationId
       };
       let queryParams = {
+        'organizationId': organizationId,
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']

@@ -44,6 +44,7 @@ export default class ContactsApi {
      * Logged in contact can retrieve all contacts.
      * @param {String} organizationId organization id
      * @param {Object} opts Optional parameters
+     * @param {String} opts.name find contacts that start with name
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of contacts
      * @param {Number} opts.page Page number (default to 1)
@@ -61,6 +62,7 @@ export default class ContactsApi {
       };
       let queryParams = {
         'organizationId': organizationId,
+        'name': opts['name'],
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -86,6 +88,7 @@ export default class ContactsApi {
      * Logged in contact can retrieve all contacts.
      * @param {String} organizationId organization id
      * @param {Object} opts Optional parameters
+     * @param {String} opts.name find contacts that start with name
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of contacts
      * @param {Number} opts.page Page number (default to 1)

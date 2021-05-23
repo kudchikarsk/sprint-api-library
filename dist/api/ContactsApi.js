@@ -48,6 +48,7 @@ var ContactsApi = /*#__PURE__*/function () {
    * Logged in contact can retrieve all contacts.
    * @param {String} organizationId organization id
    * @param {Object} opts Optional parameters
+   * @param {String} opts.name find contacts that start with name
    * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
    * @param {Number} opts.limit Maximum number of contacts
    * @param {Number} opts.page Page number (default to 1)
@@ -68,6 +69,7 @@ var ContactsApi = /*#__PURE__*/function () {
       var pathParams = {};
       var queryParams = {
         'organizationId': organizationId,
+        'name': opts['name'],
         'sortBy': opts['sortBy'],
         'limit': opts['limit'],
         'page': opts['page']
@@ -85,6 +87,7 @@ var ContactsApi = /*#__PURE__*/function () {
      * Logged in contact can retrieve all contacts.
      * @param {String} organizationId organization id
      * @param {Object} opts Optional parameters
+     * @param {String} opts.name find contacts that start with name
      * @param {String} opts.sortBy sort by query in the form of field:desc/asc (ex. name:asc)
      * @param {Number} opts.limit Maximum number of contacts
      * @param {Number} opts.page Page number (default to 1)

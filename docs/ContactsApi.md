@@ -32,6 +32,7 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new SprintService.ContactsApi();
 let organizationId = "organizationId_example"; // String | organization id
 let opts = {
+  'name': "name_example", // String | find contacts that start with name
   'sortBy': "sortBy_example", // String | sort by query in the form of field:desc/asc (ex. name:asc)
   'limit': 56, // Number | Maximum number of contacts
   'page': 1 // Number | Page number
@@ -50,6 +51,7 @@ apiInstance.contactsGet(organizationId, opts).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationId** | **String**| organization id | 
+ **name** | **String**| find contacts that start with name | [optional] 
  **sortBy** | **String**| sort by query in the form of field:desc/asc (ex. name:asc) | [optional] 
  **limit** | **Number**| Maximum number of contacts | [optional] 
  **page** | **Number**| Page number | [optional] [default to 1]

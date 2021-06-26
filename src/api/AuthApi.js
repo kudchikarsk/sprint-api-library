@@ -46,14 +46,14 @@ export default class AuthApi {
     /**
      * Forgot password
      * An email will be sent to reset password.
-     * @param {module:model/Body4} Body4 
+     * @param {module:model/Body4} body4 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    authForgotPasswordPostWithHttpInfo(Body4) {
-      let postBody = Body4;
-      // verify the required parameter 'Body4' is set
-      if (Body4 === undefined || Body4 === null) {
-        throw new Error("Missing the required parameter 'Body4' when calling authForgotPasswordPost");
+    authForgotPasswordPostWithHttpInfo(body4) {
+      let postBody = body4;
+      // verify the required parameter 'body4' is set
+      if (body4 === undefined || body4 === null) {
+        throw new Error("Missing the required parameter 'body4' when calling authForgotPasswordPost");
       }
 
       let pathParams = {
@@ -79,11 +79,11 @@ export default class AuthApi {
     /**
      * Forgot password
      * An email will be sent to reset password.
-     * @param {module:model/Body4} Body4 
+     * @param {module:model/Body4} body4 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    authForgotPasswordPost(Body4) {
-      return this.authForgotPasswordPostWithHttpInfo(Body4)
+    authForgotPasswordPost(body4) {
+      return this.authForgotPasswordPostWithHttpInfo(body4)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -92,14 +92,14 @@ export default class AuthApi {
 
     /**
      * Login
-     * @param {module:model/Body1} Body1 
+     * @param {module:model/Body1} body1 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
-    authLoginPostWithHttpInfo(Body1) {
-      let postBody = Body1;
-      // verify the required parameter 'Body1' is set
-      if (Body1 === undefined || Body1 === null) {
-        throw new Error("Missing the required parameter 'Body1' when calling authLoginPost");
+    authLoginPostWithHttpInfo(body1) {
+      let postBody = body1;
+      // verify the required parameter 'body1' is set
+      if (body1 === undefined || body1 === null) {
+        throw new Error("Missing the required parameter 'body1' when calling authLoginPost");
       }
 
       let pathParams = {
@@ -124,11 +124,11 @@ export default class AuthApi {
 
     /**
      * Login
-     * @param {module:model/Body1} Body1 
+     * @param {module:model/Body1} body1 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
-    authLoginPost(Body1) {
-      return this.authLoginPostWithHttpInfo(Body1)
+    authLoginPost(body1) {
+      return this.authLoginPostWithHttpInfo(body1)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -137,14 +137,14 @@ export default class AuthApi {
 
     /**
      * Logout
-     * @param {module:model/Body2} Body2 
+     * @param {module:model/Body2} body2 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    authLogoutPostWithHttpInfo(Body2) {
-      let postBody = Body2;
-      // verify the required parameter 'Body2' is set
-      if (Body2 === undefined || Body2 === null) {
-        throw new Error("Missing the required parameter 'Body2' when calling authLogoutPost");
+    authLogoutPostWithHttpInfo(body2) {
+      let postBody = body2;
+      // verify the required parameter 'body2' is set
+      if (body2 === undefined || body2 === null) {
+        throw new Error("Missing the required parameter 'body2' when calling authLogoutPost");
       }
 
       let pathParams = {
@@ -169,11 +169,11 @@ export default class AuthApi {
 
     /**
      * Logout
-     * @param {module:model/Body2} Body2 
+     * @param {module:model/Body2} body2 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    authLogoutPost(Body2) {
-      return this.authLogoutPostWithHttpInfo(Body2)
+    authLogoutPost(body2) {
+      return this.authLogoutPostWithHttpInfo(body2)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -182,14 +182,14 @@ export default class AuthApi {
 
     /**
      * Refresh auth tokens
-     * @param {module:model/Body3} Body3 
+     * @param {module:model/Body3} body3 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/AuthTokens} and HTTP response
      */
-    authRefreshTokensPostWithHttpInfo(Body3) {
-      let postBody = Body3;
-      // verify the required parameter 'Body3' is set
-      if (Body3 === undefined || Body3 === null) {
-        throw new Error("Missing the required parameter 'Body3' when calling authRefreshTokensPost");
+    authRefreshTokensPostWithHttpInfo(body3) {
+      let postBody = body3;
+      // verify the required parameter 'body3' is set
+      if (body3 === undefined || body3 === null) {
+        throw new Error("Missing the required parameter 'body3' when calling authRefreshTokensPost");
       }
 
       let pathParams = {
@@ -214,11 +214,11 @@ export default class AuthApi {
 
     /**
      * Refresh auth tokens
-     * @param {module:model/Body3} Body3 
+     * @param {module:model/Body3} body3 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/AuthTokens}
      */
-    authRefreshTokensPost(Body3) {
-      return this.authRefreshTokensPostWithHttpInfo(Body3)
+    authRefreshTokensPost(body3) {
+      return this.authRefreshTokensPostWithHttpInfo(body3)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -227,14 +227,14 @@ export default class AuthApi {
 
     /**
      * Register as user
-     * @param {module:model/Body} Body 
+     * @param {module:model/Body} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
-    authRegisterPostWithHttpInfo(Body) {
-      let postBody = Body;
-      // verify the required parameter 'Body' is set
-      if (Body === undefined || Body === null) {
-        throw new Error("Missing the required parameter 'Body' when calling authRegisterPost");
+    authRegisterPostWithHttpInfo(body) {
+      let postBody = body;
+      // verify the required parameter 'body' is set
+      if (body === undefined || body === null) {
+        throw new Error("Missing the required parameter 'body' when calling authRegisterPost");
       }
 
       let pathParams = {
@@ -259,11 +259,11 @@ export default class AuthApi {
 
     /**
      * Register as user
-     * @param {module:model/Body} Body 
+     * @param {module:model/Body} body 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
-    authRegisterPost(Body) {
-      return this.authRegisterPostWithHttpInfo(Body)
+    authRegisterPost(body) {
+      return this.authRegisterPostWithHttpInfo(body)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -273,18 +273,18 @@ export default class AuthApi {
     /**
      * Reset password
      * @param {String} token The reset password token
-     * @param {module:model/Body5} Body5 
+     * @param {module:model/Body5} body5 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
-    authResetPasswordPostWithHttpInfo(token, Body5) {
-      let postBody = Body5;
+    authResetPasswordPostWithHttpInfo(token, body5) {
+      let postBody = body5;
       // verify the required parameter 'token' is set
       if (token === undefined || token === null) {
         throw new Error("Missing the required parameter 'token' when calling authResetPasswordPost");
       }
-      // verify the required parameter 'Body5' is set
-      if (Body5 === undefined || Body5 === null) {
-        throw new Error("Missing the required parameter 'Body5' when calling authResetPasswordPost");
+      // verify the required parameter 'body5' is set
+      if (body5 === undefined || body5 === null) {
+        throw new Error("Missing the required parameter 'body5' when calling authResetPasswordPost");
       }
 
       let pathParams = {
@@ -311,11 +311,11 @@ export default class AuthApi {
     /**
      * Reset password
      * @param {String} token The reset password token
-     * @param {module:model/Body5} Body5 
+     * @param {module:model/Body5} body5 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
-    authResetPasswordPost(token, Body5) {
-      return this.authResetPasswordPostWithHttpInfo(token, Body5)
+    authResetPasswordPost(token, body5) {
+      return this.authResetPasswordPostWithHttpInfo(token, body5)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

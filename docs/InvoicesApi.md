@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ## invoicesPost
 
-> InvoiceEvent invoicesPost(Body10)
+> InvoiceEvent invoicesPost(body10)
 
 Create a invoice event
 
@@ -138,8 +138,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.InvoicesApi();
-let Body10 = new SprintService.Body10(); // Body10 | 
-apiInstance.invoicesPost(Body10).then((data) => {
+let body10 = new SprintService.Body10(); // Body10 | 
+apiInstance.invoicesPost(body10).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -152,7 +152,7 @@ apiInstance.invoicesPost(Body10).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body10** | [**Body10**](Body10.md)|  | 
+ **body10** | [**Body10**](Body10.md)|  | 
 
 ### Return type
 

@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ## backlogsIdPatch
 
-> Backlog backlogsIdPatch(id, Body7)
+> Backlog backlogsIdPatch(id, body7)
 
 Update a backlog
 
@@ -185,8 +185,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.BacklogsApi();
 let id = "id_example"; // String | Backlog id
-let Body7 = new SprintService.Body7(); // Body7 | 
-apiInstance.backlogsIdPatch(id, Body7).then((data) => {
+let body7 = new SprintService.Body7(); // Body7 | 
+apiInstance.backlogsIdPatch(id, body7).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -200,7 +200,7 @@ apiInstance.backlogsIdPatch(id, Body7).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Backlog id | 
- **Body7** | [**Body7**](Body7.md)|  | 
+ **body7** | [**Body7**](Body7.md)|  | 
 
 ### Return type
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ## backlogsPost
 
-> Backlog backlogsPost(Body6)
+> Backlog backlogsPost(body6)
 
 Create a backlog
 
@@ -234,8 +234,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.BacklogsApi();
-let Body6 = new SprintService.Body6(); // Body6 | 
-apiInstance.backlogsPost(Body6).then((data) => {
+let body6 = new SprintService.Body6(); // Body6 | 
+apiInstance.backlogsPost(body6).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -248,7 +248,7 @@ apiInstance.backlogsPost(Body6).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body6** | [**Body6**](Body6.md)|  | 
+ **body6** | [**Body6**](Body6.md)|  | 
 
 ### Return type
 

@@ -102,8 +102,8 @@ var SprintService = require('sprint_service');
 
 
 var api = new SprintService.AuthApi()
-var Body4 = new SprintService.Body4(); // {Body4} 
-api.authForgotPasswordPost(Body4).then(function() {
+var body4 = new SprintService.Body4(); // {Body4} 
+api.authForgotPasswordPost(body4).then(function() {
   console.log('API called successfully.');
 }, function(error) {
   console.error(error);

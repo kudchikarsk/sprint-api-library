@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ## tasksBulkPost
 
-> TaskEvent tasksBulkPost(Body13)
+> TaskEvent tasksBulkPost(body13)
 
 Create a task events
 
@@ -95,8 +95,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TasksApi();
-let Body13 = new SprintService.Body13(); // Body13 | 
-apiInstance.tasksBulkPost(Body13).then((data) => {
+let body13 = new SprintService.Body13(); // Body13 | 
+apiInstance.tasksBulkPost(body13).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -109,7 +109,7 @@ apiInstance.tasksBulkPost(Body13).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body13** | [**Body13**](Body13.md)|  | 
+ **body13** | [**Body13**](Body13.md)|  | 
 
 ### Return type
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ## tasksPost
 
-> TaskEvent tasksPost(Body14)
+> TaskEvent tasksPost(body14)
 
 Create a task event
 
@@ -267,8 +267,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.TasksApi();
-let Body14 = new SprintService.Body14(); // Body14 | 
-apiInstance.tasksPost(Body14).then((data) => {
+let body14 = new SprintService.Body14(); // Body14 | 
+apiInstance.tasksPost(body14).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -281,7 +281,7 @@ apiInstance.tasksPost(Body14).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body14** | [**Body14**](Body14.md)|  | 
+ **body14** | [**Body14**](Body14.md)|  | 
 
 ### Return type
 

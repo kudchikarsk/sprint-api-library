@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ## widgetsIdPatch
 
-> Widget widgetsIdPatch(id, Body20)
+> Widget widgetsIdPatch(id, body20)
 
 Update a widget
 
@@ -181,8 +181,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.WidgetsApi();
 let id = "id_example"; // String | Widget id
-let Body20 = new SprintService.Body20(); // Body20 | 
-apiInstance.widgetsIdPatch(id, Body20).then((data) => {
+let body20 = new SprintService.Body20(); // Body20 | 
+apiInstance.widgetsIdPatch(id, body20).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -196,7 +196,7 @@ apiInstance.widgetsIdPatch(id, Body20).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Widget id | 
- **Body20** | [**Body20**](Body20.md)|  | 
+ **body20** | [**Body20**](Body20.md)|  | 
 
 ### Return type
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ## widgetsPost
 
-> Widget widgetsPost(Body19)
+> Widget widgetsPost(body19)
 
 Create a widget
 
@@ -230,8 +230,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.WidgetsApi();
-let Body19 = new SprintService.Body19(); // Body19 | 
-apiInstance.widgetsPost(Body19).then((data) => {
+let body19 = new SprintService.Body19(); // Body19 | 
+apiInstance.widgetsPost(body19).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -244,7 +244,7 @@ apiInstance.widgetsPost(Body19).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body19** | [**Body19**](Body19.md)|  | 
+ **body19** | [**Body19**](Body19.md)|  | 
 
 ### Return type
 

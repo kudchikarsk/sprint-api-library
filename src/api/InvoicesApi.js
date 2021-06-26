@@ -159,14 +159,14 @@ export default class InvoicesApi {
     /**
      * Create a invoice event
      * User can create invoice event.
-     * @param {module:model/Body10} Body10 
+     * @param {module:model/Body10} body10 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InvoiceEvent} and HTTP response
      */
-    invoicesPostWithHttpInfo(Body10) {
-      let postBody = Body10;
-      // verify the required parameter 'Body10' is set
-      if (Body10 === undefined || Body10 === null) {
-        throw new Error("Missing the required parameter 'Body10' when calling invoicesPost");
+    invoicesPostWithHttpInfo(body10) {
+      let postBody = body10;
+      // verify the required parameter 'body10' is set
+      if (body10 === undefined || body10 === null) {
+        throw new Error("Missing the required parameter 'body10' when calling invoicesPost");
       }
 
       let pathParams = {
@@ -192,11 +192,11 @@ export default class InvoicesApi {
     /**
      * Create a invoice event
      * User can create invoice event.
-     * @param {module:model/Body10} Body10 
+     * @param {module:model/Body10} body10 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InvoiceEvent}
      */
-    invoicesPost(Body10) {
-      return this.invoicesPostWithHttpInfo(Body10)
+    invoicesPost(body10) {
+      return this.invoicesPostWithHttpInfo(body10)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

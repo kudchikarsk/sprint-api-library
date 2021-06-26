@@ -189,22 +189,22 @@ var ContactsApi = /*#__PURE__*/function () {
      * Update a contact
      * Logged in contacts can only update their own information. Only admins can update other contacts.
      * @param {String} id Contact id
-     * @param {module:model/Body9} Body9 
+     * @param {module:model/Body9} body9 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Contact} and HTTP response
      */
 
   }, {
     key: "contactsIdPatchWithHttpInfo",
-    value: function contactsIdPatchWithHttpInfo(id, Body9) {
-      var postBody = Body9; // verify the required parameter 'id' is set
+    value: function contactsIdPatchWithHttpInfo(id, body9) {
+      var postBody = body9; // verify the required parameter 'id' is set
 
       if (id === undefined || id === null) {
         throw new _Error["default"]("Missing the required parameter 'id' when calling contactsIdPatch");
-      } // verify the required parameter 'Body9' is set
+      } // verify the required parameter 'body9' is set
 
 
-      if (Body9 === undefined || Body9 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body9' when calling contactsIdPatch");
+      if (body9 === undefined || body9 === null) {
+        throw new _Error["default"]("Missing the required parameter 'body9' when calling contactsIdPatch");
       }
 
       var pathParams = {
@@ -223,31 +223,31 @@ var ContactsApi = /*#__PURE__*/function () {
      * Update a contact
      * Logged in contacts can only update their own information. Only admins can update other contacts.
      * @param {String} id Contact id
-     * @param {module:model/Body9} Body9 
+     * @param {module:model/Body9} body9 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Contact}
      */
 
   }, {
     key: "contactsIdPatch",
-    value: function contactsIdPatch(id, Body9) {
-      return this.contactsIdPatchWithHttpInfo(id, Body9).then(function (response_and_data) {
+    value: function contactsIdPatch(id, body9) {
+      return this.contactsIdPatchWithHttpInfo(id, body9).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
     /**
      * Create a contact
      * Only admins can create other contacts.
-     * @param {module:model/Body8} Body8 
+     * @param {module:model/Body8} body8 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Contact} and HTTP response
      */
 
   }, {
     key: "contactsPostWithHttpInfo",
-    value: function contactsPostWithHttpInfo(Body8) {
-      var postBody = Body8; // verify the required parameter 'Body8' is set
+    value: function contactsPostWithHttpInfo(body8) {
+      var postBody = body8; // verify the required parameter 'body8' is set
 
-      if (Body8 === undefined || Body8 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body8' when calling contactsPost");
+      if (body8 === undefined || body8 === null) {
+        throw new _Error["default"]("Missing the required parameter 'body8' when calling contactsPost");
       }
 
       var pathParams = {};
@@ -263,14 +263,14 @@ var ContactsApi = /*#__PURE__*/function () {
     /**
      * Create a contact
      * Only admins can create other contacts.
-     * @param {module:model/Body8} Body8 
+     * @param {module:model/Body8} body8 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Contact}
      */
 
   }, {
     key: "contactsPost",
-    value: function contactsPost(Body8) {
-      return this.contactsPostWithHttpInfo(Body8).then(function (response_and_data) {
+    value: function contactsPost(body8) {
+      return this.contactsPostWithHttpInfo(body8).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

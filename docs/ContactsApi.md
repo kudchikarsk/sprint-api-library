@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ## contactsIdPatch
 
-> Contact contactsIdPatch(id, Body9)
+> Contact contactsIdPatch(id, body9)
 
 Update a contact
 
@@ -185,8 +185,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.ContactsApi();
 let id = "id_example"; // String | Contact id
-let Body9 = new SprintService.Body9(); // Body9 | 
-apiInstance.contactsIdPatch(id, Body9).then((data) => {
+let body9 = new SprintService.Body9(); // Body9 | 
+apiInstance.contactsIdPatch(id, body9).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -200,7 +200,7 @@ apiInstance.contactsIdPatch(id, Body9).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Contact id | 
- **Body9** | [**Body9**](Body9.md)|  | 
+ **body9** | [**Body9**](Body9.md)|  | 
 
 ### Return type
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ## contactsPost
 
-> Contact contactsPost(Body8)
+> Contact contactsPost(body8)
 
 Create a contact
 
@@ -234,8 +234,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.ContactsApi();
-let Body8 = new SprintService.Body8(); // Body8 | 
-apiInstance.contactsPost(Body8).then((data) => {
+let body8 = new SprintService.Body8(); // Body8 | 
+apiInstance.contactsPost(body8).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -248,7 +248,7 @@ apiInstance.contactsPost(Body8).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body8** | [**Body8**](Body8.md)|  | 
+ **body8** | [**Body8**](Body8.md)|  | 
 
 ### Return type
 

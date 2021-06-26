@@ -116,17 +116,17 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Create a task events
      * User can create task events.
-     * @param {module:model/Body13} Body13 
+     * @param {module:model/Body13} body13 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TaskEvent} and HTTP response
      */
 
   }, {
     key: "tasksBulkPostWithHttpInfo",
-    value: function tasksBulkPostWithHttpInfo(Body13) {
-      var postBody = Body13; // verify the required parameter 'Body13' is set
+    value: function tasksBulkPostWithHttpInfo(body13) {
+      var postBody = body13; // verify the required parameter 'body13' is set
 
-      if (Body13 === undefined || Body13 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body13' when calling tasksBulkPost");
+      if (body13 === undefined || body13 === null) {
+        throw new _Error["default"]("Missing the required parameter 'body13' when calling tasksBulkPost");
       }
 
       var pathParams = {};
@@ -142,14 +142,14 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Create a task events
      * User can create task events.
-     * @param {module:model/Body13} Body13 
+     * @param {module:model/Body13} body13 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TaskEvent}
      */
 
   }, {
     key: "tasksBulkPost",
-    value: function tasksBulkPost(Body13) {
-      return this.tasksBulkPostWithHttpInfo(Body13).then(function (response_and_data) {
+    value: function tasksBulkPost(body13) {
+      return this.tasksBulkPostWithHttpInfo(body13).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -282,17 +282,17 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Create a task event
      * User can create task event.
-     * @param {module:model/Body14} Body14 
+     * @param {module:model/Body14} body14 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TaskEvent} and HTTP response
      */
 
   }, {
     key: "tasksPostWithHttpInfo",
-    value: function tasksPostWithHttpInfo(Body14) {
-      var postBody = Body14; // verify the required parameter 'Body14' is set
+    value: function tasksPostWithHttpInfo(body14) {
+      var postBody = body14; // verify the required parameter 'body14' is set
 
-      if (Body14 === undefined || Body14 === null) {
-        throw new _Error["default"]("Missing the required parameter 'Body14' when calling tasksPost");
+      if (body14 === undefined || body14 === null) {
+        throw new _Error["default"]("Missing the required parameter 'body14' when calling tasksPost");
       }
 
       var pathParams = {};
@@ -308,14 +308,14 @@ var TasksApi = /*#__PURE__*/function () {
     /**
      * Create a task event
      * User can create task event.
-     * @param {module:model/Body14} Body14 
+     * @param {module:model/Body14} body14 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TaskEvent}
      */
 
   }, {
     key: "tasksPost",
-    value: function tasksPost(Body14) {
-      return this.tasksPostWithHttpInfo(Body14).then(function (response_and_data) {
+    value: function tasksPost(body14) {
+      return this.tasksPostWithHttpInfo(body14).then(function (response_and_data) {
         return response_and_data.data;
       });
     }

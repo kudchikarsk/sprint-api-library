@@ -115,14 +115,14 @@ export default class TasksApi {
     /**
      * Create a task events
      * User can create task events.
-     * @param {module:model/Body13} Body13 
+     * @param {module:model/Body13} body13 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TaskEvent} and HTTP response
      */
-    tasksBulkPostWithHttpInfo(Body13) {
-      let postBody = Body13;
-      // verify the required parameter 'Body13' is set
-      if (Body13 === undefined || Body13 === null) {
-        throw new Error("Missing the required parameter 'Body13' when calling tasksBulkPost");
+    tasksBulkPostWithHttpInfo(body13) {
+      let postBody = body13;
+      // verify the required parameter 'body13' is set
+      if (body13 === undefined || body13 === null) {
+        throw new Error("Missing the required parameter 'body13' when calling tasksBulkPost");
       }
 
       let pathParams = {
@@ -148,11 +148,11 @@ export default class TasksApi {
     /**
      * Create a task events
      * User can create task events.
-     * @param {module:model/Body13} Body13 
+     * @param {module:model/Body13} body13 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TaskEvent}
      */
-    tasksBulkPost(Body13) {
-      return this.tasksBulkPostWithHttpInfo(Body13)
+    tasksBulkPost(body13) {
+      return this.tasksBulkPostWithHttpInfo(body13)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -300,14 +300,14 @@ export default class TasksApi {
     /**
      * Create a task event
      * User can create task event.
-     * @param {module:model/Body14} Body14 
+     * @param {module:model/Body14} body14 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/TaskEvent} and HTTP response
      */
-    tasksPostWithHttpInfo(Body14) {
-      let postBody = Body14;
-      // verify the required parameter 'Body14' is set
-      if (Body14 === undefined || Body14 === null) {
-        throw new Error("Missing the required parameter 'Body14' when calling tasksPost");
+    tasksPostWithHttpInfo(body14) {
+      let postBody = body14;
+      // verify the required parameter 'body14' is set
+      if (body14 === undefined || body14 === null) {
+        throw new Error("Missing the required parameter 'body14' when calling tasksPost");
       }
 
       let pathParams = {
@@ -333,11 +333,11 @@ export default class TasksApi {
     /**
      * Create a task event
      * User can create task event.
-     * @param {module:model/Body14} Body14 
+     * @param {module:model/Body14} body14 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/TaskEvent}
      */
-    tasksPost(Body14) {
-      return this.tasksPostWithHttpInfo(Body14)
+    tasksPost(body14) {
+      return this.tasksPostWithHttpInfo(body14)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

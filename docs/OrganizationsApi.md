@@ -268,7 +268,7 @@ null (empty response body)
 
 ## organizationsIdPatch
 
-> Organization organizationsIdPatch(id, Body12)
+> Organization organizationsIdPatch(id, body12)
 
 Update a organization
 
@@ -285,8 +285,8 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.OrganizationsApi();
 let id = "id_example"; // String | Organization id
-let Body12 = new SprintService.Body12(); // Body12 | 
-apiInstance.organizationsIdPatch(id, Body12).then((data) => {
+let body12 = new SprintService.Body12(); // Body12 | 
+apiInstance.organizationsIdPatch(id, body12).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -300,7 +300,7 @@ apiInstance.organizationsIdPatch(id, Body12).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| Organization id | 
- **Body12** | [**Body12**](Body12.md)|  | 
+ **body12** | [**Body12**](Body12.md)|  | 
 
 ### Return type
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ## organizationsPost
 
-> Organization organizationsPost(Body11)
+> Organization organizationsPost(body11)
 
 Create a organization
 
@@ -334,8 +334,8 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SprintService.OrganizationsApi();
-let Body11 = new SprintService.Body11(); // Body11 | 
-apiInstance.organizationsPost(Body11).then((data) => {
+let body11 = new SprintService.Body11(); // Body11 | 
+apiInstance.organizationsPost(body11).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -348,7 +348,7 @@ apiInstance.organizationsPost(Body11).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **Body11** | [**Body11**](Body11.md)|  | 
+ **body11** | [**Body11**](Body11.md)|  | 
 
 ### Return type
 

@@ -202,18 +202,18 @@ export default class BacklogsApi {
      * Update a backlog
      * Logged in backlogs can only update their own information. Only admins can update other backlogs.
      * @param {String} id Backlog id
-     * @param {module:model/Body7} Body7 
+     * @param {module:model/Body7} body7 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Backlog} and HTTP response
      */
-    backlogsIdPatchWithHttpInfo(id, Body7) {
-      let postBody = Body7;
+    backlogsIdPatchWithHttpInfo(id, body7) {
+      let postBody = body7;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling backlogsIdPatch");
       }
-      // verify the required parameter 'Body7' is set
-      if (Body7 === undefined || Body7 === null) {
-        throw new Error("Missing the required parameter 'Body7' when calling backlogsIdPatch");
+      // verify the required parameter 'body7' is set
+      if (body7 === undefined || body7 === null) {
+        throw new Error("Missing the required parameter 'body7' when calling backlogsIdPatch");
       }
 
       let pathParams = {
@@ -241,11 +241,11 @@ export default class BacklogsApi {
      * Update a backlog
      * Logged in backlogs can only update their own information. Only admins can update other backlogs.
      * @param {String} id Backlog id
-     * @param {module:model/Body7} Body7 
+     * @param {module:model/Body7} body7 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Backlog}
      */
-    backlogsIdPatch(id, Body7) {
-      return this.backlogsIdPatchWithHttpInfo(id, Body7)
+    backlogsIdPatch(id, body7) {
+      return this.backlogsIdPatchWithHttpInfo(id, body7)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -255,14 +255,14 @@ export default class BacklogsApi {
     /**
      * Create a backlog
      * User can create backlogs.
-     * @param {module:model/Body6} Body6 
+     * @param {module:model/Body6} body6 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Backlog} and HTTP response
      */
-    backlogsPostWithHttpInfo(Body6) {
-      let postBody = Body6;
-      // verify the required parameter 'Body6' is set
-      if (Body6 === undefined || Body6 === null) {
-        throw new Error("Missing the required parameter 'Body6' when calling backlogsPost");
+    backlogsPostWithHttpInfo(body6) {
+      let postBody = body6;
+      // verify the required parameter 'body6' is set
+      if (body6 === undefined || body6 === null) {
+        throw new Error("Missing the required parameter 'body6' when calling backlogsPost");
       }
 
       let pathParams = {
@@ -288,11 +288,11 @@ export default class BacklogsApi {
     /**
      * Create a backlog
      * User can create backlogs.
-     * @param {module:model/Body6} Body6 
+     * @param {module:model/Body6} body6 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Backlog}
      */
-    backlogsPost(Body6) {
-      return this.backlogsPostWithHttpInfo(Body6)
+    backlogsPost(body6) {
+      return this.backlogsPostWithHttpInfo(body6)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

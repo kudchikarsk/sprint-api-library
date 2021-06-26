@@ -305,18 +305,18 @@ export default class OrganizationsApi {
      * Update a organization
      * Logged in organizations can only update their own information. Only admins can update other organizations.
      * @param {String} id Organization id
-     * @param {module:model/Body12} Body12 
+     * @param {module:model/Body12} body12 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Organization} and HTTP response
      */
-    organizationsIdPatchWithHttpInfo(id, Body12) {
-      let postBody = Body12;
+    organizationsIdPatchWithHttpInfo(id, body12) {
+      let postBody = body12;
       // verify the required parameter 'id' is set
       if (id === undefined || id === null) {
         throw new Error("Missing the required parameter 'id' when calling organizationsIdPatch");
       }
-      // verify the required parameter 'Body12' is set
-      if (Body12 === undefined || Body12 === null) {
-        throw new Error("Missing the required parameter 'Body12' when calling organizationsIdPatch");
+      // verify the required parameter 'body12' is set
+      if (body12 === undefined || body12 === null) {
+        throw new Error("Missing the required parameter 'body12' when calling organizationsIdPatch");
       }
 
       let pathParams = {
@@ -344,11 +344,11 @@ export default class OrganizationsApi {
      * Update a organization
      * Logged in organizations can only update their own information. Only admins can update other organizations.
      * @param {String} id Organization id
-     * @param {module:model/Body12} Body12 
+     * @param {module:model/Body12} body12 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Organization}
      */
-    organizationsIdPatch(id, Body12) {
-      return this.organizationsIdPatchWithHttpInfo(id, Body12)
+    organizationsIdPatch(id, body12) {
+      return this.organizationsIdPatchWithHttpInfo(id, body12)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -358,14 +358,14 @@ export default class OrganizationsApi {
     /**
      * Create a organization
      * User can create organizations.
-     * @param {module:model/Body11} Body11 
+     * @param {module:model/Body11} body11 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Organization} and HTTP response
      */
-    organizationsPostWithHttpInfo(Body11) {
-      let postBody = Body11;
-      // verify the required parameter 'Body11' is set
-      if (Body11 === undefined || Body11 === null) {
-        throw new Error("Missing the required parameter 'Body11' when calling organizationsPost");
+    organizationsPostWithHttpInfo(body11) {
+      let postBody = body11;
+      // verify the required parameter 'body11' is set
+      if (body11 === undefined || body11 === null) {
+        throw new Error("Missing the required parameter 'body11' when calling organizationsPost");
       }
 
       let pathParams = {
@@ -391,11 +391,11 @@ export default class OrganizationsApi {
     /**
      * Create a organization
      * User can create organizations.
-     * @param {module:model/Body11} Body11 
+     * @param {module:model/Body11} body11 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Organization}
      */
-    organizationsPost(Body11) {
-      return this.organizationsPostWithHttpInfo(Body11)
+    organizationsPost(body11) {
+      return this.organizationsPostWithHttpInfo(body11)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -56,6 +56,9 @@ class InvoiceRecipient {
             if (data.hasOwnProperty('phone')) {
                 obj['phone'] = ApiClient.convertToType(data['phone'], 'String');
             }
+            if (data.hasOwnProperty('address')) {
+                obj['address'] = ApiClient.convertToType(data['address'], 'String');
+            }
         }
         return obj;
     }
@@ -77,6 +80,11 @@ InvoiceRecipient.prototype['name'] = undefined;
  * @member {String} phone
  */
 InvoiceRecipient.prototype['phone'] = undefined;
+
+/**
+ * @member {String} address
+ */
+InvoiceRecipient.prototype['address'] = undefined;
 
 
 

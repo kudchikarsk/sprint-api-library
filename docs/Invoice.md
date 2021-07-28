@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 **issuedOn** | **String** |  | [optional] 
 **dueOn** | **String** |  | [optional] 
+**currency** | **String** |  | [optional] 
 **items** | [**[InvoiceItems]**](InvoiceItems.md) |  | [optional] 
 **notes** | **String** |  | [optional] 
 **status** | **String** |  | [optional] 

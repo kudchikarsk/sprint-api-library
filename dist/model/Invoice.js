@@ -82,6 +82,10 @@ var Invoice = /*#__PURE__*/function () {
           obj['dueOn'] = _ApiClient["default"].convertToType(data['dueOn'], 'String');
         }
 
+        if (data.hasOwnProperty('currency')) {
+          obj['currency'] = _ApiClient["default"].convertToType(data['currency'], 'String');
+        }
+
         if (data.hasOwnProperty('items')) {
           obj['items'] = _ApiClient["default"].convertToType(data['items'], [_InvoiceItems["default"]]);
         }
@@ -152,6 +156,11 @@ Invoice.prototype['issuedOn'] = undefined;
  */
 
 Invoice.prototype['dueOn'] = undefined;
+/**
+ * @member {String} currency
+ */
+
+Invoice.prototype['currency'] = undefined;
 /**
  * @member {Array.<module:model/InvoiceItems>} items
  */

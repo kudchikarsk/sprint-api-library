@@ -67,6 +67,9 @@ class Invoice {
             if (data.hasOwnProperty('dueOn')) {
                 obj['dueOn'] = ApiClient.convertToType(data['dueOn'], 'String');
             }
+            if (data.hasOwnProperty('currency')) {
+                obj['currency'] = ApiClient.convertToType(data['currency'], 'String');
+            }
             if (data.hasOwnProperty('items')) {
                 obj['items'] = ApiClient.convertToType(data['items'], [InvoiceItems]);
             }
@@ -127,6 +130,11 @@ Invoice.prototype['issuedOn'] = undefined;
  * @member {String} dueOn
  */
 Invoice.prototype['dueOn'] = undefined;
+
+/**
+ * @member {String} currency
+ */
+Invoice.prototype['currency'] = undefined;
 
 /**
  * @member {Array.<module:model/InvoiceItems>} items
